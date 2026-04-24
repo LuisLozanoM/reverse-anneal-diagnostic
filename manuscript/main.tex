@@ -214,9 +214,9 @@ The central result is therefore not only that the subsystem becomes initial-stat
 This separates the question of \emph{whether} relaxation occurs from the question of \emph{what} the relaxed endpoint looks like.
 
 \paragraph{Calibrated thermal readout.}
-Across $97\%$ of relaxed ($\mathcal{M}\le 0.05$) instances in the ferromagnetic Phase 6 main sweep, the measured subsystem marginal agrees with the classical conditional Boltzmann distribution $P_S^\mathrm{th}(\sigma_S\mid\sigma_E{=}\mathbf{1})$ at the calibrated $\beta_\mathrm{eff}$ with $D_\mathrm{TV}<0.05$, and a tighter near-sampling-floor subset of relaxed disorder seeds reaches $D_\mathrm{TV}\sim 10^{-3}$ (see Effective thermal marginal subsection).
+Across $97\%$ of relaxed ($\mathcal{M}\le 0.05$) instances in the ferromagnetic thermal-marginal campaign, the measured subsystem marginal agrees with the classical conditional Boltzmann distribution $P_S^\mathrm{th}(\sigma_S\mid\sigma_E{=}\mathbf{1})$ at the calibrated $\beta_\mathrm{eff}$ with $D_\mathrm{TV}<0.05$, and a tighter near-sampling-floor subset of relaxed disorder seeds reaches $D_\mathrm{TV}\sim 10^{-3}$ (see Effective thermal marginal subsection).
 We describe this as a consistency check of the conditional thermal-marginal hypothesis on the relaxed subset rather than as an unconditional proof of thermalization: non-relaxed conditions have much larger $D_\mathrm{TV}$ against the same target (median $0.35$ across 381 non-relaxed conditions), and three relaxed conditions fail the thermal-marginal test with $D_\mathrm{TV}>0.05$---identifying a distinct dynamical-trapping failure mode that the memory order parameter alone would not detect.
-Only $113$ of the $494$ Phase~6 main-sweep conditions satisfy the relaxation criterion $\mathcal{M}\le 0.05$, reflecting the broad parameter ranges swept (system size, coupling strength, disorder strength, Hamiltonian energy scale) relative to the finite-time, finite-size nature of the experiment; the thermal-marginal law is claimed only on this relaxed subset.
+Only $113$ of the $494$ thermal-marginal campaign conditions satisfy the relaxation criterion $\mathcal{M}\le 0.05$, reflecting the broad parameter ranges swept (system size, coupling strength, disorder strength, Hamiltonian energy scale) relative to the finite-time, finite-size nature of the experiment; the thermal-marginal law is claimed only on this relaxed subset.
 This result holds across graph geometry, subsystem size, coupling strength, Hamiltonian energy scale, and QPU generation.
 A small frustrated pilot hints at a different pattern: in its two relaxed Edwards--Anderson instances, the conditional quantum reduced Gibbs target outperforms the classical conditional target by roughly an order of magnitude.  The pilot is underpowered (only two relaxed instances) and motivates a larger frustrated campaign to establish the effect; the ferromagnetic data, by contrast, do not distinguish the two predictions at the sampling floor.
 
@@ -257,7 +257,7 @@ environment-size, coupling, disorder and pause-point sweeps of
 Figs.~\ref{fig:subsystem}--\ref{fig:disorder} and~\ref{fig:baselines}.  On 2026-04-10 D-Wave flagged qubit 4374 as operating out of
 spec between 2026-04-08 21:30 PT and 2026-04-10 10:50 PT and replaced the
 solver endpoint with \texttt{Advantage2\_system1}, in which qubit 4374
-and its couplers are removed from the working graph.  The Phase 6
+and its couplers are removed from the working graph.  The thermal-marginal
 Gibbs-fit campaign of Fig.~\ref{fig:thermal_marginal} was submitted on this renamed solver after
 the incident window, with qubit 4374 therefore excluded from every
 embedding; an in-situ recalibration under the procedure described below
@@ -267,7 +267,7 @@ uses an independently recalibrated
 $\beta_\mathrm{eff}=7.331\pm0.198$.  The Pegasus-topology processor
 \texttt{Advantage\_system6.4} (5{,}612 active qubits) has
 $\beta_\mathrm{eff}=4.46\pm 0.26$ at $s_p=0.4$ for the main paper and
-$\beta_\mathrm{eff}=4.289\pm 0.294$ for the Phase 6 cross-QPU
+$\beta_\mathrm{eff}=4.289\pm 0.294$ for the thermal-marginal cross-QPU
 replication.
 The dimensionless energy scale $\beta_\mathrm{eff}=B(s_p)R/2k_BT$ was
 measured in~situ by submitting single-qubit probe problems with a known
@@ -281,9 +281,9 @@ Hamiltonian rescaling factor from \texttt{auto\_scale}, $k_B$ is the
 Boltzmann constant, and $T$ is the physical device temperature.  We
 emphasise that $\beta_\mathrm{eff}$ is a protocol-level readout parameter
 rather than a refrigerator temperature; the separate main-paper and
-Phase~6 values reflect independent calibration sessions, not a physical
+thermal-marginal campaign values reflect independent calibration sessions, not a physical
 temperature drift.  The per-QPU anneal-schedule coefficients
-$A(s_p)$, $B(s_p)$ used in the Phase 6 quantum reduced Gibbs diagnostic
+$A(s_p)$, $B(s_p)$ used in the thermal-marginal quantum reduced Gibbs diagnostic
 were extracted directly from the solver schedule spreadsheets published
 by D-Wave~\cite{dwave2024system_docs}, yielding $A(s_p)/B(s_p)=0.260$ for Advantage2 and $0.259$
 for Advantage\_system6.4 at $s_p=0.4$.
@@ -291,7 +291,7 @@ for Advantage\_system6.4 at $s_p=0.4$.
 \subsection*{Hamiltonian family and embedding}
 
 The problem Hamiltonian is a random 3-regular Ising model: $H_P = \sum_i h_i \sigma_z^i + \sum_{\langle ij \rangle} J_{ij}\sigma_z^i\sigma_z^j$, with internal couplings $J_{ij}=-1$ (ferromagnetic), boundary couplings between $S$ and $E$ scaled by $\lambda\in[0,1]$, and quenched disorder $h_i\sim\mathcal{U}[-W,W]$.
-The main environment-size, coupling, disorder and pause-depth sweeps (Figs.~\ref{fig:subsystem}--\ref{fig:baselines}) use $|S|=6$ with $|E|$ up to $50$; the Phase 6 thermal-marginal and Phase 7 frustrated-landscape campaigns use $|S|=4$ small-system instances at $N\le 12$ to permit exact classical and quantum reference computations.  In all cases $S$ is a connected subgraph and $E$ comprises the remaining qubits.
+The main environment-size, coupling, disorder and pause-depth sweeps (Figs.~\ref{fig:subsystem}--\ref{fig:baselines}) use $|S|=6$ with $|E|$ up to $50$; the thermal-marginal and mixed-frustration campaigns use $|S|=4$ small-system instances at $N\le 12$ to permit exact classical and quantum reference computations.  In all cases $S$ is a connected subgraph and $E$ comprises the remaining qubits.
 Logical graphs were embedded onto each QPU using \texttt{EmbeddingComposite}~\cite{cai2014minor} with the default chain strength from \texttt{uniform\_torque\_compensation}; chain-break dynamics and embedding-induced sampling bias are discussed in~\cite{marshall2020embedding}.
 We note that embedding introduces chains of physical qubits for each logical variable, and chain breaks can affect the effective coupling landscape.
 The default chain strength is determined by the logical problem's connectivity and bias magnitudes, and may differ between Zephyr and Pegasus embeddings even for the same logical graph.
@@ -302,10 +302,10 @@ All experiments use a four-point reverse-anneal schedule~\cite{dwave2024reverse_
 Default parameters: $s_p=0.4$, $t_p=100\,\mu$s, 1{,}000--2{,}000 reads per configuration.
 Unless otherwise stated, initial states of $S$ were varied (all-up, all-down, random) while $E$ was initialized all-up; the environment-preparation controls (all-down, random, domain wall, forward-annealed) and the bath-ensemble and frustrated sub-experiments use the preparations described in the Results and Supplementary Information.
 The submission path differs across sub-experiments and is important for the interpretation of absolute threshold values.
-The Phase~6 $\beta_\mathrm{eff}$ calibration probes were submitted with \texttt{auto\_scale=False} so that the single-qubit bias $h=0.5$ is programmed exactly.
-The Phase~6 thermal-marginal native-Zephyr conditions use direct physical-qubit submissions without chain couplers, so that the programmed and nominal $(h,J)$ coincide.
-Legacy Phase~3 and Phase~4 sweeps (Figs.~\ref{fig:subsystem}--\ref{fig:baselines}) and the Phase~7 mixed-frustration working point (Fig.~\ref{fig:barrier}) were submitted through the SDK-default path, in which the minor-embedding composite and the automatic Hamiltonian rescaling (\texttt{auto\_scale=True}) are both active; the rescaling applies a uniform linear factor to all logical and chain couplers whenever any coupler would otherwise exceed the solver's $j$-range~\cite{dwave2024system_docs}.
-We therefore performed paired \texttt{auto\_scale}-on/off spot-checks on \texttt{Advantage2\_system1} to characterise the impact of this rescaling on the memory order parameter: (i) six Phase~4 working points on direct physical-qubit submissions (no chains); (ii) five additional transition-region working points $\lambda\in\{0.15,0.20,0.25,0.30,0.50\}$ at $|E|=20$ on direct physical-qubit submissions; (iii) four back-to-back repeats of an embedded 26-qubit random-3-regular problem with explicit \texttt{chain\_strength}$=1$ at $\lambda=0.2$.
+The thermal-marginal $\beta_\mathrm{eff}$ calibration probes were submitted with \texttt{auto\_scale=False} so that the single-qubit bias $h=0.5$ is programmed exactly.
+The native-Zephyr thermal-marginal conditions use direct physical-qubit submissions without chain couplers, so that the programmed and nominal $(h,J)$ coincide.
+The preliminary discovery sweeps, main subsystem-bath sweeps (Figs.~\ref{fig:subsystem}--\ref{fig:baselines}) and mixed-frustration working point (Fig.~\ref{fig:barrier}) were submitted through the SDK-default path, in which the minor-embedding composite and the automatic Hamiltonian rescaling (\texttt{auto\_scale=True}) are both active; the rescaling applies a uniform linear factor to all logical and chain couplers whenever any coupler would otherwise exceed the solver's $j$-range~\cite{dwave2024system_docs}.
+We therefore performed paired \texttt{auto\_scale}-on/off spot-checks on \texttt{Advantage2\_system1} to characterise the impact of this rescaling on the memory order parameter: (i) six subsystem-bath working points on direct physical-qubit submissions (no chains); (ii) five additional transition-region working points $\lambda\in\{0.15,0.20,0.25,0.30,0.50\}$ at $|E|=20$ on direct physical-qubit submissions; (iii) four back-to-back repeats of an embedded 26-qubit random-3-regular problem with explicit \texttt{chain\_strength}$=1$ at $\lambda=0.2$.
 Outside the transition region ($\mathcal{M}\approx 0$ or $\mathcal{M}\approx 1$), the two \texttt{auto\_scale} settings give $|\Delta\mathcal{M}|\lesssim 0.04$; inside the transition region the rescaling shifts the effective crossover in~$\lambda$, with $\Delta\mathcal{M}$ reaching $\approx 0.98$ on the embedded problem at $\lambda=0.2$ in a reproducible manner (Supplementary Information).
 The qualitative conclusions of the paper---the monotonic decrease of $\mathcal{M}$ with $|E|$ and $\lambda$, the arrest by disorder and by atypical environment preparations, the $s_p$-dependence of the crossover, the qualitative cross-QPU agreement, and the thermal-marginal agreement on relaxed conditions where the sample distribution is already at the stable end state---are preserved under both settings.
 The quantitative placement of the crossover thresholds~$\lambda_c$ reported in Fig.~\ref{fig:subsystem} and Fig.~\ref{fig:baselines}, and the specific temperature-gap ratios reported in Fig.~\ref{fig:barrier}, inherit a rescaling-dependent systematic characterised by the spot-check; we report these values as empirical quantities for the SDK-default submission path used in the legacy campaigns, not as universal, rescaling-independent numbers.
@@ -329,13 +329,13 @@ Full details of all baselines are in the Supplementary Information.
 
 \subsection*{Data availability}
 
-The raw D-Wave sampleset data, per-condition metadata (solver identifier, \texttt{graph\_id}, calibration epoch and timing blocks; embedding information is recorded separately in per-campaign metadata), processed pooled subsystem marginals, the bootstrap resamples used for error bars, the Phase 6 thermal-marginal JSON artefacts, the D-Wave per-QPU anneal-schedule coefficients used for the quantum reduced Gibbs diagnostic, and figure source data for Figs.~\ref{fig:subsystem}--\ref{fig:barrier} are available to editors and referees through a confidential review-only repository link supplied in the submission package.
+The raw D-Wave sampleset data, per-condition metadata (solver identifier, \texttt{graph\_id}, calibration epoch and timing blocks; embedding information is recorded separately in per-campaign metadata), processed pooled subsystem marginals, the bootstrap resamples used for error bars, the thermal-marginal comparison artefacts, the D-Wave per-QPU anneal-schedule coefficients used for the quantum reduced Gibbs diagnostic, and figure source data for Figs.~\ref{fig:subsystem}--\ref{fig:barrier} are available to editors and referees through a confidential review-only repository link supplied in the submission package.
 The complete archive will be made public through a Zenodo record at a citable DOI upon publication.
 
 \subsection*{Code availability}
 
 During peer review, custom code central to the reported analyses is made available to editors and referees through a confidential review-only repository link supplied in the submission package; credentials, private account configuration and nonessential operational logs are not included.
-The repository comprises the reverse-anneal driver, the subsystem-marginal analysis pipeline, the Phase 6 thermal-marginal comparison scripts, the baseline and comparison solvers (Glauber dynamics, exact diagonalization, Lindblad evolution, and continuous-spin Monte Carlo), and the figure-generation scripts used to produce Figs.~\ref{fig:protocol}--\ref{fig:barrier} and all supplementary figures, together with a \texttt{pyproject.toml} recording the Ocean SDK and Python package versions used for the experiments.
+The repository comprises the reverse-anneal driver, the subsystem-marginal analysis pipeline, the thermal-marginal comparison scripts, the baseline and comparison solvers (Glauber dynamics, exact diagonalization, Lindblad evolution, and continuous-spin Monte Carlo), and the figure-generation scripts used to produce Figs.~\ref{fig:protocol}--\ref{fig:barrier} and all supplementary figures, together with a \texttt{pyproject.toml} recording the Ocean SDK and Python package versions used for the experiments.
 Upon publication, a curated release sufficient to reproduce the reported analyses and figures will be made publicly available on GitHub and archived at Zenodo at a citable DOI, under a licence permitting readers to repeat the reported results.
 
 \subsection*{LLM disclosure}

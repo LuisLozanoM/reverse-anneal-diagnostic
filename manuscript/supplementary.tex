@@ -23,7 +23,7 @@
 \label{sec:qpu}
 
 Experiments were performed on two D-Wave quantum processing units drawn from two hardware generations with different topologies and energy scales (Table~\ref{tab:qpus}).
-The Zephyr-topology processor was operated under the solver identifier \texttt{Advantage2\_system1.13} for the Phase 3 and Phase 4 main-paper sweeps (Figs.~2, 3 and~5), and under the renamed identifier \texttt{Advantage2\_system1} (same physical hardware; qubit 4374 removed from the working graph) for the Phase 6 thermal-marginal campaign (Fig.~4); see main text Methods for the chronology.
+The Zephyr-topology processor was operated under the solver identifier \texttt{Advantage2\_system1.13} for the preliminary discovery and main subsystem-bath sweeps (Figs.~2, 3 and~5), and under the renamed identifier \texttt{Advantage2\_system1} (same physical hardware; qubit 4374 removed from the working graph) for the thermal-marginal campaign (Fig.~4); see main text Methods for the chronology.
 The Pegasus-topology processor \texttt{Advantage\_system6.4} was used for all cross-QPU replication.
 For every reverse-anneal job we log the solver identifier, the hardware \texttt{graph\_id}, the QPU \texttt{calibration\_epoch}, and the full timing block returned by the sampler; these fields are retained in the raw data and are the basis for the reproducibility analysis in Sec.~\ref{sec:reproducibility}.
 
@@ -31,8 +31,8 @@ For every reverse-anneal job we log the solver identifier, the hardware \texttt{
 \centering
 \caption{QPU hardware used in this study.  The Zephyr processor was renamed
 from \texttt{Advantage2\_system1.13} to \texttt{Advantage2\_system1} on
-2026-04-10 after qubit 4374 was flagged out of spec; the Phase 3/4
-main-paper sweeps used the original identifier and the Phase 6 sweep
+2026-04-10 after qubit 4374 was flagged out of spec; the preliminary and subsystem-bath
+main-paper sweeps used the original identifier and the thermal-marginal sweep
 used the renamed identifier.  $\beta_\mathrm{eff}$ values are independent
 calibration sessions, not physical temperature drift (see main text Methods).}
 \label{tab:qpus}
@@ -41,14 +41,14 @@ calibration sessions, not physical temperature drift (see main text Methods).}
 \toprule
 Property & Zephyr processor & Pegasus processor \\
 \midrule
-Solver (Phase 3/4)       & \texttt{Advantage2\_system1.13} & \texttt{Advantage\_system6.4} \\
-Solver (Phase 6)         & \texttt{Advantage2\_system1}    & \texttt{Advantage\_system6.4} \\
+Solver (main sweeps)     & \texttt{Advantage2\_system1.13} & \texttt{Advantage\_system6.4} \\
+Solver (thermal marginal)& \texttt{Advantage2\_system1}    & \texttt{Advantage\_system6.4} \\
 Topology                 & Zephyr                          & Pegasus \\
 Active qubits            & 4{,}579                         & 5{,}612 \\
 Reference energy scale (1D-chain critical point) & 2.308\,GHz                      & 1.281\,GHz \\
-$\beta_\mathrm{eff}$ at $s_p{=}0.4$ (Phase 3/4) & $6.93\pm 0.20$ & $4.46\pm 0.26$ \\
-$\beta_\mathrm{eff}$ at $s_p{=}0.4$ (Phase 6 main) & $7.219\pm 0.063$ & $4.289\pm 0.294$ \\
-$\beta_\mathrm{eff}$ at $s_p{=}0.4$ (Phase 6 frustrated pilot) & $7.331\pm 0.198$ & --- \\
+$\beta_\mathrm{eff}$ at $s_p{=}0.4$ (main sweeps) & $6.93\pm 0.20$ & $4.46\pm 0.26$ \\
+$\beta_\mathrm{eff}$ at $s_p{=}0.4$ (thermal marginal) & $7.219\pm 0.063$ & $4.289\pm 0.294$ \\
+$\beta_\mathrm{eff}$ at $s_p{=}0.4$ (frustrated pilot) & $7.331\pm 0.198$ & --- \\
 $A(s_p)/B(s_p)$ at $s_p{=}0.4$ & $0.2603$                & $0.2589$ \\
 Role                     & Primary data                    & Cross-validation \\
 \bottomrule
@@ -69,10 +69,10 @@ On \texttt{Advantage\_system6.4} the same two bias values give $\beta_\mathrm{ef
 This residual bias-dependence at the smaller $h$ is consistent with the probe approaching the intrinsic control-error floor at very small longitudinal biases, and we therefore adopt the $h=0.5$ probe as the primary calibration for both QPUs.
 
 \paragraph{Auto-scale spot-check.}
-Legacy Phase~3 and Phase~4 submissions were programmed through the minor-embedding composite with the SDK default \texttt{auto\_scale=True}, which applies a uniform linear rescaling of the embedded problem to fit within the solver's programmable range.
+The preliminary discovery and main subsystem-bath submissions were programmed through the minor-embedding composite with the SDK default \texttt{auto\_scale=True}, which applies a uniform linear rescaling of the embedded problem to fit within the solver's programmable range.
 We characterised the empirical impact of this rescaling on the memory order parameter by running paired \texttt{auto\_scale=True}/\texttt{auto\_scale=False} submissions at three different submission paths on \texttt{Advantage2\_system1}:
 \begin{itemize}
-\item \textbf{Native-qubit, saturated regime} (Table~\ref{tab:autoscale_native}, top rows).  Six representative Phase~4 working points submitted directly on the live solver graph with no chain couplers.  At conditions well below or well above the crossover the two settings agree to $|\Delta\mathcal{M}|\le 0.11$, with five of six conditions agreeing exactly at $\mathcal{M}=0$ or $\mathcal{M}=1$.
+\item \textbf{Native-qubit, saturated regime} (Table~\ref{tab:autoscale_native}, top rows).  Six representative subsystem-bath working points submitted directly on the live solver graph with no chain couplers.  At conditions well below or well above the crossover the two settings agree to $|\Delta\mathcal{M}|\le 0.11$, with five of six conditions agreeing exactly at $\mathcal{M}=0$ or $\mathcal{M}=1$.
 \item \textbf{Native-qubit, transition region} (Table~\ref{tab:autoscale_native}, bottom rows).  At $|E|=20$ scanned over $\lambda\in\{0.15,0.20,0.25,0.30,0.50\}$, where the crossover happens.  Here $|\Delta\mathcal{M}|$ grows to $\sim 0.3$--$0.9$ as $\lambda$ crosses the effective transition, because the rescaling shifts the crossover location.
 \item \textbf{Embedded, transition region} (Table~\ref{tab:autoscale_embedded}).  Four back-to-back repeats of the same 26-qubit $(\lambda=0.2,W=0)$ embedded problem with explicit \texttt{chain\_strength$=1$} show $\mathcal{M}_T\approx 0.99$ consistently and $\mathcal{M}_F\approx 0.005$ consistently---$\Delta\mathcal{M}\approx 0.98$ is reproducible and not a shot-noise effect.
 \end{itemize}
@@ -120,8 +120,8 @@ Repeat & $\mathcal{M}_T$ & $\mathcal{M}_F$ & $\Delta\mathcal{M}$ \\
 \end{tabular}
 \end{table}
 
-Taken together, the spot-check establishes two things: (i) outside the transition region the \texttt{auto\_scale} setting is essentially a no-op for the memory order parameter; (ii) inside the transition region \texttt{auto\_scale} shifts the effective crossover location.  The qualitative conclusions of the main text---emergence of initial-state independence with $|E|$ and $\lambda$, disorder arrest, $s_p$-dependence---are preserved at both settings, whereas the numerical placement of the crossover threshold $\lambda_c$ inherits an \texttt{auto\_scale}-dependent systematic.  The Phase~6 thermal-marginal agreement at $\beta_\mathrm{probe}$ is unaffected because it is evaluated on the relaxed subset where the sample distribution is at the stable end state.
-The raw samplesets are archived under the Phase~4 spot-check directories listed in the repository manifest.
+Taken together, the spot-check establishes two things: (i) outside the transition region the \texttt{auto\_scale} setting is essentially a no-op for the memory order parameter; (ii) inside the transition region \texttt{auto\_scale} shifts the effective crossover location.  The qualitative conclusions of the main text---emergence of initial-state independence with $|E|$ and $\lambda$, disorder arrest, $s_p$-dependence---are preserved at both settings, whereas the numerical placement of the crossover threshold $\lambda_c$ inherits an \texttt{auto\_scale}-dependent systematic.  The thermal-marginal agreement at $\beta_\mathrm{probe}$ is unaffected because it is evaluated on the relaxed subset where the sample distribution is at the stable end state.
+The raw samplesets are archived under the auto-scale spot-check directories listed in the repository manifest.
 
 \paragraph{Gauge-averaging control.}
 Intrinsic control-error (ICE) biases on D-Wave qubits are conventionally suppressed by averaging the observable of interest over independent spin-reversal gauges~\cite{dwave2024system_docs}.
@@ -148,7 +148,7 @@ $\lambda=0.50$, $W=1.0$  & $0.002, 0.003, 0.001, 0.018$ & $0.006$ & $0.007$ \\
 \end{table}
 
 \paragraph{Regeneration of key sweeps with \texttt{auto\_scale=False}.}
-To further check which main-text conclusions are robust to the submission path, we regenerated the Phase~4 $\lambda$ sweep and $|E|$ sweep with \texttt{auto\_scale=False} and paired them against \texttt{auto\_scale=True} arms on the same physical qubits.
+To further check which main-text conclusions are robust to the submission path, we regenerated the subsystem-bath $\lambda$ sweep and $|E|$ sweep with \texttt{auto\_scale=False} and paired them against \texttt{auto\_scale=True} arms on the same physical qubits.
 We ran two complementary setups:
 \emph{(A) direct native-qubit submissions} on \texttt{Advantage2\_system1} and \texttt{Advantage\_system6.4}, which avoid any embedding and therefore have no chain couplers;
 \emph{(B) random-3-regular logical graphs} embedded on \texttt{Advantage2\_system1} via \texttt{FixedEmbeddingComposite} with explicit \texttt{chain\_strength}$\in\{1,2\}$, which matches the graph topology used for the main-paper $\lambda$ sweep but decouples the chain strength from the solver-internal \texttt{uniform\_torque\_compensation} heuristic.
@@ -210,8 +210,8 @@ The $\lambda_c$ values reported in Fig.~2b and Fig.~5c of the main text should t
 Third, the disorder-arrest effect reported in main-text Fig.~3a specifically requires the \texttt{uniform\_torque\_compensation} chain-strength regime: at $c\in\{1,2\}$ with \texttt{auto\_scale=False} we see only weak arrest ($\mathcal{M}\lesssim 0.1$ at $W=2$); a single-seed regeneration at the legacy \texttt{uniform\_torque\_compensation}+\texttt{auto\_scale=True} path on \texttt{Advantage\_system6.4} does reproduce strong arrest at $W=1.5$ ($\mathcal{M}=0.54$, consistent with the legacy $0.50$ at the same working point), and on \texttt{Advantage2\_system1} at $W=2$ a single seed gave $\mathcal{M}=0.14$ within the disorder-seed dispersion reported in the main text.
 The arrest is therefore qualitatively reproducible under the legacy submission path; its quantitative magnitude depends on chain strength, and we are explicit in the Fig.~3a caption that the plotted values characterise the legacy path.
 
-\paragraph{Phase~7 mixed-frustration re-verification at \texttt{auto\_scale=False}.}
-The Phase~7 working point (mixed frustration with $p_S=0.5$, $W=1$, $|E|=8$, $|S|=4$, $\lambda=0.5$, $s_p=0.4$, $t_p=100\,\mu$s) underpins the temperature-gap ratios of main-text Fig.~6.
+\paragraph{Mixed-frustration re-verification at \texttt{auto\_scale=False}.}
+The mixed-frustration working point ($p_S=0.5$, $W=1$, $|E|=8$, $|S|=4$, $\lambda=0.5$, $s_p=0.4$, $t_p=100\,\mu$s) underpins the temperature-gap ratios of main-text Fig.~6.
 We re-ran the full 10-seed campaign on both QPUs with \texttt{auto\_scale=False} through a \texttt{FixedEmbeddingComposite} at \texttt{chain\_strength$=2$}, paired with an \texttt{auto\_scale=True} arm on the same embedding (Table~\ref{tab:phase7_reverify}).
 On \texttt{Advantage2\_system1} $7/10$ seeds relax ($\mathcal{M}\le 0.05$) at \texttt{auto\_scale=True} and $8/10$ at \texttt{auto\_scale=False}; on \texttt{Advantage\_system6.4} $8/10$ seeds relax at \texttt{auto\_scale=True} and $7/10$ at \texttt{auto\_scale=False}.
 These rates are consistent with or above the legacy $14/20=70\%$ (Advantage2) and $10/20=50\%$ (System 6.4), and give temperature gaps versus matched-temperature Glauber at the calibrated $\beta_\mathrm{eff}$ that are at least as large as the $4.8\times$ and $1.7\times$ reported in the main text.
@@ -223,7 +223,7 @@ The main-text temperature-gap claim is therefore preserved under a seed-matched 
 
 \begin{table}[h]
 \centering
-\caption{Phase~7 mixed-frustration re-verification.  Sign seeds 100--109 at $p_S=0.5$, $W=1$, $|E|=8$, $|S|=4$, $\lambda=0.5$, $s_p=0.4$, \texttt{chain\_strength}$=2$.  Each cell is $\mathcal{M}$ pooled over three initial subsystem states (3$\times$2000 reads).}
+\caption{Mixed-frustration re-verification.  Sign seeds 100--109 at $p_S=0.5$, $W=1$, $|E|=8$, $|S|=4$, $\lambda=0.5$, $s_p=0.4$, \texttt{chain\_strength}$=2$.  Each cell is $\mathcal{M}$ pooled over three initial subsystem states (3$\times$2000 reads).}
 \label{tab:phase7_reverify}
 \footnotesize
 \begin{tabular}{ccccccc}
@@ -270,17 +270,17 @@ The same logical graph is used on both QPUs to facilitate the cross-platform com
 
 \section{Extended parameter scans}
 
-\subsection{Phase 3: Additional discovery scans}
+\subsection{Additional discovery scans}
 \label{sec:phase3}
 
 Before the subsystem--bath experiments reported in the main text, we established the reverse-anneal phenomenology on single-partition Ising problems without an explicit $S$/$E$ split.
-Table~\ref{tab:phase3} summarises the parameter ranges swept in this discovery phase; for each scan point we compare $P_S$ (computed over a fixed six-qubit subgraph) across at least two initial states and compute the memory order parameter $\mathcal{M}$ as defined in the main text.
-The Phase~3 scans confirmed that initial-state dependence decreases monotonically with increasing pause time $t_p$ at fixed $s_p=0.4$, with crossover kinetics on the order of a few microseconds; that decreasing $s_p$ (deeper pause, stronger transverse field) drives relaxation at shorter $t_p$; and that adding quenched disorder preserves initial-state memory above a threshold $W_c \approx 1.5$.
-These findings motivated the upgrade to the subsystem--bath geometry in Phase~4.
+Table~\ref{tab:phase3} summarises the parameter ranges swept in this discovery study; for each scan point we compare $P_S$ (computed over a fixed six-qubit subgraph) across at least two initial states and compute the memory order parameter $\mathcal{M}$ as defined in the main text.
+These preliminary scans confirmed that initial-state dependence decreases monotonically with increasing pause time $t_p$ at fixed $s_p=0.4$, with crossover kinetics on the order of a few microseconds; that decreasing $s_p$ (deeper pause, stronger transverse field) drives relaxation at shorter $t_p$; and that adding quenched disorder preserves initial-state memory above a threshold $W_c \approx 1.5$.
+These findings motivated the upgrade to the explicit subsystem--bath geometry.
 
 \begin{table}[h]
 \centering
-\caption{Phase 3 parameter scans (discovery phase, single-partition problems).}
+\caption{Preliminary parameter scans (single-partition problems).}
 \label{tab:phase3}
 \small
 \begin{tabular}{llll}
@@ -295,17 +295,17 @@ Scan & Variable & Values & Fixed \\
 \end{tabular}
 \end{table}
 
-\subsection{Phase 4: Full subsystem-bath scan grids}
+\subsection{Full subsystem-bath scan grids}
 \label{sec:phase4}
 
-Phase~4 introduces the explicit $S$/$E$ partition used throughout the main text: a connected six-qubit subsystem $S$ coupled to an environment $E$ of up to 50 qubits through boundary couplers of programmable strength $\lambda$.
+The main scan grid introduces the explicit $S$/$E$ partition used throughout the main text: a connected six-qubit subsystem $S$ coupled to an environment $E$ of up to 50 qubits through boundary couplers of programmable strength $\lambda$.
 Internal couplings inside $S$ and inside $E$ are ferromagnetic with $J_{ij}=-1$, and quenched disorder is applied globally as random longitudinal fields $h_i \sim \mathcal{U}[-W, W]$.
 Table~\ref{tab:phase4} summarises the full grid of scan conditions.
-Each Phase 4 data point is computed from at least three distinct initial states of $S$ (all-up, all-down, random) with 1{,}000--2{,}000 reverse-anneal reads per initial state, followed by bootstrap resampling (200 resamples) to estimate uncertainties.
+Each data point is computed from at least three distinct initial states of $S$ (all-up, all-down, random) with 1{,}000--2{,}000 reverse-anneal reads per initial state, followed by bootstrap resampling (200 resamples) to estimate uncertainties.
 
 \begin{table}[h]
 \centering
-\caption{Phase 4 subsystem--bath scans.}
+\caption{Subsystem--bath scans.}
 \label{tab:phase4}
 \small
 \begin{tabular}{lll}
@@ -406,10 +406,10 @@ This closes the loop on the classical-baseline argument in the main text: neithe
 \section{Native graph vs.\ embedded graph comparison}
 \label{sec:native}
 
-The Phase 3 and Phase 4 main-paper experiments use logical-to-physical minor embedding to map the random 3-regular Ising problem onto the Zephyr or Pegasus hardware graph.
+The preliminary and subsystem-bath main-paper experiments use logical-to-physical minor embedding to map the random 3-regular Ising problem onto the Zephyr or Pegasus hardware graph.
 Chain breaks and chain-strength-dependent effective couplings are a known source of systematic bias in D-Wave experiments~\cite{marshall2020embedding}, and directly affect the comparison between platforms when the chain strengths differ.
-As a direct consistency check, the Phase 6 thermal-marginal campaign of Fig.~4 was performed on native Zephyr subgraphs (Phase 2 native, Phase 3A scaled sweeps, Phase 3B bath ensemble; Sec.~\ref{sec:phase6_inventory}), so that each logical qubit corresponds to a single physical qubit and no minor embedding is required.
-The relaxation and thermal-marginal conclusions reported for the Phase 6 native-graph sub-experiments are consistent with the embedded Phase 3/4 results, and therefore constrain the magnitude of embedding-induced systematics.
+As a direct consistency check, the thermal-marginal campaign of Fig.~4 was performed on native Zephyr subgraphs (native exact-enumeration, Hamiltonian-scale and large-bath sub-experiments; Sec.~\ref{sec:phase6_inventory}), so that each logical qubit corresponds to a single physical qubit and no minor embedding is required.
+The relaxation and thermal-marginal conclusions reported for the native-graph thermal-marginal sub-experiments are consistent with the embedded main-sweep results, and therefore constrain the magnitude of embedding-induced systematics.
 We further emphasise that the cross-QPU consistency of the observed crossover shape (Fig.~2 of the main text) is itself an embedding consistency check, since the two QPUs use different default chain strengths for the same logical problem.
 
 \section{Reproducibility across calibration cycles}
@@ -417,7 +417,7 @@ We further emphasise that the cross-QPU consistency of the observed crossover sh
 
 D-Wave QPUs are recalibrated periodically, which can in principle cause drift in $\beta_\mathrm{eff}$ and in the effective noise environment.
 Every reverse-anneal job in this study stores the returned \texttt{graph\_id} and \texttt{calibration\_epoch} in the raw data, enabling per-calibration grouping of the results.
-We repeated selected Phase 4 conditions (the $|E|$ sweep at the relaxed point, and the $(\lambda, W)$ grid at $\lambda = 0.5$) across multiple calibration epochs on Advantage2 and verified that the memory order parameter agrees with the original measurements to within the bootstrap uncertainty in each case.
+We repeated selected subsystem-bath conditions (the $|E|$ sweep at the relaxed point, and the $(\lambda, W)$ grid at $\lambda = 0.5$) across multiple calibration epochs on Advantage2 and verified that the memory order parameter agrees with the original measurements to within the bootstrap uncertainty in each case.
 Disorder averaging over five independent random-field realisations provides an additional layer of mitigation against calibration-to-calibration drift, since each disorder realisation is an independent problem instance and the reported disorder-averaged means pool runs collected over the full span of calibration epochs.
 We therefore have no evidence that the observed crossovers are calibration-specific, although we acknowledge that a fully systematic calibration-drift study is outside the scope of the present work.
 
@@ -435,25 +435,23 @@ As a control, we verified on a toy two-qubit problem that enabling \texttt{reini
 
 Between anneal reads, D-Wave QPUs optionally introduce a settle time (\texttt{readout\_thermalization}) during which the qubit register returns to the quiescent low-energy configuration before the next anneal begins.
 Our experiments use the default setting (0\,$\mu$s on both QPUs), since we do not observe any read-count dependence of $\mathcal{M}$ that would indicate inadequate settling, and the typical intrinsic readout error rate of $\sim\!10^{-3}$ per qubit per read published by D-Wave~\cite{dwave2024system_docs} is comfortably below the statistical uncertainty in our 64-state subsystem marginals.
-A future dedicated calibration campaign could probe whether a non-zero \texttt{readout\_thermalization} changes the measured crossovers at the level of 1--2\% bootstrap uncertainty; the Phase 6 Gibbs-fit analysis (Sec.~\ref{sec:phase6}) independently establishes that the present setting is sufficient for shot-noise-level thermal-marginal agreement on the relaxed subset.
+A future dedicated calibration campaign could probe whether a non-zero \texttt{readout\_thermalization} changes the measured crossovers at the level of 1--2\% bootstrap uncertainty; the thermal-marginal analysis (Sec.~\ref{sec:phase6}) independently establishes that the present setting is sufficient for shot-noise-level thermal-marginal agreement on the relaxed subset.
 
 \subsection{Gauge transforms}
 \label{sec:gauge}
 
 A gauge transformation on an Ising problem flips the sign of a chosen subset of spins together with the sign of every coupling and field touching that subset, leaving the physical energy landscape invariant but potentially cancelling systematic biases in the hardware implementation.
 Our main-text experiments use a fixed gauge (the natural logical-to-physical mapping returned by \texttt{EmbeddingComposite}), and the two opposite-parity initial states (all-up and all-down) already provide a coarse gauge control because they are related by the global spin-flip symmetry of the internal ferromagnet.
-A dedicated gauge-averaging control, in which each reverse-anneal job is repeated under several random gauge choices before averaging, was performed on three representative Phase 6 test cases (Sec.~\ref{sec:phase6_robustness}).
+A dedicated gauge-averaging control, in which each reverse-anneal job is repeated under several random gauge choices before averaging, was performed on three representative thermal-marginal test cases (Sec.~\ref{sec:phase6_robustness}).
 We do not expect gauge averaging to change the observed crossovers qualitatively, since the disorder-averaged results reported in the main text already include disorder realisations with both positive and negative dominant field directions, which amounts to a partial gauge average.
 
-\section{Phase 6: Effective thermal marginal campaign}
+\section{Effective thermal-marginal campaign}
 \label{sec:phase6}
 
-This section gives the full details of the Phase 6 Gibbs-fit campaign
+This section gives the full details of the thermal-marginal Gibbs-fit campaign
 summarised in the main-text Effective thermal marginal subsection.
-All analyses draw on the per-condition JSON artefacts in
-\texttt{data/raw/phase6\_gibbs/*/} and are reproducible from
-\texttt{scripts/phase6\_gibbs\_campaign.py} plus the reanalysis driver
-\texttt{scripts/reanalyze\_phase6\_with\_correct\_ab.py}.
+All analyses draw on the per-condition JSON artefacts and analysis scripts
+provided in the review repository.
 
 \subsection{Per-QPU anneal schedule at $s_p=0.4$}
 \label{sec:phase6_schedule}
@@ -461,12 +459,12 @@ All analyses draw on the per-condition JSON artefacts in
 The quantum reduced Gibbs diagnostic uses the dimensionless ratio
 $A(s_p)/B(s_p)$ at the pause point.  We extracted both coefficients
 directly from the official D-Wave annealing-schedule spreadsheets
-(one per solver); the nearest-sample values at $s_p=0.4$ are stored in
-\texttt{data/raw/phase6\_gibbs/phase1\_calibration/schedules/schedule\_at\_sp0.4.json}.
+(one per solver); the nearest-sample values at $s_p=0.4$ are stored
+with the review-repository anneal-schedule artefacts.
 
 \begin{table}[h]
 \centering
-\caption{Per-QPU anneal schedule coefficients at the Phase 6 pause
+\caption{Per-QPU anneal schedule coefficients at the thermal-marginal pause
 point $s_p=0.4$, extracted from the D-Wave schedule spreadsheets.}
 \label{tab:phase6_schedule}
 \begin{tabular}{lccc}
@@ -479,7 +477,7 @@ Solver & $A(s_p)$ [GHz] & $B(s_p)$ [GHz] & $A(s_p)/B(s_p)$ \\
 \end{tabular}
 \end{table}
 
-The first run of the Phase 6 campaign used an approximate
+The first run of the thermal-marginal campaign used an approximate
 $A(s_p)/B(s_p)\approx 1.333$; all quantum-reduced-Gibbs comparisons were
 subsequently regenerated with the correct per-QPU values of
 Table~\ref{tab:phase6_schedule}.  All results reported in the main paper
@@ -488,24 +486,24 @@ use the corrected values.
 \subsection{In-situ $\beta_\mathrm{eff}$ recalibration}
 \label{sec:phase6_beta}
 
-The Phase 6 campaign re-measured $\beta_\mathrm{eff}$ under the same
+The thermal-marginal campaign re-measured $\beta_\mathrm{eff}$ under the same
 single-qubit probe protocol used for the main paper (Sec.~\ref{sec:qpu}),
-after the Advantage2 solver rename.  For the main Phase 6 sweep
-(Phase~2 native and random-regular, Phase~3A three scales,
-Phase~3B bath-ensemble, Phase~3C disorder sweep) we use
+after the Advantage2 solver rename.  For the main thermal-marginal sweep
+(native and random-regular exact-enumeration grids, three Hamiltonian scales,
+large-bath ensemble and disorder sweep) we use
 $\beta_\mathrm{eff}=7.219\pm 0.063$ on Advantage2; the frustrated pilot
 was submitted in a separate run and uses an independently measured
 $\beta_\mathrm{eff}=7.331\pm 0.198$; and the cross-QPU replication on
 Advantage\_system6.4 uses
 $\beta_\mathrm{eff}=4.289\pm 0.294$.  These recalibrations are stored
-in \texttt{data/raw/phase6\_gibbs/phase1\_calibration/}.
+with the review-repository calibration artefacts.
 
 \subsection{Sub-experiment inventory}
 \label{sec:phase6_inventory}
 
 \begin{table}[h]
 \centering
-\caption{Phase 6 sub-experiment inventory.  Every sub-experiment uses
+\caption{Thermal-marginal campaign inventory.  Every sub-experiment uses
 the reverse-anneal schedule
 $(0,1)\to(5\,\mu\mathrm{s},0.4)\to(5+t_p,0.4)\to(10+t_p,1)$
 with three $S$ initial states (all-up, all-down, random) and $E$ prepared
@@ -517,22 +515,22 @@ before initial-state multiplicity.}
 \toprule
 Sub-experiment & $|S|$ & $N$ & $\lambda$ / other & $n$ & Graph \\
 \midrule
-Phase 2 exact (native) & 4 & $\{6,8,10,12\}$ & $\{0.2,0.3,0.5\}$, $W\in\{0,0.5,1\}$ & 84 & native Zephyr \\
-Phase 2 exact (3-reg) & 4 & $\{6,8,10,12\}$ & same & 84 & random 3-regular \\
-Phase 3A scale$=0.35$ & 4 & $\{6,8,10,12\}$ & same, $(h,J)\times0.35$ & 84 & native Zephyr \\
-Phase 3A scale$=0.5$ & 4 & $\{6,8,10,12\}$ & same, $(h,J)\times0.5$ & 84 & native Zephyr \\
-Phase 3A scale$=0.75$ & 4 & $\{6,8,10,12\}$ & same, $(h,J)\times0.75$ & 84 & native Zephyr \\
-Phase 3B bath unscaled & 6 & $56$ & $|E|=50$, $\lambda=0.5$ & 7 & native Zephyr \\
-Phase 3B bath scale$=0.5$ & 6 & $56$ & same, $(h,J)\times0.5$ & 7 & native Zephyr \\
-Phase 3C disorder sweep & 4 & $12$ & $\lambda=0.5$, $W\in\{0,0.25,0.5,0.75,1,1.25\}$ (10 seeds) & 60 & random 3-regular \\
-Phase 3C cross-QPU & 4 & $12$ & same & 60 & 3-regular (System 6.4) \\
-Phase 6 frustrated pilot & 4 & $12$ & $\lambda=0.5$, EA $\pm J$ flips, 5 seeds $\times$ 3 $W$ & 15 & random 3-regular \\
-Phase 6 robustness & 4 & $\{8,12\}$ & 3 test cases $\times$ 3 return-ramps $+$ 4 gauges & 21 & native / 3-regular \\
+Native exact-enumeration & 4 & $\{6,8,10,12\}$ & $\{0.2,0.3,0.5\}$, $W\in\{0,0.5,1\}$ & 84 & native Zephyr \\
+3-regular exact-enumeration & 4 & $\{6,8,10,12\}$ & same & 84 & random 3-regular \\
+Hamiltonian scale$=0.35$ & 4 & $\{6,8,10,12\}$ & same, $(h,J)\times0.35$ & 84 & native Zephyr \\
+Hamiltonian scale$=0.5$ & 4 & $\{6,8,10,12\}$ & same, $(h,J)\times0.5$ & 84 & native Zephyr \\
+Hamiltonian scale$=0.75$ & 4 & $\{6,8,10,12\}$ & same, $(h,J)\times0.75$ & 84 & native Zephyr \\
+Large-bath unscaled & 6 & $56$ & $|E|=50$, $\lambda=0.5$ & 7 & native Zephyr \\
+Large-bath scale$=0.5$ & 6 & $56$ & same, $(h,J)\times0.5$ & 7 & native Zephyr \\
+Disorder sweep & 4 & $12$ & $\lambda=0.5$, $W\in\{0,0.25,0.5,0.75,1,1.25\}$ (10 seeds) & 60 & random 3-regular \\
+Disorder cross-QPU & 4 & $12$ & same & 60 & 3-regular (System 6.4) \\
+Frustrated pilot & 4 & $12$ & $\lambda=0.5$, EA $\pm J$ flips, 5 seeds $\times$ 3 $W$ & 15 & random 3-regular \\
+Robustness controls & 4 & $\{8,12\}$ & 3 test cases $\times$ 3 return-ramps $+$ 4 gauges & 21 & native / 3-regular \\
 \bottomrule
 \end{tabular}}
 \end{table}
 
-The $494$-condition Phase 6 main sweep on Advantage2 referenced in the
+The $494$-condition main thermal-marginal sweep on Advantage2 referenced in the
 main text is the sum of the first eight rows of
 Table~\ref{tab:phase6_inventory}
 ($84+84+84+84+84+7+7+60=494$).  The cross-QPU replication,
@@ -553,7 +551,7 @@ independent of $A/B$.
 \begin{table}[h]
 \centering
 \caption{$D_\mathrm{TV}$ against each Gibbs target for the relaxed subset of each
-Phase 6 sub-experiment.  \emph{classical cond} uses
+thermal-marginal sub-experiment.  \emph{classical cond} uses
 the classical conditional Gibbs marginal $P_S^\mathrm{th}(\sigma_S\mid\sigma_E=\mathbf{1}) = \exp[-\beta_\mathrm{eff} H_P(\sigma_S,\sigma_E=\mathbf{1})]/Z$ (see main-text Effective thermal marginal subsection); \emph{quantum
 cond} uses the conditional diagonal of the $N$-qubit quantum reduced
 Gibbs state of $H(s_p)$; \emph{quantum unc} traces over $E$.}
@@ -565,25 +563,25 @@ Gibbs state of $H(s_p)$; \emph{quantum unc} traces over $E$.}
 \cmidrule(lr){3-4} \cmidrule(lr){5-6} \cmidrule(l){7-7}
 Sub-experiment & $n_{\mathrm{rel}}/n$ & median & max & median & max & median \\
 \midrule
-Phase 2 native   & $10/84$ & $4\!\times\!10^{-4}$ & $2.8\!\times\!10^{-3}$ & $0.028$ & $0.056$ & $0.031$ \\
-Phase 2 3-reg    & $18/84$ & $2\!\times\!10^{-4}$ & $1.7\!\times\!10^{-2}$ & $0.021$ & $0.448$ & $0.068$ \\
-Phase 3A sc$=0.35$ & $12/84$ & $1.3\!\times\!10^{-2}$ & $0.941$ & $0.222$ & $0.541$ & $0.260$ \\
-Phase 3A sc$=0.5$  & $10/84$ & $5.9\!\times\!10^{-3}$ & $0.967$ & $0.109$ & $0.357$ & $0.142$ \\
-Phase 3A sc$=0.75$ & $9/84$  & $1.8\!\times\!10^{-3}$ & $1.6\!\times\!10^{-2}$ & $0.047$ & $0.093$ & $0.047$ \\
-Phase 3B unscaled  & $5/7$   & $<\!3\!\times\!10^{-4}$ & $5.0\!\times\!10^{-4}$ & --- & --- & --- \\
-Phase 3B sc$=0.5$  & $6/7$   & $<\!1\!\times\!10^{-4}$ & $2.6\!\times\!10^{-4}$ & --- & --- & --- \\
-Phase 3C Adv.2     & $43/60$ & $\sim\!10^{-6}$        & $1.6\!\times\!10^{-2}$ & $0.0145$ & $0.0272$ & $0.504$ \\
-Phase 3C Sys~6.4   & $22/60$ & $5.2\!\times\!10^{-3}$ & $2.9\!\times\!10^{-2}$ & $0.0146$ & $0.0284$ & $0.173$ \\
-Phase 6 frustrated & $2/15$  & $0.320$ & $0.639$ & $0.029$ & $0.045$ & $0.025$ \\
+Native exact     & $10/84$ & $4\!\times\!10^{-4}$ & $2.8\!\times\!10^{-3}$ & $0.028$ & $0.056$ & $0.031$ \\
+3-regular exact  & $18/84$ & $2\!\times\!10^{-4}$ & $1.7\!\times\!10^{-2}$ & $0.021$ & $0.448$ & $0.068$ \\
+Scale $0.35$     & $12/84$ & $1.3\!\times\!10^{-2}$ & $0.941$ & $0.222$ & $0.541$ & $0.260$ \\
+Scale $0.5$      & $10/84$ & $5.9\!\times\!10^{-3}$ & $0.967$ & $0.109$ & $0.357$ & $0.142$ \\
+Scale $0.75$     & $9/84$  & $1.8\!\times\!10^{-3}$ & $1.6\!\times\!10^{-2}$ & $0.047$ & $0.093$ & $0.047$ \\
+Large-bath       & $5/7$   & $<\!3\!\times\!10^{-4}$ & $5.0\!\times\!10^{-4}$ & --- & --- & --- \\
+Large-bath sc$=0.5$ & $6/7$   & $<\!1\!\times\!10^{-4}$ & $2.6\!\times\!10^{-4}$ & --- & --- & --- \\
+Disorder Adv.2   & $43/60$ & $\sim\!10^{-6}$        & $1.6\!\times\!10^{-2}$ & $0.0145$ & $0.0272$ & $0.504$ \\
+Disorder Sys~6.4 & $22/60$ & $5.2\!\times\!10^{-3}$ & $2.9\!\times\!10^{-2}$ & $0.0146$ & $0.0284$ & $0.173$ \\
+Frustrated pilot & $2/15$  & $0.320$ & $0.639$ & $0.029$ & $0.045$ & $0.025$ \\
 \bottomrule
 \end{tabular}}
 \end{table}
 
-Phase 3B does not report quantum-target columns because the
+The large-bath rows do not report quantum-target columns because the
 $|S|=6$, $|E|=50$, $N=56$ quantum reduced Gibbs state requires exact
 diagonalisation of a $2^{56}\times 2^{56}$ dense Hamiltonian, which is
 intractable; the classical conditional Gibbs target is nonetheless
-below $10^{-3}$ on all $11$ relaxed Phase 3B conditions and is used
+below $10^{-3}$ on all $11$ relaxed large-bath conditions and is used
 as the $|S|=6$ anchor in the main-text Fig.~4 discussion.
 
 Two structural features of
@@ -592,12 +590,12 @@ conditional Gibbs is the tightest ferromagnetic target at every
 Hamiltonian scale, with $\ge 97\%$ of relaxed main-sweep conditions
 satisfying $D_\mathrm{TV}<0.05$ (see
 Sec.~\ref{sec:phase6_trapping} for the three exceptions).  Second, the
-conditional quantum reduced Gibbs target is tight on Phase 3C
+conditional quantum reduced Gibbs target is tight on the disorder sweep
 (max $\approx 0.029$ on both QPUs) but progressively looser as the
-Hamiltonian is scaled down, with the Phase 3A scale=$0.35$ row having
+Hamiltonian is scaled down, with the Hamiltonian-scale row at $s=0.35$
 all twelve relaxed conditions above $D_\mathrm{TV}=0.05$ and median
 $0.22$.  This is a consequence of scaling the problem Hamiltonian by
-$s$: at Phase 3A scale $s$, the effective transverse-to-longitudinal
+$s$: at Hamiltonian scale $s$, the effective transverse-to-longitudinal
 ratio seen by the reduced Gibbs state is $A(s_p)/(sB(s_p))$, which is
 $\approx 0.744$ at $s=0.35$, $\approx 0.521$ at $s=0.5$, and
 $\approx 0.347$ at $s=0.75$.  The conditional quantum diagonal
@@ -606,7 +604,7 @@ at smaller scale, mixing that the measured post-return-ramp readout
 does not display.  The classical conditional target, which is
 computed from $H_P$ alone, is unaffected.
 
-\subsection{Phase 3C per-$W$ disorder statistics}
+\subsection{Per-$W$ disorder statistics}
 \label{sec:phase6_phase3c}
 
 Table~\ref{tab:phase6_phase3c} reports the per-$W$ disorder statistics
@@ -616,7 +614,7 @@ column shows the same statistic at the corrected per-QPU $A/B$.
 
 \begin{table}[h]
 \centering
-\caption{Phase 3C disorder sweep, $N=12$, $|S|=4$, $\lambda=0.5$,
+\caption{Disorder sweep, $N=12$, $|S|=4$, $\lambda=0.5$,
 random 3-regular logical graph, 10 seeds per $W$.  Relaxation
 threshold $\mathcal{M}\le0.05$.}
 \label{tab:phase6_phase3c}
@@ -648,7 +646,7 @@ $1.25$  & $3/10$  & $8.6\!\times\!10^{-3}$        & $0.0162$ \\
 \subsection{Dynamical-trapping instances}
 \label{sec:phase6_trapping}
 
-Three relaxed Phase 6 main-sweep conditions have classical conditional
+Three relaxed thermal-marginal main-sweep conditions have classical conditional
 $D_\mathrm{TV}>0.05$.  Two are the same physical Ising instance
 ($\lambda=0.2$, $N=8$, $W=1.0$, seed~42 on a native Zephyr subgraph)
 submitted at Hamiltonian scales $0.35$ and $0.5$; the third is a
@@ -659,7 +657,7 @@ details.
 \begin{table}[h]
 \centering
 \caption{Relaxed conditions that fail the classical conditional Gibbs
-target at $D_\mathrm{TV}>0.05$ in the 494-condition Phase 6 main
+target at $D_\mathrm{TV}>0.05$ in the 494-condition thermal-marginal
 sweep.  All three are at $\lambda=0.2$, $N=8$, $W=1.0$ on native
 Zephyr.}
 \label{tab:phase6_trapping}
@@ -706,7 +704,7 @@ cleanly, and the same instance at scale $0.75$ also relaxes cleanly.
 
 As a multi-modal stress test of the two Gibbs targets, we generated
 random-3-regular instances with the same $(N=12, |S|=4, \lambda=0.5)$
-parameters as Phase 3C, then flipped the sign of each coupler
+parameters as the ferromagnetic disorder sweep, then flipped the sign of each coupler
 independently with probability $\tfrac12$ (sign seed $7777+k$ for the
 $k$-th disorder realisation).  This produces an Edwards--Anderson $\pm J$
 bond-disorder ensemble whose classical conditional target is generically
@@ -730,7 +728,7 @@ small; a larger frustrated campaign would be valuable future work.
 
 To verify that the trapping instances are not artefacts of the return
 ramp or of the hardware gauge, we repeated three representative test
-cases from Phase 3C and Phase 3A at return-ramp durations
+cases from the disorder and Hamiltonian-scale sweeps at return-ramp durations
 $t_\mathrm{r}\in\{1,5,20\}\,\mu\mathrm{s}$ and with four random
 spin-reversal gauges each (gauge seed $20260411$).  The test cases are
 (i) a clean relaxed ferro ($N=12$, $\lambda=0.5$, $W=0$, seed $42$,
@@ -744,28 +742,28 @@ setting.  The robustness panel confirms that the classification
 durations and gauge realisations, and in particular that the trapping
 instance remains in its non-thermal basin at all three ramp speeds
 tested.  The full $\mathcal{M}$ and $D_\mathrm{TV}$ tables for each
-(case, ramp, gauge) combination are stored in
-\texttt{data/raw/phase6\_gibbs/phase6\_robustness/comparison.json}.
+(case, ramp, gauge) combination are stored with the review-repository
+thermal-marginal robustness artefacts.
 
 \subsection{Readout confusion-matrix calibration}
 \label{sec:phase6_readout}
 
-The $|S|=6$ Phase 6 readout confusion matrix was measured by preparing
+The $|S|=6$ thermal-marginal readout confusion matrix was measured by preparing
 each of the $64$ computational basis states with a shallow pause
 (reverse anneal, $s_p=0.95$, $t_p=1\,\mu$s, $200$ reads per state) and
 recording the readout probability of every basis state.  We observed
 zero readout errors in $200$ reads for each of the $64$ preparations;
 no readout error correction is applied elsewhere in
-the Phase 6 analysis, and the multinomial sampling floor of
+the thermal-marginal analysis, and the multinomial sampling floor of
 the thermal-marginal comparisons described in the main-text Effective thermal marginal subsection is dominated by finite
 shot count rather than readout infidelity.  The full confusion matrix
-and the raw calibration reads are stored in
-\texttt{data/raw/phase6\_gibbs/phase1\_readout/}.
+and the raw calibration reads are stored with the review-repository
+readout-calibration artefacts.
 
-\section{Phase 7: Barrier crossing under mixed frustration}
+\section{Barrier crossing under mixed frustration}
 \label{sec:phase7}
 
-This section provides full details for the Phase 7 experiments
+This section provides full details for the mixed-frustration experiments
 summarised in the main-text Barrier crossing under mixed frustration
 subsection (Fig.~6).
 

@@ -25,8 +25,8 @@ initial state), and estimate
     \label{eq:beta_eff}
 \end{equation}
 with the result averaged over three probe qubits drawn from the solver
-nodelist.  For the Phase 6 main sweep on Advantage2
-(Phase~2, Phase~3A, Phase~3B and Phase~3C sub-experiments), taken after
+nodelist.  For the main thermal-marginal sweep on Advantage2
+(native exact-enumeration, random-regular exact-enumeration, Hamiltonian-scale, large-bath and disorder sub-experiments), taken after
 the Advantage2 solver rename and recalibration, this procedure gives
 $\beta_\mathrm{eff}=7.219\pm0.063$ at $s_p=0.4$; the frustrated pilot
 described below was submitted in a separate run and uses an independently
@@ -89,10 +89,9 @@ scales ($5/7$ unscaled and $6/7$ at scale $0.5$), and every one of
 those $11$ relaxed conditions satisfies
 $D_\mathrm{TV}<10^{-3}$ against the classical conditional target, with
 maxima $5.0\times10^{-4}$ and $2.6\times10^{-4}$ in the two sets
-respectively.  Across the full $494$-condition Phase 6 main sweep on
-Advantage2 (Phase 2 native Zephyr, Phase 2 random 3-regular, Phase 3A
-at three Hamiltonian scales, Phase 3B bath-ensemble, and Phase 3C
-disorder sub-experiments), $113/494$ conditions satisfy the relaxation
+respectively.  Across the full $494$-condition thermal-marginal sweep on
+Advantage2 (native Zephyr, random 3-regular, three Hamiltonian scales,
+large-bath native and disorder sub-experiments), $113/494$ conditions satisfy the relaxation
 criterion, and all but three of them have classical conditional
 $D_\mathrm{TV}$ below $0.05$; the three exceptions are the two severe
 wrong-basin trapping instances and one borderline miss described below.
@@ -129,19 +128,19 @@ marginal with $\sigma_E$ fixed to the prepared ordered state, and the
 \emph{unconditional} marginal that traces over all $2^{|E|}$ environment
 configurations.
 
-The conditional quantum reduced Gibbs target is tight in the Phase 3C
-disorder sweep but not uniformly across all scaled ferromagnetic
-conditions.  On the Phase 3C sweep at $N=12$, $|S|=4$, $\lambda=0.5$ on
+The conditional quantum reduced Gibbs target is tight in the disorder
+sweep but not uniformly across all scaled ferromagnetic
+conditions.  On this disorder sweep at $N=12$, $|S|=4$, $\lambda=0.5$ on
 a 3-regular logical graph, the median conditional quantum
 $D_\mathrm{TV}$ across 43 relaxed Advantage2 conditions is $0.0145$
 (max $0.0272$); on the 22 relaxed Advantage\_system6.4 conditions it is
 $0.0146$ (max $0.0284$).  Across the 102 relaxed $N\le12$ ferromagnetic
 main-sweep conditions for which the quantum target was computed,
 $73$ satisfy $D_\mathrm{TV}\le0.05$ and $29$ exceed it, with the excesses
-concentrated in the Phase 3A scaled sweeps.  Scaling the problem
+concentrated in the Hamiltonian-scale sweeps.  Scaling the problem
 Hamiltonian by a factor $s$ leaves $A(s_p)$ unchanged but multiplies
 $B(s_p)H_P$ by $s$, so the effective transverse-to-longitudinal ratio
-seen by the reduced Gibbs state is $A/(sB)$; at Phase 3A scale $0.35$
+seen by the reduced Gibbs state is $A/(sB)$; at scale $0.35$
 this is $0.260/0.35\approx0.74$, at scale $0.5$ it is
 $0.260/0.5\approx0.52$, and at scale $0.75$ it is
 $0.260/0.75\approx0.35$.  The conditional quantum diagonal therefore
@@ -149,7 +148,7 @@ accumulates increasingly large transverse-field-induced excited-state
 mixing at smaller scale, mixing that the measured post-return-ramp
 readout does not display.  The unconditional quantum reduced Gibbs
 marginal is a much worse target in every ferromagnetic regime (median
-$D_\mathrm{TV}\approx 0.5$ in the Phase 3C Advantage2 sweep), which is
+$D_\mathrm{TV}\approx 0.5$ in the Advantage2 disorder sweep), which is
 expected because the unconditional marginal averages over both ordered
 sectors of the global $Z_2$ and cannot encode the prepared all-up
 boundary.
@@ -189,7 +188,7 @@ two relaxed instances, but this subset is too small to establish the
 effect and motivates a dedicated frustrated campaign.
 
 \paragraph{Dynamical-trapping failure modes.}
-Three relaxed conditions in the 494-instance Phase 6 main sweep fail
+Three relaxed conditions in the 494-instance thermal-marginal sweep fail
 the thermal-marginal test against the classical conditional target at
 $D_\mathrm{TV}>0.05$.  Two of them are severe wrong-basin failures
 corresponding to the same physical instance, $\lambda=0.2$, $N=8$,
@@ -231,7 +230,7 @@ or the conditional quantum reduced Gibbs marginal.
 
 The same comparison also acts as a diagnostic outside the relaxed regime,
 though low pooled $D_\mathrm{TV}$ is not equivalent to relaxation.
-Among the $381$ Phase 6 main-sweep conditions with $\mathcal{M}>0.05$,
+Among the $381$ memory-retaining thermal-marginal conditions with $\mathcal{M}>0.05$,
 the classical conditional distance against the prepared-$E$ target
 spans $[0.003, 0.97]$ with median $0.35$; larger memory is generally
 accompanied by larger deviation from the conditional Gibbs prediction,
@@ -249,8 +248,8 @@ $A(s_p)/B(s_p)$.
 \centering
 \includegraphics[width=\textwidth,height=0.72\textheight,keepaspectratio]{figures/fig6_thermal_marginal.pdf}
 \caption{\textbf{Effective thermal marginal.}
-\textbf{a,}~Fraction of relaxed disorder realisations ($\mathcal{M}\le 0.05$) in the 10-seed Phase 3C disorder sweep ($N=12$, $|S|=4$, $\lambda=0.5$, 3-regular logical graph, Advantage2).  Relaxation fraction decreases from $10/10$ at $W=0$ to $4/10$ at $W=1.25$.
+\textbf{a,}~Fraction of relaxed disorder realisations ($\mathcal{M}\le 0.05$) in the 10-seed disorder sweep ($N=12$, $|S|=4$, $\lambda=0.5$, 3-regular logical graph, Advantage2).  Relaxation fraction decreases from $10/10$ at $W=0$ to $4/10$ at $W=1.25$.
 \textbf{b,}~Total-variation distance between the pooled subsystem marginal and the calibrated classical conditional Gibbs target at $\beta_\mathrm{eff}=7.219$ vs disorder strength.  Open circles: all 10 seeds; filled circles: relaxed subset only (error bars = s.d. across relaxed seeds).  Grey band: finite-shot reference $D_\mathrm{TV}\simeq\tfrac12\sqrt{K/N_\mathrm{reads}}\approx 0.026$ with $N_\mathrm{reads}=6000$, $K=2^{|S|}=16$; the relaxed subset stays at or below this scale across the sweep.
-\textbf{c,}~Scatter of $D_\mathrm{TV}$ vs $\mathcal{M}$ across all Phase 6 conditions.  Red: relaxed ($\mathcal{M}\le 0.05$); grey: memory-retaining.  Two top-left red outliers correspond to the same $\lambda=0.2$, $N=8$, $W=1$, seed~42 native Zephyr instance at Hamiltonian scales $0.35$ and $0.5$ (dynamical trapping, discussed in the body).  The memory and thermal-marginal criteria identify the same condition set apart from this trapping pair and one borderline $D_\mathrm{TV}=0.051$ miss.}
+\textbf{c,}~Scatter of $D_\mathrm{TV}$ vs $\mathcal{M}$ across all thermal-marginal conditions.  Red: relaxed ($\mathcal{M}\le 0.05$); grey: memory-retaining.  Two top-left red outliers correspond to the same $\lambda=0.2$, $N=8$, $W=1$, seed~42 native Zephyr instance at Hamiltonian scales $0.35$ and $0.5$ (dynamical trapping, discussed in the body).  The memory and thermal-marginal criteria identify the same condition set apart from this trapping pair and one borderline $D_\mathrm{TV}=0.051$ miss.}
 \label{fig:thermal_marginal}
 \end{figure*}

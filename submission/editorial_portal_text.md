@@ -32,7 +32,7 @@ A preprint version is available at arXiv:[INSERT ARXIV ID]. The submitted manusc
 
 Review-only repository: [INSERT LINK]
 
-The repository contains the raw D-Wave sampleset data, per-condition metadata, processed subsystem marginals, bootstrap resamples, Phase 6 thermal-marginal JSON artefacts, anneal-schedule coefficients, figure source data, and custom analysis code needed to reproduce the reported analyses and figures. Credentials, private account configuration and nonessential operational logs are excluded. A curated public release will be archived at Zenodo and linked from GitHub upon publication.
+The repository contains the raw D-Wave sampleset data, per-condition metadata, processed subsystem marginals, bootstrap resamples, thermal-marginal JSON artefacts, anneal-schedule coefficients, figure source data, and custom analysis code needed to reproduce the reported analyses and figures. Credentials, private account configuration and nonessential operational logs are excluded. A curated public release will be archived at Zenodo and linked from GitHub upon publication.
 
 ## Suggested Reviewer Template
 
