@@ -1,0 +1,36 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.eggs/
+dist/
+build/
+.venv/
+.env
+dwave.conf
+*.h5
+data/raw/
+data/processed/
+data/classical/
+results/
+.pytest_cache/
+.mypy_cache/
+*.pdf
+
+# macOS and editor noise
+.DS_Store
+*.swp
+*.swo
+
+# LaTeX build artefacts
+*.aux
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.toc
+*.synctex.gz
+
+# Local experiment scratch/backups
+*.bak
+*.bak_*

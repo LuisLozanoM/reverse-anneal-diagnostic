@@ -1,0 +1,237 @@
+{
+  "solver": "Advantage_system6.4",
+  "beta_probe": 4.289414846195372,
+  "rows": [
+    {
+      "W": 0.5,
+      "seed": 42,
+      "N": 12,
+      "memory": 0.641,
+      "entropy_nats": 0.6666400082635748,
+      "n_samples": 6000,
+      "beta_mpl": 2.2868248821874286,
+      "beta_probe": 4.289414846195372,
+      "ratio_mpl_over_probe": 0.5331321320472879
+    },
+    {
+      "W": 0.5,
+      "seed": 456,
+      "N": 12,
+      "memory": 0.514,
+      "entropy_nats": 0.5618256239923506,
+      "n_samples": 6000,
+      "beta_mpl": 0.7580286076964924,
+      "beta_probe": 4.289414846195372,
+      "ratio_mpl_over_probe": 0.17672074977053084
+    },
+    {
+      "W": 0.5,
+      "seed": 1024,
+      "N": 12,
+      "memory": 0.26799999999999996,
+      "entropy_nats": 0.4013011429818807,
+      "n_samples": 6000,
+      "beta_mpl": 2.3713145061183964,
+      "beta_probe": 4.289414846195372,
+      "ratio_mpl_over_probe": 0.5528293697732936
+    },
+    {
+      "W": 0.5,
+      "seed": 2025,
+      "N": 12,
+      "memory": 0.34750000000000003,
+      "entropy_nats": 0.36116236154877424,
+      "n_samples": 6000,
+      "beta_mpl": 2.664497131912431,
+      "beta_probe": 4.289414846195372,
+      "ratio_mpl_over_probe": 0.6211796311274924
+    },
+    {
+      "W": 0.5,
+      "seed": 999,
+      "N": 12,
+      "memory": 0.8275,
+      "entropy_nats": 0.6361286598639371,
+      "n_samples": 6000,
+      "beta_mpl": 0.46336074793662285,
+      "beta_probe": 4.289414846195372,
+      "ratio_mpl_over_probe": 0.10802423280359903
+    },
+    {
+      "W": 0.75,
+      "seed": 42,
+      "N": 12,
+      "memory": 0.7745,
+      "entropy_nats": 0.6988633541463753,
+      "n_samples": 6000,
+      "beta_mpl": 2.2447347089823126,
+      "beta_probe": 4.289414846195372,
+      "ratio_mpl_over_probe": 0.5233195644327451
+    },
+    {
+      "W": 0.75,
+      "seed": 456,
+      "N": 12,
+      "memory": 0.7195,
+      "entropy_nats": 0.6889704734639395,
+      "n_samples": 6000,
+      "beta_mpl": 0.3179671196164768,
+      "beta_probe": 4.289414846195372,
+      "ratio_mpl_over_probe": 0.07412832076582834
+    },
+    {
+      "W": 0.75,
+      "seed": 1024,
+      "N": 12,
+      "memory": 0.7909999999999999,
+      "entropy_nats": 0.6211397265898557,
+      "n_samples": 6000,
+      "beta_mpl": 2.415176263526735,
+      "beta_probe": 4.289414846195372,
+      "ratio_mpl_over_probe": 0.5630549504133295
+    },
+    {
+      "W": 0.75,
+      "seed": 2025,
+      "N": 12,
+      "memory": 0.673,
+      "entropy_nats": 0.5408824107491113,
+      "n_samples": 6000,
+      "beta_mpl": 2.684258350766437,
+      "beta_probe": 4.289414846195372,
+      "ratio_mpl_over_probe": 0.6257866042374806
+    },
+    {
+      "W": 0.75,
+      "seed": 999,
+      "N": 12,
+      "memory": 0.885,
+      "entropy_nats": 0.671834450517302,
+      "n_samples": 6000,
+      "beta_mpl": 0.36532263435303647,
+      "beta_probe": 4.289414846195372,
+      "ratio_mpl_over_probe": 0.0851684081517717
+    },
+    {
+      "W": 1.0,
+      "seed": 42,
+      "N": 12,
+      "memory": 0.9755,
+      "entropy_nats": 0.6461622854290083,
+      "n_samples": 6000,
+      "beta_mpl": 2.8852608675369558,
+      "beta_probe": 4.289414846195372,
+      "ratio_mpl_over_probe": 0.6726467294475204
+    },
+    {
+      "W": 1.0,
+      "seed": 456,
+      "N": 12,
+      "memory": 0.6679999999999999,
+      "entropy_nats": 0.6468538793633668,
+      "n_samples": 6000,
+      "beta_mpl": 0.7835143524125052,
+      "beta_probe": 4.289414846195372,
+      "ratio_mpl_over_probe": 0.18266229322805352
+    },
+    {
+      "W": 1.0,
+      "seed": 1024,
+      "N": 12,
+      "memory": 0.909,
+      "entropy_nats": 0.6239685112163519,
+      "n_samples": 6000,
+      "beta_mpl": 2.200835478774169,
+      "beta_probe": 4.289414846195372,
+      "ratio_mpl_over_probe": 0.5130852476827387
+    },
+    {
+      "W": 1.0,
+      "seed": 2025,
+      "N": 12,
+      "memory": 0.928,
+      "entropy_nats": 0.6849116400758762,
+      "n_samples": 6000,
+      "beta_mpl": 2.2623933801850122,
+      "beta_probe": 4.289414846195372,
+      "ratio_mpl_over_probe": 0.5274363663360077
+    },
+    {
+      "W": 1.0,
+      "seed": 111,
+      "N": 12,
+      "memory": 0.17400000000000002,
+      "entropy_nats": 0.326921592445325,
+      "n_samples": 6000,
+      "beta_mpl": 2.257870863935434,
+      "beta_probe": 4.289414846195372,
+      "ratio_mpl_over_probe": 0.5263820229321307
+    },
+    {
+      "W": 1.0,
+      "seed": 999,
+      "N": 12,
+      "memory": 0.5245,
+      "entropy_nats": 0.5437896092582787,
+      "n_samples": 6000,
+      "beta_mpl": 0.5128813714643701,
+      "beta_probe": 4.289414846195372,
+      "ratio_mpl_over_probe": 0.11956907640194464
+    },
+    {
+      "W": 1.25,
+      "seed": 42,
+      "N": 12,
+      "memory": 0.8829999999999999,
+      "entropy_nats": 0.6119284046573401,
+      "n_samples": 6000,
+      "beta_mpl": 2.6648549861574153,
+      "beta_probe": 4.289414846195372,
+      "ratio_mpl_over_probe": 0.6212630584148535
+    },
+    {
+      "W": 1.25,
+      "seed": 456,
+      "N": 12,
+      "memory": 0.21050000000000002,
+      "entropy_nats": 0.6995600755261201,
+      "n_samples": 6000,
+      "beta_mpl": 0.36403468698126223,
+      "beta_probe": 4.289414846195372,
+      "ratio_mpl_over_probe": 0.08486814636363604
+    },
+    {
+      "W": 1.25,
+      "seed": 1024,
+      "N": 12,
+      "memory": 0.9115,
+      "entropy_nats": 0.691123124569618,
+      "n_samples": 6000,
+      "beta_mpl": 1.4026977122085018,
+      "beta_probe": 4.289414846195372,
+      "ratio_mpl_over_probe": 0.32701376819560074
+    },
+    {
+      "W": 1.25,
+      "seed": 2025,
+      "N": 12,
+      "memory": 0.06899999999999998,
+      "entropy_nats": 0.6526097322162274,
+      "n_samples": 6000,
+      "beta_mpl": 1.7964563749602902,
+      "beta_probe": 4.289414846195372,
+      "ratio_mpl_over_probe": 0.4188115254353894
+    },
+    {
+      "W": 1.25,
+      "seed": 7,
+      "N": 12,
+      "memory": 0.2845,
+      "entropy_nats": 0.31677991039509606,
+      "n_samples": 6000,
+      "beta_mpl": 3.0992655868619248,
+      "beta_probe": 4.289414846195372,
+      "ratio_mpl_over_probe": 0.7225380845620267
+    }
+  ]
+}

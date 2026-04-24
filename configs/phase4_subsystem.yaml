@@ -1,0 +1,58 @@
+# Phase 4: Subsystem-bath experiment scans
+# Run on both QPUs, both graph types
+
+defaults:
+  num_reads: 2000
+  subsystem_size: 6
+  s_p: 0.4
+  t_hold: 100  # μs
+  t_ramp_down: 5.0
+  t_ramp_up: 5.0
+  reinitialize: true
+  initial_states: [all_up, all_down, random]  # initial states of S only
+  partition_strategy: geometric
+  disorder_seed: 42
+  graph_types: [native, random_regular]
+
+qpus:
+  primary:
+    solver: Advantage2_system1.13
+    topology: zephyr
+  secondary:
+    solver: Advantage_system6.4
+    topology: pegasus
+
+scans:
+  scan_E_size:
+    description: "Environment size sweep"
+    varied: n_environment
+    values: [4, 8, 16, 32, 50, 75, 100]
+    fixed:
+      coupling_lambda: 0.5
+      disorder_W: 0.0
+
+  scan_lambda:
+    description: "S-E coupling strength sweep"
+    varied: coupling_lambda
+    values: [0.0, 0.1, 0.2, 0.3, 0.5, 0.7, 1.0]
+    fixed:
+      n_environment: 50
+      disorder_W: 0.0
+
+  scan_W_subsystem:
+    description: "Disorder sweep with subsystem partition"
+    varied: disorder_W
+    values: [0.0, 0.1, 0.2, 0.5, 0.8, 1.0, 1.5, 2.0]
+    fixed:
+      n_environment: 50
+      coupling_lambda: 0.5
+
+  scan_crossover_grid:
+    description: "2D crossover diagram"
+    varied: [coupling_lambda, disorder_W]
+    grid:
+      coupling_lambda: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+      disorder_W: [0.0, 0.2, 0.4, 0.6, 0.8, 1.0, 1.2, 1.4, 1.6, 2.0]
+    fixed:
+      n_environment: 50
+    num_reads: 1000  # lower for grid scan

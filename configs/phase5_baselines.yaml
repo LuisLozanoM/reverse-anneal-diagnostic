@@ -1,0 +1,45 @@
+# Phase 5: Classical baseline configurations
+# Run on the same Hamiltonians as QPU experiments
+
+exact_diag:
+  description: "Full quantum simulation for small systems"
+  max_qubits: 22  # M3 Max 128GB limit
+  system_sizes: [8, 10, 12, 14, 16, 18, 20]
+  s_p_values: [0.3, 0.4, 0.5, 0.6]
+  t_hold_values: [10, 50, 100, 500]  # μs (converted to natural units)
+  initial_states: [all_up, all_down, random, neel]
+  subsystem_sizes: [4, 6]
+
+lindblad:
+  description: "Open quantum system with Markovian bath"
+  max_qubits: 14  # density matrix memory limit
+  system_sizes: [8, 10, 12, 14]
+  T_device_advantage2: 0.112  # kT/h in D-Wave units
+  T_device_system64: 0.221
+  bath_models:
+    - name: weak_coupling
+      gamma_base: 0.01
+    - name: moderate_coupling
+      gamma_base: 0.1
+    - name: strong_coupling
+      gamma_base: 1.0
+
+glauber:
+  description: "Classical single-spin-flip stochastic dynamics"
+  system_sizes: [8, 16, 32, 50, 75, 100, 150, 200]
+  T_device_advantage2: 0.112
+  T_device_system64: 0.221
+  n_sweeps: 10000
+  n_samples: 2000
+  equilibration_fraction: 0.5
+  seeds: [42, 123, 456, 789, 1024]  # multiple seeds for statistics
+
+spin_vector_mc:
+  description: "Classical spin-vector Monte Carlo"
+  system_sizes: [8, 16, 32, 50, 75, 100, 150, 200]
+  T_device_advantage2: 0.112
+  T_device_system64: 0.221
+  n_equilibration: 5000
+  n_samples: 2000
+  sample_interval: 10
+  seeds: [42, 123, 456, 789, 1024]

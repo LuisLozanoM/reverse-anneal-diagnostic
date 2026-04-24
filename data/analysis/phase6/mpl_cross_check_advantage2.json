@@ -1,0 +1,127 @@
+{
+  "solver": "Advantage2_system1",
+  "beta_probe": 7.219186155246177,
+  "rows": [
+    {
+      "W": 0.25,
+      "seed": 456,
+      "N": 12,
+      "memory": 0.831,
+      "entropy_nats": 0.6937016464580957,
+      "n_samples": 6000,
+      "beta_mpl": 0.27537845251564713,
+      "beta_probe": 7.219186155246177,
+      "ratio_mpl_over_probe": 0.038145359683726926
+    },
+    {
+      "W": 0.5,
+      "seed": 456,
+      "N": 12,
+      "memory": 0.9445,
+      "entropy_nats": 0.6621562988829495,
+      "n_samples": 6000,
+      "beta_mpl": 0.3628451339023951,
+      "beta_probe": 7.219186155246177,
+      "ratio_mpl_over_probe": 0.050261224201666524
+    },
+    {
+      "W": 0.5,
+      "seed": 999,
+      "N": 12,
+      "memory": 0.9590000000000001,
+      "entropy_nats": 0.6435904170319494,
+      "n_samples": 6000,
+      "beta_mpl": 1.8681715415440159,
+      "beta_probe": 7.219186155246177,
+      "ratio_mpl_over_probe": 0.2587786907512306
+    },
+    {
+      "W": 0.75,
+      "seed": 456,
+      "N": 12,
+      "memory": 0.9860000000000001,
+      "entropy_nats": 0.690455876430652,
+      "n_samples": 6000,
+      "beta_mpl": 0.5675261064017503,
+      "beta_probe": 7.219186155246177,
+      "ratio_mpl_over_probe": 0.07861358527087288
+    },
+    {
+      "W": 0.75,
+      "seed": 999,
+      "N": 12,
+      "memory": 0.9855,
+      "entropy_nats": 0.6605402030974555,
+      "n_samples": 6000,
+      "beta_mpl": 0.3865486585212203,
+      "beta_probe": 7.219186155246177,
+      "ratio_mpl_over_probe": 0.05354463096097275
+    },
+    {
+      "W": 1.0,
+      "seed": 456,
+      "N": 12,
+      "memory": 0.9395,
+      "entropy_nats": 0.6970702369608461,
+      "n_samples": 6000,
+      "beta_mpl": 3.573851135598744,
+      "beta_probe": 7.219186155246177,
+      "ratio_mpl_over_probe": 0.4950490344402089
+    },
+    {
+      "W": 1.0,
+      "seed": 999,
+      "N": 12,
+      "memory": 0.999,
+      "entropy_nats": 0.6453161913830311,
+      "n_samples": 6000,
+      "beta_mpl": 0.28740056396447966,
+      "beta_probe": 7.219186155246177,
+      "ratio_mpl_over_probe": 0.039810659786855045
+    },
+    {
+      "W": 1.25,
+      "seed": 42,
+      "N": 12,
+      "memory": 0.9575,
+      "entropy_nats": 0.6682986722607167,
+      "n_samples": 6000,
+      "beta_mpl": 0.806676966995467,
+      "beta_probe": 7.219186155246177,
+      "ratio_mpl_over_probe": 0.11174070728308556
+    },
+    {
+      "W": 1.25,
+      "seed": 456,
+      "N": 12,
+      "memory": 0.9770000000000001,
+      "entropy_nats": 0.6452530369693518,
+      "n_samples": 6000,
+      "beta_mpl": 0.1779550284295144,
+      "beta_probe": 7.219186155246177,
+      "ratio_mpl_over_probe": 0.024650289465135155
+    },
+    {
+      "W": 1.25,
+      "seed": 111,
+      "N": 12,
+      "memory": 0.6950000000000001,
+      "entropy_nats": 0.5611518712452264,
+      "n_samples": 6000,
+      "beta_mpl": 0.5170909315501713,
+      "beta_probe": 7.219186155246177,
+      "ratio_mpl_over_probe": 0.07162731649112576
+    },
+    {
+      "W": 1.25,
+      "seed": 999,
+      "N": 12,
+      "memory": 0.988,
+      "entropy_nats": 0.7536795235487976,
+      "n_samples": 6000,
+      "beta_mpl": 0.2938205518655351,
+      "beta_probe": 7.219186155246177,
+      "ratio_mpl_over_probe": 0.04069995502914354
+    }
+  ]
+}

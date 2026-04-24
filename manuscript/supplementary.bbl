@@ -1,0 +1,42 @@
+\begin{thebibliography}{1}
+
+\bibitem{grattan2025thermometry}
+George Grattan, Pratik Sathe, and Cristiano Nisoli.
+\newblock Classical thermometry of quantum annealers.
+\newblock {\em arXiv preprint arXiv:2512.03162}, 2025.
+\newblock arXiv:2512.03162.
+
+\bibitem{dwave2024system_docs}
+{D-Wave Quantum Inc.}
+\newblock {D-Wave} system documentation: Solver properties, anneal schedules
+  and qpu-specific parameters.
+\newblock
+  \url{https://docs.dwavequantum.com/docs/latest/doc_physical_properties.html},
+  2024.
+\newblock Accessed 2026.
+
+\bibitem{mehta2025dwave}
+Vrinda Mehta et~al.
+\newblock Understanding the physics of {D-Wave} annealers: From
+  {S}chr\"{o}dinger to {L}indblad to {M}arkovian dynamics.
+\newblock {\em Physical Review A}, 112:032616, 2025.
+\newblock arXiv:2503.21565.
+
+\bibitem{cai2014minor}
+Jun Cai, William~G. Macready, and Aidan Roy.
+\newblock A practical heuristic for finding graph minors.
+\newblock Preprint at \url{https://arxiv.org/abs/1406.2741}, 2014.
+\newblock arXiv:1406.2741.
+
+\bibitem{marshall2020embedding}
+Jeffrey Marshall, Andrea {Di Gioacchino}, and Eleanor~G. Rieffel.
+\newblock Perils of embedding for sampling problems.
+\newblock {\em Physical Review Research}, 2:023020, 2020.
+
+\bibitem{shin2014svmc}
+Seung~Woo Shin, Graeme Smith, John~A. Smolin, and Umesh Vazirani.
+\newblock How ``quantum'' is the {D-Wave} machine?
+\newblock Preprint at \url{https://arxiv.org/abs/1401.7087}, 2014.
+\newblock arXiv:1401.7087.
+
+\end{thebibliography}

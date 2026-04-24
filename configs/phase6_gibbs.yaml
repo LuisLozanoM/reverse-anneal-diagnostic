@@ -1,0 +1,200 @@
+# Phase 6: Gibbs-fit campaign configuration
+#
+# Sub-phases:
+#   1. Readout confusion-matrix calibration (6-qubit subsystem)
+#   2. Exact small-system benchmark (|S|=4, N in {8,10,12})
+#   3. Bath-ensemble effective H_S fit (|S|=6, |E|=50, ordered E)
+
+# D-Wave anneal schedule at the pause point (GHz)
+# Values pulled from the official D-Wave schedule spreadsheets in
+# data/raw/phase6_gibbs/phase1_calibration/schedules/schedule_at_sp0.4.json
+# (per-QPU; see scripts/phase6_gibbs_campaign.py::extract_solver_schedule).
+schedule:
+  s_p: 0.4
+  advantage2:
+    A_GHz: 0.96359208          # transverse-field prefactor at s_p=0.4
+    B_GHz: 3.70236136          # longitudinal-problem prefactor at s_p=0.4
+    A_over_B: 0.2602641898790776
+  advantage_system64:
+    A_GHz: 0.5002342
+    B_GHz: 1.932025
+    A_over_B: 0.258917042998926
+  # Legacy default (used when no per-QPU override is plumbed through) —
+  # kept as the Advantage2 value since that is the headline QPU.
+  A_s: 0.96359208
+  B_s: 3.70236136
+  A_over_B: 0.2602641898790776
+
+# Externally calibrated beta_eff from the single-qubit probe protocol
+calibration:
+  beta_eff:
+    advantage2: 6.93           # +/- 0.20
+    advantage_system64: 4.46   # +/- 0.26
+
+# QPU endpoints (verified available on LuisLozano's account 2026-04)
+qpus:
+  advantage2:
+    solver: Advantage2_system1
+    topology: zephyr
+  advantage_system64:
+    solver: Advantage_system6.4
+    topology: pegasus
+
+# Phase 2: exact small-system benchmark (QPU + ED + classical comparison)
+#
+# 4D sweep over (lambda, W, seed, N):
+#   - |S|=4 fixed, N in {6, 8, 10, 12} -> |E| in {2, 4, 6, 8}; N=14 excluded because
+#     full ED eigh on the 4096x4096 dense real matrix is 5 s and the 16384x16384
+#     matrix would be both ~30x slower and require ~4 GB per eigh.
+#   - coupling_lambda in {0.2, 0.3, 0.5} spans the main paper's crossover at
+#     lambda_c ~ 0.2; 0.3 is the sweet spot for non-trivial entropy in the
+#     relaxed regime (weaker E boundary field), 0.5 is the strong-field
+#     reference, 0.2 is at the crossover.
+#   - W in {0.0, 0.5, 1.0}; at W=0 we use 1 seed (deterministic h=0), at
+#     W>0 we use 3 disorder seeds for realisation averaging.
+#   - 3 S initial states (all-up, all-down, random), 2000 reads each,
+#     E always initialised to all-up (ordered bath).
+phase2:
+  subsystem_size: 4
+  system_sizes: [6, 8, 10, 12]
+  t_hold: 100     # microseconds
+  num_reads: 2000
+  initial_states: [all_up, all_down, random]
+  coupling_lambda_values: [0.2, 0.3, 0.5]
+  disorder_W_values: [0.0, 0.5, 1.0]
+  disorder_seeds_per_W:
+    "0.0": [42]
+    "0.5": [42, 123, 456]
+    "1.0": [42, 123, 456]
+  graph_type: native    # native Zephyr subgraph; random_regular results preserved separately
+  qpu: advantage2
+  memory_threshold: 0.05  # flag conditions with M > threshold as not fully relaxed
+  ed_cap_n: 12            # skip quantum-conditional marginal for N > ed_cap_n
+
+# Phase 3A: scaled Hamiltonian at |S|=4 (same sweep as Phase 2, but with
+# a global scaling factor applied to (h, J) before submission to move out
+# of the ground-state-dominated regime and produce non-trivial thermal
+# spread in the relaxed distributions).
+phase3a:
+  subsystem_size: 4
+  system_sizes: [6, 8, 10, 12]
+  t_hold: 100
+  num_reads: 2000
+  initial_states: [all_up, all_down, random]
+  coupling_lambda_values: [0.2, 0.3, 0.5]
+  disorder_W_values: [0.0, 0.5, 1.0]
+  disorder_seeds_per_W:
+    "0.0": [42]
+    "0.5": [42, 123, 456]
+    "1.0": [42, 123, 456]
+  graph_type: native
+  qpu: advantage2
+  memory_threshold: 0.05
+  ed_cap_n: 12
+  hamiltonian_scale: 0.5   # global scale factor on (h, J)
+  hamiltonian_scale_values: [0.35, 0.5, 0.75]  # extended scan (use via run_phase3a_scaled)
+
+# Phase 3B: bath-ensemble fit at the main-experiment scale (|S|=6, |E|=50).
+# Runs on native Zephyr with ordered (all-up) E preparation, then fits an
+# effective subsystem Hamiltonian H_S^eff = Σ h̃_i s_i + Σ J̃_ij s_i s_j
+# at fixed externally-calibrated β_eff.
+phase3b:
+  subsystem_size: 6
+  n_environment: 50
+  t_hold: 100
+  num_reads: 2000
+  initial_states: [all_up, all_down, random]
+  coupling_lambda: 0.5
+  disorder_W_values: [0.0, 0.5, 1.0]
+  disorder_seeds_per_W:
+    "0.0": [42]
+    "0.5": [42, 123, 456]
+    "1.0": [42, 123, 456]
+  E_preparation: all_up
+  graph_type: native
+  qpu: advantage2
+  memory_threshold: 0.05
+  fit_min_entropy: 0.01       # skip effective-H fit if pooled entropy < this
+  fit_l2_regularization: 0.01 # mild L2 penalty on fitted h, J
+
+# Phase 3C: disorder averaging at fixed N, |S|, lambda for the paper's
+# "D_TV vs W" figure. Per Codex Q4, use 10 seeds per W and
+# random_regular geometry (more reliable relaxation than native at small N).
+phase3c:
+  subsystem_size: 4
+  system_size: 12
+  t_hold: 100
+  num_reads: 2000
+  initial_states: [all_up, all_down, random]
+  coupling_lambda: 0.5
+  disorder_W_values: [0.0, 0.25, 0.5, 0.75, 1.0, 1.25]
+  disorder_seeds: [42, 123, 456, 789, 1024, 2025, 7, 31, 111, 999]
+  graph_type: random_regular  # random_regular relaxes more reliably at small N than native
+  qpu: advantage2
+  memory_threshold: 0.05
+  ed_cap_n: 12
+
+# Phase 1: readout confusion-matrix calibration
+phase1_readout:
+  subsystem_size: 6
+  num_reads_per_basis_state: 200
+  s_p_calibration: 0.95      # shallow pause, minimal transverse field
+  t_hold_calibration: 1.0    # minimum non-zero hold
+  qpu: advantage2
+
+# Phase 6 robustness panel: return-ramp robustness + gauge averaging on
+# representative test cases. Used to rebut the two residual reviewer
+# questions ("ramp dependence" and "gauge invariance") for the Nature
+# submission.
+phase6_robustness:
+  ramp_values_us: [1.0, 5.0, 20.0]   # return-ramp speeds to test
+  num_gauges: 4                       # random spin-reversal gauges per case
+  gauge_seed: 20260411                # deterministic gauge generation
+  num_reads: 2000
+  initial_states: [all_up, all_down, random]
+  recalibrate_per_ramp: true          # rerun beta_eff for each ramp value
+  test_cases:
+    - name: reference_relaxed
+      description: Random 3-regular ferro, clean relaxed case
+      coupling_lambda: 0.5
+      N: 12
+      W: 0.0
+      seed: 42
+      graph_type: random_regular
+      hamiltonian_scale: 1.0
+    - name: disordered_relaxed
+      description: Random 3-regular ferro, relaxed at W=1.0
+      coupling_lambda: 0.5
+      N: 12
+      W: 1.0
+      seed: 42
+      graph_type: random_regular
+      hamiltonian_scale: 1.0
+    - name: trapping_anomaly
+      description: Phase 3A scale=0.5 native that traps on all-down
+      coupling_lambda: 0.2
+      N: 8
+      W: 1.0
+      seed: 42
+      graph_type: native
+      hamiltonian_scale: 0.5
+  qpu: advantage2
+
+# Phase 6 frustrated pilot: Edwards-Anderson bond disorder (50/50 sign flips)
+# on top of random-regular N=12, lambda=0.5. Produces natively multi-modal
+# classical Gibbs targets that test the thermal-marginal claim outside the
+# ground-state-dominated ferromagnetic regime.
+phase6_frustrated:
+  subsystem_size: 4
+  system_size: 12
+  t_hold: 100
+  num_reads: 2000
+  initial_states: [all_up, all_down, random]
+  coupling_lambda: 0.5
+  disorder_W_values: [0.0, 0.5, 1.0]
+  disorder_seeds: [42, 123, 456, 789, 1024]
+  sign_seed_offset: 7777
+  sign_flip_probability: 0.5
+  graph_type: random_regular
+  qpu: advantage2
+  memory_threshold: 0.05

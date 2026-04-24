@@ -1,0 +1,66 @@
+# Phase 3: Global memory discovery scans
+# Run on both QPUs, both graph types
+
+defaults:
+  num_reads: 1000
+  t_ramp_down: 5.0  # μs
+  t_ramp_up: 5.0    # μs
+  reinitialize: true
+  initial_states: [all_up, all_down, random, neel]
+  disorder_seed: 42
+  graph_types: [native, random_regular]
+
+qpus:
+  primary:
+    solver: Advantage2_system1.13
+    topology: zephyr
+  secondary:
+    solver: Advantage_system6.4
+    topology: pegasus
+
+scans:
+  scan_tp:
+    description: "Pause time sweep"
+    varied: t_hold
+    values: [1, 2, 5, 10, 20, 50, 100, 200, 500, 1000]  # μs
+    fixed:
+      s_p: 0.4
+      n_qubits: 50
+      disorder_W: 0.0
+
+  scan_sp:
+    description: "Pause depth sweep"
+    varied: s_p
+    values: [0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.65, 0.70]
+    fixed:
+      t_hold: 100  # μs
+      n_qubits: 50
+      disorder_W: 0.0
+
+  scan_N:
+    description: "System size sweep"
+    varied: n_qubits
+    values: [8, 16, 32, 50, 75, 100, 150, 200]
+    fixed:
+      s_p: 0.4
+      t_hold: 100
+      disorder_W: 0.0
+
+  scan_W:
+    description: "Disorder strength sweep"
+    varied: disorder_W
+    values: [0.0, 0.1, 0.2, 0.5, 0.8, 1.0, 1.5, 2.0]
+    fixed:
+      s_p: 0.4
+      t_hold: 100
+      n_qubits: 50
+
+  scan_ramp:
+    description: "Return-ramp shape comparison"
+    varied: t_ramp_up
+    values: [1, 5, 20]  # μs
+    fixed:
+      s_p: 0.4
+      t_hold: 100
+      n_qubits: 50
+      disorder_W: 0.0
