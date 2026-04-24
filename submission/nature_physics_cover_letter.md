@@ -32,6 +32,6 @@ Optional reviewer suggestions and exclusions are provided in the submission form
 
 Sincerely,
 
-Luis Lozano  
-Independent Researcher  
-Corresponding author: lalozanom@gmail.com
+Luis Lozano
+Tecnologico de Monterrey, Campus Santa Fe, Mexico City, Mexico
+Corresponding author: lalozanom@tec.mx

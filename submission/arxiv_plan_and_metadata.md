@@ -24,6 +24,12 @@ Subsystem relaxation in a programmable quantum annealer
 Author:
 Luis Lozano
 
+Affiliation:
+Tecnologico de Monterrey, Campus Santa Fe, Mexico City, Mexico
+
+Email:
+lalozanom@tec.mx
+
 Comments:
 39 pages, 6 figures; 26-page Supplementary Information.
 
