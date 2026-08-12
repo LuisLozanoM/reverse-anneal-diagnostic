@@ -1,0 +1,2226 @@
+{
+  "beta_eff": 7.219186155246177,
+  "A_over_B": 0.2602641898790776,
+  "A_over_B_approx_legacy": 1.3333333333333333,
+  "s_p": 0.4,
+  "solver": "Advantage2_system1",
+  "memory_threshold": 0.05,
+  "per_seed_conditions": [
+    {
+      "N": 12,
+      "W": 0.0,
+      "seed": 42,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.0,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.0,
+      "vs_classical_conditional": {
+        "d_tv": 8.632543145000606e-13,
+        "symmetric_kl": -2.5252523052600275e-12,
+        "kl_exp_th": 8.633094239488944e-13,
+        "kl_th_exp": -5.913814034468949e-12,
+        "magnetization_mae": 4.317102231254921e-13,
+        "pair_correlation_mae": 8.633094239485217e-13
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.014502509886137315,
+        "symmetric_kl": 0.12626522587187455,
+        "kl_exp_th": 0.014608699207559346,
+        "kl_th_exp": 0.23792175253618975,
+        "magnetization_mae": 0.007311899095953145,
+        "pair_correlation_mae": 0.014542178694951743
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.5072799512247075,
+        "symmetric_kl": 5.799492251721662,
+        "kl_exp_th": 0.7078141186114473,
+        "kl_th_exp": 10.891170384831877,
+        "magnetization_mae": 1.0000000000000555,
+        "pair_correlation_mae": 0.01459988306483656
+      }
+    },
+    {
+      "N": 12,
+      "W": 0.0,
+      "seed": 123,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.008499999999999976,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.01945050295993931,
+      "vs_classical_conditional": {
+        "d_tv": 0.002833333333333233,
+        "symmetric_kl": 0.02431338141166504,
+        "kl_exp_th": 0.04578940800908618,
+        "kl_th_exp": 0.002837354814243899,
+        "magnetization_mae": 0.0056666666662348875,
+        "pair_correlation_mae": 8.633094239485217e-13
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.014502472525812424,
+        "symmetric_kl": 0.14436395045743866,
+        "kl_exp_th": 0.048010592279811165,
+        "kl_th_exp": 0.24071730863506619,
+        "magnetization_mae": 0.002543238063099723,
+        "pair_correlation_mae": 0.01454214896861078
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.5044465600673698,
+        "symmetric_kl": 1.563038071682271,
+        "kl_exp_th": 0.688363498294806,
+        "kl_th_exp": 2.4377126450697357,
+        "magnetization_mae": 0.994333333333321,
+        "pair_correlation_mae": 0.014599766701448635
+      }
+    },
+    {
+      "N": 12,
+      "W": 0.0,
+      "seed": 456,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.0010000000000000005,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.004300326208932554,
+      "vs_classical_conditional": {
+        "d_tv": 0.0004999999997122286,
+        "symmetric_kl": 0.003856362144112453,
+        "kl_exp_th": 0.007212599256900997,
+        "kl_th_exp": 0.0005001250313239094,
+        "magnetization_mae": 0.0009999999988486996,
+        "pair_correlation_mae": 5.759281940243e-13
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.011510664000693158,
+        "symmetric_kl": 0.10145900086926186,
+        "kl_exp_th": 0.01626860811232071,
+        "kl_th_exp": 0.18664939362620303,
+        "magnetization_mae": 0.00480149644492589,
+        "pair_correlation_mae": 0.011540731180365268
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.5052670289894035,
+        "symmetric_kl": 1.9753991732382694,
+        "kl_exp_th": 0.7004479455181679,
+        "kl_th_exp": 3.250350400958371,
+        "magnetization_mae": 0.9989999999999645,
+        "pair_correlation_mae": 0.011564237418935494
+      }
+    },
+    {
+      "N": 12,
+      "W": 0.0,
+      "seed": 789,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.030499999999999985,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.0923032905335888,
+      "vs_classical_conditional": {
+        "d_tv": 0.01633333333275779,
+        "symmetric_kl": 0.1501269003403031,
+        "kl_exp_th": 0.28378560798962166,
+        "kl_th_exp": 0.016468192690984557,
+        "magnetization_mae": 0.030749999998848643,
+        "pair_correlation_mae": 0.003833333332758019
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.01633274651070108,
+        "symmetric_kl": 0.20075418619696772,
+        "kl_exp_th": 0.1989944013441942,
+        "kl_th_exp": 0.20251397104974123,
+        "magnetization_mae": 0.024945847175836894,
+        "pair_correlation_mae": 0.007712645353483612
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.4911710373272389,
+        "symmetric_kl": 1.1321249612196556,
+        "kl_exp_th": 0.6333878015671923,
+        "kl_th_exp": 1.630862120872119,
+        "magnetization_mae": 0.9692499999999721,
+        "pair_correlation_mae": 0.0077456950239863835
+      }
+    },
+    {
+      "N": 12,
+      "W": 0.0,
+      "seed": 1024,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.0,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.0,
+      "vs_classical_conditional": {
+        "d_tv": 8.632543145000606e-13,
+        "symmetric_kl": -2.5252523052600275e-12,
+        "kl_exp_th": 8.633094239488944e-13,
+        "kl_th_exp": -5.913814034468949e-12,
+        "magnetization_mae": 4.317102231254921e-13,
+        "pair_correlation_mae": 8.633094239485217e-13
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.014509846534119518,
+        "symmetric_kl": 0.1263330015114536,
+        "kl_exp_th": 0.01461614384883468,
+        "kl_th_exp": 0.2380498591740725,
+        "magnetization_mae": 0.00731563583627004,
+        "pair_correlation_mae": 0.01454955880590414
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.5072898904229586,
+        "symmetric_kl": 5.799561623186432,
+        "kl_exp_th": 0.7078342909152244,
+        "kl_th_exp": 10.89128895545764,
+        "magnetization_mae": 1.0000000000000293,
+        "pair_correlation_mae": 0.014619888327776831
+      }
+    },
+    {
+      "N": 12,
+      "W": 0.0,
+      "seed": 2025,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.0,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.0,
+      "vs_classical_conditional": {
+        "d_tv": 8.632543145000606e-13,
+        "symmetric_kl": -2.5252523052600275e-12,
+        "kl_exp_th": 8.633094239488944e-13,
+        "kl_th_exp": -5.913814034468949e-12,
+        "magnetization_mae": 4.317102231254921e-13,
+        "pair_correlation_mae": 8.633094239485217e-13
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.014495218244881428,
+        "symmetric_kl": 0.12619786755259832,
+        "kl_exp_th": 0.014601300290409534,
+        "kl_th_exp": 0.23779443481478713,
+        "magnetization_mae": 0.00730818529567151,
+        "pair_correlation_mae": 0.014534843865010213
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.5072701062857236,
+        "symmetric_kl": 5.799423550222414,
+        "kl_exp_th": 0.707794138014645,
+        "kl_th_exp": 10.891052962430184,
+        "magnetization_mae": 0.9999999999999787,
+        "pair_correlation_mae": 0.014580067525385765
+      }
+    },
+    {
+      "N": 12,
+      "W": 0.0,
+      "seed": 7,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.0,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.0,
+      "vs_classical_conditional": {
+        "d_tv": 8.632543145000606e-13,
+        "symmetric_kl": -2.5252523052600275e-12,
+        "kl_exp_th": 8.633094239488944e-13,
+        "kl_th_exp": -5.913814034468949e-12,
+        "magnetization_mae": 4.317102231254921e-13,
+        "pair_correlation_mae": 8.633094239485217e-13
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.014502479533010008,
+        "symmetric_kl": 0.1262649454522096,
+        "kl_exp_th": 0.014608668407758272,
+        "kl_th_exp": 0.2379212224966609,
+        "magnetization_mae": 0.00731188364170654,
+        "pair_correlation_mae": 0.01454214816539027
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.5072798911364793,
+        "symmetric_kl": 5.7994918322448585,
+        "kl_exp_th": 0.7078139966593909,
+        "kl_th_exp": 10.891169667830326,
+        "magnetization_mae": 0.9999999999999607,
+        "pair_correlation_mae": 0.014599762144219616
+      }
+    },
+    {
+      "N": 12,
+      "W": 0.0,
+      "seed": 31,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.0,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.0,
+      "vs_classical_conditional": {
+        "d_tv": 8.632543145000606e-13,
+        "symmetric_kl": -2.5252523052600275e-12,
+        "kl_exp_th": 8.633094239488944e-13,
+        "kl_th_exp": -5.913814034468949e-12,
+        "magnetization_mae": 4.317102231254921e-13,
+        "pair_correlation_mae": 8.633094239485217e-13
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.01450257573153701,
+        "symmetric_kl": 0.12626583435602384,
+        "kl_exp_th": 0.014608766021937525,
+        "kl_th_exp": 0.23792290269011018,
+        "magnetization_mae": 0.007311932588200731,
+        "pair_correlation_mae": 0.014542244904309479
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.50728008500955,
+        "symmetric_kl": 5.79949318713643,
+        "kl_exp_th": 0.7078143901345177,
+        "kl_th_exp": 10.891171984138342,
+        "magnetization_mae": 1.0000000000000386,
+        "pair_correlation_mae": 0.014600152071079212
+      }
+    },
+    {
+      "N": 12,
+      "W": 0.0,
+      "seed": 111,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.008000000000000004,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.02008437084212584,
+      "vs_classical_conditional": {
+        "d_tv": 0.002833333332757756,
+        "symmetric_kl": 0.023996447466047992,
+        "kl_exp_th": 0.045155540126900096,
+        "kl_th_exp": 0.0028373548051958894,
+        "magnetization_mae": 0.005583333332182028,
+        "pair_correlation_mae": 0.00016666666609131223
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.011510053811900822,
+        "symmetric_kl": 0.11539651979638585,
+        "kl_exp_th": 0.04184220723734812,
+        "kl_th_exp": 0.1889508323554236,
+        "magnetization_mae": 0.0013417852349273396,
+        "pair_correlation_mae": 0.01137402418774508
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.5029336145790742,
+        "symmetric_kl": 1.5398401058825535,
+        "kl_exp_th": 0.6855740404829479,
+        "kl_th_exp": 2.394106171282159,
+        "magnetization_mae": 0.9944166666667096,
+        "pair_correlation_mae": 0.011397407652513292
+      }
+    },
+    {
+      "N": 12,
+      "W": 0.0,
+      "seed": 999,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.01649999999999998,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.034101386721415924,
+      "vs_classical_conditional": {
+        "d_tv": 0.005499999999712175,
+        "symmetric_kl": 0.04902798703558649,
+        "kl_exp_th": 0.0925407933941156,
+        "kl_th_exp": 0.005515180677057381,
+        "magnetization_mae": 0.010999999998848597,
+        "pair_correlation_mae": 5.760392163267625e-13
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.011510719240601649,
+        "symmetric_kl": 0.1337966865380556,
+        "kl_exp_th": 0.07598573406445729,
+        "kl_th_exp": 0.19160763901165392,
+        "magnetization_mae": 0.00519847323899103,
+        "pair_correlation_mae": 0.011540786648082668
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.5002691486465752,
+        "symmetric_kl": 1.3692112477231606,
+        "kl_exp_th": 0.6706511737962784,
+        "kl_th_exp": 2.0677713216500426,
+        "magnetization_mae": 0.988999999999975,
+        "pair_correlation_mae": 0.011568509713523986
+      }
+    },
+    {
+      "N": 12,
+      "W": 0.25,
+      "seed": 42,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.0,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.0,
+      "vs_classical_conditional": {
+        "d_tv": 1.0431149263661722e-11,
+        "symmetric_kl": -1.6733605438896275e-11,
+        "kl_exp_th": 1.0431211450222526e-11,
+        "kl_th_exp": -4.389842232801508e-11,
+        "magnetization_mae": 5.215855525264601e-12,
+        "pair_correlation_mae": 1.0431100427865658e-11
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.01678028907695856,
+        "symmetric_kl": 0.14744955611674743,
+        "kl_exp_th": 0.0169226732064466,
+        "kl_th_exp": 0.27797643902704827,
+        "magnetization_mae": 0.008468838907675968,
+        "pair_correlation_mae": 0.016831552769294655
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.9998852685704096,
+        "symmetric_kl": 16.004244097327344,
+        "kl_exp_th": 9.072916555757722,
+        "kl_th_exp": 22.935571638896967,
+        "magnetization_mae": 1.9933208350367675,
+        "pair_correlation_mae": 0.012830287058167874
+      }
+    },
+    {
+      "N": 12,
+      "W": 0.25,
+      "seed": 123,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.0004999999999999725,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.0016165719017076775,
+      "vs_classical_conditional": {
+        "d_tv": 0.00016666666666663687,
+        "symmetric_kl": 0.0011938752289569826,
+        "kl_exp_th": 0.002221069926405046,
+        "kl_th_exp": 0.00016668053150891928,
+        "magnetization_mae": 0.00033333333010465704,
+        "pair_correlation_mae": 6.4572791558248355e-12
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.01510725920675193,
+        "symmetric_kl": 0.1326884782094531,
+        "kl_exp_th": 0.016665747823262113,
+        "kl_th_exp": 0.24871120859564405,
+        "magnetization_mae": 0.0072878797524747185,
+        "pair_correlation_mae": 0.015151380099801178
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.1972069285184559,
+        "symmetric_kl": 0.7867091167036501,
+        "kl_exp_th": 0.21849635776981385,
+        "kl_th_exp": 1.3549218756374863,
+        "magnetization_mae": 0.37456739880034007,
+        "pair_correlation_mae": 0.015081685754167276
+      }
+    },
+    {
+      "N": 12,
+      "W": 0.25,
+      "seed": 456,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.831,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6937016464580957,
+      "vs_classical_conditional": {
+        "d_tv": 0.478333333225087,
+        "symmetric_kl": 5.473809477992024,
+        "kl_exp_th": 10.296892493917287,
+        "kl_th_exp": 0.6507264620667608,
+        "magnetization_mae": 0.9565833331137633,
+        "pair_correlation_mae": 0.00016666665406739334
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.4783325486281073,
+        "symmetric_kl": 4.173355912947966,
+        "kl_exp_th": 7.4931444328580135,
+        "kl_th_exp": 0.8535673930379183,
+        "magnetization_mae": 0.9500484333043273,
+        "pair_correlation_mae": 0.012822104755104776
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.24165489281751096,
+        "symmetric_kl": 0.1961430427598866,
+        "kl_exp_th": 0.1359668806558055,
+        "kl_th_exp": 0.2563192048639677,
+        "magnetization_mae": 0.47407313256059164,
+        "pair_correlation_mae": 0.01111690021149129
+      }
+    },
+    {
+      "N": 12,
+      "W": 0.25,
+      "seed": 789,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.0,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.0,
+      "vs_classical_conditional": {
+        "d_tv": 7.489530640679698e-13,
+        "symmetric_kl": -1.845820543868561e-12,
+        "kl_exp_th": 7.489564524124111e-13,
+        "kl_th_exp": -4.440597540149533e-12,
+        "magnetization_mae": 3.787803404264878e-13,
+        "pair_correlation_mae": 7.46680495211649e-13
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.011211274506518971,
+        "symmetric_kl": 0.09632648139015978,
+        "kl_exp_th": 0.011274594555001871,
+        "kl_th_exp": 0.1813783682253177,
+        "magnetization_mae": 0.005645678668310172,
+        "pair_correlation_mae": 0.011237497776114547
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.01125607649539602,
+        "symmetric_kl": 0.09668476712524322,
+        "kl_exp_th": 0.011319905552934174,
+        "kl_th_exp": 0.18204962869755228,
+        "magnetization_mae": 0.005693413830627381,
+        "pair_correlation_mae": 0.011265803595690904
+      }
+    },
+    {
+      "N": 12,
+      "W": 0.25,
+      "seed": 1024,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.0,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.0,
+      "vs_classical_conditional": {
+        "d_tv": 4.632245903010355e-12,
+        "symmetric_kl": -8.69708942841691e-12,
+        "kl_exp_th": 4.632294547956732e-12,
+        "kl_th_exp": -2.2026473404790555e-11,
+        "magnetization_mae": 2.3164525853047735e-12,
+        "pair_correlation_mae": 4.632239036794772e-12
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.015858191897794915,
+        "symmetric_kl": 0.13872146572377114,
+        "kl_exp_th": 0.015985278388292567,
+        "kl_th_exp": 0.26145765305924973,
+        "magnetization_mae": 0.008006500261019206,
+        "pair_correlation_mae": 0.015908544323323132
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.9380813552359939,
+        "symmetric_kl": 12.027985116143663,
+        "kl_exp_th": 2.7819339368263805,
+        "kl_th_exp": 21.274036295460945,
+        "magnetization_mae": 1.8682775797318385,
+        "pair_correlation_mae": 0.0137155493028047
+      }
+    },
+    {
+      "N": 12,
+      "W": 0.25,
+      "seed": 2025,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.0004999999999999725,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.0016165719017076775,
+      "vs_classical_conditional": {
+        "d_tv": 0.00016666666666651972,
+        "symmetric_kl": 0.0011938752356062652,
+        "kl_exp_th": 0.0022210699211370278,
+        "kl_th_exp": 0.00016668055007550272,
+        "magnetization_mae": 0.00033333333273904975,
+        "pair_correlation_mae": 1.1883827255587676e-12
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.013892838523326147,
+        "symmetric_kl": 0.12165376922445836,
+        "kl_exp_th": 0.015569762888013493,
+        "kl_th_exp": 0.22773777556090324,
+        "magnetization_mae": 0.006665133438250981,
+        "pair_correlation_mae": 0.01392699614664574
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.9984292432395032,
+        "symmetric_kl": 7.680766410592472,
+        "kl_exp_th": 6.565657328926748,
+        "kl_th_exp": 8.795875492258196,
+        "magnetization_mae": 1.9890712342129877,
+        "pair_correlation_mae": 0.015435820174709125
+      }
+    },
+    {
+      "N": 12,
+      "W": 0.25,
+      "seed": 7,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.0,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.0,
+      "vs_classical_conditional": {
+        "d_tv": 4.601844426169491e-12,
+        "symmetric_kl": -8.772062682821723e-12,
+        "kl_exp_th": 4.6018744370818624e-12,
+        "kl_th_exp": -2.2145999802725308e-11,
+        "magnetization_mae": 2.300992729686868e-12,
+        "pair_correlation_mae": 4.601874437071274e-12
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.01518004913529734,
+        "symmetric_kl": 0.13266663014187208,
+        "kl_exp_th": 0.015296445518661182,
+        "kl_th_exp": 0.250036814765083,
+        "magnetization_mae": 0.007653355475608109,
+        "pair_correlation_mae": 0.015221479686515734
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.934740721329476,
+        "symmetric_kl": 11.956835135244773,
+        "kl_exp_th": 2.729387041041966,
+        "kl_th_exp": 21.18428322944758,
+        "magnetization_mae": 1.8612508337733358,
+        "pair_correlation_mae": 0.01437453806703389
+      }
+    },
+    {
+      "N": 12,
+      "W": 0.25,
+      "seed": 31,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.0,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.0,
+      "vs_classical_conditional": {
+        "d_tv": 6.2965075545058665e-12,
+        "symmetric_kl": -1.0122023158866224e-11,
+        "kl_exp_th": 6.296518861878936e-12,
+        "kl_th_exp": -2.6540565179611384e-11,
+        "magnetization_mae": 3.1483149420807877e-12,
+        "pair_correlation_mae": 6.296518861859113e-12
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.014798752871275312,
+        "symmetric_kl": 0.12924791217276135,
+        "kl_exp_th": 0.01490934687305073,
+        "kl_th_exp": 0.24358647747247197,
+        "magnetization_mae": 0.007457437596448208,
+        "pair_correlation_mae": 0.014836809258960193
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.3572886539018734,
+        "symmetric_kl": 3.962559604617273,
+        "kl_exp_th": 0.4420595729593755,
+        "kl_th_exp": 7.48305963627517,
+        "magnetization_mae": 0.6974280066415316,
+        "pair_correlation_mae": 0.014952062586091941
+      }
+    },
+    {
+      "N": 12,
+      "W": 0.25,
+      "seed": 111,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.0024999999999999736,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.009045191211976798,
+      "vs_classical_conditional": {
+        "d_tv": 0.0011666666665882581,
+        "symmetric_kl": 0.009492824640279333,
+        "kl_exp_th": 0.017818301542172267,
+        "kl_th_exp": 0.001167347738386399,
+        "magnetization_mae": 0.0023333333319291716,
+        "pair_correlation_mae": 2.4765189898801054e-12
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.011925402383047876,
+        "symmetric_kl": 0.10954384293112125,
+        "kl_exp_th": 0.02418781908409869,
+        "kl_th_exp": 0.1948998667781438,
+        "magnetization_mae": 0.003674789252657046,
+        "pair_correlation_mae": 0.011955092882945459
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.07394896146176072,
+        "symmetric_kl": 0.22801435525599123,
+        "kl_exp_th": 0.07217198596729937,
+        "kl_th_exp": 0.3838567245446831,
+        "magnetization_mae": 0.1307897327059854,
+        "pair_correlation_mae": 0.011947336853071791
+      }
+    },
+    {
+      "N": 12,
+      "W": 0.25,
+      "seed": 999,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.012000000000000005,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.02607783298339765,
+      "vs_classical_conditional": {
+        "d_tv": 0.00399999999973701,
+        "symmetric_kl": 0.03501679606073367,
+        "kl_exp_th": 0.06602557073802551,
+        "kl_th_exp": 0.004008021383441837,
+        "magnetization_mae": 0.007999999998715202,
+        "pair_correlation_mae": 1.4049872376631356e-12
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.011993155878163821,
+        "symmetric_kl": 0.12524951402571613,
+        "kl_exp_th": 0.0517593484281455,
+        "kl_th_exp": 0.19873967962328676,
+        "magnetization_mae": 0.0026672381210517127,
+        "pair_correlation_mae": 0.012024020591089849
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.9714024702024777,
+        "symmetric_kl": 4.527134054242679,
+        "kl_exp_th": 3.6643574593509456,
+        "kl_th_exp": 5.389910649134412,
+        "magnetization_mae": 1.9367814068625753,
+        "pair_correlation_mae": 0.01138923198883405
+      }
+    },
+    {
+      "N": 12,
+      "W": 0.5,
+      "seed": 42,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.15549999999999997,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.2038784036511629,
+      "vs_classical_conditional": {
+        "d_tv": 0.051833333333251505,
+        "symmetric_kl": 0.5214265931547435,
+        "kl_exp_th": 0.9896282030423651,
+        "kl_th_exp": 0.05322498326712193,
+        "magnetization_mae": 0.10366666658307372,
+        "pair_correlation_mae": 1.6685182864980183e-10
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.05183327695941383,
+        "symmetric_kl": 0.5321466269412252,
+        "kl_exp_th": 0.6802598110186968,
+        "kl_th_exp": 0.3840334428637536,
+        "magnetization_mae": 0.09365420855076331,
+        "pair_correlation_mae": 0.01988158578509917
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.9481666510887565,
+        "symmetric_kl": 9.976245666259516,
+        "kl_exp_th": 16.842299205467818,
+        "kl_th_exp": 3.110192127051215,
+        "magnetization_mae": 1.8905887021368188,
+        "pair_correlation_mae": 0.011436167266067498
+      }
+    },
+    {
+      "N": 12,
+      "W": 0.5,
+      "seed": 123,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.0,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.0,
+      "vs_classical_conditional": {
+        "d_tv": 1.3024201482040282e-10,
+        "symmetric_kl": 1.59752534276653e-11,
+        "kl_exp_th": 1.30242039384098e-10,
+        "kl_th_exp": -9.829153252876741e-11,
+        "magnetization_mae": 6.512271277792081e-11,
+        "pair_correlation_mae": 1.302423724425239e-10
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.016300137546562503,
+        "symmetric_kl": 0.14317856912307678,
+        "kl_exp_th": 0.0164344462891564,
+        "kl_th_exp": 0.26992269195699714,
+        "magnetization_mae": 0.008230337785567643,
+        "pair_correlation_mae": 0.01635236208088629
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.06450633836467887,
+        "symmetric_kl": 0.6256327112137139,
+        "kl_exp_th": 0.0666809086674069,
+        "kl_th_exp": 1.1845845137600208,
+        "magnetization_mae": 0.10532147531135505,
+        "pair_correlation_mae": 0.016375315448901733
+      }
+    },
+    {
+      "N": 12,
+      "W": 0.5,
+      "seed": 456,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.9445,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6621562988829495,
+      "vs_classical_conditional": {
+        "d_tv": 0.6238332949991944,
+        "symmetric_kl": 5.484360504601634,
+        "kl_exp_th": 9.990998750537802,
+        "kl_th_exp": 0.9777222586654665,
+        "magnetization_mae": 1.2476665897913084,
+        "pair_correlation_mae": 3.4186501777592565e-10
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.623833148138204,
+        "symmetric_kl": 5.113752516907218,
+        "kl_exp_th": 9.01416461935746,
+        "kl_th_exp": 1.213340414456976,
+        "magnetization_mae": 1.239999131181097,
+        "pair_correlation_mae": 0.015216483105306525
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.24234477224371045,
+        "symmetric_kl": 0.25031860220107316,
+        "kl_exp_th": 0.1917476493877826,
+        "kl_th_exp": 0.3088895550143637,
+        "magnetization_mae": 0.477281347899903,
+        "pair_correlation_mae": 0.010676652310349791
+      }
+    },
+    {
+      "N": 12,
+      "W": 0.5,
+      "seed": 789,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.0,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.0,
+      "vs_classical_conditional": {
+        "d_tv": 1.9318096278535132e-12,
+        "symmetric_kl": -3.8167447430099644e-12,
+        "kl_exp_th": 1.9317880628496384e-12,
+        "kl_th_exp": -9.565277548869567e-12,
+        "magnetization_mae": 9.658940314238862e-13,
+        "pair_correlation_mae": 1.9317880628477724e-12
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.011101234172023636,
+        "symmetric_kl": 0.0955439193110764,
+        "kl_exp_th": 0.01116331273207314,
+        "kl_th_exp": 0.17992452589007968,
+        "magnetization_mae": 0.005586634300053822,
+        "pair_correlation_mae": 0.011124904838695418
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.011125984873505107,
+        "symmetric_kl": 0.09577235883784523,
+        "kl_exp_th": 0.011188341594560471,
+        "kl_th_exp": 0.18035637608112998,
+        "magnetization_mae": 0.0055991645073741325,
+        "pair_correlation_mae": 0.011149755655319763
+      }
+    },
+    {
+      "N": 12,
+      "W": 0.5,
+      "seed": 1024,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.006000000000000003,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.015551885151413843,
+      "vs_classical_conditional": {
+        "d_tv": 0.0019999999998964587,
+        "symmetric_kl": 0.01625090966321747,
+        "kl_exp_th": 0.030499816752776094,
+        "kl_th_exp": 0.0020020025736588493,
+        "magnetization_mae": 0.0037499999776798576,
+        "pair_correlation_mae": 0.0005000000145615376
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.01761656788261004,
+        "symmetric_kl": 0.1643187950986773,
+        "kl_exp_th": 0.03440100451801435,
+        "kl_th_exp": 0.29423658567934025,
+        "magnetization_mae": 0.0051626228806913865,
+        "pair_correlation_mae": 0.017184859824325327
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.993587053234601,
+        "symmetric_kl": 5.949557151815293,
+        "kl_exp_th": 5.399536894686396,
+        "kl_th_exp": 6.499577408944191,
+        "magnetization_mae": 1.9809366144826506,
+        "pair_correlation_mae": 0.012261304768548495
+      }
+    },
+    {
+      "N": 12,
+      "W": 0.5,
+      "seed": 2025,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.0,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.0,
+      "vs_classical_conditional": {
+        "d_tv": 3.703924108042149e-12,
+        "symmetric_kl": -6.262937604554927e-12,
+        "kl_exp_th": 3.703926054761307e-12,
+        "kl_th_exp": -1.622980126387116e-11,
+        "magnetization_mae": 1.8519630273772236e-12,
+        "pair_correlation_mae": 3.703926054754447e-12
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.013504450320675836,
+        "symmetric_kl": 0.11738671731958172,
+        "kl_exp_th": 0.013596464751817795,
+        "kl_th_exp": 0.22117696988734564,
+        "magnetization_mae": 0.006798421850284869,
+        "pair_correlation_mae": 0.013534836709585349
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.9999979610506731,
+        "symmetric_kl": 18.01060454348943,
+        "kl_exp_th": 13.103075919149193,
+        "kl_th_exp": 22.918133167829666,
+        "magnetization_mae": 1.9916277955683768,
+        "pair_correlation_mae": 0.016609752919629923
+      }
+    },
+    {
+      "N": 12,
+      "W": 0.5,
+      "seed": 7,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.0004999999999999725,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.0016165719017076775,
+      "vs_classical_conditional": {
+        "d_tv": 0.00016666666666646633,
+        "symmetric_kl": 0.0011938752077027134,
+        "kl_exp_th": 0.0022210699563323362,
+        "kl_th_exp": 0.00016668045907309052,
+        "magnetization_mae": 0.00033333331513835107,
+        "pair_correlation_mae": 3.638955803353383e-11
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.016307531433178927,
+        "symmetric_kl": 0.14421130841869959,
+        "kl_exp_th": 0.01790414328127938,
+        "kl_th_exp": 0.2705184735561198,
+        "magnetization_mae": 0.007889608061031256,
+        "pair_correlation_mae": 0.01635277814028696
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.9948975992257993,
+        "symmetric_kl": 7.022272266403389,
+        "kl_exp_th": 5.308755329543394,
+        "kl_th_exp": 8.735789203263385,
+        "magnetization_mae": 1.9824655912701452,
+        "pair_correlation_mae": 0.014409218656732337
+      }
+    },
+    {
+      "N": 12,
+      "W": 0.5,
+      "seed": 31,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.0010000000000000005,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.0030020669608206213,
+      "vs_classical_conditional": {
+        "d_tv": 0.0003333333333332601,
+        "symmetric_kl": 0.002503302784537457,
+        "kl_exp_th": 0.004673216783012912,
+        "kl_th_exp": 0.00033338878606200146,
+        "magnetization_mae": 0.0006666666163897272,
+        "pair_correlation_mae": 1.005535654741152e-10
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.01582030759434557,
+        "symmetric_kl": 0.14102917594893022,
+        "kl_exp_th": 0.01930005341651885,
+        "kl_th_exp": 0.2627582984813416,
+        "magnetization_mae": 0.007303927843954089,
+        "pair_correlation_mae": 0.01585997635648299
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.23278881159447445,
+        "symmetric_kl": 0.8696962855521264,
+        "kl_exp_th": 0.26284633263002816,
+        "kl_th_exp": 1.4765462384742247,
+        "magnetization_mae": 0.4451587002442977,
+        "pair_correlation_mae": 0.016068359952363814
+      }
+    },
+    {
+      "N": 12,
+      "W": 0.5,
+      "seed": 111,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.017000000000000008,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.05676599239673108,
+      "vs_classical_conditional": {
+        "d_tv": 0.010166666666645344,
+        "symmetric_kl": 0.09377442944237792,
+        "kl_exp_th": 0.17733015874527966,
+        "kl_th_exp": 0.010218700139476166,
+        "magnetization_mae": 0.020333333322718694,
+        "pair_correlation_mae": 2.1143327829283482e-11
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.012648133707972044,
+        "symmetric_kl": 0.17981849234079839,
+        "kl_exp_th": 0.14265615803514367,
+        "kl_th_exp": 0.21698082664645313,
+        "magnetization_mae": 0.01396281830274973,
+        "pair_correlation_mae": 0.012678569343035129
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.012677545523695623,
+        "symmetric_kl": 0.11207709419132017,
+        "kl_exp_th": 0.01521462759372481,
+        "kl_th_exp": 0.20893956078891554,
+        "magnetization_mae": 0.004986792147897767,
+        "pair_correlation_mae": 0.012708143867814345
+      }
+    },
+    {
+      "N": 12,
+      "W": 0.5,
+      "seed": 999,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.959,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6435904170319494,
+      "vs_classical_conditional": {
+        "d_tv": 0.3206666666601428,
+        "symmetric_kl": 3.563337900782968,
+        "kl_exp_th": 6.740032447840116,
+        "kl_th_exp": 0.38664335372581937,
+        "magnetization_mae": 0.6370833333296544,
+        "pair_correlation_mae": 0.002833333327065405
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.31783027880733317,
+        "symmetric_kl": 1.9586187802770358,
+        "kl_exp_th": 3.4161747883246356,
+        "kl_th_exp": 0.5010627722294362,
+        "magnetization_mae": 0.6306280196927452,
+        "pair_correlation_mae": 0.009996905839633382
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.6815193051178674,
+        "symmetric_kl": 2.849883757642662,
+        "kl_exp_th": 4.38796367150441,
+        "kl_th_exp": 1.3118038437809139,
+        "magnetization_mae": 1.3558547280292799,
+        "pair_correlation_mae": 0.00863368615976473
+      }
+    },
+    {
+      "N": 12,
+      "W": 0.75,
+      "seed": 42,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.121,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.17110928343404325,
+      "vs_classical_conditional": {
+        "d_tv": 0.040999999940501464,
+        "symmetric_kl": 0.4074074087110931,
+        "kl_exp_th": 0.7729506078152107,
+        "kl_th_exp": 0.041864209606975476,
+        "magnetization_mae": 0.08199999828283863,
+        "pair_correlation_mae": 3.1956582750384635e-09
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.04089869456878878,
+        "symmetric_kl": 0.3383428961897036,
+        "kl_exp_th": 0.2293813081575919,
+        "kl_th_exp": 0.44730448422181524,
+        "magnetization_mae": 0.06964230995312112,
+        "pair_correlation_mae": 0.02409834737056632
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.9589999987246921,
+        "symmetric_kl": 11.398096487812925,
+        "kl_exp_th": 19.469710744909673,
+        "kl_th_exp": 3.326482230716178,
+        "magnetization_mae": 1.9128175250747272,
+        "pair_correlation_mae": 0.01032090027831889
+      }
+    },
+    {
+      "N": 12,
+      "W": 0.75,
+      "seed": 123,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.0,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.0,
+      "vs_classical_conditional": {
+        "d_tv": 2.760310469700298e-09,
+        "symmetric_kl": 4.576356841238849e-09,
+        "kl_exp_th": 2.760310428486161e-09,
+        "kl_th_exp": 6.392403253991537e-09,
+        "magnetization_mae": 1.3802955445285647e-09,
+        "pair_correlation_mae": 2.7603359413023534e-09
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.018360374784707305,
+        "symmetric_kl": 0.16294655571144412,
+        "kl_exp_th": 0.018531018413961105,
+        "kl_th_exp": 0.30736209300892714,
+        "magnetization_mae": 0.009283430104012669,
+        "pair_correlation_mae": 0.01842721295075998
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.0297836609806369,
+        "symmetric_kl": 0.26866977144417337,
+        "kl_exp_th": 0.030236202435314684,
+        "kl_th_exp": 0.5071033404530321,
+        "magnetization_mae": 0.032090324782057644,
+        "pair_correlation_mae": 0.01857311686822612
+      }
+    },
+    {
+      "N": 12,
+      "W": 0.75,
+      "seed": 456,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.9860000000000001,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.690455876430652,
+      "vs_classical_conditional": {
+        "d_tv": 0.463319341393323,
+        "symmetric_kl": 2.555225803116843,
+        "kl_exp_th": 4.488241791500266,
+        "kl_th_exp": 0.62220981473342,
+        "magnetization_mae": 0.9266386770506866,
+        "pair_correlation_mae": 1.0562463366910654e-08
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.4633107744321573,
+        "symmetric_kl": 2.601276027422651,
+        "kl_exp_th": 4.277092781859401,
+        "kl_th_exp": 0.925459272985901,
+        "magnetization_mae": 0.9170959938518105,
+        "pair_correlation_mae": 0.018843877030819727
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.4786676461582158,
+        "symmetric_kl": 0.7805668242105448,
+        "kl_exp_th": 0.8702799146293372,
+        "kl_th_exp": 0.6908537337917523,
+        "magnetization_mae": 0.9511617287120149,
+        "pair_correlation_mae": 0.01010678084860441
+      }
+    },
+    {
+      "N": 12,
+      "W": 0.75,
+      "seed": 789,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.0,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.0,
+      "vs_classical_conditional": {
+        "d_tv": 5.003799914541206e-12,
+        "symmetric_kl": -7.503168590847625e-12,
+        "kl_exp_th": 5.0037751719981e-12,
+        "kl_th_exp": -2.0010112353693348e-11,
+        "magnetization_mae": 2.5018875859927903e-12,
+        "pair_correlation_mae": 5.003793675702657e-12
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.011147708750329128,
+        "symmetric_kl": 0.0962111798567878,
+        "kl_exp_th": 0.011210310131616979,
+        "kl_th_exp": 0.18121204958195863,
+        "magnetization_mae": 0.005607252571314447,
+        "pair_correlation_mae": 0.011169708049942384
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.011169893924926016,
+        "symmetric_kl": 0.09641675622152297,
+        "kl_exp_th": 0.011232745659817292,
+        "kl_th_exp": 0.18160076678322865,
+        "magnetization_mae": 0.005618471844231088,
+        "pair_correlation_mae": 0.011191975956986547
+      }
+    },
+    {
+      "N": 12,
+      "W": 0.75,
+      "seed": 1024,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.0,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.0,
+      "vs_classical_conditional": {
+        "d_tv": 5.580757697267001e-10,
+        "symmetric_kl": 3.258266059257269e-10,
+        "kl_exp_th": 5.580758079440517e-10,
+        "kl_th_exp": 9.357740390740203e-11,
+        "magnetization_mae": 3.510198798295505e-10,
+        "pair_correlation_mae": 5.483300295298458e-10
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.01996803604665378,
+        "symmetric_kl": 0.17700936623856547,
+        "kl_exp_th": 0.020170091570494087,
+        "kl_th_exp": 0.33384864090663685,
+        "magnetization_mae": 0.010132451797916081,
+        "pair_correlation_mae": 0.02006219540346103
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.999702287723617,
+        "symmetric_kl": 15.527077855243892,
+        "kl_exp_th": 8.119383053360057,
+        "kl_th_exp": 22.934772657127727,
+        "magnetization_mae": 1.993325347926186,
+        "pair_correlation_mae": 0.012098214869958879
+      }
+    },
+    {
+      "N": 12,
+      "W": 0.75,
+      "seed": 2025,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.05449999999999999,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.09608677285703669,
+      "vs_classical_conditional": {
+        "d_tv": 0.019499999999999962,
+        "symmetric_kl": 0.18630497679766608,
+        "kl_exp_th": 0.352917320289549,
+        "kl_th_exp": 0.01969263330578319,
+        "magnetization_mae": 0.038999999993499734,
+        "pair_correlation_mae": 1.3000267529150733e-11
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.019499995223679144,
+        "symmetric_kl": 0.26418493506232743,
+        "kl_exp_th": 0.2906645891860544,
+        "kl_th_exp": 0.23770528093860038,
+        "magnetization_mae": 0.032302222824985904,
+        "pair_correlation_mae": 0.013338971924673815
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.9804999324173591,
+        "symmetric_kl": 10.129555337361936,
+        "kl_exp_th": 16.092240949958143,
+        "kl_th_exp": 4.1668697247657285,
+        "magnetization_mae": 1.9518179293635205,
+        "pair_correlation_mae": 0.018192037727167727
+      }
+    },
+    {
+      "N": 12,
+      "W": 0.75,
+      "seed": 7,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.0,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.0,
+      "vs_classical_conditional": {
+        "d_tv": 2.918499130607665e-10,
+        "symmetric_kl": 5.895097062294795e-11,
+        "kl_exp_th": 2.918498776409262e-10,
+        "kl_th_exp": -1.739479363950303e-10,
+        "magnetization_mae": 1.4592521635492517e-10,
+        "pair_correlation_mae": 2.91849877598338e-10
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.017993516438755575,
+        "symmetric_kl": 0.15954752499155284,
+        "kl_exp_th": 0.01815736824494105,
+        "kl_th_exp": 0.3009376817381646,
+        "magnetization_mae": 0.00907586617059375,
+        "pair_correlation_mae": 0.01804521292800541
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.999647303848755,
+        "symmetric_kl": 15.433621030265137,
+        "kl_exp_th": 7.949903633033456,
+        "kl_th_exp": 22.91733842749682,
+        "magnetization_mae": 1.9917962511739176,
+        "pair_correlation_mae": 0.014887185148991419
+      }
+    },
+    {
+      "N": 12,
+      "W": 0.75,
+      "seed": 31,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.0,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.0,
+      "vs_classical_conditional": {
+        "d_tv": 1.795018974910877e-09,
+        "symmetric_kl": 2.5553114047454214e-09,
+        "kl_exp_th": 1.7950190239214313e-09,
+        "kl_th_exp": 3.315603785569412e-09,
+        "magnetization_mae": 8.975095666663435e-10,
+        "pair_correlation_mae": 1.7950190223103846e-09
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.017752819202123717,
+        "symmetric_kl": 0.1579802827460193,
+        "kl_exp_th": 0.01791229069492393,
+        "kl_th_exp": 0.29804827479711465,
+        "magnetization_mae": 0.008944705817216653,
+        "pair_correlation_mae": 0.01779767250548338
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.14590061628797982,
+        "symmetric_kl": 1.508809335375816,
+        "kl_exp_th": 0.15770771759449206,
+        "kl_th_exp": 2.85991095315714,
+        "magnetization_mae": 0.2670928352395745,
+        "pair_correlation_mae": 0.018191430781519708
+      }
+    },
+    {
+      "N": 12,
+      "W": 0.75,
+      "seed": 111,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.019499999999999983,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.0582866712722476,
+      "vs_classical_conditional": {
+        "d_tv": 0.01049999999999416,
+        "symmetric_kl": 0.09702013876757765,
+        "kl_exp_th": 0.1834847636714327,
+        "kl_th_exp": 0.010555513863722577,
+        "magnetization_mae": 0.020999999909387113,
+        "pair_correlation_mae": 1.8120238642893582e-10
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.01374126409747892,
+        "symmetric_kl": 0.1933448543423542,
+        "kl_exp_th": 0.149489643595929,
+        "kl_th_exp": 0.2372000650887794,
+        "magnetization_mae": 0.014080016185835292,
+        "pair_correlation_mae": 0.013773655411752165
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.0137861435171775,
+        "symmetric_kl": 0.13850123612385606,
+        "kl_exp_th": 0.0404523308839043,
+        "kl_th_exp": 0.2365501413638078,
+        "magnetization_mae": 0.01342514868896616,
+        "pair_correlation_mae": 0.013818714742396562
+      }
+    },
+    {
+      "N": 12,
+      "W": 0.75,
+      "seed": 999,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.9855,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6605402030974555,
+      "vs_classical_conditional": {
+        "d_tv": 0.32966666663708377,
+        "symmetric_kl": 3.665147748712178,
+        "kl_exp_th": 6.930315320160448,
+        "kl_th_exp": 0.39998017726390894,
+        "magnetization_mae": 0.6515833333174365,
+        "pair_correlation_mae": 0.00516666663781636
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.3243260733174113,
+        "symmetric_kl": 1.3516866037046738,
+        "kl_exp_th": 2.184700952611007,
+        "kl_th_exp": 0.5186722547983404,
+        "magnetization_mae": 0.644171028266568,
+        "pair_correlation_mae": 0.008873884962822801
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.6754805876075718,
+        "symmetric_kl": 4.046349753618917,
+        "kl_exp_th": 6.788489440828424,
+        "kl_th_exp": 1.3042100664094098,
+        "magnetization_mae": 1.3423877193083094,
+        "pair_correlation_mae": 0.006907843628360648
+      }
+    },
+    {
+      "N": 12,
+      "W": 1.0,
+      "seed": 42,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.0625,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.17409739328446563,
+      "vs_classical_conditional": {
+        "d_tv": 0.04133322530857418,
+        "symmetric_kl": 0.28439413314674605,
+        "kl_exp_th": 0.5265776773391863,
+        "kl_th_exp": 0.0422105889543058,
+        "magnetization_mae": 0.08216654682141486,
+        "pair_correlation_mae": 0.0003332691739766358
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.4238095460020056,
+        "symmetric_kl": 0.8230571417305625,
+        "kl_exp_th": 0.4618562399011484,
+        "kl_th_exp": 1.1842580435599768,
+        "magnetization_mae": 0.8149905343722068,
+        "pair_correlation_mae": 0.03286709686420003
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.9589998913908333,
+        "symmetric_kl": 11.627610577164612,
+        "kl_exp_th": 19.941176890848315,
+        "kl_th_exp": 3.31404426348091,
+        "magnetization_mae": 1.9131057435426744,
+        "pair_correlation_mae": 0.009084580921824478
+      }
+    },
+    {
+      "N": 12,
+      "W": 1.0,
+      "seed": 123,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.0,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.0,
+      "vs_classical_conditional": {
+        "d_tv": 5.865122954739734e-08,
+        "symmetric_kl": 1.8685009374885627e-07,
+        "kl_exp_th": 5.865123125972465e-08,
+        "kl_th_exp": 3.150489562379879e-07,
+        "magnetization_mae": 2.933751605538326e-08,
+        "pair_correlation_mae": 5.8653258398303855e-08
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.02189663226147918,
+        "symmetric_kl": 0.19736622321900013,
+        "kl_exp_th": 0.022139921548257037,
+        "kl_th_exp": 0.3725925248897432,
+        "magnetization_mae": 0.011096036479687793,
+        "pair_correlation_mae": 0.02199147042973143
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.024795932266654313,
+        "symmetric_kl": 0.22240026459754794,
+        "kl_exp_th": 0.025108529645200085,
+        "kl_th_exp": 0.4196919995498958,
+        "magnetization_mae": 0.01640123012679498,
+        "pair_correlation_mae": 0.02235760112588442
+      }
+    },
+    {
+      "N": 12,
+      "W": 1.0,
+      "seed": 456,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.9395,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6970702369608462,
+      "vs_classical_conditional": {
+        "d_tv": 0.49908527859663954,
+        "symmetric_kl": 1.3216574540204735,
+        "kl_exp_th": 1.9737869431542105,
+        "kl_th_exp": 0.6695279648867365,
+        "magnetization_mae": 0.997670536152777,
+        "pair_correlation_mae": 0.0006663600279552817
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.49648058135828843,
+        "symmetric_kl": 1.4379909391374355,
+        "kl_exp_th": 1.8089980812417379,
+        "kl_th_exp": 1.0669837970331328,
+        "magnetization_mae": 0.980162651845,
+        "pair_correlation_mae": 0.024873340210113448
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.47212989845666387,
+        "symmetric_kl": 0.9453034592401302,
+        "kl_exp_th": 1.1713064203730736,
+        "kl_th_exp": 0.7193004981071868,
+        "magnetization_mae": 0.9383322697110802,
+        "pair_correlation_mae": 0.00907909110450709
+      }
+    },
+    {
+      "N": 12,
+      "W": 1.0,
+      "seed": 789,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.0,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.0,
+      "vs_classical_conditional": {
+        "d_tv": 1.2961180551492396e-11,
+        "symmetric_kl": -1.3263862295851028e-11,
+        "kl_exp_th": 1.2961187678767924e-11,
+        "kl_th_exp": -3.948891227046998e-11,
+        "magnetization_mae": 6.480593839341964e-12,
+        "pair_correlation_mae": 1.2961187678683928e-11
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.011327788482234404,
+        "symmetric_kl": 0.09811807348307611,
+        "kl_exp_th": 0.011392436554982281,
+        "kl_th_exp": 0.18484371041116993,
+        "magnetization_mae": 0.00569568109501864,
+        "pair_correlation_mae": 0.011348759354152027
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.011347995347332633,
+        "symmetric_kl": 0.09830609426941958,
+        "kl_exp_th": 0.01141287515066974,
+        "kl_th_exp": 0.18519931338816942,
+        "magnetization_mae": 0.005705892381919042,
+        "pair_correlation_mae": 0.01136903687510001
+      }
+    },
+    {
+      "N": 12,
+      "W": 1.0,
+      "seed": 1024,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.0004999999999999725,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.0016165719017076775,
+      "vs_classical_conditional": {
+        "d_tv": 0.00016666258384368996,
+        "symmetric_kl": 0.0008848701670465623,
+        "kl_exp_th": 0.001602890922123264,
+        "kl_th_exp": 0.0001668494119698606,
+        "magnetization_mae": 0.0003332621332598207,
+        "pair_correlation_mae": 4.5953504131575805e-08
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.023221347720525688,
+        "symmetric_kl": 0.20814888226554784,
+        "kl_exp_th": 0.024235915403003586,
+        "kl_th_exp": 0.3920618491280921,
+        "magnetization_mae": 0.011515352439037646,
+        "pair_correlation_mae": 0.02336693164654935
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.9998132750457696,
+        "symmetric_kl": 9.800082444726772,
+        "kl_exp_th": 10.813450705908107,
+        "kl_th_exp": 8.78671418354544,
+        "magnetization_mae": 1.9938050638618456,
+        "pair_correlation_mae": 0.011599823808611779
+      }
+    },
+    {
+      "N": 12,
+      "W": 1.0,
+      "seed": 2025,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.0,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.0,
+      "vs_classical_conditional": {
+        "d_tv": 4.620214298026029e-11,
+        "symmetric_kl": -1.7883399024951656e-11,
+        "kl_exp_th": 4.6202153215448136e-11,
+        "kl_th_exp": -8.196895126535145e-11,
+        "magnetization_mae": 2.3101076607190407e-11,
+        "pair_correlation_mae": 4.6202153214380814e-11
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.013308889867547734,
+        "symmetric_kl": 0.11609925364707895,
+        "kl_exp_th": 0.01339824685611498,
+        "kl_th_exp": 0.2188002604380429,
+        "magnetization_mae": 0.0066952461856381595,
+        "pair_correlation_mae": 0.013334168153501117
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.9999998207407503,
+        "symmetric_kl": 19.2163680524506,
+        "kl_exp_th": 15.534432767886958,
+        "kl_th_exp": 22.898303337014244,
+        "magnetization_mae": 1.9896961882346853,
+        "pair_correlation_mae": 0.020350427542626892
+      }
+    },
+    {
+      "N": 12,
+      "W": 1.0,
+      "seed": 7,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.0,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.0,
+      "vs_classical_conditional": {
+        "d_tv": 2.3543045646009937e-09,
+        "symmetric_kl": 2.955997493897319e-09,
+        "kl_exp_th": 2.3543045318777183e-09,
+        "kl_th_exp": 3.5576904559169198e-09,
+        "magnetization_mae": 1.177156150333758e-09,
+        "pair_correlation_mae": 2.3543045291063436e-09
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.020422658453146943,
+        "symmetric_kl": 0.18297574576419984,
+        "kl_exp_th": 0.020634084483135737,
+        "kl_th_exp": 0.3453174070452639,
+        "magnetization_mae": 0.0103064208635818,
+        "pair_correlation_mae": 0.020484720095556536
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.999974800529545,
+        "symmetric_kl": 16.756070305319497,
+        "kl_exp_th": 10.588687577257367,
+        "kl_th_exp": 22.92345303338163,
+        "magnetization_mae": 1.991975233502359,
+        "pair_correlation_mae": 0.015833184402764693
+      }
+    },
+    {
+      "N": 12,
+      "W": 1.0,
+      "seed": 31,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.0,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.0,
+      "vs_classical_conditional": {
+        "d_tv": 3.2789165246003004e-08,
+        "symmetric_kl": 9.480714214646478e-08,
+        "kl_exp_th": 3.2789165698371677e-08,
+        "kl_th_exp": 1.5682511859455787e-07,
+        "magnetization_mae": 1.6394582691425796e-08,
+        "pair_correlation_mae": 3.278916521631814e-08
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.021087237160426132,
+        "symmetric_kl": 0.19063168520015292,
+        "kl_exp_th": 0.021312748859635453,
+        "kl_th_exp": 0.35995062154067037,
+        "magnetization_mae": 0.010628198584891863,
+        "pair_correlation_mae": 0.021142805432220618
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.09283527717089551,
+        "symmetric_kl": 0.9224865636697941,
+        "kl_exp_th": 0.09743123253510715,
+        "kl_th_exp": 1.747541894804481,
+        "magnetization_mae": 0.1545327928608977,
+        "pair_correlation_mae": 0.022027114150282596
+      }
+    },
+    {
+      "N": 12,
+      "W": 1.0,
+      "seed": 111,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.01749999999999998,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.06278581485474229,
+      "vs_classical_conditional": {
+        "d_tv": 0.01149999999999839,
+        "symmetric_kl": 0.10678905571684416,
+        "kl_exp_th": 0.20201147237474554,
+        "kl_th_exp": 0.011566639058942793,
+        "magnetization_mae": 0.022999999223481393,
+        "pair_correlation_mae": 1.5530308150601968e-09
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.01531290154025037,
+        "symmetric_kl": 0.21630087036009993,
+        "kl_exp_th": 0.16568910578749388,
+        "kl_th_exp": 0.26691263493270595,
+        "magnetization_mae": 0.015288974019661616,
+        "pair_correlation_mae": 0.015348760647771261
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.015374703307989042,
+        "symmetric_kl": 0.17203081817332988,
+        "kl_exp_th": 0.07619565334457767,
+        "kl_th_exp": 0.2678659830020821,
+        "magnetization_mae": 0.015214636336632392,
+        "pair_correlation_mae": 0.015410798837393084
+      }
+    },
+    {
+      "N": 12,
+      "W": 1.0,
+      "seed": 999,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.999,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.645316191383031,
+      "vs_classical_conditional": {
+        "d_tv": 0.3348333331959156,
+        "symmetric_kl": 3.7359273717937724,
+        "kl_exp_th": 7.064137102892981,
+        "kl_th_exp": 0.4077176406945641,
+        "magnetization_mae": 0.667916666582647,
+        "pair_correlation_mae": 0.0011666665394552227
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.3232990994267586,
+        "symmetric_kl": 0.7051355591645432,
+        "kl_exp_th": 0.9028740202861424,
+        "kl_th_exp": 0.507397098042944,
+        "magnetization_mae": 0.6386705836551183,
+        "pair_correlation_mae": 0.014922057586517323
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.6663143933721114,
+        "symmetric_kl": 4.768721462362162,
+        "kl_exp_th": 8.24407747516576,
+        "kl_th_exp": 1.293365449558564,
+        "magnetization_mae": 1.3255471546512383,
+        "pair_correlation_mae": 0.01176581358011027
+      }
+    },
+    {
+      "N": 12,
+      "W": 1.25,
+      "seed": 42,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.9575,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6682986722607167,
+      "vs_classical_conditional": {
+        "d_tv": 0.38896848579045806,
+        "symmetric_kl": 1.9280301288277526,
+        "kl_exp_th": 3.3637344688894486,
+        "kl_th_exp": 0.4923257887660567,
+        "magnetization_mae": 0.7779362553037981,
+        "pair_correlation_mae": 1.4253956239773657e-06
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.6108637030113153,
+        "symmetric_kl": 3.1144670558182375,
+        "kl_exp_th": 4.782300457713603,
+        "kl_th_exp": 1.4466336539228717,
+        "magnetization_mae": 1.2059890681193408,
+        "pair_correlation_mae": 0.031118262837410943
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.6109999995025825,
+        "symmetric_kl": 6.748585251983438,
+        "kl_exp_th": 12.423678129713123,
+        "kl_th_exp": 1.0734923742537532,
+        "magnetization_mae": 1.2176428060349678,
+        "pair_correlation_mae": 0.008682322146014554
+      }
+    },
+    {
+      "N": 12,
+      "W": 1.25,
+      "seed": 123,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.061000000000000026,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.11054406462499328,
+      "vs_classical_conditional": {
+        "d_tv": 0.022333332562645147,
+        "symmetric_kl": 0.1911964261289957,
+        "kl_exp_th": 0.3597958930018639,
+        "kl_th_exp": 0.022596959256127543,
+        "magnetization_mae": 0.0339160421162919,
+        "pair_correlation_mae": 0.021500414503838255
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.02838151367005223,
+        "symmetric_kl": 0.3319310378609496,
+        "kl_exp_th": 0.14773985019723188,
+        "kl_th_exp": 0.5161222255246672,
+        "magnetization_mae": 0.020748570498633823,
+        "pair_correlation_mae": 0.02798242121677517
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.029438269931668377,
+        "symmetric_kl": 0.29643821252740116,
+        "kl_exp_th": 0.06381783723955656,
+        "kl_th_exp": 0.5290585878152457,
+        "magnetization_mae": 0.0173345601786129,
+        "pair_correlation_mae": 0.028335420490146274
+      }
+    },
+    {
+      "N": 12,
+      "W": 1.25,
+      "seed": 456,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.9770000000000001,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6452530369693518,
+      "vs_classical_conditional": {
+        "d_tv": 0.002679964191685872,
+        "symmetric_kl": 0.00037441862220402686,
+        "kl_exp_th": 7.086494276822407e-05,
+        "kl_th_exp": 0.0006779723016398296,
+        "magnetization_mae": 0.005306150868503445,
+        "pair_correlation_mae": 7.261743602798854e-05
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.06900955701585838,
+        "symmetric_kl": 0.34722989219274214,
+        "kl_exp_th": 0.04647670156784925,
+        "kl_th_exp": 0.6479830828176351,
+        "magnetization_mae": 0.1071182789680025,
+        "pair_correlation_mae": 0.03859707275372539
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.3366747466968018,
+        "symmetric_kl": 0.7532769892615655,
+        "kl_exp_th": 0.969826062348347,
+        "kl_th_exp": 0.536727916174784,
+        "magnetization_mae": 0.6677473240487573,
+        "pair_correlation_mae": 0.010337106647946348
+      }
+    },
+    {
+      "N": 12,
+      "W": 1.25,
+      "seed": 789,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.0,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.0,
+      "vs_classical_conditional": {
+        "d_tv": 3.3572980352682104e-11,
+        "symmetric_kl": -1.8372774559687685e-11,
+        "kl_exp_th": 3.357292222062338e-11,
+        "kl_th_exp": -7.031847133999875e-11,
+        "magnetization_mae": 1.6786572132332367e-11,
+        "pair_correlation_mae": 3.357297773121104e-11
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.011628568290741013,
+        "symmetric_kl": 0.10115001533174041,
+        "kl_exp_th": 0.011696708857576597,
+        "kl_th_exp": 0.19060332180590422,
+        "magnetization_mae": 0.00584524284929025,
+        "pair_correlation_mae": 0.011649016445593408
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.011647223908765682,
+        "symmetric_kl": 0.10132434327834597,
+        "kl_exp_th": 0.01171558414422732,
+        "kl_th_exp": 0.1909331024124646,
+        "magnetization_mae": 0.005854665453975616,
+        "pair_correlation_mae": 0.011667734310194708
+      }
+    },
+    {
+      "N": 12,
+      "W": 1.25,
+      "seed": 1024,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.0845,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.131464843667781,
+      "vs_classical_conditional": {
+        "d_tv": 0.028136512569954916,
+        "symmetric_kl": 0.1350947062272132,
+        "kl_exp_th": 0.24175476762857043,
+        "kl_th_exp": 0.028434644825855972,
+        "magnetization_mae": 0.055953867822912784,
+        "pair_correlation_mae": 0.000638182126072658
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.027990788179173977,
+        "symmetric_kl": 0.32960779341022917,
+        "kl_exp_th": 0.1546695966167741,
+        "kl_th_exp": 0.5045459902036842,
+        "magnetization_mae": 0.0410913449278249,
+        "pair_correlation_mae": 0.027780888852034707
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.971831975815775,
+        "symmetric_kl": 8.327623852861148,
+        "kl_exp_th": 13.0016740885651,
+        "kl_th_exp": 3.6535736171571953,
+        "magnetization_mae": 1.9383654721493628,
+        "pair_correlation_mae": 0.010559259302460914
+      }
+    },
+    {
+      "N": 12,
+      "W": 1.25,
+      "seed": 2025,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.007000000000000003,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.01945050295993942,
+      "vs_classical_conditional": {
+        "d_tv": 0.002833333333333342,
+        "symmetric_kl": 0.02431338145458853,
+        "kl_exp_th": 0.04578940817218802,
+        "kl_th_exp": 0.0028373547369890417,
+        "magnetization_mae": 0.005666666584452362,
+        "pair_correlation_mae": 1.644286928836891e-10
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.013539535108095718,
+        "symmetric_kl": 0.12155668217751318,
+        "kl_exp_th": 0.017852022624801296,
+        "kl_th_exp": 0.22526134173022508,
+        "magnetization_mae": 0.0033840671965479907,
+        "pair_correlation_mae": 0.013565449754035508
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.9971658107209976,
+        "symmetric_kl": 10.016751844425958,
+        "kl_exp_th": 13.912090328155791,
+        "kl_th_exp": 6.121413360696126,
+        "magnetization_mae": 1.9823995207020855,
+        "pair_correlation_mae": 0.023411355952129436
+      }
+    },
+    {
+      "N": 12,
+      "W": 1.25,
+      "seed": 7,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.03500000000000002,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.06352690580108245,
+      "vs_classical_conditional": {
+        "d_tv": 0.011666666666666665,
+        "symmetric_kl": 0.10842168293016796,
+        "kl_exp_th": 0.2051080405871658,
+        "kl_th_exp": 0.011735325273170125,
+        "magnetization_mae": 0.02333332378575817,
+        "pair_correlation_mae": 1.909505168799323e-08
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.02390986356484824,
+        "symmetric_kl": 0.2945131553317128,
+        "kl_exp_th": 0.16801510381624327,
+        "kl_th_exp": 0.4210112068471823,
+        "magnetization_mae": 0.01125737601763363,
+        "pair_correlation_mae": 0.023988713053852157
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.9883315100981338,
+        "symmetric_kl": 8.830570914654748,
+        "kl_exp_th": 12.997400895494602,
+        "kl_th_exp": 4.6637409338148945,
+        "magnetization_mae": 1.9679073918031253,
+        "pair_correlation_mae": 0.017365208748880052
+      }
+    },
+    {
+      "N": 12,
+      "W": 1.25,
+      "seed": 31,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.0,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.0,
+      "vs_classical_conditional": {
+        "d_tv": 6.016202608865359e-07,
+        "symmetric_kl": 2.617029562472772e-06,
+        "kl_exp_th": 6.016204419162231e-07,
+        "kl_th_exp": 4.632438683029321e-06,
+        "magnetization_mae": 3.0081013055460737e-07,
+        "pair_correlation_mae": 6.016202609796887e-07
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.027186748939804127,
+        "symmetric_kl": 0.2511530083678454,
+        "kl_exp_th": 0.027563146296193976,
+        "kl_th_exp": 0.4747428704394968,
+        "magnetization_mae": 0.013712281525480624,
+        "pair_correlation_mae": 0.027264863118492133
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.0673784771569233,
+        "symmetric_kl": 0.6469713007581909,
+        "kl_exp_th": 0.0697558165522391,
+        "kl_th_exp": 1.2241867849641426,
+        "magnetization_mae": 0.0908095444432927,
+        "pair_correlation_mae": 0.03039661122310065
+      }
+    },
+    {
+      "N": 12,
+      "W": 1.25,
+      "seed": 111,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.6950000000000001,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.5611518712452263,
+      "vs_classical_conditional": {
+        "d_tv": 0.24083332002294439,
+        "symmetric_kl": 2.6262188214954447,
+        "kl_exp_th": 4.976903876288095,
+        "kl_th_exp": 0.2755337667027948,
+        "magnetization_mae": 0.47941666001122046,
+        "pair_correlation_mae": 0.0014999866897787983
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.2393333245094153,
+        "symmetric_kl": 2.146070116721515,
+        "kl_exp_th": 3.8977531231815514,
+        "kl_th_exp": 0.39438711026147844,
+        "magnetization_mae": 0.4705814489718759,
+        "pair_correlation_mae": 0.016085813144746126
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.23933187046235516,
+        "symmetric_kl": 1.5347415324758205,
+        "kl_exp_th": 2.6746539304104298,
+        "kl_th_exp": 0.39482913454121116,
+        "magnetization_mae": 0.4705341171389339,
+        "pair_correlation_mae": 0.01617392499116334
+      }
+    },
+    {
+      "N": 12,
+      "W": 1.25,
+      "seed": 999,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.9880000000000001,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.7536795235487976,
+      "vs_classical_conditional": {
+        "d_tv": 0.36483333269192175,
+        "symmetric_kl": 4.024842672781013,
+        "kl_exp_th": 7.595817510251944,
+        "kl_th_exp": 0.45386783531008096,
+        "magnetization_mae": 0.6884166660541046,
+        "pair_correlation_mae": 0.02749999955315911
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.0737665675451534,
+        "symmetric_kl": 0.2559089008170041,
+        "kl_exp_th": 0.04289522504777002,
+        "kl_th_exp": 0.4689225765862382,
+        "magnetization_mae": 0.11844396859506223,
+        "pair_correlation_mae": 0.022521856990778744
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.6624822826802226,
+        "symmetric_kl": 4.095272697221211,
+        "kl_exp_th": 6.869142773788116,
+        "kl_th_exp": 1.321402620654306,
+        "magnetization_mae": 1.3035380427469911,
+        "pair_correlation_mae": 0.028848764249778613
+      }
+    }
+  ],
+  "per_w_stats": [
+    {
+      "W": 0.0,
+      "n_seeds": 10,
+      "n_total": 10,
+      "n_relaxed": 10,
+      "relax_rate": 1.0,
+      "M_mean": 0.006449999999999995,
+      "M_std": 0.009611061335773479,
+      "d_tv_all_mean": 0.002800000000258945,
+      "d_tv_all_std": 0.004846992194065462,
+      "d_tv_relaxed_mean": 0.002800000000258945,
+      "d_tv_relaxed_std": 0.004846992194065462,
+      "mean_d_tv_classical_cond": 0.002800000000258945,
+      "median_d_tv_classical_cond": 0.00025000000028774146,
+      "mean_d_tv_quantum_cond": 0.013787928601939442,
+      "median_d_tv_quantum_cond": 0.014502476029411217,
+      "mean_d_tv_quantum_uncond": 0.504048731368908,
+      "median_d_tv_quantum_uncond": 0.5062685676375636
+    },
+    {
+      "W": 0.25,
+      "n_seeds": 10,
+      "n_total": 10,
+      "n_relaxed": 9,
+      "relax_rate": 0.9,
+      "M_mean": 0.08464999999999998,
+      "M_std": 0.24880826453315408,
+      "d_tv_all_mean": 0.04838333332514561,
+      "d_tv_all_std": 0.14332157022038414,
+      "d_tv_relaxed_mean": 0.000611111114041014,
+      "d_tv_relaxed_std": 0.0012496913183769154,
+      "mean_d_tv_classical_cond": 0.000611111114041014,
+      "median_d_tv_classical_cond": 1.0431149263661722e-11,
+      "mean_d_tv_quantum_cond": 0.014083023719903874,
+      "median_d_tv_quantum_cond": 0.014798752871275312,
+      "mean_d_tv_quantum_uncond": 0.6091377421061497,
+      "median_d_tv_quantum_uncond": 0.934740721329476
+    },
+    {
+      "W": 0.5,
+      "n_seeds": 10,
+      "n_total": 10,
+      "n_relaxed": 7,
+      "relax_rate": 0.7,
+      "M_mean": 0.20834999999999998,
+      "M_std": 0.3744556749469822,
+      "d_tv_all_mean": 0.10089999617950078,
+      "d_tv_all_std": 0.19823753257410198,
+      "d_tv_relaxed_mean": 0.0018095238289170398,
+      "d_tv_relaxed_std": 0.0034760273833218227,
+      "mean_d_tv_classical_cond": 0.0018095238289170398,
+      "median_d_tv_classical_cond": 0.00016666666666646633,
+      "mean_d_tv_quantum_cond": 0.01475690895105265,
+      "median_d_tv_quantum_cond": 0.01582030759434557,
+      "mean_d_tv_quantum_uncond": 0.4727973276953468,
+      "median_d_tv_quantum_uncond": 0.23278881159447445
+    },
+    {
+      "W": 0.75,
+      "n_seeds": 10,
+      "n_total": 10,
+      "n_relaxed": 6,
+      "relax_rate": 0.6,
+      "M_mean": 0.21665,
+      "M_std": 0.3862674623884337,
+      "d_tv_all_mean": 0.08639860133811614,
+      "d_tv_all_std": 0.15838852233165204,
+      "d_tv_relaxed_mean": 0.0017500009017088478,
+      "d_tv_relaxed_std": 0.003913118557365679,
+      "mean_d_tv_classical_cond": 0.0017500009017088478,
+      "median_d_tv_classical_cond": 1.1765473723187886e-09,
+      "mean_d_tv_quantum_cond": 0.01649395322000807,
+      "median_d_tv_quantum_cond": 0.017873167820439646,
+      "mean_d_tv_quantum_uncond": 0.36666498438051537,
+      "median_d_tv_quantum_uncond": 0.08784213863430836
+    },
+    {
+      "W": 1.0,
+      "n_seeds": 10,
+      "n_total": 10,
+      "n_relaxed": 7,
+      "relax_rate": 0.7,
+      "M_mean": 0.20190000000000002,
+      "M_std": 0.3843485267306224,
+      "d_tv_all_mean": 0.0886918593538834,
+      "d_tv_all_std": 0.16863502912067607,
+      "d_tv_relaxed_mean": 0.0016666794911006802,
+      "d_tv_relaxed_std": 0.004014848026637189,
+      "mean_d_tv_classical_cond": 0.0016666794911006802,
+      "median_d_tv_classical_cond": 3.2789165246003004e-08,
+      "mean_d_tv_quantum_cond": 0.018082493640801493,
+      "median_d_tv_quantum_cond": 0.020422658453146943,
+      "mean_d_tv_quantum_uncond": 0.4491631149155624,
+      "median_d_tv_quantum_uncond": 0.09283527717089551
+    },
+    {
+      "W": 1.25,
+      "n_seeds": 10,
+      "n_total": 10,
+      "n_relaxed": 4,
+      "relax_rate": 0.4,
+      "M_mean": 0.3805,
+      "M_std": 0.435297254758171,
+      "d_tv_all_mean": 0.1062285549483444,
+      "d_tv_all_std": 0.15198593189194468,
+      "d_tv_relaxed_mean": 0.0036251504134584686,
+      "d_tv_relaxed_std": 0.004784663707358214,
+      "mean_d_tv_classical_cond": 0.0036251504134584686,
+      "median_d_tv_classical_cond": 0.0014169674767971145,
+      "mean_d_tv_quantum_cond": 0.019066178975872275,
+      "median_d_tv_quantum_cond": 0.01872469933647198,
+      "mean_d_tv_quantum_uncond": 0.5161307554712051,
+      "median_d_tv_quantum_uncond": 0.5278549936275285
+    }
+  ]
+}

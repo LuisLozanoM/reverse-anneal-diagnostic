@@ -1,0 +1,50 @@
+{
+  "scan": "lambda",
+  "solver": "Advantage2_system1.13",
+  "subsystem_size": 6,
+  "n_environment": 50,
+  "s_p": 0.4,
+  "t_hold": 100.0,
+  "results": [
+    {
+      "lambda": 0.0,
+      "memory": 0.013499999999999979,
+      "tvd_up_down": 0.0004999999999999727
+    },
+    {
+      "lambda": 0.05,
+      "memory": 0.9390000000000001,
+      "tvd_up_down": 0.911
+    },
+    {
+      "lambda": 0.1,
+      "memory": 0.7995,
+      "tvd_up_down": 0.412
+    },
+    {
+      "lambda": 0.2,
+      "memory": 0.5315,
+      "tvd_up_down": 0.0004999999999999725
+    },
+    {
+      "lambda": 0.3,
+      "memory": 0.0010000000000000005,
+      "tvd_up_down": 0.0010000000000000005
+    },
+    {
+      "lambda": 0.5,
+      "memory": 0.0,
+      "tvd_up_down": 0.0
+    },
+    {
+      "lambda": 0.7,
+      "memory": 0.0,
+      "tvd_up_down": 0.0
+    },
+    {
+      "lambda": 1.0,
+      "memory": 0.0,
+      "tvd_up_down": 0.0
+    }
+  ]
+}

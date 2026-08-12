@@ -1,0 +1,74 @@
+{
+  "solver": "Advantage2_system1",
+  "num_reads": 2000,
+  "s_p": 0.4,
+  "t_hold": 100.0,
+  "rows": [
+    {
+      "label": "E_size_E4_lam0.5",
+      "n_env": 4,
+      "coupling_lambda": 0.5,
+      "disorder_W": 0.0,
+      "max_abs_h": 0.0,
+      "max_abs_J": 1.0,
+      "memory_auto_scale_true": 1.0,
+      "memory_auto_scale_false": 1.0,
+      "delta_memory": 0.0
+    },
+    {
+      "label": "E_size_E8_lam0.5",
+      "n_env": 8,
+      "coupling_lambda": 0.5,
+      "disorder_W": 0.0,
+      "max_abs_h": 0.0,
+      "max_abs_J": 1.0,
+      "memory_auto_scale_true": 1.0,
+      "memory_auto_scale_false": 1.0,
+      "delta_memory": 0.0
+    },
+    {
+      "label": "lam_scan_lam0.1",
+      "n_env": 50,
+      "coupling_lambda": 0.1,
+      "disorder_W": 0.0,
+      "max_abs_h": 0.0,
+      "max_abs_J": 1.0,
+      "memory_auto_scale_true": 0.20950000000000002,
+      "memory_auto_scale_false": 0.10199999999999998,
+      "delta_memory": 0.10750000000000004
+    },
+    {
+      "label": "lam_scan_lam0.2",
+      "n_env": 50,
+      "coupling_lambda": 0.2,
+      "disorder_W": 0.0,
+      "max_abs_h": 0.0,
+      "max_abs_J": 1.0,
+      "memory_auto_scale_true": 0.0,
+      "memory_auto_scale_false": 0.0,
+      "delta_memory": 0.0
+    },
+    {
+      "label": "lam_scan_lam0.3",
+      "n_env": 50,
+      "coupling_lambda": 0.3,
+      "disorder_W": 0.0,
+      "max_abs_h": 0.0,
+      "max_abs_J": 1.0,
+      "memory_auto_scale_true": 0.0,
+      "memory_auto_scale_false": 0.0,
+      "delta_memory": 0.0
+    },
+    {
+      "label": "W_scan_W1_lam0.5",
+      "n_env": 50,
+      "coupling_lambda": 0.5,
+      "disorder_W": 1.0,
+      "max_abs_h": 0.985275460497989,
+      "max_abs_J": 1.0,
+      "memory_auto_scale_true": 0.0,
+      "memory_auto_scale_false": 0.0,
+      "delta_memory": 0.0
+    }
+  ]
+}

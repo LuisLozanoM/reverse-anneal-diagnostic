@@ -1,0 +1,54 @@
+{
+  "scan": "tp",
+  "solver": "Advantage2_system1.13",
+  "s_p": 0.4,
+  "n_qubits": 50,
+  "note": "memory=1.0 at all t_p due to curse of dimensionality on global P_full (2^50 configs vs 1000 reads). Phase 4 subsystem marginals needed.",
+  "results": [
+    {
+      "t_hold": 1,
+      "memory": 1.0,
+      "tvd_up_down": 1.0
+    },
+    {
+      "t_hold": 2,
+      "memory": 1.0,
+      "tvd_up_down": 1.0
+    },
+    {
+      "t_hold": 5,
+      "memory": 1.0,
+      "tvd_up_down": 1.0
+    },
+    {
+      "t_hold": 10,
+      "memory": 1.0,
+      "tvd_up_down": 1.0
+    },
+    {
+      "t_hold": 20,
+      "memory": 1.0,
+      "tvd_up_down": 1.0
+    },
+    {
+      "t_hold": 50,
+      "memory": 1.0,
+      "tvd_up_down": 1.0
+    },
+    {
+      "t_hold": 100,
+      "memory": 1.0,
+      "tvd_up_down": 1.0
+    },
+    {
+      "t_hold": 200,
+      "memory": 1.0,
+      "tvd_up_down": 1.0
+    },
+    {
+      "t_hold": 500,
+      "memory": 1.0,
+      "tvd_up_down": 1.0
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+[
+  {
+    "E_prep": "E_up",
+    "t_p": 1,
+    "memory_tvd": 0.0165
+  },
+  {
+    "E_prep": "E_up",
+    "t_p": 2,
+    "memory_tvd": 0.0085
+  },
+  {
+    "E_prep": "E_up",
+    "t_p": 5,
+    "memory_tvd": 0.0
+  },
+  {
+    "E_prep": "E_up",
+    "t_p": 10,
+    "memory_tvd": 0.0
+  },
+  {
+    "E_prep": "E_up",
+    "t_p": 20,
+    "memory_tvd": 0.0
+  },
+  {
+    "E_prep": "E_up",
+    "t_p": 50,
+    "memory_tvd": 0.0
+  },
+  {
+    "E_prep": "E_up",
+    "t_p": 100,
+    "memory_tvd": 0.0
+  },
+  {
+    "E_prep": "E_up",
+    "t_p": 200,
+    "memory_tvd": 0.0
+  },
+  {
+    "E_prep": "E_up",
+    "t_p": 500,
+    "memory_tvd": 0.0
+  },
+  {
+    "E_prep": "E_random",
+    "t_p": 1,
+    "memory_tvd": 0.529
+  },
+  {
+    "E_prep": "E_random",
+    "t_p": 2,
+    "memory_tvd": 0.494
+  },
+  {
+    "E_prep": "E_random",
+    "t_p": 5,
+    "memory_tvd": 0.493
+  },
+  {
+    "E_prep": "E_random",
+    "t_p": 10,
+    "memory_tvd": 0.7055
+  },
+  {
+    "E_prep": "E_random",
+    "t_p": 20,
+    "memory_tvd": 0.5725
+  },
+  {
+    "E_prep": "E_random",
+    "t_p": 50,
+    "memory_tvd": 0.693
+  },
+  {
+    "E_prep": "E_random",
+    "t_p": 100,
+    "memory_tvd": 0.1455
+  },
+  {
+    "E_prep": "E_random",
+    "t_p": 200,
+    "memory_tvd": 0.142
+  },
+  {
+    "E_prep": "E_random",
+    "t_p": 500,
+    "memory_tvd": 0.581
+  }
+]

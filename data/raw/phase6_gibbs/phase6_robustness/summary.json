@@ -1,0 +1,1569 @@
+{
+  "s_p": 0.4,
+  "A_over_B": 0.2602641898790776,
+  "solver": "Advantage2_system1",
+  "beta_eff_per_ramp": {
+    "1.0": 6.610390475425965,
+    "5.0": 7.350990382414942,
+    "20.0": 7.366563807719555
+  },
+  "test_cases": [
+    {
+      "name": "reference_relaxed",
+      "description": "Random 3-regular ferro, clean relaxed case",
+      "coupling_lambda": 0.5,
+      "N": 12,
+      "W": 0.0,
+      "seed": 42,
+      "graph_type": "random_regular",
+      "hamiltonian_scale": 1.0
+    },
+    {
+      "name": "disordered_relaxed",
+      "description": "Random 3-regular ferro, relaxed at W=1.0",
+      "coupling_lambda": 0.5,
+      "N": 12,
+      "W": 1.0,
+      "seed": 42,
+      "graph_type": "random_regular",
+      "hamiltonian_scale": 1.0
+    },
+    {
+      "name": "trapping_anomaly",
+      "description": "Phase 3A scale=0.5 native that traps on all-down",
+      "coupling_lambda": 0.2,
+      "N": 8,
+      "W": 1.0,
+      "seed": 42,
+      "graph_type": "native",
+      "hamiltonian_scale": 0.5
+    }
+  ],
+  "ramp_results": [
+    {
+      "test_case": "reference_relaxed",
+      "t_ramp_up": 1.0,
+      "beta_eff": 6.610390475425965,
+      "S_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "E_qubits": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "h": {
+        "4": 0.0,
+        "0": 0.0,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "9": 0.0,
+        "10": 0.0,
+        "11": 0.0,
+        "1": 0.0
+      },
+      "J": {
+        "(4, 11)": -1.0,
+        "(4, 10)": -1.0,
+        "(2, 4)": -0.5,
+        "(0, 1)": -1.0,
+        "(0, 3)": -1.0,
+        "(0, 2)": -1.0,
+        "(5, 7)": -1.0,
+        "(5, 11)": -1.0,
+        "(5, 10)": -1.0,
+        "(6, 9)": -1.0,
+        "(6, 8)": -1.0,
+        "(1, 6)": -0.5,
+        "(2, 7)": -0.5,
+        "(1, 7)": -0.5,
+        "(8, 9)": -1.0,
+        "(8, 10)": -1.0,
+        "(3, 11)": -0.5,
+        "(3, 9)": -0.5
+      },
+      "per_initial_state": [
+        {
+          "initial_state": "S_up",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/ramp1.0_reference_relaxed_S_up.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 1.0
+          }
+        },
+        {
+          "initial_state": "S_down",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/ramp1.0_reference_relaxed_S_down.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 1.0
+          }
+        },
+        {
+          "initial_state": "S_random",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/ramp1.0_reference_relaxed_S_random.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "test_case": "reference_relaxed",
+      "t_ramp_up": 5.0,
+      "beta_eff": 7.350990382414942,
+      "S_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "E_qubits": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "h": {
+        "4": 0.0,
+        "0": 0.0,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "9": 0.0,
+        "10": 0.0,
+        "11": 0.0,
+        "1": 0.0
+      },
+      "J": {
+        "(4, 11)": -1.0,
+        "(4, 10)": -1.0,
+        "(2, 4)": -0.5,
+        "(0, 1)": -1.0,
+        "(0, 3)": -1.0,
+        "(0, 2)": -1.0,
+        "(5, 7)": -1.0,
+        "(5, 11)": -1.0,
+        "(5, 10)": -1.0,
+        "(6, 9)": -1.0,
+        "(6, 8)": -1.0,
+        "(1, 6)": -0.5,
+        "(2, 7)": -0.5,
+        "(1, 7)": -0.5,
+        "(8, 9)": -1.0,
+        "(8, 10)": -1.0,
+        "(3, 11)": -0.5,
+        "(3, 9)": -0.5
+      },
+      "per_initial_state": [
+        {
+          "initial_state": "S_up",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/ramp5.0_reference_relaxed_S_up.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 1.0
+          }
+        },
+        {
+          "initial_state": "S_down",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/ramp5.0_reference_relaxed_S_down.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 1.0
+          }
+        },
+        {
+          "initial_state": "S_random",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/ramp5.0_reference_relaxed_S_random.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "test_case": "reference_relaxed",
+      "t_ramp_up": 20.0,
+      "beta_eff": 7.366563807719555,
+      "S_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "E_qubits": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "h": {
+        "4": 0.0,
+        "0": 0.0,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "9": 0.0,
+        "10": 0.0,
+        "11": 0.0,
+        "1": 0.0
+      },
+      "J": {
+        "(4, 11)": -1.0,
+        "(4, 10)": -1.0,
+        "(2, 4)": -0.5,
+        "(0, 1)": -1.0,
+        "(0, 3)": -1.0,
+        "(0, 2)": -1.0,
+        "(5, 7)": -1.0,
+        "(5, 11)": -1.0,
+        "(5, 10)": -1.0,
+        "(6, 9)": -1.0,
+        "(6, 8)": -1.0,
+        "(1, 6)": -0.5,
+        "(2, 7)": -0.5,
+        "(1, 7)": -0.5,
+        "(8, 9)": -1.0,
+        "(8, 10)": -1.0,
+        "(3, 11)": -0.5,
+        "(3, 9)": -0.5
+      },
+      "per_initial_state": [
+        {
+          "initial_state": "S_up",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/ramp20.0_reference_relaxed_S_up.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 1.0
+          }
+        },
+        {
+          "initial_state": "S_down",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/ramp20.0_reference_relaxed_S_down.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 1.0
+          }
+        },
+        {
+          "initial_state": "S_random",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/ramp20.0_reference_relaxed_S_random.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "test_case": "disordered_relaxed",
+      "t_ramp_up": 1.0,
+      "beta_eff": 6.610390475425965,
+      "S_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "E_qubits": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "h": {
+        "4": 0.5479120971119267,
+        "0": -0.12224312049589536,
+        "5": 0.7171958398227649,
+        "6": 0.3947360581187278,
+        "7": -0.8116453042247009,
+        "8": 0.9512447032735118,
+        "2": 0.5222794039807059,
+        "3": 0.5721286105539076,
+        "9": -0.7437727346489083,
+        "10": -0.09922812420886573,
+        "11": -0.25840395153483753,
+        "1": 0.8535299776972036
+      },
+      "J": {
+        "(4, 11)": -1.0,
+        "(4, 10)": -1.0,
+        "(2, 4)": -0.5,
+        "(0, 1)": -1.0,
+        "(0, 3)": -1.0,
+        "(0, 2)": -1.0,
+        "(5, 7)": -1.0,
+        "(5, 11)": -1.0,
+        "(5, 10)": -1.0,
+        "(6, 9)": -1.0,
+        "(6, 8)": -1.0,
+        "(1, 6)": -0.5,
+        "(2, 7)": -0.5,
+        "(1, 7)": -0.5,
+        "(8, 9)": -1.0,
+        "(8, 10)": -1.0,
+        "(3, 11)": -0.5,
+        "(3, 9)": -0.5
+      },
+      "per_initial_state": [
+        {
+          "initial_state": "S_up",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/ramp1.0_disordered_relaxed_S_up.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 1.0
+          }
+        },
+        {
+          "initial_state": "S_down",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/ramp1.0_disordered_relaxed_S_down.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 0.928,
+            "(-1, -1, -1, -1)": 0.072
+          }
+        },
+        {
+          "initial_state": "S_random",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/ramp1.0_disordered_relaxed_S_random.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 0.9965,
+            "(-1, -1, -1, -1)": 0.0035
+          }
+        }
+      ]
+    },
+    {
+      "test_case": "disordered_relaxed",
+      "t_ramp_up": 5.0,
+      "beta_eff": 7.350990382414942,
+      "S_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "E_qubits": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "h": {
+        "4": 0.5479120971119267,
+        "0": -0.12224312049589536,
+        "5": 0.7171958398227649,
+        "6": 0.3947360581187278,
+        "7": -0.8116453042247009,
+        "8": 0.9512447032735118,
+        "2": 0.5222794039807059,
+        "3": 0.5721286105539076,
+        "9": -0.7437727346489083,
+        "10": -0.09922812420886573,
+        "11": -0.25840395153483753,
+        "1": 0.8535299776972036
+      },
+      "J": {
+        "(4, 11)": -1.0,
+        "(4, 10)": -1.0,
+        "(2, 4)": -0.5,
+        "(0, 1)": -1.0,
+        "(0, 3)": -1.0,
+        "(0, 2)": -1.0,
+        "(5, 7)": -1.0,
+        "(5, 11)": -1.0,
+        "(5, 10)": -1.0,
+        "(6, 9)": -1.0,
+        "(6, 8)": -1.0,
+        "(1, 6)": -0.5,
+        "(2, 7)": -0.5,
+        "(1, 7)": -0.5,
+        "(8, 9)": -1.0,
+        "(8, 10)": -1.0,
+        "(3, 11)": -0.5,
+        "(3, 9)": -0.5
+      },
+      "per_initial_state": [
+        {
+          "initial_state": "S_up",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/ramp5.0_disordered_relaxed_S_up.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 1.0
+          }
+        },
+        {
+          "initial_state": "S_down",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/ramp5.0_disordered_relaxed_S_down.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 0.9655,
+            "(-1, -1, -1, -1)": 0.0345
+          }
+        },
+        {
+          "initial_state": "S_random",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/ramp5.0_disordered_relaxed_S_random.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 0.983,
+            "(-1, -1, -1, -1)": 0.017
+          }
+        }
+      ]
+    },
+    {
+      "test_case": "disordered_relaxed",
+      "t_ramp_up": 20.0,
+      "beta_eff": 7.366563807719555,
+      "S_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "E_qubits": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "h": {
+        "4": 0.5479120971119267,
+        "0": -0.12224312049589536,
+        "5": 0.7171958398227649,
+        "6": 0.3947360581187278,
+        "7": -0.8116453042247009,
+        "8": 0.9512447032735118,
+        "2": 0.5222794039807059,
+        "3": 0.5721286105539076,
+        "9": -0.7437727346489083,
+        "10": -0.09922812420886573,
+        "11": -0.25840395153483753,
+        "1": 0.8535299776972036
+      },
+      "J": {
+        "(4, 11)": -1.0,
+        "(4, 10)": -1.0,
+        "(2, 4)": -0.5,
+        "(0, 1)": -1.0,
+        "(0, 3)": -1.0,
+        "(0, 2)": -1.0,
+        "(5, 7)": -1.0,
+        "(5, 11)": -1.0,
+        "(5, 10)": -1.0,
+        "(6, 9)": -1.0,
+        "(6, 8)": -1.0,
+        "(1, 6)": -0.5,
+        "(2, 7)": -0.5,
+        "(1, 7)": -0.5,
+        "(8, 9)": -1.0,
+        "(8, 10)": -1.0,
+        "(3, 11)": -0.5,
+        "(3, 9)": -0.5
+      },
+      "per_initial_state": [
+        {
+          "initial_state": "S_up",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/ramp20.0_disordered_relaxed_S_up.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 1.0
+          }
+        },
+        {
+          "initial_state": "S_down",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/ramp20.0_disordered_relaxed_S_down.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 0.881,
+            "(-1, -1, -1, -1)": 0.119
+          }
+        },
+        {
+          "initial_state": "S_random",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/ramp20.0_disordered_relaxed_S_random.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 0.9955,
+            "(-1, -1, -1, -1)": 0.0045
+          }
+        }
+      ]
+    },
+    {
+      "test_case": "trapping_anomaly",
+      "t_ramp_up": 1.0,
+      "beta_eff": 6.610390475425965,
+      "S_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "E_qubits": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "h": {
+        "0": 0.27395604855596334,
+        "4": -0.06112156024794768,
+        "5": 0.35859791991138246,
+        "3": 0.1973680290593639,
+        "2": -0.40582265211235047,
+        "6": 0.4756223516367559,
+        "1": 0.26113970199035297,
+        "7": 0.2860643052769538
+      },
+      "J": {
+        "(0, 4)": -0.1,
+        "(0, 5)": -0.1,
+        "(0, 3)": -0.5,
+        "(0, 1)": -0.5,
+        "(0, 2)": -0.5,
+        "(0, 7)": -0.1,
+        "(0, 6)": -0.1,
+        "(4, 5)": -0.5,
+        "(3, 5)": -0.1,
+        "(2, 5)": -0.1,
+        "(5, 6)": -0.5
+      },
+      "per_initial_state": [
+        {
+          "initial_state": "S_up",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/ramp1.0_trapping_anomaly_S_up.h5",
+          "P_S": {
+            "(-1, -1, -1, -1)": 0.885,
+            "(1, 1, 1, 1)": 0.115
+          }
+        },
+        {
+          "initial_state": "S_down",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/ramp1.0_trapping_anomaly_S_down.h5",
+          "P_S": {
+            "(-1, -1, -1, -1)": 1.0
+          }
+        },
+        {
+          "initial_state": "S_random",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/ramp1.0_trapping_anomaly_S_random.h5",
+          "P_S": {
+            "(-1, -1, -1, -1)": 0.982,
+            "(1, 1, 1, 1)": 0.018
+          }
+        }
+      ]
+    },
+    {
+      "test_case": "trapping_anomaly",
+      "t_ramp_up": 5.0,
+      "beta_eff": 7.350990382414942,
+      "S_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "E_qubits": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "h": {
+        "0": 0.27395604855596334,
+        "4": -0.06112156024794768,
+        "5": 0.35859791991138246,
+        "3": 0.1973680290593639,
+        "2": -0.40582265211235047,
+        "6": 0.4756223516367559,
+        "1": 0.26113970199035297,
+        "7": 0.2860643052769538
+      },
+      "J": {
+        "(0, 4)": -0.1,
+        "(0, 5)": -0.1,
+        "(0, 3)": -0.5,
+        "(0, 1)": -0.5,
+        "(0, 2)": -0.5,
+        "(0, 7)": -0.1,
+        "(0, 6)": -0.1,
+        "(4, 5)": -0.5,
+        "(3, 5)": -0.1,
+        "(2, 5)": -0.1,
+        "(5, 6)": -0.5
+      },
+      "per_initial_state": [
+        {
+          "initial_state": "S_up",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/ramp5.0_trapping_anomaly_S_up.h5",
+          "P_S": {
+            "(-1, -1, -1, -1)": 0.986,
+            "(1, 1, 1, 1)": 0.014
+          }
+        },
+        {
+          "initial_state": "S_down",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/ramp5.0_trapping_anomaly_S_down.h5",
+          "P_S": {
+            "(-1, -1, -1, -1)": 0.999,
+            "(-1, -1, 1, -1)": 0.001
+          }
+        },
+        {
+          "initial_state": "S_random",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/ramp5.0_trapping_anomaly_S_random.h5",
+          "P_S": {
+            "(-1, -1, -1, -1)": 0.984,
+            "(1, 1, 1, 1)": 0.016
+          }
+        }
+      ]
+    },
+    {
+      "test_case": "trapping_anomaly",
+      "t_ramp_up": 20.0,
+      "beta_eff": 7.366563807719555,
+      "S_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "E_qubits": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "h": {
+        "0": 0.27395604855596334,
+        "4": -0.06112156024794768,
+        "5": 0.35859791991138246,
+        "3": 0.1973680290593639,
+        "2": -0.40582265211235047,
+        "6": 0.4756223516367559,
+        "1": 0.26113970199035297,
+        "7": 0.2860643052769538
+      },
+      "J": {
+        "(0, 4)": -0.1,
+        "(0, 5)": -0.1,
+        "(0, 3)": -0.5,
+        "(0, 1)": -0.5,
+        "(0, 2)": -0.5,
+        "(0, 7)": -0.1,
+        "(0, 6)": -0.1,
+        "(4, 5)": -0.5,
+        "(3, 5)": -0.1,
+        "(2, 5)": -0.1,
+        "(5, 6)": -0.5
+      },
+      "per_initial_state": [
+        {
+          "initial_state": "S_up",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/ramp20.0_trapping_anomaly_S_up.h5",
+          "P_S": {
+            "(-1, -1, -1, -1)": 0.9775,
+            "(1, 1, 1, 1)": 0.0225
+          }
+        },
+        {
+          "initial_state": "S_down",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/ramp20.0_trapping_anomaly_S_down.h5",
+          "P_S": {
+            "(-1, -1, -1, -1)": 1.0
+          }
+        },
+        {
+          "initial_state": "S_random",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/ramp20.0_trapping_anomaly_S_random.h5",
+          "P_S": {
+            "(-1, -1, -1, -1)": 0.991,
+            "(1, 1, 1, 1)": 0.009
+          }
+        }
+      ]
+    }
+  ],
+  "gauge_results": [
+    {
+      "test_case": "reference_relaxed",
+      "gauge_index": 0,
+      "gauge": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1,
+        "8": 1,
+        "9": 1,
+        "10": 1,
+        "11": 1
+      },
+      "S_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "E_qubits": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "per_initial_state": [
+        {
+          "initial_state": "S_up",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge0_reference_relaxed_S_up.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 1.0
+          }
+        },
+        {
+          "initial_state": "S_down",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge0_reference_relaxed_S_down.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 1.0
+          }
+        },
+        {
+          "initial_state": "S_random",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge0_reference_relaxed_S_random.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "test_case": "reference_relaxed",
+      "gauge_index": 1,
+      "gauge": {
+        "0": -1,
+        "1": -1,
+        "2": -1,
+        "3": -1,
+        "4": -1,
+        "5": 1,
+        "6": 1,
+        "7": -1,
+        "8": -1,
+        "9": -1,
+        "10": 1,
+        "11": 1
+      },
+      "S_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "E_qubits": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "per_initial_state": [
+        {
+          "initial_state": "S_up",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge1_reference_relaxed_S_up.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 0.997,
+            "(-1, -1, -1, -1)": 0.003
+          }
+        },
+        {
+          "initial_state": "S_down",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge1_reference_relaxed_S_down.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 0.999,
+            "(-1, -1, -1, -1)": 0.001
+          }
+        },
+        {
+          "initial_state": "S_random",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge1_reference_relaxed_S_random.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 0.9995,
+            "(-1, -1, -1, -1)": 0.0005
+          }
+        }
+      ]
+    },
+    {
+      "test_case": "reference_relaxed",
+      "gauge_index": 2,
+      "gauge": {
+        "0": -1,
+        "1": -1,
+        "2": -1,
+        "3": -1,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": -1,
+        "8": -1,
+        "9": -1,
+        "10": -1,
+        "11": -1
+      },
+      "S_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "E_qubits": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "per_initial_state": [
+        {
+          "initial_state": "S_up",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge2_reference_relaxed_S_up.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 0.9985,
+            "(-1, -1, -1, -1)": 0.0015
+          }
+        },
+        {
+          "initial_state": "S_down",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge2_reference_relaxed_S_down.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 1.0
+          }
+        },
+        {
+          "initial_state": "S_random",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge2_reference_relaxed_S_random.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 0.9995,
+            "(-1, -1, -1, -1)": 0.0005
+          }
+        }
+      ]
+    },
+    {
+      "test_case": "reference_relaxed",
+      "gauge_index": 3,
+      "gauge": {
+        "0": -1,
+        "1": -1,
+        "2": -1,
+        "3": -1,
+        "4": 1,
+        "5": 1,
+        "6": -1,
+        "7": 1,
+        "8": -1,
+        "9": 1,
+        "10": 1,
+        "11": -1
+      },
+      "S_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "E_qubits": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "per_initial_state": [
+        {
+          "initial_state": "S_up",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge3_reference_relaxed_S_up.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 1.0
+          }
+        },
+        {
+          "initial_state": "S_down",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge3_reference_relaxed_S_down.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 0.9985,
+            "(-1, -1, -1, -1)": 0.0015
+          }
+        },
+        {
+          "initial_state": "S_random",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge3_reference_relaxed_S_random.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 0.999,
+            "(-1, -1, -1, -1)": 0.001
+          }
+        }
+      ]
+    },
+    {
+      "test_case": "reference_relaxed",
+      "gauge_index": 4,
+      "gauge": {
+        "0": 1,
+        "1": -1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": -1,
+        "6": -1,
+        "7": -1,
+        "8": 1,
+        "9": 1,
+        "10": 1,
+        "11": 1
+      },
+      "S_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "E_qubits": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "per_initial_state": [
+        {
+          "initial_state": "S_up",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge4_reference_relaxed_S_up.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 0.997,
+            "(-1, -1, -1, -1)": 0.003
+          }
+        },
+        {
+          "initial_state": "S_down",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge4_reference_relaxed_S_down.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 0.998,
+            "(-1, -1, -1, -1)": 0.002
+          }
+        },
+        {
+          "initial_state": "S_random",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge4_reference_relaxed_S_random.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 0.999,
+            "(-1, -1, -1, -1)": 0.001
+          }
+        }
+      ]
+    },
+    {
+      "test_case": "disordered_relaxed",
+      "gauge_index": 0,
+      "gauge": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1,
+        "8": 1,
+        "9": 1,
+        "10": 1,
+        "11": 1
+      },
+      "S_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "E_qubits": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "per_initial_state": [
+        {
+          "initial_state": "S_up",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge0_disordered_relaxed_S_up.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 1.0
+          }
+        },
+        {
+          "initial_state": "S_down",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge0_disordered_relaxed_S_down.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 0.837,
+            "(-1, -1, -1, -1)": 0.163
+          }
+        },
+        {
+          "initial_state": "S_random",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge0_disordered_relaxed_S_random.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 0.9965,
+            "(-1, -1, -1, -1)": 0.0035
+          }
+        }
+      ]
+    },
+    {
+      "test_case": "disordered_relaxed",
+      "gauge_index": 1,
+      "gauge": {
+        "0": 1,
+        "1": -1,
+        "2": -1,
+        "3": -1,
+        "4": -1,
+        "5": -1,
+        "6": 1,
+        "7": 1,
+        "8": 1,
+        "9": 1,
+        "10": 1,
+        "11": 1
+      },
+      "S_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "E_qubits": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "per_initial_state": [
+        {
+          "initial_state": "S_up",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge1_disordered_relaxed_S_up.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 0.9245,
+            "(-1, -1, -1, -1)": 0.0755
+          }
+        },
+        {
+          "initial_state": "S_down",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge1_disordered_relaxed_S_down.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 0.8685,
+            "(-1, -1, -1, -1)": 0.1315
+          }
+        },
+        {
+          "initial_state": "S_random",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge1_disordered_relaxed_S_random.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 0.9395,
+            "(-1, -1, -1, -1)": 0.0605
+          }
+        }
+      ]
+    },
+    {
+      "test_case": "disordered_relaxed",
+      "gauge_index": 2,
+      "gauge": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": -1,
+        "4": -1,
+        "5": 1,
+        "6": -1,
+        "7": 1,
+        "8": -1,
+        "9": 1,
+        "10": 1,
+        "11": 1
+      },
+      "S_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "E_qubits": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "per_initial_state": [
+        {
+          "initial_state": "S_up",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge2_disordered_relaxed_S_up.h5",
+          "P_S": {
+            "(-1, -1, -1, -1)": 0.0475,
+            "(1, 1, 1, 1)": 0.9525
+          }
+        },
+        {
+          "initial_state": "S_down",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge2_disordered_relaxed_S_down.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 0.9225,
+            "(-1, -1, -1, -1)": 0.0775
+          }
+        },
+        {
+          "initial_state": "S_random",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge2_disordered_relaxed_S_random.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 0.959,
+            "(-1, -1, -1, -1)": 0.041
+          }
+        }
+      ]
+    },
+    {
+      "test_case": "disordered_relaxed",
+      "gauge_index": 3,
+      "gauge": {
+        "0": 1,
+        "1": -1,
+        "2": -1,
+        "3": -1,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": -1,
+        "8": 1,
+        "9": -1,
+        "10": 1,
+        "11": 1
+      },
+      "S_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "E_qubits": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "per_initial_state": [
+        {
+          "initial_state": "S_up",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge3_disordered_relaxed_S_up.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 0.969,
+            "(-1, -1, -1, -1)": 0.031
+          }
+        },
+        {
+          "initial_state": "S_down",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge3_disordered_relaxed_S_down.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 0.9455,
+            "(-1, -1, -1, -1)": 0.054,
+            "(1, -1, 1, 1)": 0.0005
+          }
+        },
+        {
+          "initial_state": "S_random",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge3_disordered_relaxed_S_random.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 0.909,
+            "(-1, -1, -1, -1)": 0.091
+          }
+        }
+      ]
+    },
+    {
+      "test_case": "disordered_relaxed",
+      "gauge_index": 4,
+      "gauge": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": -1,
+        "6": -1,
+        "7": -1,
+        "8": 1,
+        "9": -1,
+        "10": -1,
+        "11": -1
+      },
+      "S_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "E_qubits": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "per_initial_state": [
+        {
+          "initial_state": "S_up",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge4_disordered_relaxed_S_up.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 0.9805,
+            "(-1, -1, -1, -1)": 0.0195
+          }
+        },
+        {
+          "initial_state": "S_down",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge4_disordered_relaxed_S_down.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 0.904,
+            "(-1, -1, -1, -1)": 0.096
+          }
+        },
+        {
+          "initial_state": "S_random",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge4_disordered_relaxed_S_random.h5",
+          "P_S": {
+            "(1, 1, 1, 1)": 0.9775,
+            "(-1, -1, -1, -1)": 0.0225
+          }
+        }
+      ]
+    },
+    {
+      "test_case": "trapping_anomaly",
+      "gauge_index": 0,
+      "gauge": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1
+      },
+      "S_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "E_qubits": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "per_initial_state": [
+        {
+          "initial_state": "S_up",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge0_trapping_anomaly_S_up.h5",
+          "P_S": {
+            "(-1, -1, -1, -1)": 0.8765,
+            "(1, 1, 1, 1)": 0.1235
+          }
+        },
+        {
+          "initial_state": "S_down",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge0_trapping_anomaly_S_down.h5",
+          "P_S": {
+            "(-1, -1, -1, -1)": 1.0
+          }
+        },
+        {
+          "initial_state": "S_random",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge0_trapping_anomaly_S_random.h5",
+          "P_S": {
+            "(-1, -1, -1, -1)": 0.9955,
+            "(1, 1, 1, 1)": 0.004,
+            "(-1, -1, 1, -1)": 0.0005
+          }
+        }
+      ]
+    },
+    {
+      "test_case": "trapping_anomaly",
+      "gauge_index": 1,
+      "gauge": {
+        "0": -1,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": -1,
+        "5": -1,
+        "6": -1,
+        "7": 1
+      },
+      "S_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "E_qubits": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "per_initial_state": [
+        {
+          "initial_state": "S_up",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge1_trapping_anomaly_S_up.h5",
+          "P_S": {
+            "(-1, -1, -1, -1)": 0.9985,
+            "(-1, -1, 1, -1)": 0.0015
+          }
+        },
+        {
+          "initial_state": "S_down",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge1_trapping_anomaly_S_down.h5",
+          "P_S": {
+            "(-1, -1, -1, -1)": 0.999,
+            "(-1, -1, 1, -1)": 0.001
+          }
+        },
+        {
+          "initial_state": "S_random",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge1_trapping_anomaly_S_random.h5",
+          "P_S": {
+            "(-1, -1, -1, -1)": 0.9995,
+            "(-1, -1, 1, -1)": 0.0005
+          }
+        }
+      ]
+    },
+    {
+      "test_case": "trapping_anomaly",
+      "gauge_index": 2,
+      "gauge": {
+        "0": 1,
+        "1": -1,
+        "2": 1,
+        "3": 1,
+        "4": -1,
+        "5": -1,
+        "6": 1,
+        "7": -1
+      },
+      "S_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "E_qubits": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "per_initial_state": [
+        {
+          "initial_state": "S_up",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge2_trapping_anomaly_S_up.h5",
+          "P_S": {
+            "(-1, -1, -1, -1)": 0.9995,
+            "(-1, -1, 1, -1)": 0.0005
+          }
+        },
+        {
+          "initial_state": "S_down",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge2_trapping_anomaly_S_down.h5",
+          "P_S": {
+            "(-1, -1, -1, -1)": 1.0
+          }
+        },
+        {
+          "initial_state": "S_random",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge2_trapping_anomaly_S_random.h5",
+          "P_S": {
+            "(-1, -1, -1, -1)": 0.9985,
+            "(-1, -1, 1, -1)": 0.0015
+          }
+        }
+      ]
+    },
+    {
+      "test_case": "trapping_anomaly",
+      "gauge_index": 3,
+      "gauge": {
+        "0": -1,
+        "1": -1,
+        "2": 1,
+        "3": -1,
+        "4": -1,
+        "5": -1,
+        "6": -1,
+        "7": 1
+      },
+      "S_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "E_qubits": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "per_initial_state": [
+        {
+          "initial_state": "S_up",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge3_trapping_anomaly_S_up.h5",
+          "P_S": {
+            "(-1, -1, -1, -1)": 0.9995,
+            "(-1, -1, 1, -1)": 0.0005
+          }
+        },
+        {
+          "initial_state": "S_down",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge3_trapping_anomaly_S_down.h5",
+          "P_S": {
+            "(-1, -1, -1, -1)": 1.0
+          }
+        },
+        {
+          "initial_state": "S_random",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge3_trapping_anomaly_S_random.h5",
+          "P_S": {
+            "(-1, -1, -1, -1)": 0.9985,
+            "(-1, -1, 1, -1)": 0.0015
+          }
+        }
+      ]
+    },
+    {
+      "test_case": "trapping_anomaly",
+      "gauge_index": 4,
+      "gauge": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": -1,
+        "5": 1,
+        "6": 1,
+        "7": -1
+      },
+      "S_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "E_qubits": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "per_initial_state": [
+        {
+          "initial_state": "S_up",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge4_trapping_anomaly_S_up.h5",
+          "P_S": {
+            "(-1, -1, -1, -1)": 1.0
+          }
+        },
+        {
+          "initial_state": "S_down",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge4_trapping_anomaly_S_down.h5",
+          "P_S": {
+            "(-1, -1, -1, -1)": 0.9995,
+            "(-1, -1, 1, -1)": 0.0005
+          }
+        },
+        {
+          "initial_state": "S_random",
+          "raw_path": "data/raw/phase6_gibbs/phase6_robustness/gauge4_trapping_anomaly_S_random.h5",
+          "P_S": {
+            "(-1, -1, -1, -1)": 0.9995,
+            "(-1, -1, 1, -1)": 0.0005
+          }
+        }
+      ]
+    }
+  ],
+  "A_over_B_approx_legacy": 1.3333
+}

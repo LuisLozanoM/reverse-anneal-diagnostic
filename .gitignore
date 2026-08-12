@@ -7,14 +7,23 @@ build/
 .venv/
 .env
 dwave.conf
-*.h5
-data/raw/
-data/processed/
-data/classical/
 results/
 .pytest_cache/
 .mypy_cache/
 *.pdf
+
+# --- Deposited reproducibility data (tracked for the public release) ---
+# The raw HDF5 samplesets + processed artifacts back every reported number,
+# so data/raw/, data/classical/ etc. are committed rather than ignored.
+# The exclusions below keep out non-reproducible / non-deposited material:
+# Dropped mixed-frustration "barrier" campaign — not used by the paper and
+# not reproducible from the deposit.
+data/raw/phase7_*/
+data/analysis/phase7_*
+# Processed-artifact scratch and local backups under data/.
+data/processed/
+data/**/*.bak
+data/**/*.bak_*
 
 # macOS and editor noise
 .DS_Store
@@ -34,3 +43,33 @@ results/
 # Local experiment scratch/backups
 *.bak
 *.bak_*
+
+# --- Not part of the public research deposit ---
+submission/
+kimi-checks/
+docs/
+analysis.md
+phases.md
+parameters.md
+hardware.md
+.kimi_prompt.txt
+manuscript/nature.cls
+manuscript/nature_cls_backup/
+manuscript/quantumarticle_backup/
+manuscript/quantumarticle.cls
+manuscript/quantum.bst
+manuscript/mainNotes.bib
+manuscript/supplementaryNotes.bib
+manuscript/figures/fig2_discovery*
+manuscript/figures/fig7_*
+manuscript/figures/fig8_*
+manuscript/figures/*mockup*
+manuscript/figures/fig1_protocol.png
+manuscript/figures/fig1_combined_old*
+scripts/phase7_*
+scripts/figures/generate_phase7_figures.py
+scripts/figures/fig1_protocol.py
+scripts/figures/fig1_redraw.py
+configs/phase7_*
+data/analysis/phase6/mpl_*
+scripts/phase6/mpl_cross_check.py

@@ -1,0 +1,118 @@
+{
+  "solver": "Advantage2_system1",
+  "num_reads": 2000,
+  "s_p": 0.4,
+  "t_hold": 100.0,
+  "rows": [
+    {
+      "label": "fig2a_E4_lam0.5",
+      "n_env": 4,
+      "coupling_lambda": 0.5,
+      "disorder_W": 0.0,
+      "max_abs_h": 0.0,
+      "max_abs_J": 1.0,
+      "memory_auto_scale_true": 1.0,
+      "memory_auto_scale_false": 1.0,
+      "delta_memory": 0.0
+    },
+    {
+      "label": "fig2a_E8_lam0.5",
+      "n_env": 8,
+      "coupling_lambda": 0.5,
+      "disorder_W": 0.0,
+      "max_abs_h": 0.0,
+      "max_abs_J": 1.0,
+      "memory_auto_scale_true": 1.0,
+      "memory_auto_scale_false": 1.0,
+      "delta_memory": 0.0
+    },
+    {
+      "label": "fig2a_E16_lam0.5",
+      "n_env": 16,
+      "coupling_lambda": 0.5,
+      "disorder_W": 0.0,
+      "max_abs_h": 0.0,
+      "max_abs_J": 1.0,
+      "memory_auto_scale_true": 0.0010000000000000005,
+      "memory_auto_scale_false": 0.963,
+      "delta_memory": -0.962
+    },
+    {
+      "label": "fig2a_E32_lam0.5",
+      "n_env": 32,
+      "coupling_lambda": 0.5,
+      "disorder_W": 0.0,
+      "max_abs_h": 0.0,
+      "max_abs_J": 1.0,
+      "memory_auto_scale_true": 0.0,
+      "memory_auto_scale_false": 0.0,
+      "delta_memory": 0.0
+    },
+    {
+      "label": "fig2a_E50_lam0.5",
+      "n_env": 50,
+      "coupling_lambda": 0.5,
+      "disorder_W": 0.0,
+      "max_abs_h": 0.0,
+      "max_abs_J": 1.0,
+      "memory_auto_scale_true": 0.0,
+      "memory_auto_scale_false": 0.0,
+      "delta_memory": 0.0
+    },
+    {
+      "label": "fig3a_W0.0_E50_lam0.5",
+      "n_env": 50,
+      "coupling_lambda": 0.5,
+      "disorder_W": 0.0,
+      "max_abs_h": 0.0,
+      "max_abs_J": 1.0,
+      "memory_auto_scale_true": 0.0,
+      "memory_auto_scale_false": 0.0,
+      "delta_memory": 0.0
+    },
+    {
+      "label": "fig3a_W0.5_E50_lam0.5",
+      "n_env": 50,
+      "coupling_lambda": 0.5,
+      "disorder_W": 0.5,
+      "max_abs_h": 0.4926377302489945,
+      "max_abs_J": 1.0,
+      "memory_auto_scale_true": 0.0,
+      "memory_auto_scale_false": 0.0,
+      "delta_memory": 0.0
+    },
+    {
+      "label": "fig3a_W1.0_E50_lam0.5",
+      "n_env": 50,
+      "coupling_lambda": 0.5,
+      "disorder_W": 1.0,
+      "max_abs_h": 0.985275460497989,
+      "max_abs_J": 1.0,
+      "memory_auto_scale_true": 0.0,
+      "memory_auto_scale_false": 0.0,
+      "delta_memory": 0.0
+    },
+    {
+      "label": "fig3a_W1.5_E50_lam0.5",
+      "n_env": 50,
+      "coupling_lambda": 0.5,
+      "disorder_W": 1.5,
+      "max_abs_h": 1.4779131907469836,
+      "max_abs_J": 1.0,
+      "memory_auto_scale_true": 0.0,
+      "memory_auto_scale_false": 0.0,
+      "delta_memory": 0.0
+    },
+    {
+      "label": "fig3a_W2.0_E50_lam0.5",
+      "n_env": 50,
+      "coupling_lambda": 0.5,
+      "disorder_W": 2.0,
+      "max_abs_h": 1.970550920995978,
+      "max_abs_J": 1.0,
+      "memory_auto_scale_true": 0.0,
+      "memory_auto_scale_false": 0.0,
+      "delta_memory": 0.0
+    }
+  ]
+}

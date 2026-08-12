@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the arXiv preprint below."
+title: "locth1 — code and data for: A calibrated diagnostic for reverse-anneal sampling in programmable quantum annealers"
+authors:
+  - family-names: Lozano
+    given-names: Luis
+    orcid: "https://orcid.org/0000-0001-7202-3437"
+    affiliation: "Tecnologico de Monterrey, Campus Santa Fe, Mexico City, Mexico"
+license: Apache-2.0
+repository-code: "https://github.com/LuisLozanoM/locth1"
+preferred-citation:
+  type: article
+  title: "A calibrated diagnostic for reverse-anneal sampling in programmable quantum annealers"
+  authors:
+    - family-names: Lozano
+      given-names: Luis
+      orcid: "https://orcid.org/0000-0001-7202-3437"
+  year: 2026
+  journal: "arXiv preprint"
+  url: "https://arxiv.org/abs/2605.19381"
+  identifiers:
+    - type: other
+      value: "arXiv:2605.19381"
+      description: "arXiv identifier (v2)"

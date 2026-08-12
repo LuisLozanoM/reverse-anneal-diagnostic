@@ -1,0 +1,96 @@
+{
+  "solver": "Advantage2_system1",
+  "num_reads": 2000,
+  "s_p": 0.4,
+  "t_hold": 100.0,
+  "rows": [
+    {
+      "label": "fig2b_lam0.00_E50",
+      "n_env": 50,
+      "coupling_lambda": 0.0,
+      "disorder_W": 0.0,
+      "max_abs_h": 0.0,
+      "max_abs_J": 1.0,
+      "memory_auto_scale_true": 1.0,
+      "memory_auto_scale_false": 0.9975,
+      "delta_memory": 0.0024999999999999467
+    },
+    {
+      "label": "fig2b_lam0.05_E50",
+      "n_env": 50,
+      "coupling_lambda": 0.05,
+      "disorder_W": 0.0,
+      "max_abs_h": 0.0,
+      "max_abs_J": 1.0,
+      "memory_auto_scale_true": 1.0,
+      "memory_auto_scale_false": 0.9335,
+      "delta_memory": 0.0665
+    },
+    {
+      "label": "fig2b_lam0.10_E50",
+      "n_env": 50,
+      "coupling_lambda": 0.1,
+      "disorder_W": 0.0,
+      "max_abs_h": 0.0,
+      "max_abs_J": 1.0,
+      "memory_auto_scale_true": 0.20999999999999996,
+      "memory_auto_scale_false": 0.10099999999999999,
+      "delta_memory": 0.10899999999999997
+    },
+    {
+      "label": "fig2b_lam0.15_E50",
+      "n_env": 50,
+      "coupling_lambda": 0.15,
+      "disorder_W": 0.0,
+      "max_abs_h": 0.0,
+      "max_abs_J": 1.0,
+      "memory_auto_scale_true": 0.0,
+      "memory_auto_scale_false": 0.0,
+      "delta_memory": 0.0
+    },
+    {
+      "label": "fig2b_lam0.20_E50",
+      "n_env": 50,
+      "coupling_lambda": 0.2,
+      "disorder_W": 0.0,
+      "max_abs_h": 0.0,
+      "max_abs_J": 1.0,
+      "memory_auto_scale_true": 0.0,
+      "memory_auto_scale_false": 0.0,
+      "delta_memory": 0.0
+    },
+    {
+      "label": "fig2b_lam0.30_E50",
+      "n_env": 50,
+      "coupling_lambda": 0.3,
+      "disorder_W": 0.0,
+      "max_abs_h": 0.0,
+      "max_abs_J": 1.0,
+      "memory_auto_scale_true": 0.0,
+      "memory_auto_scale_false": 0.0,
+      "delta_memory": 0.0
+    },
+    {
+      "label": "fig2b_lam0.50_E50",
+      "n_env": 50,
+      "coupling_lambda": 0.5,
+      "disorder_W": 0.0,
+      "max_abs_h": 0.0,
+      "max_abs_J": 1.0,
+      "memory_auto_scale_true": 0.0,
+      "memory_auto_scale_false": 0.0,
+      "delta_memory": 0.0
+    },
+    {
+      "label": "fig2b_lam1.00_E50",
+      "n_env": 50,
+      "coupling_lambda": 1.0,
+      "disorder_W": 0.0,
+      "max_abs_h": 0.0,
+      "max_abs_J": 1.0,
+      "memory_auto_scale_true": 0.0,
+      "memory_auto_scale_false": 0.0,
+      "delta_memory": 0.0
+    }
+  ]
+}

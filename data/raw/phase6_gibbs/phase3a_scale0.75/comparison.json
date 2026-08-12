@@ -1,0 +1,4714 @@
+{
+  "beta_eff": 7.219186155246177,
+  "A_over_B": 0.2602641898790776,
+  "A_over_B_approx_legacy": 1.3333333333333333,
+  "s_p": 0.4,
+  "solver": "Advantage2_system1",
+  "memory_threshold": 0.05,
+  "conditions": [
+    {
+      "N": 6,
+      "W": 0.0,
+      "seed": 42,
+      "coupling_lambda": 0.2,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.9995,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6430053354598306,
+      "classical_cond_entropy_nats": 0.001969224673503382,
+      "vs_classical_conditional": {
+        "d_tv": 0.656827173206258,
+        "symmetric_kl": 3.058638921149753,
+        "kl_exp_th": 5.048798300277754,
+        "kl_th_exp": 1.0684795420217514,
+        "magnetization_mae": 1.3136420708406078,
+        "pair_correlation_mae": 2.442472498957275e-05
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.15701221235059218,
+        "symmetric_kl": 0.05115625459762409,
+        "kl_exp_th": 0.05016627009958696,
+        "kl_th_exp": 0.05214623909566121,
+        "magnetization_mae": 0.314,
+        "pair_correlation_mae": 2.442473504769375e-05
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.653975177648218,
+        "symmetric_kl": 2.71124046191312,
+        "kl_exp_th": 3.1940871775911472,
+        "kl_th_exp": 2.2283937462350925,
+        "magnetization_mae": 1.2716349649113858,
+        "pair_correlation_mae": 0.07040424713378264
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.19195352551348632,
+        "symmetric_kl": 0.6926105043508278,
+        "kl_exp_th": 0.12261259779684565,
+        "kl_th_exp": 1.26260841090481,
+        "magnetization_mae": 0.3139999999999965,
+        "pair_correlation_mae": 0.07061448974927702
+      },
+      "measured_magnetization": [
+        -0.314,
+        -0.314,
+        -0.314,
+        -0.314
+      ],
+      "classical_cond_magnetization": [
+        0.999654220048718,
+        0.9996145929638683,
+        0.9996497351749223,
+        0.9996497351749222
+      ]
+    },
+    {
+      "N": 8,
+      "W": 0.0,
+      "seed": 42,
+      "coupling_lambda": 0.2,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.995,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.63697526674802,
+      "classical_cond_entropy_nats": 0.00032988540128721323,
+      "vs_classical_conditional": {
+        "d_tv": 0.33399772734480115,
+        "symmetric_kl": 2.05495726799705,
+        "kl_exp_th": 3.703226089293265,
+        "kl_th_exp": 0.4066884467008341,
+        "magnetization_mae": 0.6679832705625512,
+        "pair_correlation_mae": 2.4366529037589402e-05
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.16601218624338543,
+        "symmetric_kl": 0.0574168916761397,
+        "kl_exp_th": 0.05619628659571016,
+        "kl_th_exp": 0.058637496756569235,
+        "magnetization_mae": 0.33199999999999985,
+        "pair_correlation_mae": 2.4372518765488255e-05
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.3339481813082496,
+        "symmetric_kl": 2.161280931187651,
+        "kl_exp_th": 2.7062272847656046,
+        "kl_th_exp": 1.616334577609698,
+        "magnetization_mae": 0.6325833312609154,
+        "pair_correlation_mae": 0.06923620399677577
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.20044256553101794,
+        "symmetric_kl": 0.6893913814757326,
+        "kl_exp_th": 0.12754454081006805,
+        "kl_th_exp": 1.2512382221413971,
+        "magnetization_mae": 0.33199999999999974,
+        "pair_correlation_mae": 0.06953370438699961
+      },
+      "measured_magnetization": [
+        0.3319999999999999,
+        0.3319999999999999,
+        0.3319999999999999,
+        0.3319999999999999
+      ],
+      "classical_cond_magnetization": [
+        0.9999954530279309,
+        0.9999558124163357,
+        0.9999909084029691,
+        0.9999909084029691
+      ]
+    },
+    {
+      "N": 10,
+      "W": 0.0,
+      "seed": 42,
+      "coupling_lambda": 0.2,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.888,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.607869527559284,
+      "classical_cond_entropy_nats": 0.00029861021809605504,
+      "vs_classical_conditional": {
+        "d_tv": 0.29649997011984136,
+        "symmetric_kl": 2.4406345135211884,
+        "kl_exp_th": 4.5293277364236415,
+        "kl_th_exp": 0.35194129061873536,
+        "magnetization_mae": 0.5929877573151251,
+        "pair_correlation_mae": 2.4365763764688797e-05
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.20351218324882728,
+        "symmetric_kl": 0.08804823083365437,
+        "kl_exp_th": 0.08530201979518404,
+        "kl_th_exp": 0.09079444187212471,
+        "magnetization_mae": 0.4070000000000004,
+        "pair_correlation_mae": 2.436652943479019e-05
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.2964971544356463,
+        "symmetric_kl": 2.391639713584046,
+        "kl_exp_th": 3.2278794210477333,
+        "kl_th_exp": 1.555400006120359,
+        "magnetization_mae": 0.558085193804275,
+        "pair_correlation_mae": 0.06855687954592238
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.23764803907439763,
+        "symmetric_kl": 0.7137113191313573,
+        "kl_exp_th": 0.1560178481854782,
+        "kl_th_exp": 1.2714047900772365,
+        "magnetization_mae": 0.40700000000000613,
+        "pair_correlation_mae": 0.06890851957859313
+      },
+      "measured_magnetization": [
+        0.40700000000000003,
+        0.40700000000000003,
+        0.40700000000000003,
+        0.40700000000000003
+      ],
+      "classical_cond_magnetization": [
+        0.9999999402178356,
+        0.9999602994283646,
+        0.9999953948071502,
+        0.9999953948071502
+      ]
+    },
+    {
+      "N": 12,
+      "W": 0.0,
+      "seed": 42,
+      "coupling_lambda": 0.2,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 1.0,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.636744967396635,
+      "classical_cond_entropy_nats": 9.043385011311949e-09,
+      "vs_classical_conditional": {
+        "d_tv": 0.33366666666150135,
+        "symmetric_kl": 3.726089596411946,
+        "kl_exp_th": 7.0462139598254385,
+        "kl_th_exp": 0.40596523299845355,
+        "magnetization_mae": 0.6673333331264573,
+        "pair_correlation_mae": 3.9294978382287127e-10
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.16633333353028848,
+        "symmetric_kl": 0.05752202179117544,
+        "kl_exp_th": 0.056402213557220304,
+        "kl_th_exp": 0.05864183002513057,
+        "magnetization_mae": 0.33266666666666644,
+        "pair_correlation_mae": 3.939126432446945e-10
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.3336603151375499,
+        "symmetric_kl": 2.0099077892601023,
+        "kl_exp_th": 3.3664820360237755,
+        "kl_th_exp": 0.6533335424964287,
+        "magnetization_mae": 0.6595699672023113,
+        "pair_correlation_mae": 0.015386914352000828
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.1747105297025059,
+        "symmetric_kl": 0.19869064811697146,
+        "kl_exp_th": 0.07329854841366082,
+        "kl_th_exp": 0.3240827478202821,
+        "magnetization_mae": 0.3326666666666537,
+        "pair_correlation_mae": 0.016821542983322463
+      },
+      "measured_magnetization": [
+        0.3326666666666667,
+        0.3326666666666667,
+        0.3326666666666667,
+        0.3326666666666667
+      ],
+      "classical_cond_magnetization": [
+        0.9999999999895025,
+        0.9999999999896695,
+        0.9999999999895336,
+        0.9999999992037908
+      ]
+    },
+    {
+      "N": 6,
+      "W": 0.5,
+      "seed": 42,
+      "coupling_lambda": 0.2,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.9765,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6341786357122057,
+      "classical_cond_entropy_nats": 0.6052519789522439,
+      "vs_classical_conditional": {
+        "d_tv": 0.04729650210121522,
+        "symmetric_kl": 0.014844128126853085,
+        "kl_exp_th": 0.006494370843183536,
+        "kl_th_exp": 0.023193885410522634,
+        "magnetization_mae": 0.09300710242308205,
+        "pair_correlation_mae": 0.0012270334918249581
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.3298862493646675,
+        "symmetric_kl": 1.3811275631377253,
+        "kl_exp_th": 2.3627967516341166,
+        "kl_th_exp": 0.3994583746413342,
+        "magnetization_mae": 0.6597694673128058,
+        "pair_correlation_mae": 5.280283366752385e-06
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.3045059135120891,
+        "symmetric_kl": 1.1624289165936879,
+        "kl_exp_th": 0.6499199045746351,
+        "kl_th_exp": 1.6749379286127404,
+        "magnetization_mae": 0.5645530737168951,
+        "pair_correlation_mae": 0.07898641171762909
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.32986077624838067,
+        "symmetric_kl": 1.8186002459945434,
+        "kl_exp_th": 2.3320189660804713,
+        "kl_th_exp": 1.3051815259086152,
+        "magnetization_mae": 0.633021455370969,
+        "pair_correlation_mae": 0.05253652340207541
+      },
+      "measured_magnetization": [
+        -0.34,
+        -0.34,
+        -0.34,
+        -0.34
+      ],
+      "classical_cond_magnetization": [
+        -0.4326482110703727,
+        -0.4345812847435181,
+        -0.43262992365284425,
+        -0.43216899022559324
+      ]
+    },
+    {
+      "N": 8,
+      "W": 0.5,
+      "seed": 42,
+      "coupling_lambda": 0.2,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.991,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6560560550187825,
+      "classical_cond_entropy_nats": 0.00407694618072767,
+      "vs_classical_conditional": {
+        "d_tv": 0.3645885919256804,
+        "symmetric_kl": 1.6253867421488575,
+        "kl_exp_th": 2.7931798295255614,
+        "kl_th_exp": 0.4575936547721537,
+        "magnetization_mae": 0.7289983945432102,
+        "pair_correlation_mae": 0.00035538431007485033
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.6353321712926183,
+        "symmetric_kl": 4.518551645316473,
+        "kl_exp_th": 8.026053505067551,
+        "kl_th_exp": 1.0110497855653944,
+        "magnetization_mae": 1.2705715830587638,
+        "pair_correlation_mae": 0.0001855177866166476
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.3060846978250815,
+        "symmetric_kl": 1.1121330336467516,
+        "kl_exp_th": 0.2556571059281795,
+        "kl_th_exp": 1.968608961365324,
+        "magnetization_mae": 0.5275502784140185,
+        "pair_correlation_mae": 0.10359709245443322
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.6353281203389339,
+        "symmetric_kl": 4.7103057286763095,
+        "kl_exp_th": 7.101152108463073,
+        "kl_th_exp": 2.3194593488895454,
+        "magnetization_mae": 1.2316404957953317,
+        "pair_correlation_mae": 0.07657728837232482
+      },
+      "measured_magnetization": [
+        0.2706666666666668,
+        0.2706666666666668,
+        0.2706666666666668,
+        0.2706666666666668
+      ],
+      "classical_cond_magnetization": [
+        0.99984166048921,
+        0.9991716534951137,
+        0.9998437910449399,
+        0.9998031398102445
+      ]
+    },
+    {
+      "N": 10,
+      "W": 0.5,
+      "seed": 42,
+      "coupling_lambda": 0.2,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.9985,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6366296303301126,
+      "classical_cond_entropy_nats": 0.0035025681540161793,
+      "vs_classical_conditional": {
+        "d_tv": 0.3334990795189582,
+        "symmetric_kl": 2.204925947683999,
+        "kl_exp_th": 3.9987394555124647,
+        "kl_th_exp": 0.4111124398555338,
+        "magnetization_mae": 0.6668014470192554,
+        "pair_correlation_mae": 0.00039342097254835284
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.6664084714731409,
+        "symmetric_kl": 3.337147182307988,
+        "kl_exp_th": 5.561463087543359,
+        "kl_th_exp": 1.1128312770726176,
+        "magnetization_mae": 1.332259407769598,
+        "pair_correlation_mae": 0.0011149939655047218
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.3323037801582852,
+        "symmetric_kl": 1.788320057283638,
+        "kl_exp_th": 1.6667375500796497,
+        "kl_th_exp": 1.9099025644876262,
+        "magnetization_mae": 0.6211405351913507,
+        "pair_correlation_mae": 0.08485763643696569
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.66637202445913,
+        "symmetric_kl": 4.073122308692519,
+        "kl_exp_th": 5.37117486711135,
+        "kl_th_exp": 2.7750697502736887,
+        "magnetization_mae": 1.2835904694720672,
+        "pair_correlation_mae": 0.09638184968612841
+      },
+      "measured_magnetization": [
+        0.333,
+        0.333,
+        0.333,
+        0.333
+      ],
+      "classical_cond_magnetization": [
+        0.9999981563715926,
+        0.9999974517539125,
+        0.9992143678762689,
+        0.9999958120752477
+      ]
+    },
+    {
+      "N": 12,
+      "W": 0.5,
+      "seed": 42,
+      "coupling_lambda": 0.2,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.9995,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.640258600162396,
+      "classical_cond_entropy_nats": 7.982075302836399e-06,
+      "vs_classical_conditional": {
+        "d_tv": 0.33883289956091467,
+        "symmetric_kl": 2.368822974413361,
+        "kl_exp_th": 4.323902774158782,
+        "kl_th_exp": 0.4137431746679402,
+        "magnetization_mae": 0.6776657647958633,
+        "pair_correlation_mae": 6.806430052908041e-08
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.6611656152821008,
+        "symmetric_kl": 4.771598917359554,
+        "kl_exp_th": 8.460967127120334,
+        "kl_th_exp": 1.0822307075987734,
+        "magnetization_mae": 1.3223312305625972,
+        "pair_correlation_mae": 3.0643265702678946e-12
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.5590730635301646,
+        "symmetric_kl": 1.044909514556706,
+        "kl_exp_th": 0.9165787857063915,
+        "kl_th_exp": 1.1732402434070204,
+        "magnetization_mae": 1.100396433928025,
+        "pair_correlation_mae": 0.030580006959876522
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.6611649457844988,
+        "symmetric_kl": 4.717275697220657,
+        "kl_exp_th": 8.139936524437001,
+        "kl_th_exp": 1.294614870004314,
+        "magnetization_mae": 1.3153056433884625,
+        "pair_correlation_mae": 0.013953042785803615
+      },
+      "measured_magnetization": [
+        0.32233333333333336,
+        0.32233333333333336,
+        0.32233333333333336,
+        0.32233333333333336
+      ],
+      "classical_cond_magnetization": [
+        0.9999991318666064,
+        0.9999991324551623,
+        0.9999991318679778,
+        0.99999899632704
+      ]
+    },
+    {
+      "N": 6,
+      "W": 0.5,
+      "seed": 123,
+      "coupling_lambda": 0.2,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.9815,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.643867998192958,
+      "classical_cond_entropy_nats": 2.853465354200136e-06,
+      "vs_classical_conditional": {
+        "d_tv": 0.34433333221688844,
+        "symmetric_kl": 3.4380093648351018,
+        "kl_exp_th": 6.453915202036464,
+        "kl_th_exp": 0.4221035276337396,
+        "magnetization_mae": 0.688666584075913,
+        "pair_correlation_mae": 1.6064243833306216e-07
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.34431486403923306,
+        "symmetric_kl": 1.765533496071943,
+        "kl_exp_th": 3.1091712954876405,
+        "kl_th_exp": 0.4218956966562458,
+        "magnetization_mae": 0.6886296326020908,
+        "pair_correlation_mae": 1.7079894358100015e-07
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.344332057444354,
+        "symmetric_kl": 2.5709724714242532,
+        "kl_exp_th": 4.055531488104288,
+        "kl_th_exp": 1.0864134547442186,
+        "magnetization_mae": 0.6687097304375936,
+        "pair_correlation_mae": 0.03935637811903436
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.3443103422245674,
+        "symmetric_kl": 2.081922790550034,
+        "kl_exp_th": 3.0606081357343755,
+        "kl_th_exp": 1.1032374453656928,
+        "magnetization_mae": 0.6680900310916145,
+        "pair_correlation_mae": 0.040404197902547866
+      },
+      "measured_magnetization": [
+        0.31133333333333335,
+        0.31133333333333335,
+        0.31133333333333335,
+        0.31133333333333335
+      ],
+      "classical_cond_magnetization": [
+        0.9999999976934224,
+        0.9999998617502522,
+        0.9999999614972626,
+        0.9999998486960482
+      ]
+    },
+    {
+      "N": 8,
+      "W": 0.5,
+      "seed": 123,
+      "coupling_lambda": 0.2,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.672,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.5410824656117083,
+      "classical_cond_entropy_nats": 0.0007100263341360141,
+      "vs_classical_conditional": {
+        "d_tv": 0.23149998685499912,
+        "symmetric_kl": 1.9620883561972755,
+        "kl_exp_th": 3.660051312674383,
+        "kl_th_exp": 0.264125399720168,
+        "magnetization_mae": 0.46296656989973106,
+        "pair_correlation_mae": 6.680689359352583e-05
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.23136903281318622,
+        "symmetric_kl": 0.8958956815981447,
+        "kl_exp_th": 1.528810109849615,
+        "kl_th_exp": 0.2629812533466743,
+        "magnetization_mae": 0.4627045298372936,
+        "pair_correlation_mae": 6.688928459225307e-05
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.23149689474582863,
+        "symmetric_kl": 1.8877114832322894,
+        "kl_exp_th": 2.4425652629462444,
+        "kl_th_exp": 1.3328577035183344,
+        "magnetization_mae": 0.43219465361417575,
+        "pair_correlation_mae": 0.06059933747810662
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.2312886186090866,
+        "symmetric_kl": 1.4065074339437522,
+        "kl_exp_th": 1.4664323565861652,
+        "kl_th_exp": 1.3465825113013392,
+        "magnetization_mae": 0.431180218313292,
+        "pair_correlation_mae": 0.06158442572859444
+      },
+      "measured_magnetization": [
+        0.537,
+        0.537,
+        0.537,
+        0.537
+      ],
+      "classical_cond_magnetization": [
+        0.9999999729846898,
+        0.999999937312805,
+        0.9998665321179305,
+        0.9999998371834989
+      ]
+    },
+    {
+      "N": 10,
+      "W": 0.5,
+      "seed": 123,
+      "coupling_lambda": 0.2,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.13049999999999998,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.179426856853618,
+      "classical_cond_entropy_nats": 0.01026730340453743,
+      "vs_classical_conditional": {
+        "d_tv": 0.04366666317121903,
+        "symmetric_kl": 0.3687642644737637,
+        "kl_exp_th": 0.6721334032861181,
+        "kl_th_exp": 0.06539512566140926,
+        "magnetization_mae": 0.08665856456411014,
+        "pair_correlation_mae": 0.0013495232869505196
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.3822591500082716,
+        "symmetric_kl": 0.5386066974106772,
+        "kl_exp_th": 0.3886993895383311,
+        "kl_th_exp": 0.6885140052830234,
+        "magnetization_mae": 0.7632778539761502,
+        "pair_correlation_mae": 0.0009293392526265968
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.09084404819924963,
+        "symmetric_kl": 1.1098338080482821,
+        "kl_exp_th": 0.47786767773518307,
+        "kl_th_exp": 1.7417999383613811,
+        "magnetization_mae": 0.06441272332005316,
+        "pair_correlation_mae": 0.09157559735240922
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.41051572781935586,
+        "symmetric_kl": 1.334647011992267,
+        "kl_exp_th": 0.44414062689566175,
+        "kl_th_exp": 2.2251533970888726,
+        "magnetization_mae": 0.7192982064190034,
+        "pair_correlation_mae": 0.09447465430381659
+      },
+      "measured_magnetization": [
+        0.9126666666666666,
+        0.9126666666666666,
+        0.9126666666666666,
+        0.9126666666666666
+      ],
+      "classical_cond_magnetization": [
+        0.9999999928162748,
+        0.9973011184821036,
+        0.9999998569011294,
+        0.9999999567235993
+      ]
+    },
+    {
+      "N": 12,
+      "W": 0.5,
+      "seed": 123,
+      "coupling_lambda": 0.2,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.5855,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.4936285504008153,
+      "classical_cond_entropy_nats": 0.0002678348138457776,
+      "vs_classical_conditional": {
+        "d_tv": 0.19516666666588994,
+        "symmetric_kl": 2.1088212552856995,
+        "kl_exp_th": 4.000268436934404,
+        "kl_th_exp": 0.2173740736369944,
+        "magnetization_mae": 0.3903218937177232,
+        "pair_correlation_mae": 2.2879226744691266e-05
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.18768007667747108,
+        "symmetric_kl": 0.32579633472004804,
+        "kl_exp_th": 0.46770969068766116,
+        "kl_th_exp": 0.18388297875243492,
+        "magnetization_mae": 0.37534738421131664,
+        "pair_correlation_mae": 2.3651407209020665e-05
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.19516638721520718,
+        "symmetric_kl": 1.805681845251637,
+        "kl_exp_th": 2.4936139463404348,
+        "kl_th_exp": 1.117749744162839,
+        "magnetization_mae": 0.36437603436449195,
+        "pair_correlation_mae": 0.051264678392447825
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.19010625066611544,
+        "symmetric_kl": 0.8480636830339514,
+        "kl_exp_th": 0.5854869728306394,
+        "kl_th_exp": 1.1106403932372633,
+        "magnetization_mae": 0.35307631037380216,
+        "pair_correlation_mae": 0.05249985041681465
+      },
+      "measured_magnetization": [
+        0.6096666666666666,
+        0.6096666666666666,
+        0.6096666666666666,
+        0.6096666666666666
+      ],
+      "classical_cond_magnetization": [
+        0.999999999998142,
+        0.9999543816552313,
+        0.9999998640417288,
+        0.9999999958424569
+      ]
+    },
+    {
+      "N": 6,
+      "W": 0.5,
+      "seed": 456,
+      "coupling_lambda": 0.2,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.9975,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.636744967396635,
+      "classical_cond_entropy_nats": 0.032119688005409625,
+      "vs_classical_conditional": {
+        "d_tv": 0.6619242790381593,
+        "symmetric_kl": 2.0253628348407116,
+        "kl_exp_th": 2.979124767055038,
+        "kl_th_exp": 1.0716009026263849,
+        "magnetization_mae": 1.3236383529108948,
+        "pair_correlation_mae": 0.00041760844561620586
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.495107587394244,
+        "symmetric_kl": 0.5639046507081753,
+        "kl_exp_th": 0.6019871113183879,
+        "kl_th_exp": 0.5258221900979628,
+        "magnetization_mae": 0.9900391265494716,
+        "pair_correlation_mae": 0.0003483687770420481
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.6551139069447122,
+        "symmetric_kl": 2.577019578701095,
+        "kl_exp_th": 2.3944536547438733,
+        "kl_th_exp": 2.759585502658317,
+        "magnetization_mae": 1.2570791455468122,
+        "pair_correlation_mae": 0.1011532305297494
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.491601236924998,
+        "symmetric_kl": 1.3569501264312878,
+        "kl_exp_th": 0.6289941722498562,
+        "kl_th_exp": 2.0849060806127193,
+        "magnetization_mae": 0.9260989828152978,
+        "pair_correlation_mae": 0.09271967771189338
+      },
+      "measured_magnetization": [
+        -0.3326666666666667,
+        -0.3326666666666667,
+        -0.3326666666666667,
+        -0.3326666666666667
+      ],
+      "classical_cond_magnetization": [
+        0.9911790989343187,
+        0.9904207094645009,
+        0.9911077181083675,
+        0.9911792184697257
+      ]
+    },
+    {
+      "N": 8,
+      "W": 0.5,
+      "seed": 456,
+      "coupling_lambda": 0.2,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.7185,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6870480484128885,
+      "classical_cond_entropy_nats": 0.00042314803789647516,
+      "vs_classical_conditional": {
+        "d_tv": 0.4448333001866748,
+        "symmetric_kl": 3.7814675446809067,
+        "kl_exp_th": 6.9740363873958415,
+        "kl_th_exp": 0.5888987019659724,
+        "magnetization_mae": 0.889647993961317,
+        "pair_correlation_mae": 3.721172400977801e-05
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.07225909586423968,
+        "symmetric_kl": 0.011568948310373181,
+        "kl_exp_th": 0.011025570584174083,
+        "kl_th_exp": 0.01211232603657228,
+        "magnetization_mae": 0.14438192515121737,
+        "pair_correlation_mae": 0.00011463041174656723
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.44483059564598915,
+        "symmetric_kl": 3.355675384002286,
+        "kl_exp_th": 5.045962096939804,
+        "kl_th_exp": 1.665388671064768,
+        "magnetization_mae": 0.8579947134866514,
+        "pair_correlation_mae": 0.062275924648302595
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.13889176701039896,
+        "symmetric_kl": 0.6685153802836193,
+        "kl_exp_th": 0.10089668891596272,
+        "kl_th_exp": 1.2361340716512759,
+        "magnetization_mae": 0.21570734222430551,
+        "pair_correlation_mae": 0.0699325387394998
+      },
+      "measured_magnetization": [
+        0.11033333333333323,
+        0.11033333333333323,
+        0.11033333333333323,
+        0.11033333333333323
+      ],
+      "classical_cond_magnetization": [
+        0.999999932637879,
+        0.9999998839615785,
+        0.9999281386380736,
+        0.9999973539410694
+      ]
+    },
+    {
+      "N": 10,
+      "W": 0.5,
+      "seed": 456,
+      "coupling_lambda": 0.2,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 1.0,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6366296303301126,
+      "classical_cond_entropy_nats": 3.1743215326628596e-06,
+      "vs_classical_conditional": {
+        "d_tv": 0.6664998885409581,
+        "symmetric_kl": 5.565942669898286,
+        "kl_exp_th": 10.033774597342486,
+        "kl_th_exp": 1.098110742454086,
+        "magnetization_mae": 1.3329997410471206,
+        "pair_correlation_mae": 7.206959055465016e-08
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.07862816801873296,
+        "symmetric_kl": 0.01325767620549078,
+        "kl_exp_th": 0.013067438116928967,
+        "kl_th_exp": 0.013447914294052593,
+        "magnetization_mae": 0.15725632116190613,
+        "pair_correlation_mae": 2.971833205448841e-08
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.6642430596193873,
+        "symmetric_kl": 2.465655983644729,
+        "kl_exp_th": 3.43436130194612,
+        "kl_th_exp": 1.4969506653433384,
+        "magnetization_mae": 1.3153357934001155,
+        "pair_correlation_mae": 0.02596328629466819
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.07888534077314587,
+        "symmetric_kl": 0.1807547305282905,
+        "kl_exp_th": 0.03320885006458166,
+        "kl_th_exp": 0.32830061099199936,
+        "magnetization_mae": 0.14092656142747556,
+        "pair_correlation_mae": 0.01968401408216482
+      },
+      "measured_magnetization": [
+        -0.333,
+        -0.333,
+        -0.333,
+        -0.333
+      ],
+      "classical_cond_magnetization": [
+        0.9999997646710959,
+        0.9999997770819153,
+        0.9999997770819163,
+        0.9999996453535542
+      ]
+    },
+    {
+      "N": 12,
+      "W": 0.5,
+      "seed": 456,
+      "coupling_lambda": 0.2,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 1.0,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6366296303301126,
+      "classical_cond_entropy_nats": 1.6151685613332607e-06,
+      "vs_classical_conditional": {
+        "d_tv": 0.6664999999999868,
+        "symmetric_kl": 7.904106416306203,
+        "kl_exp_th": 14.710100044732423,
+        "kl_th_exp": 1.098112787879984,
+        "magnetization_mae": 1.3329999546368323,
+        "pair_correlation_mae": 9.072627948913947e-08
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.36805400127897675,
+        "symmetric_kl": 0.2851648027308678,
+        "kl_exp_th": 0.28752660518923534,
+        "kl_th_exp": 0.28280300027250027,
+        "magnetization_mae": 0.7359964611881917,
+        "pair_correlation_mae": 7.440535357935059e-05
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.6664986062341793,
+        "symmetric_kl": 4.955109891756382,
+        "kl_exp_th": 8.359585094047413,
+        "kl_th_exp": 1.5506346894653515,
+        "magnetization_mae": 1.3188274492753191,
+        "pair_correlation_mae": 0.02808962197237619
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.44631703684329804,
+        "symmetric_kl": 0.749740604878573,
+        "kl_exp_th": 0.4714423751237326,
+        "kl_th_exp": 1.0280388346334133,
+        "magnetization_mae": 0.8594717647156971,
+        "pair_correlation_mae": 0.037919079834160006
+      },
+      "measured_magnetization": [
+        -0.333,
+        -0.333,
+        -0.333,
+        -0.333
+      ],
+      "classical_cond_magnetization": [
+        0.999999868271594,
+        0.9999999999999725,
+        0.9999999999999701,
+        0.999999950275792
+      ]
+    },
+    {
+      "N": 6,
+      "W": 1.0,
+      "seed": 42,
+      "coupling_lambda": 0.2,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.022499999999999982,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.044168196360934636,
+      "classical_cond_entropy_nats": 0.0059482676806613495,
+      "vs_classical_conditional": {
+        "d_tv": 0.007473075530319781,
+        "symmetric_kl": 0.026256375797494017,
+        "kl_exp_th": 0.03543968415597687,
+        "kl_th_exp": 0.017073067439011165,
+        "magnetization_mae": 0.014596583764289517,
+        "pair_correlation_mae": 0.0006673625233449831
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.007499987243001785,
+        "symmetric_kl": 0.04989480293803474,
+        "kl_exp_th": 0.09216952743374861,
+        "kl_th_exp": 0.007620078442320874,
+        "magnetization_mae": 0.014995524974415197,
+        "pair_correlation_mae": 8.88396911878179e-06
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.06754775033006415,
+        "symmetric_kl": 0.6757206185616689,
+        "kl_exp_th": 0.11574692394419947,
+        "kl_th_exp": 1.2356943131791382,
+        "magnetization_mae": 0.023739541527555752,
+        "pair_correlation_mae": 0.06815045413046683
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.045590956063065374,
+        "symmetric_kl": 0.46556991982393203,
+        "kl_exp_th": 0.11486337993782064,
+        "kl_th_exp": 0.8162764597100435,
+        "magnetization_mae": 0.013513590090467154,
+        "pair_correlation_mae": 0.04585717389225946
+      },
+      "measured_magnetization": [
+        -0.9850000000000001,
+        -0.9850000000000001,
+        -0.9850000000000001,
+        -0.9850000000000001
+      ],
+      "classical_cond_magnetization": [
+        -0.9999143765625798,
+        -0.9999461409033247,
+        -0.9999095787013561,
+        -0.9986162388898979
+      ]
+    },
+    {
+      "N": 8,
+      "W": 1.0,
+      "seed": 42,
+      "coupling_lambda": 0.2,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.10350000000000001,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.152818432520955,
+      "classical_cond_entropy_nats": 0.07504886709541285,
+      "vs_classical_conditional": {
+        "d_tv": 0.9620129129028836,
+        "symmetric_kl": 4.500797882063834,
+        "kl_exp_th": 5.569778263830098,
+        "kl_th_exp": 3.43181750029757,
+        "magnetization_mae": 1.9166275373994974,
+        "pair_correlation_mae": 0.008775109032449732
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.035333331397411974,
+        "symmetric_kl": 0.4337804574523586,
+        "kl_exp_th": 0.5703445962983309,
+        "kl_th_exp": 0.29721631860638625,
+        "magnetization_mae": 0.06331884676960672,
+        "pair_correlation_mae": 0.014695630991336306
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.22359324004461845,
+        "symmetric_kl": 2.4634864816146176,
+        "kl_exp_th": 0.4352931066064686,
+        "kl_th_exp": 4.491679856622767,
+        "magnetization_mae": 0.11703892484946313,
+        "pair_correlation_mae": 0.22652528883457249
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.15540192725515967,
+        "symmetric_kl": 1.7697346998708325,
+        "kl_exp_th": 0.46936838139472514,
+        "kl_th_exp": 3.0701010183469397,
+        "magnetization_mae": 0.08874449346357266,
+        "pair_correlation_mae": 0.15674192137504817
+      },
+      "measured_magnetization": [
+        -0.9293333333333333,
+        -0.9293333333333333,
+        -0.9293333333333333,
+        -0.9293333333333333
+      ],
+      "classical_cond_magnetization": [
+        0.9886716245694522,
+        0.9774657245504972,
+        0.9946924786457493,
+        0.9883469884989576
+      ]
+    },
+    {
+      "N": 10,
+      "W": 1.0,
+      "seed": 42,
+      "coupling_lambda": 0.2,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.7835,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6993585761323813,
+      "classical_cond_entropy_nats": 0.23640774495344632,
+      "vs_classical_conditional": {
+        "d_tv": 0.4861384293963814,
+        "symmetric_kl": 2.6551233230569236,
+        "kl_exp_th": 4.458486946314465,
+        "kl_th_exp": 0.851759699799382,
+        "magnetization_mae": 0.9408556655542342,
+        "pair_correlation_mae": 0.0627318956824205
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.5138332880459511,
+        "symmetric_kl": 4.549463896808523,
+        "kl_exp_th": 8.13231668701854,
+        "kl_th_exp": 0.9666111065985057,
+        "magnetization_mae": 0.9980569606913211,
+        "pair_correlation_mae": 0.058768764865572067
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.413824861148303,
+        "symmetric_kl": 1.5059198109544738,
+        "kl_exp_th": 0.7040801615394643,
+        "kl_th_exp": 2.3077594603694833,
+        "magnetization_mae": 0.6563310139263105,
+        "pair_correlation_mae": 0.26351926794369834
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.5137260592904375,
+        "symmetric_kl": 4.156438252559102,
+        "kl_exp_th": 5.90949629619261,
+        "kl_th_exp": 2.4033802089255953,
+        "magnetization_mae": 0.9043221244661375,
+        "pair_correlation_mae": 0.23993793741316313
+      },
+      "measured_magnetization": [
+        0.027666666666666673,
+        0.02799999999999997,
+        0.026333333333333375,
+        0.027666666666666673
+      ],
+      "classical_cond_magnetization": [
+        0.9999434887778565,
+        0.9999467939944665,
+        0.8732567303251284,
+        0.9999423157861518
+      ]
+    },
+    {
+      "N": 12,
+      "W": 1.0,
+      "seed": 42,
+      "coupling_lambda": 0.2,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.909,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6728762804702846,
+      "classical_cond_entropy_nats": 0.1523592997781406,
+      "vs_classical_conditional": {
+        "d_tv": 0.36451956317220846,
+        "symmetric_kl": 0.5296362826802927,
+        "kl_exp_th": 0.6867803593479656,
+        "kl_th_exp": 0.3724922060126199,
+        "magnetization_mae": 0.7290316496792346,
+        "pair_correlation_mae": 1.2504146478760822e-05
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.6003333333323826,
+        "symmetric_kl": 7.033716986865462,
+        "kl_exp_th": 13.150309561137774,
+        "kl_th_exp": 0.9171244125931505,
+        "magnetization_mae": 1.2006666666646537,
+        "pair_correlation_mae": 2.220631086421084e-13
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.6003327396443,
+        "symmetric_kl": 4.612494198413456,
+        "kl_exp_th": 7.943222274355321,
+        "kl_th_exp": 1.2817661224715913,
+        "magnetization_mae": 1.1891306326849969,
+        "pair_correlation_mae": 0.022811307908657857
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.60033331915938,
+        "symmetric_kl": 5.643348420783161,
+        "kl_exp_th": 10.181210989982393,
+        "kl_th_exp": 1.1054858515839294,
+        "magnetization_mae": 1.194461280680514,
+        "pair_correlation_mae": 0.012337908595991173
+      },
+      "measured_magnetization": [
+        0.20066666666666672,
+        0.20066666666666672,
+        0.20066666666666672,
+        0.20066666666666672
+      ],
+      "classical_cond_magnetization": [
+        0.929703343808663,
+        0.9297057930110708,
+        0.9297033437452614,
+        0.9296807848186106
+      ]
+    },
+    {
+      "N": 6,
+      "W": 1.0,
+      "seed": 123,
+      "coupling_lambda": 0.2,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.04600000000000002,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.08065741129352133,
+      "classical_cond_entropy_nats": 9.703169006614432e-08,
+      "vs_classical_conditional": {
+        "d_tv": 0.015666666666603865,
+        "symmetric_kl": 0.14793580984127042,
+        "kl_exp_th": 0.28008092449035676,
+        "kl_th_exp": 0.015790695192184092,
+        "magnetization_mae": 0.031333331022748406,
+        "pair_correlation_mae": 4.6204905827333205e-09
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.015666666597740887,
+        "symmetric_kl": 0.1479358091496784,
+        "kl_exp_th": 0.2800809245799352,
+        "kl_th_exp": 0.015790693719421614,
+        "magnetization_mae": 0.0313333308546733,
+        "pair_correlation_mae": 4.6441833897089184e-09
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.027667578787781623,
+        "symmetric_kl": 0.3407788036940445,
+        "kl_exp_th": 0.19501198723801602,
+        "kl_th_exp": 0.48654562015007297,
+        "magnetization_mae": 0.017272498725284885,
+        "pair_correlation_mae": 0.027813039516223898
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.02870226460661094,
+        "symmetric_kl": 0.3455067352578104,
+        "kl_exp_th": 0.18667917000752055,
+        "kl_th_exp": 0.5043343005081002,
+        "magnetization_mae": 0.016705483388706643,
+        "pair_correlation_mae": 0.02887777028033271
+      },
+      "measured_magnetization": [
+        0.9686666666666666,
+        0.9686666666666666,
+        0.9686666666666666,
+        0.9686666666666666
+      ],
+      "classical_cond_magnetization": [
+        0.9999999999993523,
+        0.9999999959329232,
+        0.9999999997108089,
+        0.9999999951145755
+      ]
+    },
+    {
+      "N": 8,
+      "W": 1.0,
+      "seed": 123,
+      "coupling_lambda": 0.2,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.0004999999999999725,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.0016165719017076775,
+      "classical_cond_entropy_nats": 0.014148196665193909,
+      "vs_classical_conditional": {
+        "d_tv": 0.001788490864562986,
+        "symmetric_kl": 0.00220343708788609,
+        "kl_exp_th": 0.0013797211207401076,
+        "kl_th_exp": 0.0030271530550320725,
+        "magnetization_mae": 0.0008942485282186219,
+        "pair_correlation_mae": 0.001788490320018728
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.001788732917407018,
+        "symmetric_kl": 0.0022042640653812265,
+        "kl_exp_th": 0.0013799636470674963,
+        "kl_th_exp": 0.0030285644836949566,
+        "magnetization_mae": 0.0008946280854262023,
+        "pair_correlation_mae": 0.001788681768057243
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.09252908118211269,
+        "symmetric_kl": 0.3956093136945936,
+        "kl_exp_th": 0.09607915879151147,
+        "kl_th_exp": 0.6951394685976757,
+        "magnetization_mae": 0.04745087643688495,
+        "pair_correlation_mae": 0.0932635693024849
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.09395954969355759,
+        "symmetric_kl": 0.40658164064689234,
+        "kl_exp_th": 0.09765602598413393,
+        "kl_th_exp": 0.7155072553096508,
+        "magnetization_mae": 0.04843760834591512,
+        "pair_correlation_mae": 0.09483795520383143
+      },
+      "measured_magnetization": [
+        1.0000000000000002,
+        1.0000000000000002,
+        0.9996666666666668,
+        1.0000000000000002
+      ],
+      "classical_cond_magnetization": [
+        0.9999999941265733,
+        0.9999999981315184,
+        0.9960896892845773,
+        0.999999991011124
+      ]
+    },
+    {
+      "N": 10,
+      "W": 1.0,
+      "seed": 123,
+      "coupling_lambda": 0.2,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.8440000000000001,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.5990211706118265,
+      "classical_cond_entropy_nats": 0.2892679128969667,
+      "vs_classical_conditional": {
+        "d_tv": 0.2848333329579158,
+        "symmetric_kl": 3.1989225126503205,
+        "kl_exp_th": 5.646130630088748,
+        "kl_th_exp": 0.7517143952118932,
+        "magnetization_mae": 0.527574843848452,
+        "pair_correlation_mae": 0.08418364169451897
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.0737724875969688,
+        "symmetric_kl": 0.28003171601543947,
+        "kl_exp_th": 0.08421134498153494,
+        "kl_th_exp": 0.475852087049344,
+        "magnetization_mae": 0.10205130281212627,
+        "pair_correlation_mae": 0.07377890326810786
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.28482834804395846,
+        "symmetric_kl": 2.610634593744841,
+        "kl_exp_th": 3.0957409408975147,
+        "kl_th_exp": 2.125528246592167,
+        "magnetization_mae": 0.43564081311452674,
+        "pair_correlation_mae": 0.263619851133964
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.2625162313299336,
+        "symmetric_kl": 1.3695496763888562,
+        "kl_exp_th": 0.32718976250609766,
+        "kl_th_exp": 2.411909590271615,
+        "magnetization_mae": 0.20990737797648473,
+        "pair_correlation_mae": 0.2657058381351156
+      },
+      "measured_magnetization": [
+        0.4303333333333333,
+        0.43,
+        0.4303333333333333,
+        0.4303333333333333
+      ],
+      "classical_cond_magnetization": [
+        0.9999999966684533,
+        0.8312993867688847,
+        0.999999993141397,
+        0.9999999988150731
+      ]
+    },
+    {
+      "N": 12,
+      "W": 1.0,
+      "seed": 123,
+      "coupling_lambda": 0.2,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.0,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.0,
+      "classical_cond_entropy_nats": 0.0003031591895043303,
+      "vs_classical_conditional": {
+        "d_tv": 2.6250671202758332e-05,
+        "symmetric_kl": 0.00016376793407636933,
+        "kl_exp_th": 2.625101575766465e-05,
+        "kl_th_exp": 0.00030128485239507404,
+        "magnetization_mae": 1.3125335670827187e-05,
+        "pair_correlation_mae": 2.625067122150974e-05
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 3.1920899622773966e-05,
+        "symmetric_kl": 0.0001946719331684602,
+        "kl_exp_th": 3.1921409105764315e-05,
+        "kl_th_exp": 0.0003574224572311561,
+        "magnetization_mae": 2.444682384719621e-05,
+        "pair_correlation_mae": 2.6288789622648984e-05
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.045300419273756255,
+        "symmetric_kl": 0.4281103241645474,
+        "kl_exp_th": 0.04635856314631571,
+        "kl_th_exp": 0.8098620851827791,
+        "magnetization_mae": 0.023012399987379972,
+        "pair_correlation_mae": 0.04553454024224207
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.04671246427463864,
+        "symmetric_kl": 0.4406851871755913,
+        "kl_exp_th": 0.047838704439198916,
+        "kl_th_exp": 0.8335316699119837,
+        "magnetization_mae": 0.023846205302741924,
+        "pair_correlation_mae": 0.04700902754530739
+      },
+      "measured_magnetization": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "classical_cond_magnetization": [
+        0.9999999999999094,
+        0.9999475027571605,
+        0.9999999959333901,
+        0.9999999999668567
+      ]
+    },
+    {
+      "N": 6,
+      "W": 1.0,
+      "seed": 456,
+      "coupling_lambda": 0.2,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.988,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.646304340783445,
+      "classical_cond_entropy_nats": 0.5271660368346265,
+      "vs_classical_conditional": {
+        "d_tv": 0.5554469526779451,
+        "symmetric_kl": 1.303414534680981,
+        "kl_exp_th": 0.9356529098098261,
+        "kl_th_exp": 1.6711761595521355,
+        "magnetization_mae": 1.0834331806465267,
+        "pair_correlation_mae": 0.05479725668167499
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.5204178007950608,
+        "symmetric_kl": 1.1430232134335738,
+        "kl_exp_th": 0.7473505735059416,
+        "kl_th_exp": 1.538695853361206,
+        "magnetization_mae": 1.0144389811360401,
+        "pair_correlation_mae": 0.052673313012895594
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.5649297067645311,
+        "symmetric_kl": 3.3609034562333435,
+        "kl_exp_th": 1.095522837115543,
+        "kl_th_exp": 5.626284075351144,
+        "magnetization_mae": 0.9803458528388707,
+        "pair_correlation_mae": 0.2680338976154991
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.5087890004937683,
+        "symmetric_kl": 3.0101604008504514,
+        "kl_exp_th": 0.7945726603251935,
+        "kl_th_exp": 5.22574814137571,
+        "magnetization_mae": 0.8724883963855923,
+        "pair_correlation_mae": 0.254777156085427
+      },
+      "measured_magnetization": [
+        -0.3036666666666667,
+        -0.3036666666666667,
+        -0.3036666666666667,
+        -0.3036666666666667
+      ],
+      "classical_cond_magnetization": [
+        0.8071235696237696,
+        0.6986171049919062,
+        0.8060995992397985,
+        0.807225782063966
+      ]
+    },
+    {
+      "N": 8,
+      "W": 1.0,
+      "seed": 456,
+      "coupling_lambda": 0.2,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.54,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.524660449924625,
+      "classical_cond_entropy_nats": 0.004814112423923782,
+      "vs_classical_conditional": {
+        "d_tv": 0.21699999994459548,
+        "symmetric_kl": 2.359234399584959,
+        "kl_exp_th": 4.473639481010834,
+        "kl_th_exp": 0.24482931815908415,
+        "magnetization_mae": 0.43379961526372623,
+        "pair_correlation_mae": 0.00040076881432164296
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.1293943237087439,
+        "symmetric_kl": 0.1468968159838731,
+        "kl_exp_th": 0.10104379255977738,
+        "kl_th_exp": 0.19274983940796886,
+        "magnetization_mae": 0.24289424582796254,
+        "pair_correlation_mae": 0.02845903030193612
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.21699905688793336,
+        "symmetric_kl": 1.7402591883556402,
+        "kl_exp_th": 2.5509104026161906,
+        "kl_th_exp": 0.9296079740950898,
+        "magnetization_mae": 0.3936621306556928,
+        "pair_correlation_mae": 0.0794088609589051
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.1794729427419825,
+        "symmetric_kl": 1.0212623942039945,
+        "kl_exp_th": 0.32240965795951904,
+        "kl_th_exp": 1.7201151304484696,
+        "magnetization_mae": 0.22204220001613825,
+        "pair_correlation_mae": 0.18248130183961356
+      },
+      "measured_magnetization": [
+        0.5660000000000001,
+        0.5660000000000001,
+        0.5656666666666668,
+        0.5660000000000001
+      ],
+      "classical_cond_magnetization": [
+        0.9999999997289841,
+        0.99999999934518,
+        0.9988665918807745,
+        0.9999985367666334
+      ]
+    },
+    {
+      "N": 10,
+      "W": 1.0,
+      "seed": 456,
+      "coupling_lambda": 0.2,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.999,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6363985812595093,
+      "classical_cond_entropy_nats": 0.0001878018091533805,
+      "vs_classical_conditional": {
+        "d_tv": 0.6668297075096901,
+        "symmetric_kl": 4.408239996917076,
+        "kl_exp_th": 7.7173136321455855,
+        "kl_th_exp": 1.099166361688566,
+        "magnetization_mae": 1.3336538449761082,
+        "pair_correlation_mae": 1.1140085645492773e-05
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.02237393905359744,
+        "symmetric_kl": 0.0011647661130716486,
+        "kl_exp_th": 0.0011572011859001773,
+        "kl_th_exp": 0.00117233104024312,
+        "magnetization_mae": 0.04474268449064367,
+        "pair_correlation_mae": 3.4626155548574586e-06
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.6030326789035116,
+        "symmetric_kl": 1.365521835097126,
+        "kl_exp_th": 1.235530012145973,
+        "kl_th_exp": 1.4955136580482793,
+        "magnetization_mae": 1.1836796378547252,
+        "pair_correlation_mae": 0.04102369002873607
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.23139739310132545,
+        "symmetric_kl": 0.34091835424390937,
+        "kl_exp_th": 0.21167402675969454,
+        "kl_th_exp": 0.47016268172812425,
+        "magnetization_mae": 0.4480184737712881,
+        "pair_correlation_mae": 0.02035618344481005
+      },
+      "measured_magnetization": [
+        -0.3336666666666666,
+        -0.3336666666666666,
+        -0.3336666666666666,
+        -0.3336666666666666
+      ],
+      "classical_cond_magnetization": [
+        0.9999925523202838,
+        0.9999927483526653,
+        0.9999927483525842,
+        0.9999706642122326
+      ]
+    },
+    {
+      "N": 12,
+      "W": 1.0,
+      "seed": 456,
+      "coupling_lambda": 0.2,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.9765,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6497873811191579,
+      "classical_cond_entropy_nats": 0.00013708069213027376,
+      "vs_classical_conditional": {
+        "d_tv": 0.6461666666666663,
+        "symmetric_kl": 7.633894431219222,
+        "kl_exp_th": 14.228753868628557,
+        "kl_th_exp": 1.0390349938098864,
+        "magnetization_mae": 1.292327812142079,
+        "pair_correlation_mae": 1.1042382390728337e-05
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.6355287666798068,
+        "symmetric_kl": 1.6335359872297093,
+        "kl_exp_th": 2.2898489777916344,
+        "kl_th_exp": 0.9772229966677839,
+        "magnetization_mae": 1.2706405210440015,
+        "pair_correlation_mae": 0.00028692947096399984
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.6461660326967833,
+        "symmetric_kl": 5.1201358289243135,
+        "kl_exp_th": 8.585097595653064,
+        "kl_th_exp": 1.6551740621955637,
+        "magnetization_mae": 1.2736488455409876,
+        "pair_correlation_mae": 0.03698904686051713
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.6328992493640866,
+        "symmetric_kl": 1.9282892858693628,
+        "kl_exp_th": 2.1641908332388833,
+        "kl_th_exp": 1.692387738499842,
+        "magnetization_mae": 1.2394487521817774,
+        "pair_correlation_mae": 0.04473508692439911
+      },
+      "measured_magnetization": [
+        -0.2923333333333333,
+        -0.2923333333333333,
+        -0.2923333333333333,
+        -0.2923333333333333
+      ],
+      "classical_cond_magnetization": [
+        0.9999779157792795,
+        0.9999999999999987,
+        0.9999999999996565,
+        0.999999999456048
+      ]
+    },
+    {
+      "N": 6,
+      "W": 0.0,
+      "seed": 42,
+      "coupling_lambda": 0.3,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.9995,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6821050888406719,
+      "classical_cond_entropy_nats": 0.0002895135124320459,
+      "vs_classical_conditional": {
+        "d_tv": 0.4258310606713059,
+        "symmetric_kl": 2.703225743483519,
+        "kl_exp_th": 4.851424733950101,
+        "kl_th_exp": 0.5550267530169368,
+        "magnetization_mae": 0.8516514380347433,
+        "pair_correlation_mae": 2.1361863829338912e-05
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.07417734759388249,
+        "symmetric_kl": 0.011203409046624466,
+        "kl_exp_th": 0.011063453801872708,
+        "kl_th_exp": 0.011343364291376223,
+        "magnetization_mae": 0.14833333333333343,
+        "pair_correlation_mae": 2.1361865010819752e-05
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.424847491023024,
+        "symmetric_kl": 1.980187942525634,
+        "kl_exp_th": 2.3039097220782927,
+        "kl_th_exp": 1.6564661629729753,
+        "magnetization_mae": 0.8168569936073541,
+        "pair_correlation_mae": 0.06424988078737232
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.10609804107869225,
+        "symmetric_kl": 0.5963807046603816,
+        "kl_exp_th": 0.07703526910206565,
+        "kl_th_exp": 1.1157261402186975,
+        "magnetization_mae": 0.14833333333333515,
+        "pair_correlation_mae": 0.0644268132659827
+      },
+      "measured_magnetization": [
+        0.14833333333333343,
+        0.14833333333333343,
+        0.14833333333333343,
+        0.14833333333333343
+      ],
+      "classical_cond_magnetization": [
+        0.9999954499439194,
+        0.9999558093324467,
+        0.9999939130979705,
+        0.9999939130979705
+      ]
+    },
+    {
+      "N": 8,
+      "W": 0.0,
+      "seed": 42,
+      "coupling_lambda": 0.3,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.9755,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6931177913831474,
+      "classical_cond_entropy_nats": 0.0002577283094978032,
+      "vs_classical_conditional": {
+        "d_tv": 0.4961666632405006,
+        "symmetric_kl": 4.831907754627852,
+        "kl_exp_th": 8.97808630468608,
+        "kl_th_exp": 0.6857292045696235,
+        "magnetization_mae": 0.9923226466922229,
+        "pair_correlation_mae": 2.1359549691531605e-05
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.003844013146284249,
+        "symmetric_kl": 0.00014974854159105293,
+        "kl_exp_th": 5.0749030819847215e-05,
+        "kl_th_exp": 0.00024874805236225865,
+        "magnetization_mae": 0.0076666666666665995,
+        "pair_correlation_mae": 2.1359636276622556e-05
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.4961594286435639,
+        "symmetric_kl": 3.490898072037509,
+        "kl_exp_th": 5.212179330176286,
+        "kl_th_exp": 1.7696168138987312,
+        "magnetization_mae": 0.9602292278857718,
+        "pair_correlation_mae": 0.06312299383444847
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.06284123719121454,
+        "symmetric_kl": 0.5765893103544775,
+        "kl_exp_th": 0.06493196291077113,
+        "kl_th_exp": 1.0882466577981837,
+        "magnetization_mae": 0.007666666666668542,
+        "pair_correlation_mae": 0.06335022463379125
+      },
+      "measured_magnetization": [
+        0.007666666666666544,
+        0.007666666666666544,
+        0.007666666666666544,
+        0.007666666666666544
+      ],
+      "classical_cond_magnetization": [
+        0.999999993140534,
+        0.9999603523489653,
+        0.9999984539730293,
+        0.9999984539730293
+      ]
+    },
+    {
+      "N": 10,
+      "W": 0.0,
+      "seed": 42,
+      "coupling_lambda": 0.3,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.356,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.36492781485209097,
+      "classical_cond_entropy_nats": 0.0002576581412493373,
+      "vs_classical_conditional": {
+        "d_tv": 0.11899999999483488,
+        "symmetric_kl": 1.2510481869837502,
+        "kl_exp_th": 2.375167263767418,
+        "kl_th_exp": 0.12692911020008238,
+        "magnetization_mae": 0.23798932020619668,
+        "pair_correlation_mae": 2.1359546202618745e-05
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.38101067976966496,
+        "symmetric_kl": 0.38148417074616064,
+        "kl_exp_th": 0.32824072547530303,
+        "kl_th_exp": 0.43472761601701826,
+        "magnetization_mae": 0.762,
+        "pair_correlation_mae": 2.1359549697064217e-05
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.11899955511648469,
+        "symmetric_kl": 1.3339075418683404,
+        "kl_exp_th": 1.431905961604955,
+        "kl_th_exp": 1.235909122131726,
+        "magnetization_mae": 0.2062718212877548,
+        "pair_correlation_mae": 0.0624827582618492
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.4121223773400393,
+        "symmetric_kl": 0.9391984732324637,
+        "kl_exp_th": 0.3924856622273237,
+        "kl_th_exp": 1.4859112842376039,
+        "magnetization_mae": 0.7620000000000049,
+        "pair_correlation_mae": 0.06272265469360692
+      },
+      "measured_magnetization": [
+        0.7619999999999999,
+        0.7619999999999999,
+        0.7619999999999999,
+        0.7619999999999999
+      ],
+      "classical_cond_magnetization": [
+        0.9999999999896588,
+        0.9999603591978187,
+        0.9999984608186544,
+        0.9999984608186544
+      ]
+    },
+    {
+      "N": 12,
+      "W": 0.0,
+      "seed": 42,
+      "coupling_lambda": 0.3,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.999,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6362828691929283,
+      "classical_cond_entropy_nats": 8.901853955753023e-09,
+      "vs_classical_conditional": {
+        "d_tv": 0.333,
+        "symmetric_kl": 3.71814536189561,
+        "kl_exp_th": 7.031325490739295,
+        "kl_th_exp": 0.4049652330519247,
+        "magnetization_mae": 0.6659999998035551,
+        "pair_correlation_mae": 3.9288274485590097e-10
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.1670000001964473,
+        "symmetric_kl": 0.05800307104144281,
+        "kl_exp_th": 0.0568643117599123,
+        "kl_th_exp": 0.05914183032297332,
+        "magnetization_mae": 0.3340000000000012,
+        "pair_correlation_mae": 3.928974923184114e-10
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.33299992510548226,
+        "symmetric_kl": 2.7347747945072576,
+        "kl_exp_th": 4.836796720279679,
+        "kl_th_exp": 0.6327528687348358,
+        "magnetization_mae": 0.6588701116265638,
+        "pair_correlation_mae": 0.014167346686216794
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.17443986350744267,
+        "symmetric_kl": 0.18299511294175536,
+        "kl_exp_th": 0.07185585207776246,
+        "kl_th_exp": 0.29413437380574825,
+        "magnetization_mae": 0.33400000000006036,
+        "pair_correlation_mae": 0.014930330895542854
+      },
+      "measured_magnetization": [
+        0.3339999999999999,
+        0.3339999999999999,
+        0.3339999999999999,
+        0.3339999999999999
+      ],
+      "classical_cond_magnetization": [
+        0.999999999999967,
+        0.9999999999999999,
+        0.9999999999999981,
+        0.9999999992142552
+      ]
+    },
+    {
+      "N": 6,
+      "W": 0.5,
+      "seed": 42,
+      "coupling_lambda": 0.3,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.959,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.659661491648403,
+      "classical_cond_entropy_nats": 0.1645457244521532,
+      "vs_classical_conditional": {
+        "d_tv": 0.5965453911397112,
+        "symmetric_kl": 1.1990037998756078,
+        "kl_exp_th": 1.5152497506472078,
+        "kl_th_exp": 0.8827578491040078,
+        "magnetization_mae": 1.1913878915523448,
+        "pair_correlation_mae": 0.0033383181121507954
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.37121954793245326,
+        "symmetric_kl": 1.5878225754968116,
+        "kl_exp_th": 2.712562264883599,
+        "kl_th_exp": 0.46308288611002385,
+        "magnetization_mae": 0.7424376604839732,
+        "pair_correlation_mae": 2.0910897509107684e-06
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.2934755439686909,
+        "symmetric_kl": 0.9968960955210562,
+        "kl_exp_th": 0.39513817170760623,
+        "kl_th_exp": 1.5986540193345062,
+        "magnetization_mae": 0.5353031227627586,
+        "pair_correlation_mae": 0.0793800287047433
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.3711947925417332,
+        "symmetric_kl": 1.9685064058814068,
+        "kl_exp_th": 2.669603506982706,
+        "kl_th_exp": 1.2674093047801076,
+        "magnetization_mae": 0.7185079094552728,
+        "pair_correlation_mae": 0.04708392838555803
+      },
+      "measured_magnetization": [
+        -0.2573333333333333,
+        -0.2573333333333333,
+        -0.2573333333333333,
+        -0.2573333333333333
+      ],
+      "classical_cond_magnetization": [
+        0.9356899982627409,
+        0.929094186110874,
+        0.9356812445369087,
+        0.9357528039655224
+      ]
+    },
+    {
+      "N": 8,
+      "W": 0.5,
+      "seed": 42,
+      "coupling_lambda": 0.3,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.999,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.637434367194242,
+      "classical_cond_entropy_nats": 0.0031023354405485927,
+      "vs_classical_conditional": {
+        "d_tv": 0.334666548954058,
+        "symmetric_kl": 2.5572483886416575,
+        "kl_exp_th": 4.702406265241858,
+        "kl_th_exp": 0.41209051204145725,
+        "magnetization_mae": 0.6691623092716523,
+        "pair_correlation_mae": 0.0003415660633402373
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.6653327688368611,
+        "symmetric_kl": 5.015139916834185,
+        "kl_exp_th": 8.93495846767025,
+        "kl_th_exp": 1.0953213659981207,
+        "magnetization_mae": 1.330633736018896,
+        "pair_correlation_mae": 6.360286947641273e-05
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.11990049457609422,
+        "symmetric_kl": 0.8709497054143177,
+        "kl_exp_th": 0.10492338272014283,
+        "kl_th_exp": 1.6369760281084926,
+        "magnetization_mae": 0.14462231085128868,
+        "pair_correlation_mae": 0.09260740592763506
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.6653312372465388,
+        "symmetric_kl": 5.149106019065099,
+        "kl_exp_th": 8.084842041361439,
+        "kl_th_exp": 2.213369996768758,
+        "magnetization_mae": 1.2970130749791013,
+        "pair_correlation_mae": 0.06622952089360852
+      },
+      "measured_magnetization": [
+        0.3306666666666667,
+        0.3306666666666667,
+        0.3306666666666667,
+        0.3306666666666667
+      ],
+      "classical_cond_magnetization": [
+        0.9999997548239112,
+        0.9993296946781294,
+        0.999999745560385,
+        0.9999867086908506
+      ]
+    },
+    {
+      "N": 10,
+      "W": 0.5,
+      "seed": 42,
+      "coupling_lambda": 0.3,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.995,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6376631687845968,
+      "classical_cond_entropy_nats": 0.00132955037466549,
+      "vs_classical_conditional": {
+        "d_tv": 0.3349999998408433,
+        "symmetric_kl": 3.6650313462582105,
+        "kl_exp_th": 6.9204047918807445,
+        "kl_th_exp": 0.40965790063567653,
+        "magnetization_mae": 0.6699332557055331,
+        "pair_correlation_mae": 0.00013348788514344623
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.6649481185459631,
+        "symmetric_kl": 3.5163556697147866,
+        "kl_exp_th": 5.923982187440755,
+        "kl_th_exp": 1.108729151988818,
+        "magnetization_mae": 1.3293401853629765,
+        "pair_correlation_mae": 0.0011120884943569924
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.33482531687163175,
+        "symmetric_kl": 1.9891593754693706,
+        "kl_exp_th": 2.309919901263548,
+        "kl_th_exp": 1.6683988496751934,
+        "magnetization_mae": 0.6333284598205775,
+        "pair_correlation_mae": 0.07140517917254229
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.6649191292308713,
+        "symmetric_kl": 4.1749146770693475,
+        "kl_exp_th": 5.660302264570763,
+        "kl_th_exp": 2.6895270895679317,
+        "magnetization_mae": 1.2833334992927254,
+        "pair_correlation_mae": 0.09147470719550331
+      },
+      "measured_magnetization": [
+        0.33000000000000007,
+        0.33000000000000007,
+        0.33000000000000007,
+        0.33000000000000007
+      ],
+      "classical_cond_magnetization": [
+        0.9999999996810164,
+        0.9999992930154243,
+        0.9997345244795148,
+        0.9999992056461774
+      ]
+    },
+    {
+      "N": 12,
+      "W": 0.5,
+      "seed": 42,
+      "coupling_lambda": 0.3,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.996,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6357024322930036,
+      "classical_cond_entropy_nats": 1.1866098556273137e-06,
+      "vs_classical_conditional": {
+        "d_tv": 0.33216666666568084,
+        "symmetric_kl": 3.7082173738485635,
+        "kl_exp_th": 7.012717763531524,
+        "kl_th_exp": 0.40371698416560337,
+        "magnetization_mae": 0.664333299439974,
+        "pair_correlation_mae": 6.777459352994934e-08
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.6678318850692976,
+        "symmetric_kl": 4.722755252179454,
+        "kl_exp_th": 8.34341400822923,
+        "kl_th_exp": 1.1020964961296773,
+        "magnetization_mae": 1.3356637701372913,
+        "pair_correlation_mae": 2.4117004689590735e-12
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.22332840694881825,
+        "symmetric_kl": 0.3515978741849498,
+        "kl_exp_th": 0.19524736803952575,
+        "kl_th_exp": 0.5079483803303739,
+        "magnetization_mae": 0.430089360641915,
+        "pair_correlation_mae": 0.022893890368744063
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.6678318828994214,
+        "symmetric_kl": 4.817406574864127,
+        "kl_exp_th": 8.34651586461729,
+        "kl_th_exp": 1.2882972851109635,
+        "magnetization_mae": 1.3294747031400338,
+        "pair_correlation_mae": 0.012307005948321292
+      },
+      "measured_magnetization": [
+        0.3356666666666666,
+        0.3356666666666666,
+        0.3356666666666666,
+        0.3356666666666666
+      ],
+      "classical_cond_magnetization": [
+        0.9999999999889145,
+        0.9999999999980282,
+        0.9999999999903081,
+        0.9999998644493114
+      ]
+    },
+    {
+      "N": 6,
+      "W": 0.5,
+      "seed": 123,
+      "coupling_lambda": 0.3,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.9995,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6389126687832809,
+      "classical_cond_entropy_nats": 1.0167854572657947e-06,
+      "vs_classical_conditional": {
+        "d_tv": 0.33683333332836285,
+        "symmetric_kl": 3.7638453198856667,
+        "kl_exp_th": 7.11696148885439,
+        "kl_th_exp": 0.41072915091694334,
+        "magnetization_mae": 0.6736666394639071,
+        "pair_correlation_mae": 5.4384667972732594e-08
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.336795877156034,
+        "symmetric_kl": 1.6022835077576216,
+        "kl_exp_th": 2.794231701935777,
+        "kl_th_exp": 0.4103353135794665,
+        "magnetization_mae": 0.6735917186730355,
+        "pair_correlation_mae": 6.001966782835193e-08
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.33683292849811186,
+        "symmetric_kl": 2.668752816715793,
+        "kl_exp_th": 4.342546729875935,
+        "kl_th_exp": 0.9949589035556502,
+        "magnetization_mae": 0.6560710676857662,
+        "pair_correlation_mae": 0.03478167584464633
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.3368033988291861,
+        "symmetric_kl": 1.9518964382141164,
+        "kl_exp_th": 2.8937117271914325,
+        "kl_th_exp": 1.0100811492368003,
+        "magnetization_mae": 0.6554917315918279,
+        "pair_correlation_mae": 0.0357377284927454
+      },
+      "measured_magnetization": [
+        0.32633333333333336,
+        0.32633333333333336,
+        0.32633333333333336,
+        0.32633333333333336
+      ],
+      "classical_cond_magnetization": [
+        0.9999999999890746,
+        0.9999999539517458,
+        0.9999999877164301,
+        0.9999999495317112
+      ]
+    },
+    {
+      "N": 8,
+      "W": 0.5,
+      "seed": 123,
+      "coupling_lambda": 0.3,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.999,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6837331016424035,
+      "classical_cond_entropy_nats": 0.00026484897784808753,
+      "vs_classical_conditional": {
+        "d_tv": 0.43149999999328936,
+        "symmetric_kl": 4.908465845072227,
+        "kl_exp_th": 9.251934435951222,
+        "kl_th_exp": 0.5649972541932327,
+        "magnetization_mae": 0.8629886884861225,
+        "pair_correlation_mae": 2.2622999379514248e-05
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.43129205356375866,
+        "symmetric_kl": 1.7689189767105828,
+        "kl_exp_th": 2.97475426224589,
+        "kl_th_exp": 0.5630836911752761,
+        "magnetization_mae": 0.8625727584236781,
+        "pair_correlation_mae": 2.2644675182870166e-05
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.43149957805892286,
+        "symmetric_kl": 3.5620782028358278,
+        "kl_exp_th": 5.679642740442971,
+        "kl_th_exp": 1.4445136652286845,
+        "magnetization_mae": 0.8371028224802968,
+        "pair_correlation_mae": 0.05112719569755303
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.4312468327759059,
+        "symmetric_kl": 2.1876886311973185,
+        "kl_exp_th": 2.9200020588568036,
+        "kl_th_exp": 1.4553752035378331,
+        "magnetization_mae": 0.8360973280375088,
+        "pair_correlation_mae": 0.05198130181009578
+      },
+      "measured_magnetization": [
+        0.1369999999999999,
+        0.1369999999999999,
+        0.1369999999999999,
+        0.1369999999999999
+      ],
+      "classical_cond_magnetization": [
+        0.9999999999854753,
+        0.9999999877130473,
+        0.9999548122977603,
+        0.999999953948207
+      ]
+    },
+    {
+      "N": 10,
+      "W": 0.5,
+      "seed": 123,
+      "coupling_lambda": 0.3,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.9585,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6772803604438948,
+      "classical_cond_entropy_nats": 0.01026624848033791,
+      "vs_classical_conditional": {
+        "d_tv": 0.5888333333327291,
+        "symmetric_kl": 6.8950135357063465,
+        "kl_exp_th": 12.881663425741648,
+        "kl_th_exp": 0.9083636456710454,
+        "magnetization_mae": 1.1769919335017143,
+        "pair_correlation_mae": 0.0013494663011605808
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.09654617736805843,
+        "symmetric_kl": 0.02445417451884333,
+        "kl_exp_th": 0.01933074302971595,
+        "kl_th_exp": 0.029577606007970714,
+        "magnetization_mae": 0.19265934155455527,
+        "pair_correlation_mae": 0.0007453829239170521
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.5888328850988798,
+        "symmetric_kl": 5.20950622864032,
+        "kl_exp_th": 7.967873948532237,
+        "kl_th_exp": 2.4511385087484037,
+        "magnetization_mae": 1.1330325857526158,
+        "pair_correlation_mae": 0.08802611204071807
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.19015173085185136,
+        "symmetric_kl": 0.8495493485780397,
+        "kl_exp_th": 0.13591843631781447,
+        "kl_th_exp": 1.5631802608382648,
+        "magnetization_mae": 0.30272697717369823,
+        "pair_correlation_mae": 0.08559123536223402
+      },
+      "measured_magnetization": [
+        -0.17766666666666675,
+        -0.17766666666666675,
+        -0.17766666666666675,
+        -0.17766666666666675
+      ],
+      "classical_cond_magnetization": [
+        0.9999999999986922,
+        0.9973011256548268,
+        0.9999999539612021,
+        0.999999987725469
+      ]
+    },
+    {
+      "N": 12,
+      "W": 0.5,
+      "seed": 123,
+      "coupling_lambda": 0.3,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.002000000000000001,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.0055419246531053885,
+      "classical_cond_entropy_nats": 0.0002670346362819388,
+      "vs_classical_conditional": {
+        "d_tv": 0.0006666666666665141,
+        "symmetric_kl": 0.005378517653708081,
+        "kl_exp_th": 0.00983146010034334,
+        "kl_th_exp": 0.0009255752070728226,
+        "magnetization_mae": 0.0013219171190927415,
+        "pair_correlation_mae": 2.2832428127136e-05
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.020686176976337903,
+        "symmetric_kl": 0.03616211942632866,
+        "kl_exp_th": 0.018592909047344914,
+        "kl_th_exp": 0.05373132980531241,
+        "magnetization_mae": 0.041338337778101225,
+        "pair_correlation_mae": 2.3341532349618888e-05
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.04741527649747409,
+        "symmetric_kl": 0.4515360443203896,
+        "kl_exp_th": 0.05402486287966154,
+        "kl_th_exp": 0.8490472257611176,
+        "magnetization_mae": 0.022742732952621192,
+        "pair_correlation_mae": 0.04765614839271463
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.058550450202463994,
+        "symmetric_kl": 0.4709740600952491,
+        "kl_exp_th": 0.058486390460564176,
+        "kl_th_exp": 0.8834617297299341,
+        "magnetization_mae": 0.04559706447106371,
+        "pair_correlation_mae": 0.04881279917351796
+      },
+      "measured_magnetization": [
+        0.9986666666666667,
+        0.9986666666666667,
+        0.9986666666666667,
+        0.9986666666666667
+      ],
+      "classical_cond_magnetization": [
+        0.9999999999999997,
+        0.9999543816570888,
+        0.9999999539624876,
+        0.9999999995234616
+      ]
+    },
+    {
+      "N": 6,
+      "W": 0.5,
+      "seed": 456,
+      "coupling_lambda": 0.3,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 1.0,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6365141682948128,
+      "classical_cond_entropy_nats": 0.0020678947168505744,
+      "vs_classical_conditional": {
+        "d_tv": 0.6666084284228055,
+        "symmetric_kl": 3.4819039299829253,
+        "kl_exp_th": 5.864198003968797,
+        "kl_th_exp": 1.099609855997054,
+        "magnetization_mae": 1.3331459802976735,
+        "pair_correlation_mae": 0.00014164308129654968
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.4984145217351449,
+        "symmetric_kl": 0.5717033444367295,
+        "kl_exp_th": 0.6131361699219093,
+        "kl_th_exp": 0.5302705189515498,
+        "magnetization_mae": 0.9967697322167763,
+        "pair_correlation_mae": 0.00011805671009588552
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.6651702322908465,
+        "symmetric_kl": 3.113975948381151,
+        "kl_exp_th": 3.7290856334936326,
+        "kl_th_exp": 2.498866263268669,
+        "magnetization_mae": 1.2876668880299005,
+        "pair_correlation_mae": 0.0831213153288874
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.49588970736864846,
+        "symmetric_kl": 1.2213320486841175,
+        "kl_exp_th": 0.6360674343800907,
+        "kl_th_exp": 1.8065966629881445,
+        "magnetization_mae": 0.9449884499484571,
+        "pair_correlation_mae": 0.07645240255283452
+      },
+      "measured_magnetization": [
+        -0.3333333333333333,
+        -0.3333333333333333,
+        -0.3333333333333333,
+        -0.3333333333333333
+      ],
+      "classical_cond_magnetization": [
+        0.9998834145816821,
+        0.9996254187037311,
+        0.9998591083328356,
+        0.9998826462391119
+      ]
+    },
+    {
+      "N": 8,
+      "W": 0.5,
+      "seed": 456,
+      "coupling_lambda": 0.3,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.8614999999999999,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6931124579358343,
+      "classical_cond_entropy_nats": 0.00015672947318495079,
+      "vs_classical_conditional": {
+        "d_tv": 0.5041666665190924,
+        "symmetric_kl": 5.710598889162368,
+        "kl_exp_th": 10.719557774426738,
+        "kl_th_exp": 0.7016400038979971,
+        "magnetization_mae": 1.008327032658543,
+        "pair_correlation_mae": 1.2600741622163328e-05
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.12985833673545732,
+        "symmetric_kl": 0.03464503877146488,
+        "kl_exp_th": 0.03484243574915469,
+        "kl_th_exp": 0.034447641793775075,
+        "magnetization_mae": 0.2596723611105782,
+        "pair_correlation_mae": 3.4907408568818354e-05
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.5041657706354258,
+        "symmetric_kl": 3.980366737745818,
+        "kl_exp_th": 6.354420585615964,
+        "kl_th_exp": 1.606312889875672,
+        "magnetization_mae": 0.9814074582397865,
+        "pair_correlation_mae": 0.05309624495221547
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.18821404789299084,
+        "symmetric_kl": 0.5891903612826542,
+        "kl_exp_th": 0.1200268226834276,
+        "kl_th_exp": 1.0583538998818809,
+        "magnetization_mae": 0.32426081561672904,
+        "pair_correlation_mae": 0.058517911697063975
+      },
+      "measured_magnetization": [
+        -0.008333333333333415,
+        -0.008333333333333415,
+        -0.008333333333333415,
+        -0.008333333333333415
+      ],
+      "classical_cond_magnetization": [
+        0.9999999996907901,
+        0.9999999828669935,
+        0.9999756882569922,
+        0.9999991264860619
+      ]
+    },
+    {
+      "N": 10,
+      "W": 0.5,
+      "seed": 456,
+      "coupling_lambda": 0.3,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.9995,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6363985812595093,
+      "classical_cond_entropy_nats": 1.278621556356776e-06,
+      "vs_classical_conditional": {
+        "d_tv": 0.6668333333268093,
+        "symmetric_kl": 7.9085595432687,
+        "kl_exp_th": 14.71800637120248,
+        "kl_th_exp": 1.0991127153349198,
+        "magnetization_mae": 1.3336666306188194,
+        "pair_correlation_mae": 7.206959784511469e-08
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.0837545709672762,
+        "symmetric_kl": 0.017079817036756074,
+        "kl_exp_th": 0.01756639700572034,
+        "kl_th_exp": 0.01659323706779181,
+        "magnetization_mae": 0.16750911496176907,
+        "pair_correlation_mae": 1.7995503550268428e-08
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.6667780092488627,
+        "symmetric_kl": 3.706242960723236,
+        "kl_exp_th": 5.908597299109562,
+        "kl_th_exp": 1.5038886223369101,
+        "magnetization_mae": 1.320856710696982,
+        "pair_correlation_mae": 0.02520801134044785
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.07982561109793512,
+        "symmetric_kl": 0.1689496032696244,
+        "kl_exp_th": 0.032300785188661404,
+        "kl_th_exp": 0.3055984213505874,
+        "magnetization_mae": 0.14379773443399702,
+        "pair_correlation_mae": 0.01825276872557911
+      },
+      "measured_magnetization": [
+        -0.3336666666666666,
+        -0.3336666666666666,
+        -0.3336666666666666,
+        -0.3336666666666666
+      ],
+      "classical_cond_magnetization": [
+        0.9999999875761311,
+        0.9999999999869518,
+        0.9999999999869518,
+        0.9999998682585761
+      ]
+    },
+    {
+      "N": 12,
+      "W": 0.5,
+      "seed": 456,
+      "coupling_lambda": 0.3,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 1.0,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6365141682948128,
+      "classical_cond_entropy_nats": 1.3199203953491536e-06,
+      "vs_classical_conditional": {
+        "d_tv": 0.6666666666666667,
+        "symmetric_kl": 7.906332870330723,
+        "kl_exp_th": 14.714053143093153,
+        "kl_th_exp": 1.0986125975682932,
+        "magnetization_mae": 1.3333332961918438,
+        "pair_correlation_mae": 7.428297869408833e-08
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.21299455627088815,
+        "symmetric_kl": 0.09381244942291296,
+        "kl_exp_th": 0.09193902221357672,
+        "kl_th_exp": 0.0956858766322492,
+        "magnetization_mae": 0.4259379471614695,
+        "pair_correlation_mae": 3.4137401234220675e-05
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.6666666280006972,
+        "symmetric_kl": 6.131087382489227,
+        "kl_exp_th": 10.750978258529669,
+        "kl_th_exp": 1.5111965064487844,
+        "magnetization_mae": 1.3204322323991087,
+        "pair_correlation_mae": 0.025621740705103497
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.2940697732254804,
+        "symmetric_kl": 0.47534762453444107,
+        "kl_exp_th": 0.1961804416220377,
+        "kl_th_exp": 0.7545148074468444,
+        "magnetization_mae": 0.5521115242966104,
+        "pair_correlation_mae": 0.035152284133246746
+      },
+      "measured_magnetization": [
+        -0.3333333333333333,
+        -0.3333333333333333,
+        -0.3333333333333333,
+        -0.3333333333333333
+      ],
+      "classical_cond_magnetization": [
+        0.9999998682716245,
+        1.0000000000000002,
+        1.0000000000000002,
+        0.9999999831624176
+      ]
+    },
+    {
+      "N": 6,
+      "W": 1.0,
+      "seed": 42,
+      "coupling_lambda": 0.3,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.03549999999999999,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.06573585700680037,
+      "classical_cond_entropy_nats": 0.0378941635575371,
+      "vs_classical_conditional": {
+        "d_tv": 0.010127958273678635,
+        "symmetric_kl": 0.03490766723422889,
+        "kl_exp_th": 0.014749081116098815,
+        "kl_th_exp": 0.05506625335235897,
+        "magnetization_mae": 0.017494343763446524,
+        "pair_correlation_mae": 0.0031179778347649734
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.012166653780028392,
+        "symmetric_kl": 0.0837839244024637,
+        "kl_exp_th": 0.15529978709322045,
+        "kl_th_exp": 0.01226806171170695,
+        "magnetization_mae": 0.024331838583341203,
+        "pair_correlation_mae": 2.9227503846041003e-06
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.06513432530123972,
+        "symmetric_kl": 0.6654677157604073,
+        "kl_exp_th": 0.13907885272207568,
+        "kl_th_exp": 1.191856578798739,
+        "magnetization_mae": 0.021947308795004894,
+        "pair_correlation_mae": 0.06572652047654942
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.04020003232492694,
+        "symmetric_kl": 0.44246672485811855,
+        "kl_exp_th": 0.16568274802588107,
+        "kl_th_exp": 0.719250701690356,
+        "magnetization_mae": 0.012555280490867987,
+        "pair_correlation_mae": 0.04040787765987406
+      },
+      "measured_magnetization": [
+        -0.9756666666666668,
+        -0.9756666666666668,
+        -0.9756666666666668,
+        -0.9756666666666668
+      ],
+      "classical_cond_magnetization": [
+        -0.9935173355471075,
+        -0.995922355607217,
+        -0.9935035293160196,
+        -0.9897008212501092
+      ]
+    },
+    {
+      "N": 8,
+      "W": 1.0,
+      "seed": 42,
+      "coupling_lambda": 0.3,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.8654999999999999,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6235936211199392,
+      "classical_cond_entropy_nats": 0.035616028609093964,
+      "vs_classical_conditional": {
+        "d_tv": 0.6909824960520902,
+        "symmetric_kl": 4.6125299490085885,
+        "kl_exp_th": 7.961853319888604,
+        "kl_th_exp": 1.2632065781285724,
+        "magnetization_mae": 1.3787933708687292,
+        "pair_correlation_mae": 0.005870718846396746
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.30899999999507266,
+        "symmetric_kl": 3.4361287655050265,
+        "kl_exp_th": 6.4984009476278,
+        "kl_th_exp": 0.3738565833822523,
+        "magnetization_mae": 0.6158207758809935,
+        "pair_correlation_mae": 0.004358447949890802
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.30894931388967495,
+        "symmetric_kl": 2.0858983929789088,
+        "kl_exp_th": 2.5792369194934173,
+        "kl_th_exp": 1.5925598664644,
+        "magnetization_mae": 0.5188268318093652,
+        "pair_correlation_mae": 0.1920165817055726
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.3089993575673228,
+        "symmetric_kl": 2.4921283374975993,
+        "kl_exp_th": 3.869863651092429,
+        "kl_th_exp": 1.1143930239027695,
+        "magnetization_mae": 0.5582986882500669,
+        "pair_correlation_mae": 0.11754564161336596
+      },
+      "measured_magnetization": [
+        -0.382,
+        -0.382,
+        -0.3806666666666667,
+        -0.382
+      ],
+      "classical_cond_magnetization": [
+        0.999964991853008,
+        0.9886954544245532,
+        0.9999919520519679,
+        0.9998544184787213
+      ]
+    },
+    {
+      "N": 10,
+      "W": 1.0,
+      "seed": 42,
+      "coupling_lambda": 0.3,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.9945,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6369020714029086,
+      "classical_cond_entropy_nats": 0.10719572511553628,
+      "vs_classical_conditional": {
+        "d_tv": 0.6683333282386299,
+        "symmetric_kl": 6.830300435176914,
+        "kl_exp_th": 12.173375493820195,
+        "kl_th_exp": 1.487225376533634,
+        "magnetization_mae": 1.3253892872944288,
+        "pair_correlation_mae": 0.022443479335965116
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.33166665212478685,
+        "symmetric_kl": 3.0281257625383056,
+        "kl_exp_th": 5.3893336284586475,
+        "kl_th_exp": 0.6669178966179637,
+        "magnetization_mae": 0.6340598402960831,
+        "pair_correlation_mae": 0.05854681400958447
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.22893448829192536,
+        "symmetric_kl": 1.4555274965104468,
+        "kl_exp_th": 0.2705231172663697,
+        "kl_th_exp": 2.6405318757545237,
+        "magnetization_mae": 0.1561352221450656,
+        "pair_correlation_mae": 0.23317329868247214
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.33166571834662906,
+        "symmetric_kl": 3.107244386374996,
+        "kl_exp_th": 4.140610664912583,
+        "kl_th_exp": 2.073878107837409,
+        "magnetization_mae": 0.5435281677724236,
+        "pair_correlation_mae": 0.23523769596072963
+      },
+      "measured_magnetization": [
+        -0.33666666666666667,
+        -0.3363333333333334,
+        -0.33666666666666667,
+        -0.33666666666666667
+      ],
+      "classical_cond_magnetization": [
+        0.9999999897910483,
+        0.9999999777931164,
+        0.9552242680803319,
+        0.9999995801798855
+      ]
+    },
+    {
+      "N": 12,
+      "W": 1.0,
+      "seed": 42,
+      "coupling_lambda": 0.3,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.995,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6450413050150654,
+      "classical_cond_entropy_nats": 0.00014620392003419506,
+      "vs_classical_conditional": {
+        "d_tv": 0.3461665838773948,
+        "symmetric_kl": 2.71245808781196,
+        "kl_exp_th": 4.999894934547277,
+        "kl_th_exp": 0.4250212410766432,
+        "magnetization_mae": 0.6923272975138007,
+        "pair_correlation_mae": 1.1707067337126306e-05
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.6538333333327109,
+        "symmetric_kl": 7.735431242829658,
+        "kl_exp_th": 14.410027561344583,
+        "kl_th_exp": 1.0608349243147333,
+        "magnetization_mae": 1.3076666666653811,
+        "pair_correlation_mae": 8.071321389024888e-14
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.6538305799092072,
+        "symmetric_kl": 4.6521825807220445,
+        "kl_exp_th": 7.7366498674705,
+        "kl_th_exp": 1.5677152939735883,
+        "magnetization_mae": 1.2918613616285408,
+        "pair_correlation_mae": 0.031148813047616297
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.6538333267922732,
+        "symmetric_kl": 6.455644235667075,
+        "kl_exp_th": 11.680476763417765,
+        "kl_th_exp": 1.2308117079163843,
+        "magnetization_mae": 1.3019922342104426,
+        "pair_correlation_mae": 0.011289449429506326
+      },
+      "measured_magnetization": [
+        0.3076666666666667,
+        0.3076666666666667,
+        0.3076666666666667,
+        0.3076666666666667
+      ],
+      "classical_cond_magnetization": [
+        0.9999998009254177,
+        0.9999998344214563,
+        0.99999980104627,
+        0.9999764203287256
+      ]
+    },
+    {
+      "N": 6,
+      "W": 1.0,
+      "seed": 123,
+      "coupling_lambda": 0.3,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.238,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.28523447003577473,
+      "classical_cond_entropy_nats": 3.4547729474082755e-08,
+      "vs_classical_conditional": {
+        "d_tv": 0.08266666666666642,
+        "symmetric_kl": 0.8522601224396508,
+        "kl_exp_th": 1.6182358749411372,
+        "kl_th_exp": 0.08628436993816439,
+        "magnetization_mae": 0.1653333325510796,
+        "pair_correlation_mae": 1.5644996409491796e-09
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.0826666664805765,
+        "symmetric_kl": 0.8265896142100035,
+        "kl_exp_th": 1.5668948624210102,
+        "kl_th_exp": 0.08628436599899703,
+        "magnetization_mae": 0.16533333217087165,
+        "pair_correlation_mae": 1.5711594987995643e-09
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.08266660705238515,
+        "symmetric_kl": 0.809709439082749,
+        "kl_exp_th": 1.1131113128731163,
+        "kl_th_exp": 0.5063075652923816,
+        "magnetization_mae": 0.15269587966414233,
+        "pair_correlation_mae": 0.02503865859914034
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.08266652930953464,
+        "symmetric_kl": 0.7867464832544631,
+        "kl_exp_th": 1.0453179995417838,
+        "kl_th_exp": 0.5281749669671423,
+        "magnetization_mae": 0.15200095309717787,
+        "pair_correlation_mae": 0.026354384688784833
+      },
+      "measured_magnetization": [
+        0.8346666666666666,
+        0.8346666666666666,
+        0.8346666666666666,
+        0.8346666666666666
+      ],
+      "classical_cond_magnetization": [
+        0.9999999999999882,
+        0.9999999986229843,
+        0.9999999999021317,
+        0.9999999983458804
+      ]
+    },
+    {
+      "N": 8,
+      "W": 1.0,
+      "seed": 123,
+      "coupling_lambda": 0.3,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.0004999999999999725,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.0016165719017076775,
+      "classical_cond_entropy_nats": 0.0055144608206336,
+      "vs_classical_conditional": {
+        "d_tv": 0.0006629108843526548,
+        "symmetric_kl": 0.006400143276709491,
+        "kl_exp_th": 0.0028840901054298764,
+        "kl_th_exp": 0.009916196447989106,
+        "magnetization_mae": 0.000498121367627391,
+        "pair_correlation_mae": 0.0006629108850323973
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.0006629145222732071,
+        "symmetric_kl": 0.006035350501047287,
+        "kl_exp_th": 0.002154585246151209,
+        "kl_th_exp": 0.009916115755943365,
+        "magnetization_mae": 0.0004981121970145108,
+        "pair_correlation_mae": 0.0006629149337757934
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.07252816857498906,
+        "symmetric_kl": 0.7127755066592868,
+        "kl_exp_th": 0.0760950828431107,
+        "kl_th_exp": 1.349455930475463,
+        "magnetization_mae": 0.03662998866327555,
+        "pair_correlation_mae": 0.07297567444174578
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.07383063120319429,
+        "symmetric_kl": 0.7246015933899029,
+        "kl_exp_th": 0.07735466026693075,
+        "kl_th_exp": 1.371848526512875,
+        "magnetization_mae": 0.03745817899761594,
+        "pair_correlation_mae": 0.07438049854992289
+      },
+      "measured_magnetization": [
+        0.9996666666666668,
+        0.9996666666666668,
+        0.9996666666666668,
+        0.9996666666666668
+      ],
+      "classical_cond_magnetization": [
+        0.9999999999904055,
+        0.9999999999010704,
+        0.9986741797045156,
+        0.9999999986168829
+      ]
+    },
+    {
+      "N": 10,
+      "W": 1.0,
+      "seed": 123,
+      "coupling_lambda": 0.3,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.6245,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.5193413879464931,
+      "classical_cond_entropy_nats": 0.289267846641545,
+      "vs_classical_conditional": {
+        "d_tv": 0.2099999999999349,
+        "symmetric_kl": 2.4657548235311033,
+        "kl_exp_th": 4.387292997321809,
+        "kl_th_exp": 0.5442166497403984,
+        "magnetization_mae": 0.37815818041824245,
+        "pair_correlation_mae": 0.08368363912047207
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.08968437217642222,
+        "symmetric_kl": 0.1780268153587049,
+        "kl_exp_th": 0.0704388284898998,
+        "kl_th_exp": 0.28561480222751,
+        "magnetization_mae": 0.08217859919073453,
+        "pair_correlation_mae": 0.06680767930230237
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.25601595184297604,
+        "symmetric_kl": 2.136583677101203,
+        "kl_exp_th": 2.6191756995813527,
+        "kl_th_exp": 1.6539916546210536,
+        "magnetization_mae": 0.32383052309874605,
+        "pair_correlation_mae": 0.2575872448674292
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.2435335363081153,
+        "symmetric_kl": 1.0547542664120158,
+        "kl_exp_th": 0.2755756482709277,
+        "kl_th_exp": 1.8339328845531038,
+        "magnetization_mae": 0.11546170380793744,
+        "pair_correlation_mae": 0.2456982066829454
+      },
+      "measured_magnetization": [
+        0.5800000000000002,
+        0.5786666666666668,
+        0.5800000000000002,
+        0.5800000000000002
+      ],
+      "classical_cond_magnetization": [
+        0.9999999999981593,
+        0.8312993898177291,
+        0.9999999986218198,
+        0.999999999901929
+      ]
+    },
+    {
+      "N": 12,
+      "W": 1.0,
+      "seed": 123,
+      "coupling_lambda": 0.3,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.10099999999999999,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.1472654593352979,
+      "classical_cond_entropy_nats": 0.00030313130057833663,
+      "vs_classical_conditional": {
+        "d_tv": 0.03366666666666655,
+        "symmetric_kl": 0.3312551878896935,
+        "kl_exp_th": 0.6279635545572159,
+        "kl_th_exp": 0.034546821222171085,
+        "magnetization_mae": 0.06732020867744379,
+        "pair_correlation_mae": 2.6249311766590733e-05
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.03364904702143509,
+        "symmetric_kl": 0.12785227560039134,
+        "kl_exp_th": 0.22130899054762132,
+        "kl_th_exp": 0.03439556065316137,
+        "magnetization_mae": 0.06728493402366698,
+        "pair_correlation_mae": 2.6272590693247427e-05
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.042932800966778366,
+        "symmetric_kl": 0.6364949101061316,
+        "kl_exp_th": 0.47162999533323124,
+        "kl_th_exp": 0.8013598248790319,
+        "magnetization_mae": 0.04558987768412559,
+        "pair_correlation_mae": 0.04311413655834758
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.044281993695006815,
+        "symmetric_kl": 0.5442451740431753,
+        "kl_exp_th": 0.26490338405882574,
+        "kl_th_exp": 0.823586964027525,
+        "magnetization_mae": 0.04478529581286497,
+        "pair_correlation_mae": 0.04451980727308271
+      },
+      "measured_magnetization": [
+        0.9326666666666668,
+        0.9326666666666668,
+        0.9326666666666668,
+        0.9326666666666668
+      ],
+      "classical_cond_magnetization": [
+        0.9999999999999998,
+        0.9999475027572509,
+        0.9999999986229916,
+        0.9999999999961999
+      ]
+    },
+    {
+      "N": 6,
+      "W": 1.0,
+      "seed": 456,
+      "coupling_lambda": 0.3,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.9905,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6408141321956515,
+      "classical_cond_entropy_nats": 0.11527241370150372,
+      "vs_classical_conditional": {
+        "d_tv": 0.6588744098212748,
+        "symmetric_kl": 2.5553666944162936,
+        "kl_exp_th": 3.679030714184064,
+        "kl_th_exp": 1.4317026746485235,
+        "magnetization_mae": 1.3070784466442156,
+        "pair_correlation_mae": 0.021333402775051597
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.6145704187230563,
+        "symmetric_kl": 1.3151660811354227,
+        "kl_exp_th": 1.4190856696510856,
+        "kl_th_exp": 1.2112464926197597,
+        "magnetization_mae": 1.2189437356864004,
+        "pair_correlation_mae": 0.020386973463837405
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.6542873960865117,
+        "symmetric_kl": 3.798045322055432,
+        "kl_exp_th": 2.812010661369357,
+        "kl_th_exp": 4.784079982741508,
+        "magnetization_mae": 1.200701220654858,
+        "pair_correlation_mae": 0.20640684263897083
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.5973566099085004,
+        "symmetric_kl": 2.8296269339928273,
+        "kl_exp_th": 1.2858354817410649,
+        "kl_th_exp": 4.37341838624459,
+        "magnetization_mae": 1.0892242371133338,
+        "pair_correlation_mae": 0.19726506954746648
+      },
+      "measured_magnetization": [
+        -0.3206666666666666,
+        -0.3206666666666666,
+        -0.3206666666666666,
+        -0.3206666666666666
+      ],
+      "classical_cond_magnetization": [
+        0.9970775189918489,
+        0.9547938006482192,
+        0.9966941479815894,
+        0.9970816522885392
+      ]
+    },
+    {
+      "N": 8,
+      "W": 1.0,
+      "seed": 456,
+      "coupling_lambda": 0.3,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.36450000000000005,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.5174684392786679,
+      "classical_cond_entropy_nats": 0.0018388728978910873,
+      "vs_classical_conditional": {
+        "d_tv": 0.21266666666641992,
+        "symmetric_kl": 2.3105792854062708,
+        "kl_exp_th": 4.379513878354801,
+        "kl_th_exp": 0.24164469245774062,
+        "magnetization_mae": 0.42523722493427596,
+        "pair_correlation_mae": 0.00019221676330906842
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.0449420922023032,
+        "symmetric_kl": 0.028226805932512745,
+        "kl_exp_th": 0.007833179848006668,
+        "kl_th_exp": 0.04862043201701882,
+        "magnetization_mae": 0.08731479441931295,
+        "pair_correlation_mae": 0.0028058574101423686
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.21266630790786298,
+        "symmetric_kl": 2.0494100299795406,
+        "kl_exp_th": 2.6913156856515883,
+        "kl_th_exp": 1.4075043743074933,
+        "magnetization_mae": 0.3923294414024132,
+        "pair_correlation_mae": 0.0651364258964741
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.08197379958389522,
+        "symmetric_kl": 0.7870459081401361,
+        "kl_exp_th": 0.09367126438481967,
+        "kl_th_exp": 1.4804205518954525,
+        "magnetization_mae": 0.05913395124834217,
+        "pair_correlation_mae": 0.0828305130703319
+      },
+      "measured_magnetization": [
+        0.5746666666666667,
+        0.5746666666666667,
+        0.5746666666666667,
+        0.5746666666666667
+      ],
+      "classical_cond_magnetization": [
+        0.9999999999973971,
+        0.9999999998153131,
+        0.9996160619816752,
+        0.999999504609385
+      ]
+    },
+    {
+      "N": 10,
+      "W": 1.0,
+      "seed": 456,
+      "coupling_lambda": 0.3,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 1.0,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.636744967396635,
+      "classical_cond_entropy_nats": 0.0001387591832134183,
+      "vs_classical_conditional": {
+        "d_tv": 0.6663333331210983,
+        "symmetric_kl": 7.65121856575756,
+        "kl_exp_th": 14.204718819183341,
+        "kl_th_exp": 1.0977183123317784,
+        "magnetization_mae": 1.332661096178861,
+        "pair_correlation_mae": 1.114012594755076e-05
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.19895077672531725,
+        "symmetric_kl": 0.08182885997339957,
+        "kl_exp_th": 0.08027060134431982,
+        "kl_th_exp": 0.08338711860247933,
+        "magnetization_mae": 0.3978985865606147,
+        "pair_correlation_mae": 5.933543801036241e-06
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.665015706428333,
+        "symmetric_kl": 2.7862031376369507,
+        "kl_exp_th": 3.7967733245732123,
+        "kl_th_exp": 1.7756329507006894,
+        "magnetization_mae": 1.3091611856177316,
+        "pair_correlation_mae": 0.04125140033389624
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.0808502440687519,
+        "symmetric_kl": 0.21043735193997343,
+        "kl_exp_th": 0.03684030906367705,
+        "kl_th_exp": 0.3840343948162698,
+        "magnetization_mae": 0.13922588607860392,
+        "pair_correlation_mae": 0.022821618482386286
+      },
+      "measured_magnetization": [
+        -0.3326666666666667,
+        -0.3326666666666667,
+        -0.3326666666666667,
+        -0.3326666666666667
+      ],
+      "classical_cond_magnetization": [
+        0.9999998035425641,
+        0.9999999995755281,
+        0.9999999995755298,
+        0.9999779153551556
+      ]
+    },
+    {
+      "N": 12,
+      "W": 1.0,
+      "seed": 456,
+      "coupling_lambda": 0.3,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.9975,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.640924866946571,
+      "classical_cond_entropy_nats": 0.0001370766448791976,
+      "vs_classical_conditional": {
+        "d_tv": 0.6601666666666667,
+        "symmetric_kl": 7.81969169020541,
+        "kl_exp_th": 14.559978141164915,
+        "kl_th_exp": 1.0794052392459044,
+        "magnetization_mae": 1.3203278122321909,
+        "pair_correlation_mae": 1.1042202284206049e-05
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.5877516467501434,
+        "symmetric_kl": 0.9482379889978745,
+        "kl_exp_th": 1.1179787788260882,
+        "kl_th_exp": 0.7784971991696608,
+        "magnetization_mae": 1.1747151331061705,
+        "pair_correlation_mae": 0.0005325139196021844
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.6601666308675471,
+        "symmetric_kl": 6.175806469341956,
+        "kl_exp_th": 10.689892982037962,
+        "kl_th_exp": 1.6617199566459504,
+        "magnetization_mae": 1.3027444406925892,
+        "pair_correlation_mae": 0.03491897236470883
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.6050469810234242,
+        "symmetric_kl": 1.4300202684065717,
+        "kl_exp_th": 1.307792281698259,
+        "kl_th_exp": 1.5522482551148844,
+        "magnetization_mae": 1.1793531568403046,
+        "pair_correlation_mae": 0.044077600092045845
+      },
+      "measured_magnetization": [
+        -0.3203333333333334,
+        -0.3203333333333334,
+        -0.3203333333333334,
+        -0.3203333333333334
+      ],
+      "classical_cond_magnetization": [
+        0.9999779157796229,
+        1.0,
+        0.9999999999999999,
+        0.9999999998158073
+      ]
+    },
+    {
+      "N": 6,
+      "W": 0.0,
+      "seed": 42,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 1.0,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6828394932228317,
+      "classical_cond_entropy_nats": 0.00023750346945695263,
+      "vs_classical_conditional": {
+        "d_tv": 0.4283333329404776,
+        "symmetric_kl": 4.576622840714735,
+        "kl_exp_th": 8.593834713743677,
+        "kl_th_exp": 0.5594109676857926,
+        "magnetization_mae": 0.8566566674345093,
+        "pair_correlation_mae": 1.9996883537376497e-05
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.07167666510785761,
+        "symmetric_kl": 0.010457887708196702,
+        "kl_exp_th": 0.010327684419435892,
+        "kl_th_exp": 0.010588090996957511,
+        "magnetization_mae": 0.14333333333333337,
+        "pair_correlation_mae": 1.9996883553197176e-05
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.42809049001741417,
+        "symmetric_kl": 2.2131036601716794,
+        "kl_exp_th": 2.9147305223839908,
+        "kl_th_exp": 1.5114767979593684,
+        "magnetization_mae": 0.8280406498949863,
+        "pair_correlation_mae": 0.055424717205191855
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.09924489794383679,
+        "symmetric_kl": 0.5134270997756916,
+        "kl_exp_th": 0.0670436213741184,
+        "kl_th_exp": 0.9598105781772648,
+        "magnetization_mae": 0.14333333333332843,
+        "pair_correlation_mae": 0.05554276705597855
+      },
+      "measured_magnetization": [
+        0.14333333333333337,
+        0.14333333333333337,
+        0.14333333333333337,
+        0.14333333333333337
+      ],
+      "classical_cond_magnetization": [
+        0.9999999992072611,
+        0.9999603584154518,
+        0.999999822724329,
+        0.9999998227243289
+      ]
+    },
+    {
+      "N": 8,
+      "W": 0.0,
+      "seed": 42,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.9955,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6357024322930036,
+      "classical_cond_entropy_nats": 0.00023749446993232693,
+      "vs_classical_conditional": {
+        "d_tv": 0.33216666666665895,
+        "symmetric_kl": 3.7083312940839064,
+        "kl_exp_th": 7.012731072984683,
+        "kl_th_exp": 0.40393151518313003,
+        "magnetization_mae": 0.6643233348921347,
+        "pair_correlation_mae": 1.9996880029053237e-05
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.16784333177277144,
+        "symmetric_kl": 0.05872149612648443,
+        "kl_exp_th": 0.05746474534575843,
+        "kl_th_exp": 0.05997824690721043,
+        "magnetization_mae": 0.3356666666666666,
+        "pair_correlation_mae": 1.9996880045077454e-05
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.33216605685546957,
+        "symmetric_kl": 2.7529232001321216,
+        "kl_exp_th": 4.154758850238309,
+        "kl_th_exp": 1.3510875500259343,
+        "magnetization_mae": 0.6367826940560211,
+        "pair_correlation_mae": 0.05440023082864801
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.1949255600264376,
+        "symmetric_kl": 0.5519383238011699,
+        "kl_exp_th": 0.11315245964661416,
+        "kl_th_exp": 0.9907241879557256,
+        "magnetization_mae": 0.3356666666666469,
+        "pair_correlation_mae": 0.05452712935184301
+      },
+      "measured_magnetization": [
+        0.3356666666666666,
+        0.3356666666666666,
+        0.3356666666666666,
+        0.3356666666666666
+      ],
+      "classical_cond_magnetization": [
+        0.9999999999999845,
+        0.9999603592081436,
+        0.9999998235135386,
+        0.9999998235135386
+      ]
+    },
+    {
+      "N": 10,
+      "W": 0.0,
+      "seed": 42,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.5825,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.49378917062066197,
+      "classical_cond_entropy_nats": 0.0002374944696715951,
+      "vs_classical_conditional": {
+        "d_tv": 0.19431351294091104,
+        "symmetric_kl": 2.097452162727658,
+        "kl_exp_th": 3.9788844624609214,
+        "kl_th_exp": 0.21601986299439496,
+        "magnetization_mae": 0.38840666822548364,
+        "pair_correlation_mae": 0.0001469051018884171
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.3058334215765525,
+        "symmetric_kl": 0.21782991655718642,
+        "kl_exp_th": 0.20118280355689583,
+        "kl_th_exp": 0.23447702955747704,
+        "magnetization_mae": 0.6115833333333335,
+        "pair_correlation_mae": 0.0001469051018884541
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.19416661396832025,
+        "symmetric_kl": 1.7918534069117769,
+        "kl_exp_th": 2.8051421957010936,
+        "kl_th_exp": 0.7785646181224603,
+        "magnetization_mae": 0.3611498410565891,
+        "pair_correlation_mae": 0.053714069100930385
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.33250122414022576,
+        "symmetric_kl": 0.6046903582547962,
+        "kl_exp_th": 0.25511368062614237,
+        "kl_th_exp": 0.95426703588345,
+        "magnetization_mae": 0.611583333333329,
+        "pair_correlation_mae": 0.053824828060342944
+      },
+      "measured_magnetization": [
+        0.6116666666666666,
+        0.6113333333333333,
+        0.6116666666666666,
+        0.6116666666666666
+      ],
+      "classical_cond_magnetization": [
+        1.0,
+        0.9999603592081594,
+        0.9999998235135541,
+        0.9999998235135541
+      ]
+    },
+    {
+      "N": 12,
+      "W": 0.0,
+      "seed": 42,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.23250000000000004,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.27262063463299685,
+      "classical_cond_entropy_nats": 8.901853067574496e-09,
+      "vs_classical_conditional": {
+        "d_tv": 0.07749999999999999,
+        "symmetric_kl": 0.7962753579900539,
+        "kl_exp_th": 1.5118828127998198,
+        "kl_th_exp": 0.08066790318028785,
+        "magnetization_mae": 0.15499999980355644,
+        "pair_correlation_mae": 3.928818751811984e-10
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.42250000019643996,
+        "symmetric_kl": 0.5232259941156592,
+        "kl_exp_th": 0.4205265463198292,
+        "kl_th_exp": 0.625925441911489,
+        "magnetization_mae": 0.8450000000000008,
+        "pair_correlation_mae": 3.928827633596181e-10
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.07749999851514791,
+        "symmetric_kl": 0.8035433592795328,
+        "kl_exp_th": 1.3147226278182904,
+        "kl_th_exp": 0.29236409074077513,
+        "magnetization_mae": 0.1485236662832193,
+        "pair_correlation_mae": 0.01288107713998791
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.4290433285007844,
+        "symmetric_kl": 0.6294959231204398,
+        "kl_exp_th": 0.43369958771061734,
+        "kl_th_exp": 0.8252922585302623,
+        "magnetization_mae": 0.8450000000000176,
+        "pair_correlation_mae": 0.013123458147539069
+      },
+      "measured_magnetization": [
+        0.845,
+        0.845,
+        0.845,
+        0.845
+      ],
+      "classical_cond_magnetization": [
+        0.9999999999999688,
+        0.9999999999999999,
+        0.9999999999999999,
+        0.9999999992142571
+      ]
+    },
+    {
+      "N": 6,
+      "W": 0.5,
+      "seed": 42,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 1.0,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.638460048232503,
+      "classical_cond_entropy_nats": 0.022850112732944194,
+      "vs_classical_conditional": {
+        "d_tv": 0.3361609296796717,
+        "symmetric_kl": 1.9424118998891065,
+        "kl_exp_th": 3.4208632809244417,
+        "kl_th_exp": 0.4639605188537713,
+        "magnetization_mae": 0.6706176550699678,
+        "pair_correlation_mae": 0.0034083017111980287
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.6637195412241481,
+        "symmetric_kl": 3.2394338421167217,
+        "kl_exp_th": 5.389940133619188,
+        "kl_th_exp": 1.0889275506142553,
+        "magnetization_mae": 1.327438350539479,
+        "pair_correlation_mae": 6.85497295205284e-07
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.4025074360999022,
+        "symmetric_kl": 1.0609410672901176,
+        "kl_exp_th": 0.39381463893840607,
+        "kl_th_exp": 1.7280674956418292,
+        "magnetization_mae": 0.7295330029347569,
+        "pair_correlation_mae": 0.08299256722563812
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.6636940709409287,
+        "symmetric_kl": 3.4984399800135733,
+        "kl_exp_th": 5.269225548425274,
+        "kl_th_exp": 1.7276544116018728,
+        "magnetization_mae": 1.3075741630145539,
+        "pair_correlation_mae": 0.03916889128078854
+      },
+      "measured_magnetization": [
+        0.3276666666666667,
+        0.3276666666666667,
+        0.3276666666666667,
+        0.3276666666666667
+      ],
+      "classical_cond_magnetization": [
+        0.9999884209263085,
+        0.9931735059770267,
+        0.9999869310913111,
+        0.9999884289518922
+      ]
+    },
+    {
+      "N": 8,
+      "W": 0.5,
+      "seed": 42,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 1.0,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6406116994236372,
+      "classical_cond_entropy_nats": 0.003026969351140228,
+      "vs_classical_conditional": {
+        "d_tv": 0.33383333333306586,
+        "symmetric_kl": 3.728596104217733,
+        "kl_exp_th": 7.046408591637392,
+        "kl_th_exp": 0.4107836167980741,
+        "magnetization_mae": 0.6667487770837044,
+        "pair_correlation_mae": 0.0006119262209168622
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.6666663328664291,
+        "symmetric_kl": 5.201971677588777,
+        "kl_exp_th": 9.305263162060152,
+        "kl_th_exp": 1.0986801931174033,
+        "magnetization_mae": 1.333078500011389,
+        "pair_correlation_mae": 0.0005027770672548967
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.2235479946492689,
+        "symmetric_kl": 0.8486836046598144,
+        "kl_exp_th": 0.23596898772014746,
+        "kl_th_exp": 1.4613982215994814,
+        "magnetization_mae": 0.39764421290103247,
+        "pair_correlation_mae": 0.07598104058095288
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.6666614825971122,
+        "symmetric_kl": 5.347629430955369,
+        "kl_exp_th": 8.72277614907479,
+        "kl_th_exp": 1.9724827128359483,
+        "magnetization_mae": 1.3065478009418805,
+        "pair_correlation_mae": 0.05191097992705518
+      },
+      "measured_magnetization": [
+        0.33233333333333337,
+        0.33333333333333337,
+        0.33333333333333337,
+        0.33333333333333337
+      ],
+      "classical_cond_magnetization": [
+        0.9999999999992717,
+        0.9993299397710614,
+        0.9999999978208696,
+        0.9999985040769483
+      ]
+    },
+    {
+      "N": 10,
+      "W": 0.5,
+      "seed": 42,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.9625,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.627496005782675,
+      "classical_cond_entropy_nats": 0.00019049252185171462,
+      "vs_classical_conditional": {
+        "d_tv": 0.32083333333333325,
+        "symmetric_kl": 3.5735134889679463,
+        "kl_exp_th": 6.759975110090034,
+        "kl_th_exp": 0.38705186784585877,
+        "magnetization_mae": 0.6416588562828014,
+        "pair_correlation_mae": 1.56207636720825e-05
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.6791348186186734,
+        "symmetric_kl": 3.7787096163779186,
+        "kl_exp_th": 6.405325454883096,
+        "kl_th_exp": 1.1520937778727416,
+        "magnetization_mae": 1.3577142463265532,
+        "pair_correlation_mae": 0.0011107806995636071
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.32082494947746554,
+        "symmetric_kl": 2.2469897296467978,
+        "kl_exp_th": 3.1604730448713183,
+        "kl_th_exp": 1.333506414422277,
+        "magnetization_mae": 0.6141605768047356,
+        "pair_correlation_mae": 0.0542961379497461
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.6791222373373971,
+        "symmetric_kl": 4.410699531727712,
+        "kl_exp_th": 6.207019126882761,
+        "kl_th_exp": 2.6143799365726617,
+        "magnetization_mae": 1.315429630785397,
+        "pair_correlation_mae": 0.08454489031040718
+      },
+      "measured_magnetization": [
+        0.35833333333333334,
+        0.35833333333333334,
+        0.35833333333333334,
+        0.35833333333333334
+      ],
+      "classical_cond_magnetization": [
+        0.9999999999999998,
+        0.9999992933340534,
+        0.9999695561771565,
+        0.9999999089533291
+      ]
+    },
+    {
+      "N": 12,
+      "W": 0.5,
+      "seed": 42,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.994,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6351188648930708,
+      "classical_cond_entropy_nats": 1.1864763167392815e-06,
+      "vs_classical_conditional": {
+        "d_tv": 0.33133333333333326,
+        "symmetric_kl": 3.698291533863185,
+        "kl_exp_th": 6.994113121876411,
+        "kl_th_exp": 0.4024699458499589,
+        "magnetization_mae": 0.6626666327810679,
+        "pair_correlation_mae": 6.777073408015255e-08
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.6686653449205997,
+        "symmetric_kl": 4.760468092213586,
+        "kl_exp_th": 8.416325965162173,
+        "kl_th_exp": 1.1046102192649976,
+        "magnetization_mae": 1.3373306898399187,
+        "pair_correlation_mae": 2.3822610550894296e-12
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.3312167045133774,
+        "symmetric_kl": 1.5418514528655163,
+        "kl_exp_th": 2.378014480029486,
+        "kl_th_exp": 0.7056884257015468,
+        "magnetization_mae": 0.6531907500375775,
+        "pair_correlation_mae": 0.018333534089667074
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.6686653216758032,
+        "symmetric_kl": 4.835886501364531,
+        "kl_exp_th": 8.408166817064272,
+        "kl_th_exp": 1.2636061856647898,
+        "magnetization_mae": 1.3320431961968673,
+        "pair_correlation_mae": 0.010526114669874983
+      },
+      "measured_magnetization": [
+        0.33733333333333343,
+        0.33733333333333343,
+        0.33733333333333343,
+        0.33733333333333343
+      ],
+      "classical_cond_magnetization": [
+        0.9999999999986047,
+        0.9999999999999999,
+        0.9999999999999986,
+        0.9999998644590019
+      ]
+    },
+    {
+      "N": 6,
+      "W": 0.5,
+      "seed": 123,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 1.0,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6365141682948128,
+      "classical_cond_entropy_nats": 1.300761608480707e-07,
+      "vs_classical_conditional": {
+        "d_tv": 0.33333333333333315,
+        "symmetric_kl": 3.7221172991327953,
+        "kl_exp_th": 7.038769479175916,
+        "kl_th_exp": 0.4054651190896746,
+        "magnetization_mae": 0.6666666635487335,
+        "pair_correlation_mae": 6.235865527652133e-09
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.3332625338718407,
+        "symmetric_kl": 1.4767598101792507,
+        "kl_exp_th": 2.5487527590739276,
+        "kl_th_exp": 0.40476686128457384,
+        "magnetization_mae": 0.6665250628507045,
+        "pair_correlation_mae": 7.4190143843170615e-09
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.333333257441642,
+        "symmetric_kl": 2.856658141100958,
+        "kl_exp_th": 4.846815471457482,
+        "kl_th_exp": 0.866500810744434,
+        "magnetization_mae": 0.6526751990605102,
+        "pair_correlation_mae": 0.027742280919070144
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.3332824411655628,
+        "symmetric_kl": 1.7766930444328706,
+        "kl_exp_th": 2.6778624261266946,
+        "kl_th_exp": 0.8755236627390468,
+        "magnetization_mae": 0.6522550549157352,
+        "pair_correlation_mae": 0.028337456305724335
+      },
+      "measured_magnetization": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "classical_cond_magnetization": [
+        0.9999999999999994,
+        0.9999999947211894,
+        0.999999998592703,
+        0.9999999942143756
+      ]
+    },
+    {
+      "N": 8,
+      "W": 0.5,
+      "seed": 123,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 1.0,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6366296303301126,
+      "classical_cond_entropy_nats": 3.598713795451976e-05,
+      "vs_classical_conditional": {
+        "d_tv": 0.3335,
+        "symmetric_kl": 3.724115607191998,
+        "kl_exp_th": 7.042493383760307,
+        "kl_th_exp": 0.40573783062368796,
+        "magnetization_mae": 0.6669987029609591,
+        "pair_correlation_mae": 2.5940780761050477e-06
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.33299041689105335,
+        "symmetric_kl": 1.1469994730398074,
+        "kl_exp_th": 1.8922813466859172,
+        "kl_th_exp": 0.4017175993936975,
+        "magnetization_mae": 0.6659795266870897,
+        "pair_correlation_mae": 2.5999008247586572e-06
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.33349995942976046,
+        "symmetric_kl": 3.06060277711938,
+        "kl_exp_th": 5.06533830722129,
+        "kl_th_exp": 1.0558672470174697,
+        "magnetization_mae": 0.6478135455908876,
+        "pair_correlation_mae": 0.03802507117177364
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.3330827171905315,
+        "symmetric_kl": 1.5223954927909533,
+        "kl_exp_th": 1.98491602042493,
+        "kl_th_exp": 1.0598749651569768,
+        "magnetization_mae": 0.6466971844763574,
+        "pair_correlation_mae": 0.03850641324920717
+      },
+      "measured_magnetization": [
+        0.333,
+        0.333,
+        0.333,
+        0.333
+      ],
+      "classical_cond_magnetization": [
+        1.0,
+        0.9999999985927035,
+        0.9999948185299428,
+        0.9999999947211899
+      ]
+    },
+    {
+      "N": 10,
+      "W": 0.5,
+      "seed": 123,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.877,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6043749910970477,
+      "classical_cond_entropy_nats": 0.010265768745719201,
+      "vs_classical_conditional": {
+        "d_tv": 0.2925,
+        "symmetric_kl": 3.24899937317272,
+        "kl_exp_th": 6.131641779826905,
+        "kl_th_exp": 0.366356966518534,
+        "magnetization_mae": 0.5843252797425064,
+        "pair_correlation_mae": 0.0013494405119795494
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.29007503073357754,
+        "symmetric_kl": 0.18054583640954658,
+        "kl_exp_th": 0.17205719309466658,
+        "kl_th_exp": 0.18903447972442658,
+        "magnetization_mae": 0.5792998209996435,
+        "pair_correlation_mae": 0.0005723782886688696
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.2924999425936359,
+        "symmetric_kl": 3.1029931694649724,
+        "kl_exp_th": 4.333545988163004,
+        "kl_th_exp": 1.8724403507669412,
+        "magnetization_mae": 0.5430089960410439,
+        "pair_correlation_mae": 0.08308988829873366
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.24171422545784405,
+        "symmetric_kl": 0.7633620969381861,
+        "kl_exp_th": 0.16182407676646207,
+        "kl_th_exp": 1.3649001171099102,
+        "magnetization_mae": 0.40542394918294056,
+        "pair_correlation_mae": 0.0723101784785714
+      },
+      "measured_magnetization": [
+        0.41500000000000004,
+        0.41500000000000004,
+        0.41500000000000004,
+        0.41500000000000004
+      ],
+      "classical_cond_magnetization": [
+        0.9999999999999999,
+        0.9973011256561326,
+        0.9999999947211897,
+        0.9999999985927034
+      ]
+    },
+    {
+      "N": 12,
+      "W": 0.5,
+      "seed": 123,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.01749999999999998,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.05291516350544642,
+      "classical_cond_entropy_nats": 0.0002666561308464358,
+      "vs_classical_conditional": {
+        "d_tv": 0.009333333333333357,
+        "symmetric_kl": 0.08582546543375168,
+        "kl_exp_th": 0.16201537766876556,
+        "kl_th_exp": 0.009635553198737806,
+        "magnetization_mae": 0.018655260759670056,
+        "pair_correlation_mae": 2.2811813952916538e-05
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.06416126737055994,
+        "symmetric_kl": 0.06845345684644039,
+        "kl_exp_th": 0.047075722719957594,
+        "kl_th_exp": 0.08983119097292316,
+        "magnetization_mae": 0.12829008819652352,
+        "pair_correlation_mae": 2.262158412824622e-05
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.0425879998587386,
+        "symmetric_kl": 0.46752203049660035,
+        "kl_exp_th": 0.16332154588762002,
+        "kl_th_exp": 0.7717225151055807,
+        "magnetization_mae": 0.016232054435077886,
+        "pair_correlation_mae": 0.04275233638963446
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.0660824719830829,
+        "symmetric_kl": 0.4229334531671981,
+        "kl_exp_th": 0.056921863695478775,
+        "kl_th_exp": 0.7889450426389174,
+        "magnetization_mae": 0.06913143383408243,
+        "pair_correlation_mae": 0.0437086650129623
+      },
+      "measured_magnetization": [
+        0.9813333333333334,
+        0.9813333333333334,
+        0.9813333333333334,
+        0.9813333333333334
+      ],
+      "classical_cond_magnetization": [
+        1.0,
+        0.9999543816570892,
+        0.9999999947211899,
+        0.9999999999937347
+      ]
+    },
+    {
+      "N": 6,
+      "W": 0.5,
+      "seed": 456,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 1.0,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6366296303301126,
+      "classical_cond_entropy_nats": 0.00020059759522735257,
+      "vs_classical_conditional": {
+        "d_tv": 0.6664999899310362,
+        "symmetric_kl": 6.367223358195677,
+        "kl_exp_th": 11.636178848117137,
+        "kl_th_exp": 1.0982678682742169,
+        "magnetization_mae": 1.3329918608468263,
+        "pair_correlation_mae": 1.6237851945710702e-05
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.4982705543302911,
+        "symmetric_kl": 0.5707430172414588,
+        "kl_exp_th": 0.612793297601705,
+        "kl_th_exp": 0.5286927368812127,
+        "magnetization_mae": 0.9965343147086182,
+        "pair_correlation_mae": 1.3533364513632998e-05
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.6662066988727793,
+        "symmetric_kl": 3.443477006045021,
+        "kl_exp_th": 4.805133303231115,
+        "kl_th_exp": 2.0818207088589262,
+        "magnetization_mae": 1.3023835629370064,
+        "pair_correlation_mae": 0.059054517144095355
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.4876352744364142,
+        "symmetric_kl": 1.0017549042227936,
+        "kl_exp_th": 0.5990031363214667,
+        "kl_th_exp": 1.4045066721241204,
+        "magnetization_mae": 0.9412926178873902,
+        "pair_correlation_mae": 0.05462347926692481
+      },
+      "measured_magnetization": [
+        -0.333,
+        -0.333,
+        -0.333,
+        -0.333
+      ],
+      "classical_cond_magnetization": [
+        0.9999999796977804,
+        0.999970391912307,
+        0.9999971920459044,
+        0.9999998797313139
+      ]
+    },
+    {
+      "N": 8,
+      "W": 0.5,
+      "seed": 456,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 1.0,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6377773825296138,
+      "classical_cond_entropy_nats": 2.1100070632459535e-05,
+      "vs_classical_conditional": {
+        "d_tv": 0.6648333333333304,
+        "symmetric_kl": 7.881857138164419,
+        "kl_exp_th": 14.670576328327169,
+        "kl_th_exp": 1.093137948001669,
+        "magnetization_mae": 1.3296659442384526,
+        "pair_correlation_mae": 1.4448563664763252e-06
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.2904792845491856,
+        "symmetric_kl": 0.174086060414805,
+        "kl_exp_th": 0.17264224720933882,
+        "kl_th_exp": 0.17552987362027117,
+        "magnetization_mae": 0.5809534969925294,
+        "pair_correlation_mae": 3.9840660058798605e-06
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.6648331595264312,
+        "symmetric_kl": 5.736460184712727,
+        "kl_exp_th": 9.724176187536804,
+        "kl_th_exp": 1.7487441818886507,
+        "magnetization_mae": 1.3094615450231413,
+        "pair_correlation_mae": 0.0399927471514939
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.33767559159072547,
+        "symmetric_kl": 0.6000119405054929,
+        "kl_exp_th": 0.26006587338918774,
+        "kl_th_exp": 0.9399580076217982,
+        "magnetization_mae": 0.6367511906167268,
+        "pair_correlation_mae": 0.043386584588820075
+      },
+      "measured_magnetization": [
+        -0.3296666666666666,
+        -0.3296666666666666,
+        -0.3296666666666666,
+        -0.3296666666666666
+      ],
+      "classical_cond_magnetization": [
+        0.9999999999999917,
+        0.9999999980693425,
+        0.9999972123423666,
+        0.9999998998754431
+      ]
+    },
+    {
+      "N": 10,
+      "W": 0.5,
+      "seed": 456,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.9995,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6375488303497421,
+      "classical_cond_entropy_nats": 1.2784469993414356e-06,
+      "vs_classical_conditional": {
+        "d_tv": 0.6651666666666667,
+        "symmetric_kl": 7.886301194786362,
+        "kl_exp_th": 14.678479704013624,
+        "kl_th_exp": 1.094122685559099,
+        "magnetization_mae": 1.3303332972985342,
+        "pair_correlation_mae": 7.206959790062584e-08
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.28498404395795074,
+        "symmetric_kl": 0.32220462247605136,
+        "kl_exp_th": 0.40054605219350614,
+        "kl_th_exp": 0.24386319275859658,
+        "magnetization_mae": 0.5699680825140443,
+        "pair_correlation_mae": 3.6184771845526598e-09
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.6651663699110802,
+        "symmetric_kl": 5.426822170678468,
+        "kl_exp_th": 9.368334522729288,
+        "kl_th_exp": 1.4853098186276492,
+        "magnetization_mae": 1.3181408688338432,
+        "pair_correlation_mae": 0.02423732633305999
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.21707767442094147,
+        "symmetric_kl": 0.26818569081136834,
+        "kl_exp_th": 0.17341025726485346,
+        "kl_th_exp": 0.3629611243578832,
+        "magnetization_mae": 0.42368627445918716,
+        "pair_correlation_mae": 0.01498532432297737
+      },
+      "measured_magnetization": [
+        -0.33033333333333337,
+        -0.33033333333333337,
+        -0.33033333333333337,
+        -0.33033333333333337
+      ],
+      "classical_cond_magnetization": [
+        0.9999999875891793,
+        1.0,
+        1.0,
+        0.9999998682716243
+      ]
+    },
+    {
+      "N": 12,
+      "W": 0.5,
+      "seed": 456,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.9985,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6496079920333753,
+      "classical_cond_entropy_nats": 1.175976817967426e-06,
+      "vs_classical_conditional": {
+        "d_tv": 0.35116666666666674,
+        "symmetric_kl": 3.934441552039431,
+        "kl_exp_th": 7.436303369558599,
+        "kl_th_exp": 0.43257973452026327,
+        "magnetization_mae": 0.7022499665852433,
+        "pair_correlation_mae": 0.00016668765607023386
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.3573266652141316,
+        "symmetric_kl": 0.2685016730558139,
+        "kl_exp_th": 0.27289900376395776,
+        "kl_th_exp": 0.26410434234767005,
+        "magnetization_mae": 0.7144119390940822,
+        "pair_correlation_mae": 0.00016091418461664878
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.35116659055809096,
+        "symmetric_kl": 3.643730480940283,
+        "kl_exp_th": 6.479114723384469,
+        "kl_th_exp": 0.8083462384960964,
+        "magnetization_mae": 0.6909791818173526,
+        "pair_correlation_mae": 0.02225976754552626
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.2672044245926032,
+        "symmetric_kl": 0.28170631278565084,
+        "kl_exp_th": 0.16149793118402295,
+        "kl_th_exp": 0.4019146943872788,
+        "magnetization_mae": 0.5111733804451558,
+        "pair_correlation_mae": 0.028591942217212507
+      },
+      "measured_magnetization": [
+        0.29766666666666663,
+        0.29766666666666663,
+        0.29766666666666663,
+        0.29799999999999993
+      ],
+      "classical_cond_magnetization": [
+        0.9999998682716245,
+        1.0000000000000002,
+        1.0000000000000002,
+        0.9999999980693485
+      ]
+    },
+    {
+      "N": 6,
+      "W": 1.0,
+      "seed": 42,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.996,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.63697526674802,
+      "classical_cond_entropy_nats": 0.8321277466327128,
+      "vs_classical_conditional": {
+        "d_tv": 0.6156580823443468,
+        "symmetric_kl": 4.7467772884636386,
+        "kl_exp_th": 1.5260419011704607,
+        "kl_th_exp": 7.967512675756817,
+        "magnetization_mae": 1.0540438825906318,
+        "pair_correlation_mae": 0.3528525148593557
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.333999987055706,
+        "symmetric_kl": 2.9179022909911696,
+        "kl_exp_th": 5.4293369669651455,
+        "kl_th_exp": 0.40646761501719375,
+        "magnetization_mae": 0.6679997959177164,
+        "pair_correlation_mae": 3.41117929366271e-07
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.33395520106566834,
+        "symmetric_kl": 2.0959217365570155,
+        "kl_exp_th": 2.7480751747549323,
+        "kl_th_exp": 1.4437682983590987,
+        "magnetization_mae": 0.6374347283646027,
+        "pair_correlation_mae": 0.0596351234016708
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.33399993539801287,
+        "symmetric_kl": 2.93625108992999,
+        "kl_exp_th": 4.914432429791717,
+        "kl_th_exp": 0.9580697500682638,
+        "magnetization_mae": 0.6515218031932515,
+        "pair_correlation_mae": 0.03267482462448601
+      },
+      "measured_magnetization": [
+        -0.332,
+        -0.332,
+        -0.332,
+        -0.332
+      ],
+      "classical_cond_magnetization": [
+        0.897625539029404,
+        0.19362025841618244,
+        0.897619851994081,
+        0.8993098809228591
+      ]
+    },
+    {
+      "N": 8,
+      "W": 1.0,
+      "seed": 42,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.772,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.5979201697988547,
+      "classical_cond_entropy_nats": 0.03488293461360188,
+      "vs_classical_conditional": {
+        "d_tv": 0.28533333332418764,
+        "symmetric_kl": 3.2026096999849343,
+        "kl_exp_th": 5.976165600552169,
+        "kl_th_exp": 0.4290537994176995,
+        "magnetization_mae": 0.5678460626743733,
+        "pair_correlation_mae": 0.005641183597631105
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.714666666666372,
+        "symmetric_kl": 8.559929135136034,
+        "kl_exp_th": 15.858053169371576,
+        "kl_th_exp": 1.2618051009004927,
+        "magnetization_mae": 1.4290439172706177,
+        "pair_correlation_mae": 0.000578832097026083
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.7146167673473951,
+        "symmetric_kl": 5.164132877767625,
+        "kl_exp_th": 6.524890195067817,
+        "kl_th_exp": 3.8033755604674337,
+        "magnetization_mae": 1.3549561245305868,
+        "pair_correlation_mae": 0.14383232670810478
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.7146665715808045,
+        "symmetric_kl": 6.765036619648848,
+        "kl_exp_th": 10.97938570847801,
+        "kl_th_exp": 2.550687530819687,
+        "magnetization_mae": 1.391162541007311,
+        "pair_correlation_mae": 0.07540262368446071
+      },
+      "measured_magnetization": [
+        0.42933333333333334,
+        0.42933333333333334,
+        0.42933333333333334,
+        0.42933333333333334
+      ],
+      "classical_cond_magnetization": [
+        0.9999999994472657,
+        0.9887302647532341,
+        0.9999999999548145,
+        0.9999873198755123
+      ]
+    },
+    {
+      "N": 10,
+      "W": 1.0,
+      "seed": 42,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.9995,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6410722974388959,
+      "classical_cond_entropy_nats": 0.018185835738996594,
+      "vs_classical_conditional": {
+        "d_tv": 0.3344999999999999,
+        "symmetric_kl": 3.75554459042131,
+        "kl_exp_th": 7.0628200724485115,
+        "kl_th_exp": 0.448269108394109,
+        "magnetization_mae": 0.6674404977552113,
+        "pair_correlation_mae": 0.0027856470495077703
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.6654999974796958,
+        "symmetric_kl": 6.905897511398269,
+        "kl_exp_th": 12.55671273518711,
+        "kl_th_exp": 1.2550822876094285,
+        "magnetization_mae": 1.3018944779027022,
+        "pair_correlation_mae": 0.058211021122200744
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.2370451703664744,
+        "symmetric_kl": 1.1333344336938858,
+        "kl_exp_th": 0.3036668315007093,
+        "kl_th_exp": 1.9630020358870623,
+        "magnetization_mae": 0.38121578267334527,
+        "pair_correlation_mae": 0.12185604959814737
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.6654998506639634,
+        "symmetric_kl": 6.084644346398606,
+        "kl_exp_th": 9.905316770221837,
+        "kl_th_exp": 2.2639719225753736,
+        "magnetization_mae": 1.2155329012227862,
+        "pair_correlation_mae": 0.22779248195887714
+      },
+      "measured_magnetization": [
+        0.33099999999999996,
+        0.33199999999999996,
+        0.33099999999999996,
+        0.33099999999999996
+      ],
+      "classical_cond_magnetization": [
+        0.9999999999999998,
+        0.9999999874026931,
+        0.9947620505877428,
+        0.9999999530304093
+      ]
+    },
+    {
+      "N": 12,
+      "W": 1.0,
+      "seed": 42,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 1.0,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6366296303301126,
+      "classical_cond_entropy_nats": 0.00014445563062750574,
+      "vs_classical_conditional": {
+        "d_tv": 0.33350000000000013,
+        "symmetric_kl": 3.7241672839023012,
+        "kl_exp_th": 7.042499446477393,
+        "kl_th_exp": 0.4058351213272096,
+        "magnetization_mae": 0.6669941547848715,
+        "pair_correlation_mae": 1.1690383377264505e-05
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.6664999999964889,
+        "symmetric_kl": 7.904106214001926,
+        "kl_exp_th": 14.710100014476389,
+        "kl_th_exp": 1.0981124135274625,
+        "magnetization_mae": 1.3329999999929565,
+        "pair_correlation_mae": 4.2558549277297665e-14
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.6654292662748119,
+        "symmetric_kl": 2.9991990221017226,
+        "kl_exp_th": 3.9415232989376268,
+        "kl_th_exp": 2.0568747452658185,
+        "magnetization_mae": 1.301816387042889,
+        "pair_correlation_mae": 0.05678197003039326
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.6664999991357672,
+        "symmetric_kl": 7.257102508651295,
+        "kl_exp_th": 13.275816844370691,
+        "kl_th_exp": 1.2383881729318982,
+        "magnetization_mae": 1.3282872924256957,
+        "pair_correlation_mae": 0.009387270772602504
+      },
+      "measured_magnetization": [
+        0.333,
+        0.333,
+        0.333,
+        0.333
+      ],
+      "classical_cond_magnetization": [
+        0.9999999998708935,
+        1.0000000000000002,
+        0.9999999999942311,
+        0.9999766192743608
+      ]
+    },
+    {
+      "N": 6,
+      "W": 1.0,
+      "seed": 123,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.85,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.5960740318257864,
+      "classical_cond_entropy_nats": 4.34985037209851e-09,
+      "vs_classical_conditional": {
+        "d_tv": 0.2833333333333333,
+        "symmetric_kl": 3.1305307556843838,
+        "kl_exp_th": 5.927917065119239,
+        "kl_th_exp": 0.33314444624952905,
+        "magnetization_mae": 0.5666666665769717,
+        "pair_correlation_mae": 1.793898363189328e-10
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.28333333200876565,
+        "symmetric_kl": 2.764510647771117,
+        "kl_exp_th": 5.19587687648049,
+        "kl_th_exp": 0.3331444190617442,
+        "magnetization_mae": 0.5666666639243864,
+        "pair_correlation_mae": 1.8200126591002194e-10
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.28333331913769766,
+        "symmetric_kl": 2.6043851278839467,
+        "kl_exp_th": 4.538704533295981,
+        "kl_th_exp": 0.6700657224719124,
+        "magnetization_mae": 0.5563038098813258,
+        "pair_correlation_mae": 0.020580234376585387
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.2833332874663054,
+        "symmetric_kl": 2.4502544666709882,
+        "kl_exp_th": 4.207419769375608,
+        "kl_th_exp": 0.6930891639663678,
+        "magnetization_mae": 0.5555694877908175,
+        "pair_correlation_mae": 0.021989603174864092
+      },
+      "measured_magnetization": [
+        0.43333333333333335,
+        0.43333333333333335,
+        0.43333333333333335,
+        0.43333333333333335
+      ],
+      "classical_cond_magnetization": [
+        1.0,
+        0.9999999998421079,
+        0.9999999999887783,
+        0.9999999998103343
+      ]
+    },
+    {
+      "N": 8,
+      "W": 1.0,
+      "seed": 123,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.159,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.20950853302176375,
+      "classical_cond_entropy_nats": 0.0007973739201138999,
+      "vs_classical_conditional": {
+        "d_tv": 0.05292394394194618,
+        "symmetric_kl": 0.5314964742788744,
+        "kl_exp_th": 1.0086766256635276,
+        "kl_th_exp": 0.05431632289422122,
+        "magnetization_mae": 0.10562863859535782,
+        "pair_correlation_mae": 0.0002572772433510802
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.05292392652543344,
+        "symmetric_kl": 0.3956520374312268,
+        "kl_exp_th": 0.7369880303126402,
+        "kl_th_exp": 0.054316044549813404,
+        "magnetization_mae": 0.1056286037659615,
+        "pair_correlation_mae": 0.0002572772162928357
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.05283084642847833,
+        "symmetric_kl": 0.5789545649948796,
+        "kl_exp_th": 0.7338854763636581,
+        "kl_th_exp": 0.4240236536261011,
+        "magnetization_mae": 0.08113972517974272,
+        "pair_correlation_mae": 0.04829850033160382
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.05282755559416827,
+        "symmetric_kl": 0.5511552601353634,
+        "kl_exp_th": 0.6633522544215688,
+        "kl_th_exp": 0.4389582658491581,
+        "magnetization_mae": 0.08055532189295461,
+        "pair_correlation_mae": 0.049359458746083294
+      },
+      "measured_magnetization": [
+        0.8943333333333334,
+        0.8946666666666667,
+        0.8940000000000001,
+        0.8943333333333334
+      ],
+      "classical_cond_magnetization": [
+        0.9999999999999998,
+        0.9999999999887781,
+        0.9998478878838795,
+        0.9999999998421076
+      ]
+    },
+    {
+      "N": 10,
+      "W": 1.0,
+      "seed": 123,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.3865,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.4994628771884771,
+      "classical_cond_entropy_nats": 0.289267832256672,
+      "vs_classical_conditional": {
+        "d_tv": 0.19233333333333327,
+        "symmetric_kl": 2.2348831975131747,
+        "kl_exp_th": 4.003528056453267,
+        "kl_th_exp": 0.46623833857308206,
+        "magnetization_mae": 0.3431581807459084,
+        "pair_correlation_mae": 0.08301697183676153
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.23245805185631396,
+        "symmetric_kl": 0.1982461693558379,
+        "kl_exp_th": 0.1420757741467712,
+        "kl_th_exp": 0.2544165645649046,
+        "magnetization_mae": 0.3873403450098709,
+        "pair_correlation_mae": 0.052086546816365376
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.24979728089738898,
+        "symmetric_kl": 2.09987850751207,
+        "kl_exp_th": 2.798900597578456,
+        "kl_th_exp": 1.4008564174456837,
+        "magnetization_mae": 0.3059909988630739,
+        "pair_correlation_mae": 0.2509229512389428
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.2607466339045298,
+        "symmetric_kl": 0.8395215153076351,
+        "kl_exp_th": 0.2657858448780012,
+        "kl_th_exp": 1.4132571857372689,
+        "magnetization_mae": 0.23309523033417928,
+        "pair_correlation_mae": 0.21418393222992763
+      },
+      "measured_magnetization": [
+        0.6153333333333333,
+        0.6126666666666667,
+        0.6153333333333333,
+        0.6153333333333333
+      ],
+      "classical_cond_magnetization": [
+        0.9999999999999999,
+        0.8312993898194144,
+        0.9999999998421077,
+        0.9999999999887782
+      ]
+    },
+    {
+      "N": 12,
+      "W": 1.0,
+      "seed": 123,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.0,
+      "relaxed": true,
+      "pooled_entropy_nats": 0.0,
+      "classical_cond_entropy_nats": 0.00030311795008973995,
+      "vs_classical_conditional": {
+        "d_tv": 2.62487003433756e-05,
+        "symmetric_kl": 0.0001637648779849518,
+        "kl_exp_th": 2.624904484645323e-05,
+        "kl_th_exp": 0.0003012807111234504,
+        "magnetization_mae": 1.3124350172671884e-05,
+        "pair_correlation_mae": 2.6248700343992997e-05
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.0002405185655711419,
+        "symmetric_kl": 0.0017254310025299137,
+        "kl_exp_th": 0.00024054749480002026,
+        "kl_th_exp": 0.003210314510259807,
+        "magnetization_mae": 0.00044165968504689124,
+        "pair_correlation_mae": 2.626873980711893e-05
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.03967946297432616,
+        "symmetric_kl": 0.3763344890907014,
+        "kl_exp_th": 0.040488157514952605,
+        "kl_th_exp": 0.7121808206664502,
+        "magnetization_mae": 0.02002899849230408,
+        "pair_correlation_mae": 0.03980448024473743
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.04077556108832599,
+        "symmetric_kl": 0.3855748266693633,
+        "kl_exp_th": 0.041630197161712255,
+        "kl_th_exp": 0.7295194561770144,
+        "magnetization_mae": 0.020846238999696703,
+        "pair_correlation_mae": 0.04079195379664683
+      },
+      "measured_magnetization": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "classical_cond_magnetization": [
+        1.0000000000000002,
+        0.9999475027572513,
+        0.999999999842108,
+        0.9999999999999503
+      ]
+    },
+    {
+      "N": 6,
+      "W": 1.0,
+      "seed": 456,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 1.0,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6365141682948128,
+      "classical_cond_entropy_nats": 0.01758325661314918,
+      "vs_classical_conditional": {
+        "d_tv": 0.6666664092383692,
+        "symmetric_kl": 5.307548541737702,
+        "kl_exp_th": 9.479335402432556,
+        "kl_th_exp": 1.1357616810428497,
+        "magnetization_mae": 1.3320847320077953,
+        "pair_correlation_mae": 0.002496129446852106
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.6214179424856836,
+        "symmetric_kl": 1.1809574308376516,
+        "kl_exp_th": 1.4434742551246647,
+        "kl_th_exp": 0.9184406065506383,
+        "magnetization_mae": 1.2416442538930736,
+        "pair_correlation_mae": 0.00238319578691761
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.6660964052944739,
+        "symmetric_kl": 3.784550085676833,
+        "kl_exp_th": 4.384969126441918,
+        "kl_th_exp": 3.184131044911748,
+        "magnetization_mae": 1.2713113240823797,
+        "pair_correlation_mae": 0.11880797598750742
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.600603664409759,
+        "symmetric_kl": 2.017129818654311,
+        "kl_exp_th": 1.2402683886555907,
+        "kl_th_exp": 2.793991248653031,
+        "magnetization_mae": 1.141085391346792,
+        "pair_correlation_mae": 0.11323403846112391
+      },
+      "measured_magnetization": [
+        -0.3333333333333333,
+        -0.3333333333333333,
+        -0.3333333333333333,
+        -0.3333333333333333
+      ],
+      "classical_cond_magnetization": [
+        0.999999478012231,
+        0.9950512413791772,
+        0.999955446975094,
+        0.9999994283313461
+      ]
+    },
+    {
+      "N": 8,
+      "W": 1.0,
+      "seed": 456,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.6415,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6709321847375349,
+      "classical_cond_entropy_nats": 0.0002586267955493304,
+      "vs_classical_conditional": {
+        "d_tv": 0.39500000000000013,
+        "symmetric_kl": 4.463528483143885,
+        "kl_exp_th": 8.42429226931983,
+        "kl_th_exp": 0.5027646969679408,
+        "magnetization_mae": 0.789988978029533,
+        "pair_correlation_mae": 2.2043940516839704e-05
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.13382265673237692,
+        "symmetric_kl": 0.04250383652393904,
+        "kl_exp_th": 0.04268046359795656,
+        "kl_th_exp": 0.04232720944992152,
+        "magnetization_mae": 0.2673480898842721,
+        "pair_correlation_mae": 0.00020912523711254702
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.39499992216066404,
+        "symmetric_kl": 3.5632078769569735,
+        "kl_exp_th": 5.823186319735668,
+        "kl_th_exp": 1.3032294341782789,
+        "magnetization_mae": 0.7666406014730709,
+        "pair_correlation_mae": 0.04626008546827096
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.2181942039657029,
+        "symmetric_kl": 0.5985851325734496,
+        "kl_exp_th": 0.17167145430477243,
+        "kl_th_exp": 1.0254988108421268,
+        "magnetization_mae": 0.3937149148839503,
+        "pair_correlation_mae": 0.05360285421530753
+      },
+      "measured_magnetization": [
+        0.20999999999999996,
+        0.20999999999999996,
+        0.20999999999999996,
+        0.20999999999999996
+      ],
+      "classical_cond_magnetization": [
+        0.9999999999999998,
+        0.9999999999788801,
+        0.9999559689420567,
+        0.9999999431971953
+      ]
+    },
+    {
+      "N": 10,
+      "W": 1.0,
+      "seed": 456,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.998,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6519662072448864,
+      "classical_cond_entropy_nats": 0.00013875424382638838,
+      "vs_classical_conditional": {
+        "d_tv": 0.6425,
+        "symmetric_kl": 7.585436606189631,
+        "kl_exp_th": 14.142146997858937,
+        "kl_th_exp": 1.028726214520324,
+        "magnetization_mae": 1.2849944299366647,
+        "pair_correlation_mae": 1.1140125948901533e-05
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.11136975983576317,
+        "symmetric_kl": 0.02970065105906998,
+        "kl_exp_th": 0.03074255648586542,
+        "kl_th_exp": 0.028658745632274538,
+        "magnetization_mae": 0.22273540674070852,
+        "pair_correlation_mae": 2.7419573164766398e-06
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.6424963078941749,
+        "symmetric_kl": 4.552779260535427,
+        "kl_exp_th": 7.399889722847643,
+        "kl_th_exp": 1.7056687982232108,
+        "magnetization_mae": 1.2647099203262155,
+        "pair_correlation_mae": 0.04023372222810386
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.13331585152246594,
+        "symmetric_kl": 0.20365689121574662,
+        "kl_exp_th": 0.06157708394610885,
+        "kl_th_exp": 0.3457366984853844,
+        "magnetization_mae": 0.2476096700806359,
+        "pair_correlation_mae": 0.019016673588585737
+      },
+      "measured_magnetization": [
+        -0.285,
+        -0.285,
+        -0.285,
+        -0.285
+      ],
+      "classical_cond_magnetization": [
+        0.9999998039670361,
+        1.0,
+        1.0,
+        0.9999779157796229
+      ]
+    },
+    {
+      "N": 12,
+      "W": 1.0,
+      "seed": 456,
+      "coupling_lambda": 0.5,
+      "beta_eff": 7.219186155246177,
+      "A_over_B": 0.2602641898790776,
+      "memory_order_param": 0.998,
+      "relaxed": false,
+      "pooled_entropy_nats": 0.6408141321956514,
+      "classical_cond_entropy_nats": 0.00013707470205404846,
+      "vs_classical_conditional": {
+        "d_tv": 0.3396666666666667,
+        "symmetric_kl": 3.797715154870552,
+        "kl_exp_th": 7.180307191861447,
+        "kl_th_exp": 0.4151231178796572,
+        "magnetization_mae": 0.679327812272959,
+        "pair_correlation_mae": 1.1042120748501935e-05
+      },
+      "vs_classical_unconditional": {
+        "d_tv": 0.13643322388268853,
+        "symmetric_kl": 0.04895147127995687,
+        "kl_exp_th": 0.05056742628031222,
+        "kl_th_exp": 0.04733551627960152,
+        "magnetization_mae": 0.27263414702211547,
+        "pair_correlation_mae": 0.0001607315039431345
+      },
+      "vs_quantum_conditional": {
+        "d_tv": 0.33966666474979257,
+        "symmetric_kl": 3.5900013144822545,
+        "kl_exp_th": 6.1989261323202625,
+        "kl_th_exp": 0.981076496644246,
+        "magnetization_mae": 0.6630050116220748,
+        "pair_correlation_mae": 0.032492956978557495
+      },
+      "vs_quantum_unconditional": {
+        "d_tv": 0.10793088641530277,
+        "symmetric_kl": 0.4142982150586272,
+        "kl_exp_th": 0.0671736035419656,
+        "kl_th_exp": 0.7614228265752888,
+        "magnetization_mae": 0.17756053793044818,
+        "pair_correlation_mae": 0.04228665977435966
+      },
+      "measured_magnetization": [
+        0.3206666666666667,
+        0.3206666666666667,
+        0.3206666666666667,
+        0.3206666666666667
+      ],
+      "classical_cond_magnetization": [
+        0.9999779157796229,
+        1.0,
+        1.0,
+        0.9999999999788799
+      ]
+    }
+  ]
+}

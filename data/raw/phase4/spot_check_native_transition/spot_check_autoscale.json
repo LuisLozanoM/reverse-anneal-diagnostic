@@ -1,0 +1,74 @@
+{
+  "solver": "Advantage2_system1",
+  "num_reads": 2000,
+  "s_p": 0.4,
+  "t_hold": 100.0,
+  "rows": [
+    {
+      "label": "native_lam0.15_W0",
+      "n_env": 20,
+      "coupling_lambda": 0.15,
+      "disorder_W": 0.0,
+      "max_abs_h": 0.0,
+      "max_abs_J": 1.0,
+      "memory_auto_scale_true": 1.0,
+      "memory_auto_scale_false": 1.0,
+      "delta_memory": 0.0
+    },
+    {
+      "label": "native_lam0.20_W0",
+      "n_env": 20,
+      "coupling_lambda": 0.2,
+      "disorder_W": 0.0,
+      "max_abs_h": 0.0,
+      "max_abs_J": 1.0,
+      "memory_auto_scale_true": 1.0,
+      "memory_auto_scale_false": 0.998,
+      "delta_memory": 0.0020000000000000018
+    },
+    {
+      "label": "native_lam0.25_W0",
+      "n_env": 20,
+      "coupling_lambda": 0.25,
+      "disorder_W": 0.0,
+      "max_abs_h": 0.0,
+      "max_abs_J": 1.0,
+      "memory_auto_scale_true": 1.0,
+      "memory_auto_scale_false": 0.931,
+      "delta_memory": 0.06899999999999995
+    },
+    {
+      "label": "native_lam0.30_W0",
+      "n_env": 20,
+      "coupling_lambda": 0.3,
+      "disorder_W": 0.0,
+      "max_abs_h": 0.0,
+      "max_abs_J": 1.0,
+      "memory_auto_scale_true": 0.9985,
+      "memory_auto_scale_false": 0.706,
+      "delta_memory": 0.2925000000000001
+    },
+    {
+      "label": "native_lam0.50_W0",
+      "n_env": 20,
+      "coupling_lambda": 0.5,
+      "disorder_W": 0.0,
+      "max_abs_h": 0.0,
+      "max_abs_J": 1.0,
+      "memory_auto_scale_true": 0.0004999999999999725,
+      "memory_auto_scale_false": 0.9425,
+      "delta_memory": -0.9420000000000001
+    },
+    {
+      "label": "native_lam0.50_W1",
+      "n_env": 20,
+      "coupling_lambda": 0.5,
+      "disorder_W": 1.0,
+      "max_abs_h": 0.9512447032735118,
+      "max_abs_J": 1.0,
+      "memory_auto_scale_true": 0.0,
+      "memory_auto_scale_false": 0.0030000000000000014,
+      "delta_memory": -0.0030000000000000014
+    }
+  ]
+}

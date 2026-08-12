@@ -1,0 +1,248 @@
+{
+  "beta_eff_per_ramp": {
+    "1.0": 6.610390475425965,
+    "5.0": 7.350990382414942,
+    "20.0": 7.366563807719555
+  },
+  "ramp_analysis": [
+    {
+      "test_case": "reference_relaxed",
+      "t_ramp_up": 1.0,
+      "beta_eff": 6.610390475425965,
+      "M": 0.0,
+      "relaxed": true,
+      "pooled_entropy": 0.0,
+      "d_tv_classical_cond": 9.856037902448454e-12,
+      "sym_kl": -1.6832870058307345e-11
+    },
+    {
+      "test_case": "reference_relaxed",
+      "t_ramp_up": 5.0,
+      "beta_eff": 7.350990382414942,
+      "M": 0.0,
+      "relaxed": true,
+      "pooled_entropy": 0.0,
+      "d_tv_classical_cond": 5.095457766051835e-13,
+      "sym_kl": -1.6248251918392293e-12
+    },
+    {
+      "test_case": "reference_relaxed",
+      "t_ramp_up": 20.0,
+      "beta_eff": 7.366563807719555,
+      "M": 0.0,
+      "relaxed": true,
+      "pooled_entropy": 0.0,
+      "d_tv_classical_cond": 4.788395687475293e-13,
+      "sym_kl": -1.5416076694238598e-12
+    },
+    {
+      "test_case": "disordered_relaxed",
+      "t_ramp_up": 1.0,
+      "beta_eff": 6.610390475425965,
+      "M": 0.07199999999999998,
+      "relaxed": false,
+      "pooled_entropy": 0.11751687417430683,
+      "d_tv_classical_cond": 0.025166485750362903,
+      "sym_kl": 0.1493450696644155
+    },
+    {
+      "test_case": "disordered_relaxed",
+      "t_ramp_up": 5.0,
+      "beta_eff": 7.350990382414942,
+      "M": 0.03449999999999999,
+      "relaxed": true,
+      "pooled_entropy": 0.08679729119142116,
+      "d_tv_classical_cond": 0.017166634892475937,
+      "sym_kl": 0.11344706827901664
+    },
+    {
+      "test_case": "disordered_relaxed",
+      "t_ramp_up": 20.0,
+      "beta_eff": 7.366563807719555,
+      "M": 0.119,
+      "relaxed": false,
+      "pooled_entropy": 0.1716343171565858,
+      "d_tv_classical_cond": 0.041166636033648736,
+      "sym_kl": 0.29131787739838627
+    },
+    {
+      "test_case": "trapping_anomaly",
+      "t_ramp_up": 1.0,
+      "beta_eff": 6.610390475425965,
+      "M": 0.11499999999999999,
+      "relaxed": false,
+      "pooled_entropy": 0.18147924206987526,
+      "d_tv_classical_cond": 0.9312540655343989,
+      "sym_kl": 3.6844617744185557
+    },
+    {
+      "test_case": "trapping_anomaly",
+      "t_ramp_up": 5.0,
+      "beta_eff": 7.350990382414942,
+      "M": 0.016000000000000007,
+      "relaxed": true,
+      "pooled_entropy": 0.05900025064242432,
+      "d_tv_classical_cond": 0.9728726818836917,
+      "sym_kl": 4.409177999975017
+    },
+    {
+      "test_case": "trapping_anomaly",
+      "t_ramp_up": 20.0,
+      "beta_eff": 7.366563807719555,
+      "M": 0.022499999999999982,
+      "relaxed": true,
+      "pooled_entropy": 0.0582866712722476,
+      "d_tv_classical_cond": 0.9728395024870105,
+      "sym_kl": 4.524995354214051
+    }
+  ],
+  "gauge_analysis": {
+    "reference_relaxed": {
+      "beta_eff": 7.350990382414942,
+      "per_gauge": [
+        {
+          "gauge_index": 0,
+          "M": 0.0,
+          "relaxed": true,
+          "pooled_entropy": 0.0,
+          "d_tv_classical_cond": 5.095457766051835e-13,
+          "sym_kl": -1.6248251918392293e-12
+        },
+        {
+          "gauge_index": 1,
+          "M": 0.002500000000000029,
+          "relaxed": true,
+          "pooled_entropy": 0.011252309693388762,
+          "d_tv_classical_cond": 0.0014999999999999818,
+          "sym_kl": 0.012393796412268976
+        },
+        {
+          "gauge_index": 2,
+          "M": 0.001499999999999973,
+          "relaxed": true,
+          "pooled_entropy": 0.0055419246531053885,
+          "d_tv_classical_cond": 0.0006666666666665833,
+          "sym_kl": 0.005237765808987454
+        },
+        {
+          "gauge_index": 3,
+          "M": 0.001499999999999973,
+          "relaxed": true,
+          "pooled_entropy": 0.006741383377767049,
+          "d_tv_classical_cond": 0.0008333333333332963,
+          "sym_kl": 0.0066402532379218095
+        },
+        {
+          "gauge_index": 4,
+          "M": 0.002000000000000001,
+          "relaxed": true,
+          "pooled_entropy": 0.014427214862176005,
+          "d_tv_classical_cond": 0.0019999999999998986,
+          "sym_kl": 0.01681324483256309
+        }
+      ],
+      "D_TV_mean": 0.001000000000101861,
+      "D_TV_std": 0.0006912147116301336,
+      "M_mean": 0.001499999999999995,
+      "M_std": 0.0008366600265340827
+    },
+    "disordered_relaxed": {
+      "beta_eff": 7.350990382414942,
+      "per_gauge": [
+        {
+          "gauge_index": 0,
+          "M": 0.16300000000000003,
+          "relaxed": false,
+          "pooled_entropy": 0.21440172501407206,
+          "d_tv_classical_cond": 0.05549996822580927,
+          "sym_kl": 0.4004418180168071
+        },
+        {
+          "gauge_index": 1,
+          "M": 0.07099999999999998,
+          "relaxed": false,
+          "pooled_entropy": 0.30060554255577454,
+          "d_tv_classical_cond": 0.08916663489247598,
+          "sym_kl": 0.6661087367248397
+        },
+        {
+          "gauge_index": 2,
+          "M": 0.03649999999999999,
+          "relaxed": true,
+          "pooled_entropy": 0.2139290810310936,
+          "d_tv_classical_cond": 0.055333301559142616,
+          "sym_kl": 0.3991512001254117
+        },
+        {
+          "gauge_index": 3,
+          "M": 0.05999999999999997,
+          "relaxed": false,
+          "pooled_entropy": 0.22488943248801882,
+          "d_tv_classical_cond": 0.05883325371802162,
+          "sym_kl": 0.425705593556834
+        },
+        {
+          "gauge_index": 4,
+          "M": 0.07650000000000001,
+          "relaxed": false,
+          "pooled_entropy": 0.18656463218197328,
+          "d_tv_classical_cond": 0.04599996822580924,
+          "sym_kl": 0.327349471379375
+        }
+      ],
+      "D_TV_mean": 0.060966625324251754,
+      "D_TV_std": 0.014733711787835821,
+      "M_mean": 0.0814,
+      "M_std": 0.043045789573429846
+    },
+    "trapping_anomaly": {
+      "beta_eff": 7.350990382414942,
+      "per_gauge": [
+        {
+          "gauge_index": 0,
+          "M": 0.12350000000000003,
+          "relaxed": false,
+          "pooled_entropy": 0.17741881087062947,
+          "d_tv_classical_cond": 0.9405393485503585,
+          "sym_kl": 3.615265032163114
+        },
+        {
+          "gauge_index": 1,
+          "M": 0.0010000000000000005,
+          "relaxed": true,
+          "pooled_entropy": 0.007907255112232087,
+          "d_tv_classical_cond": 0.9822060152170251,
+          "sym_kl": 13.051088653560187
+        },
+        {
+          "gauge_index": 2,
+          "M": 0.001499999999999973,
+          "relaxed": true,
+          "pooled_entropy": 0.0055419246531053885,
+          "d_tv_classical_cond": 0.9825393485503586,
+          "sym_kl": 13.055991767661437
+        },
+        {
+          "gauge_index": 3,
+          "M": 0.001499999999999973,
+          "relaxed": true,
+          "pooled_entropy": 0.0055419246531053885,
+          "d_tv_classical_cond": 0.9825393485503586,
+          "sym_kl": 13.055991767661437
+        },
+        {
+          "gauge_index": 4,
+          "M": 0.0004999999999999725,
+          "relaxed": true,
+          "pooled_entropy": 0.0030020669608206213,
+          "d_tv_classical_cond": 0.9828726818836919,
+          "sym_kl": 13.06361371147799
+        }
+      ],
+      "D_TV_mean": 0.9741393485503587,
+      "D_TV_std": 0.016801322699253347,
+      "M_mean": 0.02559999999999999,
+      "M_std": 0.04895140447423345
+    }
+  }
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "quantile": 0.0,
+    "E_energy": -71.0,
+    "E_magnetization": 1.0,
+    "memory_tvd": 0.0
+  },
+  {
+    "quantile": 0.25,
+    "E_energy": -71.0,
+    "E_magnetization": -1.0,
+    "memory_tvd": 0.0
+  },
+  {
+    "quantile": 0.5,
+    "E_energy": -71.0,
+    "E_magnetization": -1.0,
+    "memory_tvd": 0.0
+  },
+  {
+    "quantile": 0.75,
+    "E_energy": -71.0,
+    "E_magnetization": 1.0,
+    "memory_tvd": 0.0
+  },
+  {
+    "quantile": 1.0,
+    "E_energy": -71.0,
+    "E_magnetization": -1.0,
+    "memory_tvd": 0.0
+  }
+]

@@ -1,0 +1,72 @@
+{
+  "solver": "Advantage2_system1",
+  "num_reads": 2000,
+  "s_p": 0.4,
+  "t_hold": 100.0,
+  "rows": [
+    {
+      "label": "gauge_lam0.15_W0",
+      "n_env": 20,
+      "coupling_lambda": 0.15,
+      "disorder_W": 0.0,
+      "max_abs_h": 0.0,
+      "max_abs_J": 1.0,
+      "gauge_Ms": [
+        0.9985,
+        0.9995,
+        1.0,
+        0.9995
+      ],
+      "gauge_mean": 0.9993750000000001,
+      "gauge_std": 0.0005448623679425688
+    },
+    {
+      "label": "gauge_lam0.25_W0",
+      "n_env": 20,
+      "coupling_lambda": 0.25,
+      "disorder_W": 0.0,
+      "max_abs_h": 0.0,
+      "max_abs_J": 1.0,
+      "gauge_Ms": [
+        0.886,
+        0.926,
+        0.918,
+        0.8885
+      ],
+      "gauge_mean": 0.904625,
+      "gauge_std": 0.017625886502528065
+    },
+    {
+      "label": "gauge_lam0.30_W0",
+      "n_env": 20,
+      "coupling_lambda": 0.3,
+      "disorder_W": 0.0,
+      "max_abs_h": 0.0,
+      "max_abs_J": 1.0,
+      "gauge_Ms": [
+        0.6739999999999999,
+        0.7065,
+        0.671,
+        0.716
+      ],
+      "gauge_mean": 0.691875,
+      "gauge_std": 0.01969255887384877
+    },
+    {
+      "label": "gauge_lam0.50_W1",
+      "n_env": 20,
+      "coupling_lambda": 0.5,
+      "disorder_W": 1.0,
+      "max_abs_h": 0.9512447032735118,
+      "max_abs_J": 1.0,
+      "gauge_Ms": [
+        0.002000000000000001,
+        0.0030000000000000287,
+        0.0010000000000000005,
+        0.01749999999999998
+      ],
+      "gauge_mean": 0.005875000000000003,
+      "gauge_std": 0.0067488424933465335
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+[
+  {
+    "n": 8,
+    "T": "advantage2",
+    "seed": 42,
+    "memory": 1.0,
+    "tvd": 1.0
+  },
+  {
+    "n": 8,
+    "T": "advantage2",
+    "seed": 123,
+    "memory": 1.0,
+    "tvd": 1.0
+  },
+  {
+    "n": 8,
+    "T": "system64",
+    "seed": 42,
+    "memory": 1.0,
+    "tvd": 1.0
+  },
+  {
+    "n": 8,
+    "T": "system64",
+    "seed": 123,
+    "memory": 1.0,
+    "tvd": 1.0
+  },
+  {
+    "n": 16,
+    "T": "advantage2",
+    "seed": 42,
+    "memory": 1.0,
+    "tvd": 1.0
+  },
+  {
+    "n": 16,
+    "T": "advantage2",
+    "seed": 123,
+    "memory": 1.0,
+    "tvd": 1.0
+  },
+  {
+    "n": 16,
+    "T": "system64",
+    "seed": 42,
+    "memory": 1.0,
+    "tvd": 1.0
+  },
+  {
+    "n": 16,
+    "T": "system64",
+    "seed": 123,
+    "memory": 1.0,
+    "tvd": 1.0
+  },
+  {
+    "n": 32,
+    "T": "advantage2",
+    "seed": 42,
+    "memory": 1.0,
+    "tvd": 1.0
+  },
+  {
+    "n": 32,
+    "T": "advantage2",
+    "seed": 123,
+    "memory": 1.0,
+    "tvd": 1.0
+  },
+  {
+    "n": 32,
+    "T": "system64",
+    "seed": 42,
+    "memory": 1.0,
+    "tvd": 1.0
+  },
+  {
+    "n": 32,
+    "T": "system64",
+    "seed": 123,
+    "memory": 1.0,
+    "tvd": 1.0
+  },
+  {
+    "n": 50,
+    "T": "advantage2",
+    "seed": 42,
+    "memory": 1.0,
+    "tvd": 1.0
+  },
+  {
+    "n": 50,
+    "T": "advantage2",
+    "seed": 123,
+    "memory": 1.0,
+    "tvd": 1.0
+  },
+  {
+    "n": 50,
+    "T": "system64",
+    "seed": 42,
+    "memory": 1.0,
+    "tvd": 1.0
+  },
+  {
+    "n": 50,
+    "T": "system64",
+    "seed": 123,
+    "memory": 1.0,
+    "tvd": 1.0
+  }
+]

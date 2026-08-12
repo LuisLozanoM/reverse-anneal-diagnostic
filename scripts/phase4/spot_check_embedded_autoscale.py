@@ -1,17 +1,14 @@
 """Embedded auto_scale spot-check with a manually-bounded chain strength.
 
-The legacy Phase 3/4 main sweeps used `EmbeddingComposite` with the
-SDK-default `uniform_torque_compensation` chain strength, which can push
-chain couplers above the solver's |J|=1 range; auto_scale=True then
-rescaled every (h, J, chain coupler) to fit the range before programming.
-This script submits a logical problem twice through a *fixed* embedding
-with `chain_strength=1.0` (so chains just fit the j_range):
-once with auto_scale=True, once with auto_scale=False.  Any residual
-memory-order-parameter difference isolates the effect of auto_scale's
-rescaling on the logical (h, J).
+Submits each logical random-3-regular problem through a fixed embedding
+twice -- once with auto_scale=True and once with auto_scale=False -- to
+isolate the effect of the SDK auto_scale rescaling on the logical (h, J).
+The chain strength is taken from the module-level CHAIN_STRENGTH constant
+(currently 2.0; chains live within the solver's extended_j_range when
+auto_scale=False); per-condition overrides go in SPOT_CONDITIONS_EX.
 
-The output archives sampleset.info for each run so the chain-break
-fraction and the actual programmed problem can be inspected.
+Sampleset metadata (chain-break fractions, programmed problem) is
+archived under data/raw/phase4/spot_check_embedded* for each run.
 """
 
 from __future__ import annotations

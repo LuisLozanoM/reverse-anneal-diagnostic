@@ -1,0 +1,36 @@
+{
+  "solver": "Advantage_system6.4",
+  "graph_id": "Advantage_system6.4",
+  "calibration_epoch": null,
+  "s_p": 0.4,
+  "probe_h": 0.5,
+  "probe_t_hold_us": 100.0,
+  "probe_reads": 5000,
+  "beta_eff": 4.289414846195372,
+  "beta_eff_std": 0.2939321665427415,
+  "per_probe": [
+    {
+      "qubit": 30,
+      "n_up": 132,
+      "n_down": 9868,
+      "beta_eff": 4.314250555062876
+    },
+    {
+      "qubit": 31,
+      "n_up": 195,
+      "n_down": 9805,
+      "beta_eff": 3.9176481800667
+    },
+    {
+      "qubit": 32,
+      "n_up": 96,
+      "n_down": 9904,
+      "beta_eff": 4.636345803456541
+    }
+  ],
+  "A_s": 2.0,
+  "B_s": 1.5,
+  "A_over_B": 1.3333333333333333,
+  "schedule_from_properties": false,
+  "dry_run": false
+}

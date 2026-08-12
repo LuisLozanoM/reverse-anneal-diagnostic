@@ -1,0 +1,51 @@
+{
+  "scan": "W",
+  "solver": "Advantage_system6.4",
+  "subsystem_size": 6,
+  "n_environment": 50,
+  "coupling_lambda": 0.5,
+  "s_p": 0.4,
+  "t_hold": 100.0,
+  "results": [
+    {
+      "disorder_W": 0.0,
+      "memory": 0.005000000000000003,
+      "tvd_up_down": 0.005000000000000003
+    },
+    {
+      "disorder_W": 0.1,
+      "memory": 0.0025000000000000005,
+      "tvd_up_down": 0.0025
+    },
+    {
+      "disorder_W": 0.2,
+      "memory": 0.005500000000000002,
+      "tvd_up_down": 0.005500000000000002
+    },
+    {
+      "disorder_W": 0.5,
+      "memory": 0.00400000000000003,
+      "tvd_up_down": 0.003000000000000001
+    },
+    {
+      "disorder_W": 0.8,
+      "memory": 0.0030000000000000287,
+      "tvd_up_down": 0.0010000000000000005
+    },
+    {
+      "disorder_W": 1.0,
+      "memory": 0.010999999999999973,
+      "tvd_up_down": 0.008500000000000032
+    },
+    {
+      "disorder_W": 1.5,
+      "memory": 0.4975,
+      "tvd_up_down": 0.356
+    },
+    {
+      "disorder_W": 2.0,
+      "memory": 0.04550000000000005,
+      "tvd_up_down": 0.04550000000000005
+    }
+  ]
+}

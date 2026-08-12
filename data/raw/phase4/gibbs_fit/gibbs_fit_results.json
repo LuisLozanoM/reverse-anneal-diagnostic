@@ -1,0 +1,67 @@
+[
+  {
+    "n_env": 4,
+    "fits": {
+      "S_up": {
+        "beta_eff": 9999.9997,
+        "chi_squared": 1.0
+      },
+      "S_down": {
+        "beta_eff": 9999.9997,
+        "chi_squared": 0.998001
+      }
+    }
+  },
+  {
+    "n_env": 8,
+    "fits": {
+      "S_up": {
+        "beta_eff": 9999.9997,
+        "chi_squared": 1.0
+      },
+      "S_down": {
+        "beta_eff": 9999.9997,
+        "chi_squared": 1.0
+      }
+    }
+  },
+  {
+    "n_env": 16,
+    "fits": {
+      "S_up": {
+        "beta_eff": 9999.9997,
+        "chi_squared": 1.0
+      },
+      "S_down": {
+        "beta_eff": 9999.9997,
+        "chi_squared": 1.0
+      }
+    }
+  },
+  {
+    "n_env": 32,
+    "fits": {
+      "S_up": {
+        "beta_eff": 9999.9997,
+        "chi_squared": 1.0
+      },
+      "S_down": {
+        "beta_eff": 9999.9997,
+        "chi_squared": 1.0
+      }
+    }
+  },
+  {
+    "n_env": 50,
+    "fits": {
+      "S_up": {
+        "beta_eff": 9999.9997,
+        "chi_squared": 1.0
+      },
+      "S_down": {
+        "beta_eff": 9999.9997,
+        "chi_squared": 1.0
+      }
+    }
+  }
+]

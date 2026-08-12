@@ -1,0 +1,325 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\providecommand{\bibinfo}[2]{#2}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem{deutsch1991quantum}
+\bibinfo{author}{Deutsch, J.~M.}
+\newblock \bibinfo{title}{Quantum statistical mechanics in a closed system}.
+\newblock \emph{\bibinfo{journal}{Physical Review A}}
+  \textbf{\bibinfo{volume}{43}}, \bibinfo{pages}{2046--2049}
+  (\bibinfo{year}{1991}).
+
+\bibitem{srednicki1994chaos}
+\bibinfo{author}{Srednicki, M.}
+\newblock \bibinfo{title}{Chaos and quantum thermalization}.
+\newblock \emph{\bibinfo{journal}{Physical Review E}}
+  \textbf{\bibinfo{volume}{50}}, \bibinfo{pages}{888--901}
+  (\bibinfo{year}{1994}).
+
+\bibitem{rigol2008thermalization}
+\bibinfo{author}{Rigol, M.}, \bibinfo{author}{Dunjko, V.} \&
+  \bibinfo{author}{Olshanii, M.}
+\newblock \bibinfo{title}{Thermalization and its mechanism for generic isolated
+  quantum systems}.
+\newblock \emph{\bibinfo{journal}{Nature}} \textbf{\bibinfo{volume}{452}},
+  \bibinfo{pages}{854--858} (\bibinfo{year}{2008}).
+
+\bibitem{nandkishore2015mbl}
+\bibinfo{author}{Nandkishore, R.} \& \bibinfo{author}{Huse, D.~A.}
+\newblock \bibinfo{title}{Many-body localization and thermalization in quantum
+  statistical mechanics}.
+\newblock \emph{\bibinfo{journal}{Annual Review of Condensed Matter Physics}}
+  \textbf{\bibinfo{volume}{6}}, \bibinfo{pages}{15--38} (\bibinfo{year}{2015}).
+
+\bibitem{abanin2019mbl}
+\bibinfo{author}{Abanin, D.~A.}, \bibinfo{author}{Altman, E.},
+  \bibinfo{author}{Bloch, I.} \& \bibinfo{author}{Serbyn, M.}
+\newblock \bibinfo{title}{Colloquium: Many-body localization, thermalization,
+  and entanglement}.
+\newblock \emph{\bibinfo{journal}{Reviews of Modern Physics}}
+  \textbf{\bibinfo{volume}{91}}, \bibinfo{pages}{021001}
+  (\bibinfo{year}{2019}).
+
+\bibitem{kaufman2016quantum}
+\bibinfo{author}{Kaufman, A.~M.} \emph{et~al.}
+\newblock \bibinfo{title}{Quantum thermalization through entanglement in an
+  isolated many-body system}.
+\newblock \emph{\bibinfo{journal}{Science}} \textbf{\bibinfo{volume}{353}},
+  \bibinfo{pages}{794--800} (\bibinfo{year}{2016}).
+
+\bibitem{shaw2025ergodicity}
+\bibinfo{author}{Shaw, A.~L.} \emph{et~al.}
+\newblock \bibinfo{title}{Experimental signatures of hilbert-space ergodicity:
+  Universal bitstring distributions and applications in noise learning}.
+\newblock \emph{\bibinfo{journal}{Physical Review X}}
+  \textbf{\bibinfo{volume}{15}}, \bibinfo{pages}{031001}
+  (\bibinfo{year}{2025}).
+
+\bibitem{schreiber2015mbl}
+\bibinfo{author}{Schreiber, M.} \emph{et~al.}
+\newblock \bibinfo{title}{Observation of many-body localization of interacting
+  fermions in a quasirandom optical lattice}.
+\newblock \emph{\bibinfo{journal}{Science}} \textbf{\bibinfo{volume}{349}},
+  \bibinfo{pages}{842--845} (\bibinfo{year}{2015}).
+
+\bibitem{smith2016mbl}
+\bibinfo{author}{Smith, J.} \emph{et~al.}
+\newblock \bibinfo{title}{Many-body localization in a quantum simulator with
+  programmable random disorder}.
+\newblock \emph{\bibinfo{journal}{Nature Physics}}
+  \textbf{\bibinfo{volume}{12}}, \bibinfo{pages}{907--911}
+  (\bibinfo{year}{2016}).
+
+\bibitem{popescu2006entanglement}
+\bibinfo{author}{Popescu, S.}, \bibinfo{author}{Short, A.~J.} \&
+  \bibinfo{author}{Winter, A.}
+\newblock \bibinfo{title}{Entanglement and the foundations of statistical
+  mechanics}.
+\newblock \emph{\bibinfo{journal}{Nature Physics}}
+  \textbf{\bibinfo{volume}{2}}, \bibinfo{pages}{754--758}
+  (\bibinfo{year}{2006}).
+
+\bibitem{goldstein2006canonical}
+\bibinfo{author}{Goldstein, S.}, \bibinfo{author}{Lebowitz, J.~L.},
+  \bibinfo{author}{Tumulka, R.} \& \bibinfo{author}{Zangh\`{i}, N.}
+\newblock \bibinfo{title}{Canonical typicality}.
+\newblock \emph{\bibinfo{journal}{Physical Review Letters}}
+  \textbf{\bibinfo{volume}{96}}, \bibinfo{pages}{050403}
+  (\bibinfo{year}{2006}).
+
+\bibitem{dalessio2016quantum}
+\bibinfo{author}{D'Alessio, L.}, \bibinfo{author}{Kafri, Y.},
+  \bibinfo{author}{Polkovnikov, A.} \& \bibinfo{author}{Rigol, M.}
+\newblock \bibinfo{title}{From quantum chaos and eigenstate thermalization to
+  statistical mechanics and thermodynamics}.
+\newblock \emph{\bibinfo{journal}{Advances in Physics}}
+  \textbf{\bibinfo{volume}{65}}, \bibinfo{pages}{239--362}
+  (\bibinfo{year}{2016}).
+
+\bibitem{king2022coherent}
+\bibinfo{author}{King, A.~D.} \emph{et~al.}
+\newblock \bibinfo{title}{Coherent quantum annealing in a programmable 2,000
+  qubit {I}sing chain}.
+\newblock \emph{\bibinfo{journal}{Nature Physics}}
+  \textbf{\bibinfo{volume}{18}}, \bibinfo{pages}{1324--1328}
+  (\bibinfo{year}{2022}).
+
+\bibitem{king2023critical}
+\bibinfo{author}{King, A.~D.} \emph{et~al.}
+\newblock \bibinfo{title}{Quantum critical dynamics in a 5,000-qubit
+  programmable spin glass}.
+\newblock \emph{\bibinfo{journal}{Nature}} \textbf{\bibinfo{volume}{617}},
+  \bibinfo{pages}{61--66} (\bibinfo{year}{2023}).
+
+\bibitem{vodeb2025false_vacuum}
+\bibinfo{author}{Vodeb, J.} \emph{et~al.}
+\newblock \bibinfo{title}{Stirring the false vacuum via interacting quantized
+  bubbles on a 5,564-qubit quantum annealer}.
+\newblock \emph{\bibinfo{journal}{Nature Physics}}
+  \textbf{\bibinfo{volume}{21}}, \bibinfo{pages}{386--392}
+  (\bibinfo{year}{2025}).
+
+\bibitem{sathe2026criticality}
+\bibinfo{author}{Sathe, P.} \emph{et~al.}
+\newblock \bibinfo{title}{Classical criticality via quantum annealing}.
+\newblock \emph{\bibinfo{journal}{Nature Communications}}
+  \textbf{\bibinfo{volume}{17}}, \bibinfo{pages}{856} (\bibinfo{year}{2026}).
+
+\bibitem{marshall2019pausing}
+\bibinfo{author}{Marshall, J.}, \bibinfo{author}{Venturelli, D.},
+  \bibinfo{author}{Hen, I.} \& \bibinfo{author}{Rieffel, E.~G.}
+\newblock \bibinfo{title}{Power of pausing: Advancing understanding of
+  thermalization in experimental quantum annealers}.
+\newblock \emph{\bibinfo{journal}{Physical Review Applied}}
+  \textbf{\bibinfo{volume}{11}}, \bibinfo{pages}{044083}
+  (\bibinfo{year}{2019}).
+
+\bibitem{chen2020pausing}
+\bibinfo{author}{Chen, H.} \& \bibinfo{author}{Lidar, D.~A.}
+\newblock \bibinfo{title}{Why and when pausing is beneficial in quantum
+  annealing}.
+\newblock \emph{\bibinfo{journal}{Physical Review Applied}}
+  \textbf{\bibinfo{volume}{14}}, \bibinfo{pages}{014100}
+  (\bibinfo{year}{2020}).
+
+\bibitem{mehta2025unraveling}
+\bibinfo{author}{Mehta, V.}, \bibinfo{author}{De~Raedt, H.},
+  \bibinfo{author}{Michielsen, K.} \& \bibinfo{author}{Jin, F.}
+\newblock \bibinfo{title}{Unraveling reverse annealing: A study of {D-Wave}
+  quantum annealers}.
+\newblock \emph{\bibinfo{journal}{Physical Review A}}
+  \textbf{\bibinfo{volume}{112}}, \bibinfo{pages}{012414}
+  (\bibinfo{year}{2025}).
+
+\bibitem{kendon2026qacm}
+\bibinfo{author}{Kendon, V.} \& \bibinfo{author}{Chancellor, N.}
+\newblock \bibinfo{title}{Quantum annealing and condensed matter physics}.
+\newblock \emph{\bibinfo{journal}{Journal of Physics: Condensed Matter}}
+  \textbf{\bibinfo{volume}{38}}, \bibinfo{pages}{143005}
+  (\bibinfo{year}{2026}).
+
+\bibitem{raymond2016global}
+\bibinfo{author}{Raymond, J.}, \bibinfo{author}{Yarkoni, S.} \&
+  \bibinfo{author}{Andriyash, E.}
+\newblock \bibinfo{title}{Global warming: Temperature estimation in annealers}.
+\newblock \emph{\bibinfo{journal}{Frontiers in ICT}}
+  \textbf{\bibinfo{volume}{3}}, \bibinfo{pages}{23} (\bibinfo{year}{2016}).
+
+\bibitem{marshall2017freezeout}
+\bibinfo{author}{Marshall, J.}, \bibinfo{author}{Rieffel, E.~G.} \&
+  \bibinfo{author}{Hen, I.}
+\newblock \bibinfo{title}{Thermalization, freeze-out, and noise: Deciphering
+  experimental quantum annealers}.
+\newblock \emph{\bibinfo{journal}{Physical Review Applied}}
+  \textbf{\bibinfo{volume}{8}}, \bibinfo{pages}{064025} (\bibinfo{year}{2017}).
+
+\bibitem{nelson2022gibbs}
+\bibinfo{author}{Nelson, J.}, \bibinfo{author}{Vuffray, M.},
+  \bibinfo{author}{Lokhov, A.~Y.}, \bibinfo{author}{Albash, T.} \&
+  \bibinfo{author}{Coffrin, C.}
+\newblock \bibinfo{title}{High-quality thermal {G}ibbs sampling with quantum
+  annealing hardware}.
+\newblock \emph{\bibinfo{journal}{Physical Review Applied}}
+  \textbf{\bibinfo{volume}{17}}, \bibinfo{pages}{044046}
+  (\bibinfo{year}{2022}).
+
+\bibitem{vuffray2022boltzmann}
+\bibinfo{author}{Vuffray, M.}, \bibinfo{author}{Coffrin, C.},
+  \bibinfo{author}{Kharkov, Y.~A.} \& \bibinfo{author}{Lokhov, A.~Y.}
+\newblock \bibinfo{title}{Programmable quantum annealers as noisy {G}ibbs
+  samplers}.
+\newblock \emph{\bibinfo{journal}{PRX Quantum}} \textbf{\bibinfo{volume}{3}},
+  \bibinfo{pages}{020317} (\bibinfo{year}{2022}).
+
+\bibitem{grattan2025thermometry}
+\bibinfo{author}{Grattan, G.}, \bibinfo{author}{Sathe, P.} \&
+  \bibinfo{author}{Nisoli, C.}
+\newblock \bibinfo{title}{Classical thermometry of quantum annealers}.
+\newblock \emph{\bibinfo{journal}{arXiv preprint arXiv:2512.03162}}
+  (\bibinfo{year}{2025}).
+\newblock \bibinfo{note}{ArXiv:2512.03162}.
+
+\bibitem{teza2025finite}
+\bibinfo{author}{Teza, G.} \emph{et~al.}
+\newblock \bibinfo{title}{Finite-temperature criticality through quantum
+  annealing}.
+\newblock \emph{\bibinfo{journal}{arXiv preprint arXiv:2507.07167}}
+  (\bibinfo{year}{2025}).
+\newblock \bibinfo{note}{ArXiv:2507.07167}.
+
+\bibitem{pelofske2025erasing}
+\bibinfo{author}{Pelofske, E.} \& \bibinfo{author}{Nisoli, C.}
+\newblock \bibinfo{title}{Erasing classical memory with quantum fluctuations:
+  {S}hannon information entropy of reverse quantum annealing}.
+\newblock \bibinfo{howpublished}{Preprint at
+  \url{https://arxiv.org/abs/2509.10927}} (\bibinfo{year}{2025}).
+\newblock \bibinfo{note}{ArXiv:2509.10927}.
+
+\bibitem{dacafilho2022localization}
+\bibinfo{author}{da~C.~Filho, J. L.~C.} \emph{et~al.}
+\newblock \bibinfo{title}{Localization transition induced by programmable
+  disorder}.
+\newblock \emph{\bibinfo{journal}{Physical Review B}}
+  \textbf{\bibinfo{volume}{105}}, \bibinfo{pages}{134201}
+  (\bibinfo{year}{2022}).
+
+\bibitem{albash2018adiabatic}
+\bibinfo{author}{Albash, T.} \& \bibinfo{author}{Lidar, D.~A.}
+\newblock \bibinfo{title}{Adiabatic quantum computation}.
+\newblock \emph{\bibinfo{journal}{Reviews of Modern Physics}}
+  \textbf{\bibinfo{volume}{90}}, \bibinfo{pages}{015002}
+  (\bibinfo{year}{2018}).
+
+\bibitem{dwave2024reverse_anneal}
+\bibinfo{author}{{D-Wave Quantum Inc.}}
+\newblock \bibinfo{title}{{D-Wave} ocean software documentation: Reverse
+  annealing}.
+\newblock \bibinfo{howpublished}{\url{https://docs.dwavequantum.com}}
+  (\bibinfo{year}{2024}).
+\newblock \bibinfo{note}{Accessed 2026}.
+
+\bibitem{linden2009equilibration}
+\bibinfo{author}{Linden, N.}, \bibinfo{author}{Popescu, S.},
+  \bibinfo{author}{Short, A.~J.} \& \bibinfo{author}{Winter, A.}
+\newblock \bibinfo{title}{Quantum mechanical evolution towards thermal
+  equilibrium}.
+\newblock \emph{\bibinfo{journal}{Physical Review E}}
+  \textbf{\bibinfo{volume}{79}}, \bibinfo{pages}{061103}
+  (\bibinfo{year}{2009}).
+
+\bibitem{shin2014svmc}
+\bibinfo{author}{Shin, S.~W.}, \bibinfo{author}{Smith, G.},
+  \bibinfo{author}{Smolin, J.~A.} \& \bibinfo{author}{Vazirani, U.}
+\newblock \bibinfo{title}{How ``quantum'' is the {D-Wave} machine?}
+\newblock \bibinfo{howpublished}{Preprint at
+  \url{https://arxiv.org/abs/1401.7087}} (\bibinfo{year}{2014}).
+\newblock \bibinfo{note}{ArXiv:1401.7087}.
+
+\bibitem{mehta2025dwave}
+\bibinfo{author}{Mehta, V.} \emph{et~al.}
+\newblock \bibinfo{title}{Understanding the physics of {D-Wave} annealers: From
+  {S}chr\"{o}dinger to {L}indblad to {M}arkovian dynamics}.
+\newblock \emph{\bibinfo{journal}{Physical Review A}}
+  \textbf{\bibinfo{volume}{112}}, \bibinfo{pages}{032616}
+  (\bibinfo{year}{2025}).
+\newblock \bibinfo{note}{ArXiv:2503.21565}.
+
+\bibitem{crosson2021prospects}
+\bibinfo{author}{Crosson, E.~J.} \& \bibinfo{author}{Lidar, D.~A.}
+\newblock \bibinfo{title}{Prospects for quantum enhancement with diabatic
+  quantum annealing}.
+\newblock \emph{\bibinfo{journal}{Nature Reviews Physics}}
+  \textbf{\bibinfo{volume}{3}}, \bibinfo{pages}{466--489}
+  (\bibinfo{year}{2021}).
+
+\bibitem{denchev2016computational}
+\bibinfo{author}{Denchev, V.~S.} \emph{et~al.}
+\newblock \bibinfo{title}{What is the computational value of finite-range
+  tunneling?}
+\newblock \emph{\bibinfo{journal}{Physical Review X}}
+  \textbf{\bibinfo{volume}{6}}, \bibinfo{pages}{031015} (\bibinfo{year}{2016}).
+
+\bibitem{boixo2016tunneling}
+\bibinfo{author}{Boixo, S.} \emph{et~al.}
+\newblock \bibinfo{title}{Computational multiqubit tunnelling in programmable
+  quantum annealers}.
+\newblock \emph{\bibinfo{journal}{Nature Communications}}
+  \textbf{\bibinfo{volume}{7}}, \bibinfo{pages}{10327} (\bibinfo{year}{2016}).
+
+\bibitem{aronoff2026coherence}
+\bibinfo{author}{Aronoff, C.}, \bibinfo{author}{Howard, T.},
+  \bibinfo{author}{Nicholaeff, D.}, \bibinfo{author}{Lopez-Bezanilla, A.} \&
+  \bibinfo{author}{DeGottardi, W.}
+\newblock \bibinfo{title}{Identifying quantum coherence in quantum annealers}.
+\newblock \emph{\bibinfo{journal}{arXiv preprint arXiv:2602.21355}}
+  (\bibinfo{year}{2026}).
+\newblock \bibinfo{note}{ArXiv:2602.21355}.
+
+\bibitem{dwave2024system_docs}
+\bibinfo{author}{{D-Wave Quantum Inc.}}
+\newblock \bibinfo{title}{{D-Wave} system documentation: Solver properties,
+  anneal schedules and qpu-specific parameters}.
+\newblock
+  \bibinfo{howpublished}{\url{https://docs.dwavequantum.com/docs/latest/doc_physical_properties.html}}
+  (\bibinfo{year}{2024}).
+\newblock \bibinfo{note}{Accessed 2026}.
+
+\bibitem{cai2014minor}
+\bibinfo{author}{Cai, J.}, \bibinfo{author}{Macready, W.~G.} \&
+  \bibinfo{author}{Roy, A.}
+\newblock \bibinfo{title}{A practical heuristic for finding graph minors}.
+\newblock \bibinfo{howpublished}{Preprint at
+  \url{https://arxiv.org/abs/1406.2741}} (\bibinfo{year}{2014}).
+\newblock \bibinfo{note}{ArXiv:1406.2741}.
+
+\bibitem{marshall2020embedding}
+\bibinfo{author}{Marshall, J.}, \bibinfo{author}{{Di Gioacchino}, A.} \&
+  \bibinfo{author}{Rieffel, E.~G.}
+\newblock \bibinfo{title}{Perils of embedding for sampling problems}.
+\newblock \emph{\bibinfo{journal}{Physical Review Research}}
+  \textbf{\bibinfo{volume}{2}}, \bibinfo{pages}{023020} (\bibinfo{year}{2020}).
+
+\end{thebibliography}

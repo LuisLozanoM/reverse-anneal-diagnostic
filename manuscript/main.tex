@@ -1,69 +1,60 @@
-\documentclass{nature}
+\documentclass[aps,prapplied,reprint,superscriptaddress,floatfix,nofootinbib]{revtex4-2}
+\pdfoutput=1
 
 \usepackage{amsmath,amssymb}
 \usepackage{graphicx}
-\usepackage[hidelinks]{hyperref}
-\usepackage{xcolor}
-\usepackage{lineno}
-\linenumbers
-
-\title{Subsystem relaxation in a\\programmable quantum annealer}
-
-\author{Luis~Lozano\textsuperscript{1,*}}
+\usepackage{hyperref}
 
 \begin{document}
 
-\maketitle
+\title{A calibrated diagnostic for reverse-anneal sampling in programmable quantum annealers}
 
-\begin{affiliations}
-\item Tecnol\'ogico de Monterrey, Campus Santa Fe, Mexico City, Mexico
-\end{affiliations}
+\author{Luis Lozano}
+\email{lalozanom@tec.mx}
+\affiliation{Tecnol\'ogico de Monterrey, Campus Santa Fe, Mexico City, Mexico}
 
 \begin{abstract}
-Small subsystems are expected to relax when coupled to sufficiently large environments, but direct large-scale tests with independent control over bath size, coupling and disorder remain scarce.
-Here we realise a controllable subsystem--environment experiment on two programmable quantum annealers by coupling a six-qubit subsystem to an on-chip environment during reverse annealing.
-We find that the subsystem becomes initial-state independent within experimental resolution as the environment grows or the coupling increases, whereas quenched disorder and atypical environment preparation arrest this relaxation.
-In the relaxed regime, the final subsystem readout is accurately described by a calibrated conditional Boltzmann marginal across graph geometries, coupling strengths, disorder levels and two QPU generations.
-In a mixed-frustration regime, matched-temperature single-spin-flip Glauber dynamics fails to reproduce the observed relaxation rate, consistent with a transverse-field-assisted relaxation pathway.
-These results separate the dynamics of relaxation from the form of the relaxed readout and establish programmable quantum annealers as controllable platforms for studying subsystem relaxation, effective thermal readout, and memory arrest.
+Reverse annealing is widely used as a heuristic sampler on programmable quantum annealers, but it is often unclear whether the readout has erased its initialization memory or whether the resulting samples represent any calibrated target distribution.
+We introduce a subsystem-level validation protocol that pairs a memory order parameter $\mathcal{M}$ with the total-variation distance $D_{\mathrm{TV}}$ between the measured subsystem readout and a fixed, independently calibrated conditional-Boltzmann reference, and apply it on two D-Wave QPU generations.
+The protocol delivers three things: a diagnostic that separates relaxed, memory-retaining and ``wrong-basin'' readouts; the isolation of relaxed-but-non-thermal trapping, in which a readout passes the initial-state-independence test while concentrating on the wrong basin; and an engineering control showing that SDK auto-scale, embedding choice and environment preparation shift apparent thresholds, so calibration metadata must be logged to interpret them.
+Relaxed ferromagnetic readouts are near-deterministic, so the small distances seen there are a consistency check rather than a thermometric measurement; the diagnostic earns its value in the opposite regime.
+Across 494 conditions on one processor, 113 pass the memory criterion and 110 of those agree with the reference at $D_{\mathrm{TV}}<0.05$, while a wrong-basin instance, reproduced at two Hamiltonian scales, passes the memory test yet reaches $D_{\mathrm{TV}}>0.94$; a 60-condition replication confirms that the diagnostic transfers to a second processor.
+We provide the protocol as a transferable, reproducible validation workflow for annealer-as-sampler applications.
 \end{abstract}
 
-\section*{Introduction}
+\maketitle
 
-How thermal equilibrium emerges from microscopic quantum dynamics is a central question in statistical mechanics~\cite{deutsch1991quantum,srednicki1994chaos}.
-The eigenstate thermalization hypothesis (ETH) offers a theoretical framework: for generic, non-integrable Hamiltonians, small subsystems relax toward thermal distributions when coupled to a sufficiently large environment, even in a globally isolated system~\cite{rigol2008thermalization}.
-Many-body localization (MBL) can arrest this relaxation when quenched disorder exceeds a critical threshold~\cite{nandkishore2015mbl,abanin2019mbl}.
-Experimental signatures of ETH have been observed in cold-atom systems~\cite{kaufman2016quantum}, and recent Rydberg-array experiments have probed bath-size-dependent signatures of Hilbert-space ergodicity~\cite{shaw2025ergodicity}.
-MBL has been probed in optical lattices~\cite{schreiber2015mbl} and trapped-ion simulators~\cite{smith2016mbl}, but simultaneously tuning bath size, coupling strength, and disorder at large scale remains challenging on these platforms.
-The theoretical foundations connecting subsystem relaxation to the structure of the global quantum state are well established~\cite{popescu2006entanglement,goldstein2006canonical,dalessio2016quantum}, yet direct large-scale experimental tests remain scarce.
+\section{Introduction}
 
-Programmable quantum annealers, originally designed for optimization, have recently emerged as versatile quantum simulators.
-D-Wave devices have demonstrated coherent quantum annealing in two-thousand-qubit Ising chains~\cite{king2022coherent}, quantum critical dynamics in five-thousand-qubit spin glasses~\cite{king2023critical}, false-vacuum bubble nucleation~\cite{vodeb2025false_vacuum}, and finite-temperature critical exponents via quantum annealing~\cite{sathe2026criticality}.
-Their reverse-annealing mode enables controlled preparation and dynamical probing of many-body quantum states~\cite{marshall2019pausing,chen2020pausing,mehta2025unraveling}.
-A recent review explicitly noted that whether a sufficiently large annealer can act as an effective thermal bath for its own subsystems remains an open question, and that no such research had been performed on annealing hardware~\cite{kendon2026qacm}.
-Temperature-estimation, freeze-out and Gibbs-sampling studies have shown that annealer outputs can sometimes resemble effective Boltzmann distributions, while also exposing local/global and scale-dependent limitations~\cite{raymond2016global,marshall2017freezeout,marshall2019pausing,nelson2022gibbs,vuffray2022boltzmann,grattan2025thermometry}.
-Recent work on finite-temperature criticality through quantum annealing~\cite{teza2025finite}, reverse-anneal memory erasure~\cite{pelofske2025erasing} and programmable localization~\cite{dacafilho2022localization} provides closely related but distinct context.
+Programmable quantum annealers are increasingly deployed as open-system samplers for Boltzmann-machine training, probabilistic inference and hybrid optimization pipelines~\cite{adachi2015qbm,amin2018qbm,benedetti2017qbm,nelson2022gibbs,vuffray2022boltzmann}.
+Any such deployment turns on two operational questions: under what conditions does a reverse-anneal protocol actually erase its initial-state memory, and what distribution does the readout represent once it has?
+A sampler that has not erased its initialization is not a sampler, and a sampler whose readout does not approximate any well-defined target distribution cannot be calibrated against; both questions are practical, not academic.
+Existing answers are partial. A recent review notes that whether a sufficiently large annealer can act as an effective bath for its own subsystems remains experimentally unresolved, and that no controlled study had been performed on annealing hardware~\cite{kendon2026qacm}.
+Temperature-estimation, freeze-out and Gibbs-sampling studies have shown that annealer outputs can sometimes resemble effective Boltzmann distributions while also exposing local/global and scale-dependent limitations~\cite{raymond2016global,marshall2017freezeout,marshall2019pausing,grattan2025thermometry}.
+Reverse-anneal memory erasure~\cite{pelofske2025erasing}, finite-temperature criticality via quantum annealing~\cite{teza2025finite} and programmable localization~\cite{dacafilho2022localization} provide closely related but distinct context, and the theoretical foundations connecting subsystem relaxation to the structure of the global quantum state are well established~\cite{popescu2006entanglement,goldstein2006canonical,dalessio2016quantum}.
+What has been lacking is a direct, subsystem-level validation protocol applicable to a working annealer---a tool, not a theory---in which bath size, coupling, disorder and environment preparation can all be tuned independently on the same programmable platform.
 
-Here we address this open question experimentally on two D-Wave QPUs with different topologies and energy scales.
-We partition the annealer into a small subsystem~$S$ ($|S|=6$) coupled to a programmable environment~$E$ (up to $|E|=50$), prepare distinct initial states of both~$S$ and~$E$, and use reverse annealing to probe the dynamics at a controlled pause point.
-We ask two questions.
-First, under what conditions does the subsystem become initial-state independent?
-Second, when relaxation occurs, what form does the converged subsystem readout take?
-We find a tunable crossover from memory retention to relaxation with increasing bath size and coupling, arrest of this crossover by disorder and atypical bath preparation, and a calibrated conditional thermal law for the relaxed readout.
-Mixed frustration then reveals that the route to relaxation can be quantitatively distinct from matched-temperature single-spin-flip classical dynamics.
+Here we provide such a protocol on two D-Wave QPUs with different topologies and energy scales~\cite{king2022coherent,king2023critical,mehta2025unraveling,mehta2025dwave}.
+We partition the annealer into a small subsystem~$S$ ($|S|=6$) coupled through programmable boundary couplers of strength $\lambda$ to an on-chip environment~$E$ (up to $|E|=50$), and use reverse annealing with a pause at $s_p=0.4$ to probe the dynamics.
+We report a two-observable validation protocol.
+The memory order parameter $\mathcal{M}$, defined as the maximum total-variation distance between subsystem marginals from different initial preparations of~$S$, identifies when the subsystem has become initial-state independent.
+The distance $D_\mathrm{TV}$ between the measured subsystem readout and a calibrated conditional-Boltzmann reference then acts as a discrepancy detector: large $D_\mathrm{TV}$ flags relaxed-but-non-thermal trapping that the memory criterion alone cannot detect.
+We find a tunable crossover from memory retention to relaxation with increasing bath size and coupling, arrest of this crossover by quenched disorder and atypical bath preparations, and a small set of relaxed-but-non-thermal wrong-basin traps isolated by the reference---precisely the failure the two-observable diagnostic is built to catch, and one that initial-state-independence testing alone aliases as success; on relaxed ferromagnetic conditions the readout is near-deterministic and its small distance to the reference is a consistency check rather than a thermometric measurement (it is essentially independent of the calibrated temperature; see Methods and Supplemental Material).
+The absolute thresholds behind these crossovers are themselves submission-path quantities: an SDK default (\texttt{auto\_scale}) alone can shift the memory order parameter by $\Delta\mathcal{M}\approx 0.98$ on the same embedded problem in the transition region, so calibration metadata is part of the validation protocol rather than an optional log.
 
-We emphasize that D-Wave QPUs operate as open quantum systems: the cryogenic environment, control noise, and the anneal protocol itself contribute to the dynamics~\cite{albash2018adiabatic}.
-Our results therefore demonstrate subsystem relaxation during reverse annealing---a process involving both transverse-field dynamics and environmental coupling---rather than thermalization in a strictly isolated system.
+We emphasize that D-Wave QPUs operate as open quantum systems: the cryogenic environment, control noise, and the time-dependent anneal schedule itself contribute to the dynamics~\cite{albash2018adiabatic,mehta2025dwave}.
+The results therefore describe subsystem relaxation during reverse annealing, not thermalization in a strictly isolated system; we make no claim of isolated-system eigenstate thermalization~\cite{rigol2008thermalization,dalessio2016quantum}, many-body localization~\cite{nandkishore2015mbl,abanin2019mbl}, or quantum computational advantage.
+The contribution is a subsystem-level validation protocol for quantum-annealer sampling, anchored to a fixed, independently calibrated effective inverse temperature used as a discrepancy reference.
 
-\section*{Results}
+\section{Results}
 
-\subsection*{Reverse-anneal protocol and subsystem partition}
+\subsection{Reverse-anneal protocol and subsystem partition}
 
 \begin{figure*}[!htbp]
 \centering
-\includegraphics[width=\textwidth,height=0.72\textheight,keepaspectratio]{figures/fig1_combined.png}
+\includegraphics[width=\textwidth]{figures/fig1_combined.png}
 \caption{\textbf{Reverse-anneal protocol and subsystem--environment partition.}
-\textbf{a,}~Energy-landscape concept: three distinct initial preparations of the subsystem (coloured balls in different potential wells) converge to the same distribution under relaxing conditions after reverse annealing in the presence of a large on-chip environment.
+\textbf{a,}~Energy-landscape concept: three distinct initial preparations of the subsystem (colored balls in different potential wells) converge to the same distribution under relaxing conditions after reverse annealing in the presence of a large on-chip environment.
 \textbf{b,}~Reverse-anneal schedule.  The system is initialized at $s=1$ (classical), ramped to a pause point $s_p$ where quantum fluctuations are reintroduced (blue-shaded region), held for a time $t_p$, and returned to $s=1$ for readout.
 \textbf{c,}~Schematic of the subsystem--environment partition on the QPU topology.  The subsystem~$S$ (orange, $|S|=6$) is a connected cluster of qubits; the environment~$E$ (blue) surrounds it.  Dashed purple lines indicate the boundary couplers of programmable strength~$\lambda$.}
 \label{fig:protocol}
@@ -79,7 +70,7 @@ Different initial preparations of~$S$ (all spins up, all down, or random) are us
 The key observable is the memory order parameter~$\mathcal{M}$, defined as the maximum pairwise total variation distance (TVD) between the marginal distributions $P_S$ obtained from different initial states (see Methods).
 $\mathcal{M}\to 0$ signals initial-state independence; $\mathcal{M}= 1$ indicates complete memory retention.
 
-\subsection*{Subsystem relaxation with tunable environment}
+\subsection{Subsystem relaxation with tunable environment}
 
 With the protocol and subsystem partition defined, we first show that enlarging and more strongly coupling the environment drives the subsystem toward initial-state independence within experimental resolution on both QPU generations (Fig.~\ref{fig:subsystem}).
 On the Advantage2 QPU ($s_p=0.4$, $t_p=100\,\mu$s), the memory order parameter drops sharply with environment size: from $\mathcal{M}=1.0$ at $|E|=4$ to $\mathcal{M}=0.005$ at $|E|=8$ and $\mathcal{M}<0.005$ for $|E|\geq 16$ (Fig.~\ref{fig:subsystem}a, blue circles).
@@ -87,283 +78,159 @@ The Advantage\_system6.4 QPU shows the same qualitative trend, with a slightly h
 
 The coupling strength~$\lambda$ provides an independent control parameter (Fig.~\ref{fig:subsystem}b).
 On Advantage2, memory decreases monotonically from $\mathcal{M}=0.94$ at $\lambda=0.05$ through $0.53$ at $\lambda=0.2$ to $\mathcal{M}<0.001$ for $\lambda\geq 0.3$.
-On System~6.4, a similar crossover occurs at lower~$\lambda$, consistent with the weaker effective coupling at this QPU's energy scale.
+On System~6.4, a similar crossover occurs at lower nominal~$\lambda$, illustrating that the threshold is platform- and submission-path-dependent rather than set by $\beta_\mathrm{eff}\lambda$ alone.
+The submission-path dependence is itself quantifiable and reproducible: paired \texttt{auto\_scale} on/off repeats of the same $26$-qubit embedded problem in the transition region shift $\mathcal{M}$ from $\approx 0.99$ to $\approx 0.005$ ($\Delta\mathcal{M}\approx 0.98$, stable across four back-to-back repeats), while saturated conditions away from the crossover are unaffected (Methods; Supplemental Material)---so all absolute thresholds in this work are reported as empirical quantities for the stated submission path.
 
 To probe the role of the pause-point Hamiltonian, we sweep~$s_p$ on both QPUs (Fig.~\ref{fig:subsystem}c,d).
 The crossover curves display the same sigmoidal shape on both platforms: as $s_p$ increases from 0.35 to 0.50, the crossover coupling~$\lambda_c$ shifts to larger values, reflecting the decreasing transverse field.
-In~situ measurement of the dimensionless energy scale $\beta_\mathrm{eff}=B(s_p)R/2k_BT$ at $s_p=0.4$ yields $\beta_\mathrm{eff}=6.93\pm 0.20$ (Advantage2) and $4.46\pm 0.26$ (System~6.4) (Fig.~\ref{fig:disorder}c; see Methods).
-The ratio of~1.55 is consistent with the different hardware energy scales.
-The systematic shift of crossover thresholds between QPUs, together with their common functional form across~$s_p$, suggests that the relaxation behaviour is governed by the Hamiltonian parameters at the pause point rather than by platform-specific details.  We emphasise, however, that rescaling Advantage2 couplings by the measured ratio $\beta_\mathrm{eff}^{\mathrm{S6.4}}/\beta_\mathrm{eff}^{\mathrm{A2}}=0.59$ does not collapse the cross-QPU crossover curves onto a single master curve, and a residual $\sim 3\times$ gap between the two platforms persists at $s_p=0.4$ (Supplementary Information); a full quantitative collapse would require matching both~$\beta_\mathrm{eff}$ and the transverse-field ratio~$A(s_p)/B(s_p)$, which differ between QPUs at the same~$s_p$.  The present evidence therefore supports qualitative cross-QPU agreement with thresholds shifted by the measured energy-scale ratio, rather than strict universality in a scaling-collapse sense.
+In~situ single-qubit probes at $s_p=0.4$ yield $\beta_\mathrm{eff}=7.22\pm 0.06$ (Advantage2) and $\beta_\mathrm{eff}=4.29\pm 0.29$ (System~6.4) (Fig.~\ref{fig:disorder}c; see Methods), a ratio of $1.68$ consistent with the different hardware energy scales.
+The common functional form across $s_p$ and the systematic threshold shift between QPUs suggest that pause-point Hamiltonian parameters are important, while platform-specific open-system contributions remain necessary to explain the full crossover; rescaling by $\beta_\mathrm{eff}^{\mathrm{S6.4}}/\beta_\mathrm{eff}^{\mathrm{A2}}\approx 0.59$ does not produce a single master curve, leaving a residual $\sim 3\times$ gap at $s_p=0.4$ that is not attributable to the transverse-field ratio $A(s_p)/B(s_p)$ (nearly identical at $0.260$ versus $0.259$) and is more naturally accommodated by platform-specific open-system contributions (flux-noise spectra, chain strength, calibration epoch, schedule outside the pause) that the dimensionless $\beta_\mathrm{eff}$ alone does not capture.
+The cross-QPU comparison is anchored to a single $(s_p,t_p)=(0.4,\,100\,\mu\mathrm{s})$ operating point on each device, with $t_p$ set well above the relaxation timescale characterized in the kinetics scan; we did not separately sweep $t_p$ at $s_p=0.4$ on Advantage\_system6.4 (Supplemental Material).
 
-\subsection*{Environment-state dependence and kinetics}
+\subsection{Environment-state dependence and kinetics}
 
-Having established that relaxation can be tuned by environment size, coupling, and pause point, we next ask which environment states actually produce this initial-state independence and on what timescale it develops.
-To test whether the environment acts as a preparation-independent bath, we repeat the experiment at the relaxed point ($|E|=50$, $\lambda=0.5$) with four different initial preparations of~$E$: all-up, all-down, random, and domain wall, while varying the initial state of~$S$ as before.
-When~$E$ is initialized in an ordered state (all-up or all-down), $S$~becomes initial-state independent within experimental resolution ($\mathcal{M}=0.000$).
-However, when~$E$ is initialized in a disordered configuration (random or domain wall), residual memory persists ($\mathcal{M}=0.39$ and $0.65$, respectively).
-Furthermore, $P_S$~depends on which~$E$ preparation was used (cross-preparation TVD$\,= 1.0$).
-This indicates that the on-chip environment is a finite-size partner, not a universal thermal bath: the initial microstate of~$E$ influences the subsystem's fate.
-
-Pause-time kinetics confirm that this distinction is not a timescale effect.
-When~$E$ is ordered, subsystem relaxation is rapid: $\mathcal{M}$ drops from $0.017$ at $t_p=1\,\mu$s to $<0.001$ by $t_p=5\,\mu$s and remains zero out to $t_p=500\,\mu$s.
-When~$E$ is in a random configuration, memory fluctuates between $0.1$ and $0.7$ across the same range of~$t_p$ with no systematic decay, indicating that relaxation does not occur on any timescale accessible in this experiment.
-
-We also test environment states produced by the QPU's own forward-annealing dynamics.
-Forward-annealing the $E$-only Hamiltonian (with~$S$ decoupled) yields low-energy, ordered samples (magnetization $\pm 1$, ground-state energy); using these as the environment initial state for reverse annealing produced $\mathcal{M}=0.000$ on each of the tested forward-annealed environment preparations.
-This shows that the QPU's natural sampling tendency produces environment states that drive subsystem relaxation, and that the relaxation--arrest distinction is controlled by the environment's order, not by the method of preparation.
-
-These observations are consistent with the expectation that subsystem relaxation depends on the environment's energy sector~\cite{linden2009equilibration,popescu2006entanglement}: for the ferromagnetic Hamiltonian, ordered product states lie near the ground-state manifold and can serve as effective baths, while random product states occupy a high-energy sector with qualitatively different dynamics.
+We next ask which environment states produce this initial-state independence and on what timescale it develops.
+At the relaxed working point ($|E|=50$, $\lambda=0.5$), an ordered $E$ (all-up or all-down) gives $\mathcal{M}=0.000$, while a random or domain-wall $E$ leaves residual memory $\mathcal{M}=0.39$ and $0.65$ respectively, with $P_S$ depending on which $E$ preparation was used (cross-preparation $\mathrm{TVD}=1.0$).
+The on-chip environment is therefore a finite-size partner whose initial microstate influences the subsystem's fate, not a universal thermal bath.
+Pause-time kinetics confirm that the ordered/disordered distinction is not a timescale effect: with ordered $E$, $\mathcal{M}$ drops from $0.017$ at $t_p=1\,\mu$s to $<0.001$ by $t_p=5\,\mu$s and remains zero to $t_p=500\,\mu$s, while with random $E$ it fluctuates between $0.1$ and $0.7$ over the same range with no systematic decay.
+We adopt $t_p=100\,\mu$s ($\sim 20\times$ the ordered-$E$ relaxation timescale) as the working pause time for all subsequent campaigns.
+A complementary test using $E$ states produced by forward-annealing the $E$-only Hamiltonian (with $S$ decoupled), which yields low-energy ordered samples, gives $\mathcal{M}=0.000$ across the tested preparations, consistent with the expectation~\cite{linden2009equilibration,popescu2006entanglement} that the environment's energy sector controls whether it acts as an effective bath.
 
 \begin{figure*}[!htbp]
 \centering
-\includegraphics[width=\textwidth,height=0.72\textheight,keepaspectratio]{figures/fig3_subsystem.png}
+\includegraphics[width=\textwidth,height=0.55\textheight,keepaspectratio]{figures/fig3_subsystem.png}
 \caption{\textbf{Subsystem relaxation with tunable environment.}
 \textbf{a,}~Memory order parameter $\mathcal{M}$ versus environment size $|E|$ on both QPUs ($s_p=0.4$, $\lambda=0.5$).
 \textbf{b,}~Memory versus coupling strength $\lambda$ ($|E|=50$).  Filled markers with solid lines: legacy SDK-default submission path.  Open markers with dashed lines: regenerated on direct native-qubit submissions with \texttt{auto\_scale=False} (no chain couplers).  The $\lambda=0$ point is a decoupled control and is excluded from the monotonic crossover statement.
 \textbf{c,d,}~Pause-depth sweeps on Advantage2 (\textbf{c}) and System~6.4 (\textbf{d}); lower $s_p$ shifts relaxation to weaker coupling.
-Plotted threshold values are nominal SDK-default quantities and inherit the \texttt{auto\_scale} systematic characterised in Methods and the Supplementary Information; bootstrap error bars are smaller than the markers unless shown.}
+Plotted threshold values are nominal SDK-default quantities and inherit the \texttt{auto\_scale} systematic characterized in Methods and the Supplemental Material; bootstrap error bars are smaller than the markers unless shown.}
 \label{fig:subsystem}
 \end{figure*}
 
-\subsection*{Disorder arrests relaxation}
+\subsection{Disorder as a control parameter for relaxation}
 
-This pronounced sensitivity to the environment's initial energy sector suggests that disorder should compete directly with the same relaxation mechanism, which we test next by adding random longitudinal fields (Fig.~\ref{fig:disorder}a).
-At fixed $|E|=50$ and $\lambda=0.5$, the memory order parameter remains near zero for $W\leq 1.0$ on both QPUs, then rises: to $\mathcal{M}=0.74$ at $W=2.0$ on Advantage2 and $\mathcal{M}=0.50$ at $W=1.5$ on System~6.4.
-The lower threshold on System~6.4 is consistent with its smaller~$\beta_\mathrm{eff}$.
-To assess the robustness of the disorder-arrest effect, we repeat the Advantage2 $W$-scan with five independent random-field realizations.
-The disorder-averaged memory is $\mathcal{M}=0.000\pm 0.000$ for $W\leq 1.0$, $0.001\pm 0.001$ at $W=1.5$, and $0.125\pm 0.103$ at $W=2.0$ (mean $\pm$ s.d.\ across realizations).
-The large variance at $W=2.0$ reflects the expected sample-to-sample fluctuations near a crossover, and supports the conclusion that the disorder-arrest effect is robust in the mean but realization-dependent in magnitude.
-
-The full crossover diagram in the $(\lambda, W)$ plane (Fig.~\ref{fig:disorder}b), constructed from 72 grid points on Advantage2, reveals a boundary separating initial-state-independent (memory$\,\approx 0$) and memory-retaining (memory$\,> 0.1$) regions.
-Stronger coupling generally pushes the disorder threshold higher, consistent with the intuition that a more strongly coupled environment is harder to localize.
-We note that the disorder-arrest threshold is graph-dependent: native Zephyr subgraphs, whose boundary connectivity between~$S$ and~$E$ is roughly an order of magnitude denser than the random 3-regular logical graphs studied here, relax across a broader range of~$W$ (Supplementary Information).
-The lower connectivity of the random 3-regular logical graph therefore provides a more stringent test of disorder arrest, and the native-graph results constrain embedding-induced systematics without contradicting the main conclusion.
-This crossover between relaxing and memory-retaining regimes is reminiscent of the delocalized--localized boundary predicted by MBL theory, though we caution that the open-system nature of the QPU and the finite pause time preclude direct identification with an MBL transition.
+The sensitivity to the environment's initial energy sector suggests that disorder should compete directly with the same relaxation mechanism, making quenched disorder a third control knob---alongside bath size and coupling---that a sampler user must account for; we test it by adding random longitudinal fields (Fig.~\ref{fig:disorder}a).
+At fixed $|E|=50$ and $\lambda=0.5$, $\mathcal{M}$ remains near zero for $W\leq 1.0$ on both QPUs and then rises above the noise floor for a subset of disorder realizations beyond $W\approx 1.5$, reaching single-realization values of $\mathcal{M}=0.74$ at $W=2.0$ on Advantage2 and $\mathcal{M}=0.50$ at $W=1.5$ on System~6.4, the lower threshold consistent with its smaller $\beta_\mathrm{eff}$.
+The effect is realization-dependent: a five-realization disorder average on Advantage2 gives $\mathcal{M}=0.000\pm 0.000$ for $W\leq 1.0$, $0.001\pm 0.001$ at $W=1.5$, and $0.125\pm 0.103$ at $W=2.0$, where the dispersion as large as the mean (5 seeds) indicates that some realizations arrest while most do not.
+The full $(\lambda, W)$ crossover diagram on Advantage2 (Fig.~\ref{fig:disorder}b, 72 grid points) reveals, at the single system size studied ($|S|=6$, $|E|=50$), an empirical boundary separating initial-state-independent and memory-retaining regions, with stronger coupling pushing the disorder threshold higher; absent a finite-size scaling analysis we treat this as a single-size threshold, not a thermodynamic phase boundary.
+The disorder-arrest threshold is graph-dependent: native Zephyr subgraphs, whose boundary connectivity is roughly an order of magnitude denser than the random 3-regular logical graphs studied here, relax across a broader range of $W$ (Supplemental Material).
+The lower-connectivity logical graph therefore provides a more stringent test of disorder arrest. We note only in passing that the open-system nature of the QPU and the finite pause time preclude any identification with a many-body-localization transition, despite a superficial resemblance; the operational point is simply that disorder above $W\approx 1.5$ degrades relaxation and must be logged as a sampler-validation parameter.
 
 \begin{figure*}[!htbp]
 \centering
-\includegraphics[width=\textwidth,height=0.72\textheight,keepaspectratio]{figures/fig4_disorder.png}
-\caption{\textbf{Disorder arrests relaxation.}
-\textbf{a,}~Memory order parameter versus disorder strength~$W$ on both QPUs ($|E|=50$, $\lambda=0.5$, $s_p=0.4$).  Solid curves: legacy SDK-default submission path.  Open triangles (dotted, red): a single-seed reproduction on \texttt{Advantage\_system6.4} at the \texttt{uniform\_torque\_compensation} chain-strength path with \texttt{auto\_scale=True}, giving $\mathcal{M}=0.54$ at $W=1.5$ versus the legacy $0.50$.  Memory rises sharply above $W\approx 1.5$--$2.0$, indicating disorder-induced arrest of relaxation; the lower threshold on System~6.4 is consistent with its smaller~$\beta_\mathrm{eff}$.  Smaller fixed chain strengths (Supplementary Information) give weaker arrest, so the arrest magnitude here is specific to the legacy chain-strength regime.
-\textbf{b,}~Crossover diagram in the $(\text{disorder}\;W,\;\text{coupling}\;\lambda)$ plane on Advantage2 (72 grid points, $|E|=50$).  Colour indicates $\mathcal{M}$; contour lines at $\mathcal{M}=0.1$ (white) and $0.5$ (black) delineate the relaxed and memory-retaining regions.  Stronger coupling pushes the disorder threshold higher.
+\includegraphics[width=\textwidth,height=0.55\textheight,keepaspectratio]{figures/fig4_disorder.png}
+\caption{\textbf{Disorder degrades relaxation above $W\approx 1.5$.}
+\textbf{a,}~Memory order parameter versus disorder strength~$W$ on both QPUs ($|E|=50$, $\lambda=0.5$, $s_p=0.4$).  Solid curves: legacy SDK-default submission path.  Open triangles (dotted, red): a single-seed reproduction on \texttt{Advantage\_system6.4} at the \texttt{uniform\_torque\_compensation} chain-strength path with \texttt{auto\_scale=True}, giving $\mathcal{M}=0.54$ at $W=1.5$ versus the legacy $0.50$.  Memory rises above the noise floor for a subset of realizations beyond $W\approx 1.5$--$2.0$ (5-seed average $\mathcal{M}=0.125\pm 0.103$ at $W=2.0$); the lower threshold on System~6.4 is consistent with its smaller~$\beta_\mathrm{eff}$.  Smaller fixed chain strengths (Supplemental Material) give weaker arrest, so the arrest magnitude here is specific to the legacy chain-strength regime.
+\textbf{b,}~Single-size empirical crossover in the $(\text{disorder}\;W,\;\text{coupling}\;\lambda)$ plane on Advantage2 (72 grid points, $|E|=50$, $|S|=6$).  Color indicates $\mathcal{M}$; contour lines at $\mathcal{M}=0.1$ (white) and $0.5$ (black) delineate the relaxed and memory-retaining regions at this single system size (not a thermodynamic phase diagram).  Stronger coupling pushes the disorder threshold higher.
 \textbf{c,}~In~situ measured dimensionless energy scale $\beta_\mathrm{eff}=B(s_p)R/2k_BT$ at $s_p=0.4$ on both QPUs.}
 \label{fig:disorder}
 \end{figure*}
 
 \input{phase6_results}
 
-\subsection*{Classical and small-system controls}
+\subsection{Classical and small-system controls}
 
-To place the relaxation crossovers and the thermal-marginal endpoint on firmer footing, we compare the data with classical and small-system controls that test whether the observed initial-state independence can arise without quantum mixing (Fig.~\ref{fig:baselines}).
-
-As a purely classical reference, we simulated single-spin-flip Glauber dynamics at the device effective temperature across the ranges of system size, coupling strength, and disorder studied experimentally, and found $\mathcal{M}=1.0$ in every case (Fig.~\ref{fig:baselines}a), indicating complete retention of the subsystem's initial-state memory.
-The same conclusion holds for continuous-spin $O(3)$ spin-vector Monte Carlo~\cite{shin2014svmc}, which is often invoked to argue that semiclassical models can reproduce D-Wave dynamics: at the device effective temperature, SVMC likewise shows $\mathcal{M}=1.0$ across our parameter range (Supplementary Information Sec.~3.4).
-
-Exact diagonalization (ED) of the closed quantum Hamiltonian for small systems ($N=8$--$12$, $|S|=4$) shows the same qualitative trend as the QPU data.
-At $s_p=0.4$, $\mathcal{M}$ decreases with system size: for $t_p=0.5\,\mu$s, $\mathcal{M}$ falls from $0.47$ at $N=8$ to $0.13$ at $N=12$ (Fig.~\ref{fig:baselines}b).
-By contrast, at $s_p=0.5$, $\mathcal{M}$ remains above $0.94$ for all sizes, consistent with much weaker mixing.
-A complementary Lindblad master-equation treatment with local thermal jump operators at the device temperature (Supplementary Information) reproduces the same qualitative trends across the tractable system sizes.
-This agreement does not establish that the QPU dynamics are themselves unitary, but it supports quantum fluctuations as the primary ingredient enabling subsystem relaxation~\cite{mehta2025dwave}.
-
-A further signature of quantum control appears in the pause-point dependence of the coupling crossover.
-On both QPUs, the threshold coupling $\lambda_c$ required to erase the subsystem's initial-state memory shifts systematically with $s_p$ (Fig.~\ref{fig:baselines}c), such that deeper pauses, with larger transverse-field weight, produce relaxation at weaker coupling.
-A mechanism governed purely by the classical problem Hamiltonian $H_P$ would not generate this $s_p$ dependence, although open-system effects, including $s_p$-dependent decoherence, may also contribute to the observed crossover~\cite{mehta2025dwave}.
+We next compare the relaxation crossovers and thermal-marginal endpoint against classical and small-system quantum controls (Fig.~\ref{fig:baselines}).
+Single-spin-flip Glauber dynamics at the calibrated readout temperature $T_\mathrm{cal}=1/\beta_\mathrm{eff}$ (in the dimensionless coupling units; see Methods), and continuous-spin $O(3)$ spin-vector Monte Carlo~\cite{shin2014svmc}, both give $\mathcal{M}=1.0$ across the experimental ranges of system size, coupling strength, and disorder (Fig.~\ref{fig:baselines}a; Supplemental Material).
+Exact diagonalization (ED) of the closed quantum Hamiltonian for $N\in\{8,10,12\}$ ($|S|=4$) is consistent with transverse-field-driven relaxation on the three ED-accessible sizes: at $s_p=0.4$, $t_p=0.5\,\mu$s, $\mathcal{M}$ falls from $0.47$ at $N=8$ to $0.13$ at $N=12$ (Fig.~\ref{fig:baselines}b); at $s_p=0.5$, $\mathcal{M}$ remains above $0.94$ at all sizes.
+A complementary Lindblad master equation with local thermal jump operators at the calibrated readout temperature reproduces the same qualitative trend (Supplemental Material).
+That both a closed-system (ED) and an open-system (Lindblad) model reproduce the trend indicates the qualitative crossover does not by itself discriminate coherent from dissipative dynamics; the agreement does not establish that the QPU dynamics are unitary, and is only consistent with the pause-point transverse field influencing small-system relaxation~\cite{mehta2025dwave}.
+On both QPUs, the threshold coupling $\lambda_c$ shifts systematically with $s_p$ (Fig.~\ref{fig:baselines}c), with deeper pauses producing relaxation at weaker coupling---an $s_p$ dependence absent from any purely classical-$H_P$ dynamics, but one we do not over-read: $s_p$ simultaneously sets the transverse field $A(s_p)$, the problem prefactor $B(s_p)$ and the $s_p$-dependent open-system rates, which we do not separately isolate.
 
 \begin{figure*}[!htbp]
 \centering
-\includegraphics[width=\textwidth,height=0.72\textheight,keepaspectratio]{figures/fig5_baselines.png}
+\includegraphics[width=\textwidth,height=0.55\textheight,keepaspectratio]{figures/fig5_baselines.png}
 \caption{\textbf{Classical and small-system controls.}
-\textbf{a,}~Comparison across system sizes at fixed $s_p=0.4$ and representative $(\lambda, W)$ (see Supplementary Sec.~3 for the full Glauber and SVMC sweeps over system size, coupling strength and disorder).  Glauber dynamics at the device temperature (grey diamonds) shows $\mathcal{M}=1.0$ everywhere.  ED at $s_p=0.4$ (green triangles) shows decreasing memory with system size.  The blue-shaded band indicates the QPU result for $|E|\geq 16$ ($\mathcal{M}<0.01$).
+\textbf{a,}~Comparison across system sizes at fixed $s_p=0.4$ and representative $(\lambda, W)$ (see Supplementary Sec.~3 for the full Glauber and SVMC sweeps over system size, coupling strength and disorder).  Glauber dynamics at the calibrated readout temperature (gray diamonds) shows $\mathcal{M}=1.0$ everywhere.  ED at $s_p=0.4$ (green triangles) shows decreasing memory with system size.  The blue-shaded band indicates the QPU result for $|E|\geq 16$ ($\mathcal{M}<0.01$).
 \textbf{b,}~ED memory versus pause depth~$s_p$ for three system sizes.  Stronger transverse field (lower~$s_p$) drives relaxation; weaker field preserves memory.
-\textbf{c,}~Crossover coupling $\lambda_c$ (approximate nominal thresholds, defined as the $\lambda$ where $\mathcal{M}$ drops below 0.5) versus pause depth~$s_p$ on both QPUs.  The plotted $\lambda_c$ values are nominal logical couplings under the SDK-default submission path and inherit the auto-scale systematic characterised in the Methods and Supplementary Information.  The systematic shift with $s_p$ supports the interpretation that the transverse field at the pause point controls the relaxation threshold.}
+\textbf{c,}~Crossover coupling $\lambda_c$ (approximate nominal thresholds, defined as the $\lambda$ where $\mathcal{M}$ drops below 0.5) versus pause depth~$s_p$ on both QPUs.  The plotted $\lambda_c$ values are nominal logical couplings under the SDK-default submission path and inherit the auto-scale systematic characterized in the Methods and Supplemental Material.  The systematic shift with $s_p$ supports the interpretation that the transverse field at the pause point controls the relaxation threshold.}
 \label{fig:baselines}
 \end{figure*}
 
-\subsection*{Barrier crossing under mixed frustration}
+\section{Discussion}
 
-The results above establish both that the subsystem relaxes and what it relaxes to.
-We now ask a sharper dynamical question: can the QPU relax through frustrated landscapes that are not traversed efficiently by matched-temperature single-spin-flip classical dynamics?
+The two-observable validation protocol introduced here separates \emph{whether} a reverse-anneal subsystem has relaxed from \emph{what} its readout actually represents.
+Across the 494-condition thermal-marginal campaign on Advantage2, $113$ conditions satisfy the relaxation criterion $\mathcal{M}\le 0.05$; $110$ of those agree with the calibrated classical conditional Boltzmann marginal at $D_\mathrm{TV}<0.05$, with the disorder sweep agreeing at the $D_\mathrm{TV}\sim 10^{-3}$ level on average (per-$W$ mean; individual relaxed conditions reach far smaller distances).
+The three exceptions are two severe wrong-basin traps and one borderline miss ($D_\mathrm{TV}=0.051$) at $\lambda=0.2$, $N=8$, $W=1.0$, seed~42 on a native Zephyr subgraph; these conditions satisfy the memory criterion but place most of their weight on the higher-energy basin, exposing a relaxed-but-non-thermal failure mode that memory-based validation alone would not catch.
+An independent $60$-condition cross-QPU replication on Advantage\_system6.4 at the separately calibrated $\beta_\mathrm{eff}=4.29$ gives the same qualitative picture (Calibrated conditional-Boltzmann diagnostic subsection): $22/60$ relaxed conditions with conditional $D_\mathrm{TV}$ from $10^{-7}$ to $0.029$ (median $0.005$), so the diagnostic transfers across topology and energy scale.
 
-To probe this, we introduce mixed frustration: the subsystem~$S$ couplers are sign-flipped with probability~$p_S$ (Edwards--Anderson bond disorder), while the environment~$E$ remains ferromagnetic.
-This creates a multi-modal classical landscape within~$S$ while preserving the bath character of~$E$.
-At $p_S=0.5$ and $W=1.0$, the QPU relaxes $14/20$ instances ($70\%$; $|S|=4$, $|E|=8$, $N=12$, $\lambda=0.5$), while single-spin-flip Glauber dynamics at the calibrated device temperature ($\beta_\mathrm{eff}=7.2$) relaxes only $2/20$ ($10\%$) (Fig.~\ref{fig:barrier}a).
-A fine Glauber temperature sweep reveals that classical dynamics requires $\beta\approx 1.5$ ($T\approx 0.67$), roughly $4.8\times$ the device temperature, to approximate the QPU's relaxation rate.
-Cross-QPU replication on Advantage\_system6.4 ($\beta_\mathrm{eff}=4.29$) gives the same qualitative separation, with the second QPU relaxing $10/20$ instances ($50\%$) versus $5/20$ ($25\%$) for matched-temperature Glauber, and Glauber reaching $50\%$ at $\beta\approx 2.5$ ($T\approx 0.4$), an effective-temperature gap of $1.7\times$ (Fig.~\ref{fig:barrier}b).
+D-Wave QPUs operate as open quantum systems with cryogenic bath, flux noise and time-dependent anneal schedule all participating in the dynamics~\cite{albash2018adiabatic,mehta2025dwave,mehta2025unraveling,aronoff2026coherence}.
+The relaxation threshold in $|E|$ characterises the effective boundary-coupling density of the chosen graph family rather than a universal qubit-count threshold: native Zephyr subgraphs, with roughly an order of magnitude denser boundary connectivity, relax at smaller $|E|$ on the same logical problem than the random 3-regular graphs in Fig.~\ref{fig:subsystem}a; conversely at $|E|=20$, $\lambda=0.5$ a direct native-qubit submission remains memory-retaining while the embedded random-3-regular submission at larger $|E|=50$ relaxes (Supplemental Material).
+The small relaxed-subset distances persist on the native Zephyr topology (mean conditional $D_\mathrm{TV}=0.0015$ across $5$ relaxed conditions, $N=12$, $|S|=4$, $\lambda=0.5$), so the consistency check is not solely an embedding artifact.
 
-Exact enumeration of all $2^{12}=4096$ configurations clarifies the relevant classical barrier scale: the frustrated instances have on average $9.2$ local minima separated by single-spin-flip barriers of mean height $\Delta=1.93$, giving $\beta_\mathrm{eff}\Delta\approx 14$ (Fig.~\ref{fig:barrier}c).
-Classical thermal activation over these barriers is exponentially suppressed at the device temperature; the QPU's transverse field at the pause point is consistent with an alternative relaxation pathway.
-The mixed-frustration design further shows that relaxation persists across tested frustration densities---from $p_S=0$ (ferromagnetic) through $p_S=0.5$ (full subsystem EA)---with QPU relaxation rates spanning $53$--$92\%$ in the Supplementary mixed-frustration sweep; the matched-temperature Glauber comparison is shown for the $p_S=0.5$, $W=1.0$ working point (Supplementary Information).
-By contrast, full Edwards--Anderson disorder across the entire $S$+$E$ system produced zero relaxed instances among the $826$ completed conditions across two QPUs, indicating that a fully frustrated environment did not act as a bath under the tested reverse-anneal protocol.
+The wrong-basin trapping conditions identified by the thermal-marginal test show that initial-state independence alone can mask non-thermal endpoints, an aliasing that memory-based validation cannot detect by construction.
+The practical recommendation follows directly: for annealer-based Boltzmann-machine training~\cite{adachi2015qbm,amin2018qbm,benedetti2017qbm}, quantum-assisted sampling and reverse-anneal optimization~\cite{marshall2019pausing,chen2020pausing,pelofske2025erasing,nelson2022gibbs,vuffray2022boltzmann,grattan2025thermometry}, report $\mathcal{M}$ and $D_\mathrm{TV}$ against a calibrated $\beta_\mathrm{eff}$ alongside any final-energy or success-probability metric, and log the embedding chain strength, the \texttt{auto\_scale} flag, the calibration epoch, and the per-QPU $A(s_p)/B(s_p)$ together with the samples themselves; the calibrated effective temperature alone is not sufficient to interpret the programmed Hamiltonian.
+A second, concrete control follows from the environment-preparation results: bath qubits should be initialized deliberately into ordered, low-energy states rather than allowed to relax alongside the problem region, because random or domain-wall environment preparations arrest relaxation.
+Read this way, the experiment also speaks to a standing open question---whether a sufficiently large annealer can act as an effective bath for its own subsystems~\cite{kendon2026qacm}: under ordered low-energy environment preparations it can (for the tested subsystems $|S|\in\{4,6\}$ with on-chip environments up to $|E|=50$; exact-reference comparisons are restricted to $N\le12$), but only as a finite-size partner whose microstate must be controlled, not as a universal thermal bath.
 
-\begin{figure*}[!htbp]
-\centering
-\includegraphics[width=\textwidth,height=0.72\textheight,keepaspectratio]{figures/fig7_barrier_crossing.png}
-\caption{\textbf{Barrier crossing under mixed frustration.}
-\textbf{a,}~Glauber relaxation fraction as a function of classical temperature~$T$ on mixed-frustration instances ($p_S=0.5$, $W=1.0$, $N=12$), compared to the QPU relaxation rate (blue dashed line, $70\%$) at device temperature $T_\mathrm{device}=0.139$.  Glauber requires $T\approx 0.67$ ($4.8\times$ the device temperature) to match.
-\textbf{b,}~Same comparison on Advantage\_system6.4.  The QPU relaxes $50\%$ at $T_\mathrm{device}=0.233$; Glauber matches at $T\approx 0.4$ ($1.7\times$).
-\textbf{c,}~Distribution of single-spin-flip barrier heights~$\Delta$ across ten $N=12$ instances from exact enumeration.  The mean barrier $\Delta=1.93$ gives $\beta_\mathrm{eff}\Delta\approx 14$, implying exponential Arrhenius suppression for classical thermal activation.  Temperature-gap ratios in \textbf{a}~and \textbf{b}~are reported for the same SDK-default submission path as the QPU data; see Methods for the auto-scale characterisation.}
-\label{fig:barrier}
-\end{figure*}
+Looking ahead, a systematic study of the cross-QPU collapse residual against noise spectra and embedding could turn the $\beta_\mathrm{eff}$-only discrepancy into a dynamical calibration tool, and a bath-ensemble experiment with multiple certified low-energy environment microstates would tighten the bath-engineering control beyond ordered boundary conditions.
+More broadly, the same controlled subsystem-bath protocol gives a reproducible platform for studying subsystem relaxation at sizes beyond exact diagonalization, a regime otherwise accessible only on cold-atom and trapped-ion hardware~\cite{kaufman2016quantum,smith2016mbl,shaw2025ergodicity}.
+The contribution is a transferable validation protocol for annealer-as-sampler workflows---memory loss plus distance to a fixed calibrated reference, used as a discrepancy detector rather than a thermometer, cleanly separating relaxed, relaxed-but-trapped, and memory-retaining readouts on both QPU generations---not a thermalization claim.
 
-A targeted schedule screen (Supplementary Information) was performed as a pilot exploration of schedule engineering; with the limited statistics available ($40$ seeds per schedule) the effect was not robustly established, and a systematic characterization of schedule-dependent relaxation pathways remains beyond the scope of the present study~\cite{kendon2026qacm,crosson2021prospects}.
+\section{Methods}
 
-\section*{Discussion}
+\subsection{Quantum processing units}
 
-We have shown that a programmable quantum annealer can drive subsystem relaxation during reverse annealing under controlled bath conditions, and that this relaxation is arrested by disorder and atypical environment preparation.
-The central result is therefore not only that the subsystem becomes initial-state independent, but that the relaxed readout follows a calibrated conditional thermal law across graph geometries, coupling strengths, disorder levels and two QPU generations.
-This separates the question of \emph{whether} relaxation occurs from the question of \emph{what} the relaxed endpoint looks like.
+Experiments were performed on two D-Wave QPUs~\cite{dwave2024system_docs}: the Zephyr-topology Advantage2 (4{,}579 active qubits, operated as \texttt{Advantage2\_system1.13} for the sweeps of Figs.~\ref{fig:subsystem}--\ref{fig:disorder} and~\ref{fig:baselines}, then \texttt{Advantage2\_system1} with qubit 4374 removed for the thermal-marginal campaign of Fig.~\ref{fig:thermal_marginal}) and the Pegasus-topology Advantage\_system6.4 (5{,}612 active qubits) for the cross-QPU replication.
+The dimensionless energy scale $\beta_\mathrm{eff}=B(s_p)R/2k_BT$ (with $B(s_p)$ the problem energy scale at the pause point, $R$ the \texttt{auto\_scale} rescaling factor, and $T$ the physical refrigerator temperature) was measured in~situ by submitting single-qubit probes at $h=0.5$ under the full reverse-anneal protocol ($s_p=0.4$, $t_p=100\,\mu$s, \texttt{auto\_scale=False}, 5{,}000 reads), extracting $\beta_\mathrm{eff}=\ln(n_\downarrow/n_\uparrow)/(2h)$ averaged over three probe qubits from the solver nodelist.  We write $T_\mathrm{cal}=1/\beta_\mathrm{eff}$ for the corresponding calibrated readout temperature in the dimensionless coupling units (not a refrigerator temperature); all classical-baseline temperature comparisons are expressed in units of $T_\mathrm{cal}$.
+This procedure gives $\beta_\mathrm{eff}=7.219\pm 0.063$ for the Advantage2 thermal-marginal campaign and $\beta_\mathrm{eff}=4.289\pm 0.294$ for the Advantage\_system6.4 cross-QPU replication; the frustrated pilot (Supplemental Material; deposited but not used for any main-text conclusion) uses an independently recalibrated $\beta_\mathrm{eff}=7.331\pm 0.198$ from a separate run.  The Advantage2 point value $7.219$ is the deposited, load-bearing quantity (it propagates into every thermal-marginal comparison); the quoted $\pm 0.063$ is a campaign-time probe dispersion recorded in run logs rather than a deposited artifact, and the reproducible uncertainty on $\beta_\mathrm{eff}$ is instead bounded by the independent $h=0.25$/$h=0.5$ probe bracket ($7.14$--$7.51$, $\sim\!5\%$; Supplemental Material).
+$\beta_\mathrm{eff}$ is a protocol-level readout slope, not a refrigerator temperature: each value is a single per-campaign single-qubit-probe calibration, not verified for cross-calibration-epoch stability, and it is used only to define a \emph{fixed} conditional-Boltzmann reference for the discrepancy detector, not as a fitted many-body temperature.  The relaxed-subset distance to this reference is essentially independent of $\beta_\mathrm{eff}$ over a ninefold range (Calibrated conditional-Boltzmann diagnostic subsection; Supplementary $\beta$-sensitivity), so the diagnostic does not rely on the precise value or on temperature drift between sessions.
+The per-QPU anneal-schedule coefficients used in the quantum reduced Gibbs diagnostic were extracted from the solver schedule spreadsheets~\cite{dwave2024system_docs}, giving $A(s_p)/B(s_p)=0.260$ for Advantage2 and $0.259$ for Advantage\_system6.4 at $s_p=0.4$.
+Solver rename and qubit-availability dates and full per-campaign metadata are recorded in the Supplemental Material and in the deposited archive.
 
-\paragraph{Calibrated thermal readout.}
-Across $97\%$ of relaxed ($\mathcal{M}\le 0.05$) instances in the ferromagnetic thermal-marginal campaign, the measured subsystem marginal agrees with the classical conditional Boltzmann distribution $P_S^\mathrm{th}(\sigma_S\mid\sigma_E{=}\mathbf{1})$ at the calibrated $\beta_\mathrm{eff}$ with $D_\mathrm{TV}<0.05$, and a tighter near-sampling-floor subset of relaxed disorder seeds reaches $D_\mathrm{TV}\sim 10^{-3}$ (see Effective thermal marginal subsection).
-We describe this as a consistency check of the conditional thermal-marginal hypothesis on the relaxed subset rather than as an unconditional proof of thermalization: non-relaxed conditions have much larger $D_\mathrm{TV}$ against the same target (median $0.35$ across 381 non-relaxed conditions), and three relaxed conditions fail the thermal-marginal test with $D_\mathrm{TV}>0.05$---identifying a distinct dynamical-trapping failure mode that the memory order parameter alone would not detect.
-Only $113$ of the $494$ thermal-marginal campaign conditions satisfy the relaxation criterion $\mathcal{M}\le 0.05$, reflecting the broad parameter ranges swept (system size, coupling strength, disorder strength, Hamiltonian energy scale) relative to the finite-time, finite-size nature of the experiment; the thermal-marginal law is claimed only on this relaxed subset.
-This result holds across graph geometry, subsystem size, coupling strength, Hamiltonian energy scale, and QPU generation.
-A small frustrated pilot hints at a different pattern: in its two relaxed Edwards--Anderson instances, the conditional quantum reduced Gibbs target outperforms the classical conditional target by roughly an order of magnitude.  The pilot is underpowered (only two relaxed instances) and motivates a larger frustrated campaign to establish the effect; the ferromagnetic data, by contrast, do not distinguish the two predictions at the sampling floor.
-
-\paragraph{Barrier crossing under mixed frustration.}
-A further result concerns the relaxation mechanism under mixed frustration, where the QPU differs quantitatively from matched-temperature Glauber dynamics.
-When~$S$ carries Edwards--Anderson bond disorder ($p_S=0.5$) while~$E$ remains ferromagnetic, the QPU relaxes $\sim\!70\%$ of instances at the calibrated device temperature ($\beta_\mathrm{eff}=7.2$), versus $\sim\!10\%$ for single-spin-flip Glauber at the same temperature.
-A fine temperature sweep shows that Glauber requires roughly $4.8\times$ the device temperature to match the QPU relaxation rate on Advantage2, and $1.7\times$ on System~6.4.
-Exact enumeration of the $N=12$ landscape gives on average $9.2$ local minima with mean single-spin-flip barrier $\Delta=1.93$, so $\beta_\mathrm{eff}\Delta\approx 14$---well into the Arrhenius-suppressed regime.
-The QPU's transverse field at the pause point is consistent with an alternative relaxation pathway, and cross-QPU replication supports the interpretation that the effect is not specific to a single processor~\cite{denchev2016computational,boixo2016tunneling}.
-These ratios are empirical comparisons for the SDK-default submission path used in the QPU runs; a paired re-verification of the working point with \texttt{auto\_scale=False} reproduces the same rates within seed variability on both QPUs (Supplementary Information), so the separation between QPU relaxation and matched-temperature local Glauber dynamics is preserved under the regenerated submission path.
-Schedule engineering, scaling, and native frustrated motifs remain beyond the scope of the present study.
-
-\paragraph{Open-system caveats and outlook.}
-D-Wave QPUs operate as open quantum systems: the cryogenic bath, flux noise, and the time-dependent anneal schedule all participate in the dynamics~\cite{albash2018adiabatic,mehta2025dwave,mehta2025unraveling,aronoff2026coherence}.
-Our results demonstrate subsystem relaxation in the specific context of reverse-anneal dynamics, which involves both transverse-field evolution and environmental decoherence.
-The dynamical separation from Glauber is specific to single-spin-flip classical dynamics at matched temperature; a referee may reasonably ask whether more sophisticated classical algorithms (parallel tempering, cluster moves, simulated quantum annealing) could close the gap.
-We note, however, that single-spin-flip Glauber is a standard local classical reference for D-Wave benchmarking~\cite{shin2014svmc,albash2018adiabatic}, and the effective-temperature gap is quantitative, with ratios of $4.8\times$ on Advantage2 and $1.7\times$ on Advantage\_system6.4.
-
-A native-graph replication on the actual QPU topology (no minor embedding) supports the thermal-marginal law: across $5$ relaxed native Zephyr conditions ($N=12$, $|S|=4$, $\lambda=0.5$), the mean classical conditional $D_\mathrm{TV}=0.0015$, indicating that the thermal readout is not solely an embedding artefact.
-Several directions follow naturally: a bath-ensemble experiment with multiple certified low-energy environment microstates would strengthen the ``effective bath'' interpretation beyond ordered boundary conditions, and extending the frustrated campaign to larger $N$ and native topologies would test whether the barrier-crossing effect scales.
-We further note that the environment size required for relaxation is geometry-dependent: native Zephyr subgraphs, with roughly an order of magnitude denser boundary connectivity, relax at smaller $|E|$ on the same logical problem than the random 3-regular graphs reported in Fig.~\ref{fig:subsystem}a, and conversely at $|E|=20$, $\lambda=0.5$ a direct native-qubit submission remains memory-retaining while the embedded random-3-regular submission at larger $|E|=50$ relaxes (Supplementary Information).
-The relaxation threshold in $|E|$ therefore characterises the effective boundary coupling density of the chosen graph family, not a universal qubit-count threshold.
-
-Our results address an open question posed in recent reviews~\cite{kendon2026qacm}: whether a sufficiently large quantum annealer can act as an effective bath for its own subsystems.
-We find that it can, under ordered low-energy environment preparations, and that this bath-like behaviour is arrested by disorder and atypical environment states.
-When relaxation occurs, the relaxed readout follows a calibrated classical thermal marginal across graph geometries, coupling strengths, disorder levels and two QPU generations.
-In a mixed-frustration regime, the route to that endpoint is quantitatively distinct from matched-temperature single-spin-flip classical dynamics, consistent with transverse-field-assisted barrier crossing.
-These findings establish programmable quantum annealers as experimental platforms for studying subsystem relaxation, connecting quantum annealing to statistical mechanics and open-system quantum dynamics.
-
-\section*{Methods}
-
-\subsection*{Quantum processing units}
-
-Experiments were performed on two D-Wave QPUs~\cite{dwave2024system_docs}.  The Zephyr-topology
-processor was operated as \texttt{Advantage2\_system1.13} (4{,}579 active
-qubits, $\beta_\mathrm{eff}=6.93\pm 0.20$ at $s_p=0.4$) for the main
-environment-size, coupling, disorder and pause-point sweeps of
-Figs.~\ref{fig:subsystem}--\ref{fig:disorder} and~\ref{fig:baselines}.  On 2026-04-10 D-Wave flagged qubit 4374 as operating out of
-spec between 2026-04-08 21:30 PT and 2026-04-10 10:50 PT and replaced the
-solver endpoint with \texttt{Advantage2\_system1}, in which qubit 4374
-and its couplers are removed from the working graph.  The thermal-marginal
-Gibbs-fit campaign of Fig.~\ref{fig:thermal_marginal} was submitted on this renamed solver after
-the incident window, with qubit 4374 therefore excluded from every
-embedding; an in-situ recalibration under the procedure described below
-gives $\beta_\mathrm{eff}=7.219\pm 0.063$ for that campaign, and the
-frustrated pilot reported in the Effective thermal marginal subsection
-uses an independently recalibrated
-$\beta_\mathrm{eff}=7.331\pm0.198$.  The Pegasus-topology processor
-\texttt{Advantage\_system6.4} (5{,}612 active qubits) has
-$\beta_\mathrm{eff}=4.46\pm 0.26$ at $s_p=0.4$ for the main paper and
-$\beta_\mathrm{eff}=4.289\pm 0.294$ for the thermal-marginal cross-QPU
-replication.
-The dimensionless energy scale $\beta_\mathrm{eff}=B(s_p)R/2k_BT$ was
-measured in~situ by submitting single-qubit probe problems with a known
-bias $h=0.5$ under reverse annealing at $s_p=0.4$ with
-\texttt{auto\_scale=False}, and extracting
-$\beta_\mathrm{eff} = \ln(n_\downarrow/n_\uparrow)/(2h)$ from
-5{,}000 reads for each of two initial states, averaged over three probe
-qubits drawn from the solver nodelist.
-Here $B(s_p)$ is the problem energy scale at the pause point, $R$ is the
-Hamiltonian rescaling factor from \texttt{auto\_scale}, $k_B$ is the
-Boltzmann constant, and $T$ is the physical device temperature.  We
-emphasise that $\beta_\mathrm{eff}$ is a protocol-level readout parameter
-rather than a refrigerator temperature; the separate main-paper and
-thermal-marginal campaign values reflect independent calibration sessions, not a physical
-temperature drift.  The per-QPU anneal-schedule coefficients
-$A(s_p)$, $B(s_p)$ used in the thermal-marginal quantum reduced Gibbs diagnostic
-were extracted directly from the solver schedule spreadsheets published
-by D-Wave~\cite{dwave2024system_docs}, yielding $A(s_p)/B(s_p)=0.260$ for Advantage2 and $0.259$
-for Advantage\_system6.4 at $s_p=0.4$.
-
-\subsection*{Hamiltonian family and embedding}
+\subsection{Hamiltonian family and embedding}
 
 The problem Hamiltonian is a random 3-regular Ising model: $H_P = \sum_i h_i \sigma_z^i + \sum_{\langle ij \rangle} J_{ij}\sigma_z^i\sigma_z^j$, with internal couplings $J_{ij}=-1$ (ferromagnetic), boundary couplings between $S$ and $E$ scaled by $\lambda\in[0,1]$, and quenched disorder $h_i\sim\mathcal{U}[-W,W]$.
-The main environment-size, coupling, disorder and pause-depth sweeps (Figs.~\ref{fig:subsystem}--\ref{fig:baselines}) use $|S|=6$ with $|E|$ up to $50$; the thermal-marginal and mixed-frustration campaigns use $|S|=4$ small-system instances at $N\le 12$ to permit exact classical and quantum reference computations.  In all cases $S$ is a connected subgraph and $E$ comprises the remaining qubits.
-Logical graphs were embedded onto each QPU using \texttt{EmbeddingComposite}~\cite{cai2014minor} with the default chain strength from \texttt{uniform\_torque\_compensation}; chain-break dynamics and embedding-induced sampling bias are discussed in~\cite{marshall2020embedding}.
-We note that embedding introduces chains of physical qubits for each logical variable, and chain breaks can affect the effective coupling landscape.
-The default chain strength is determined by the logical problem's connectivity and bias magnitudes, and may differ between Zephyr and Pegasus embeddings even for the same logical graph.
+The main environment-size, coupling, disorder and pause-depth sweeps (Figs.~\ref{fig:subsystem}--\ref{fig:baselines}) use $|S|=6$ with $|E|$ up to $50$; the thermal-marginal campaign uses $|S|=4$ small-system instances at $N\le 12$ to permit exact classical and quantum reference computations.  $S$ is a connected subgraph in all cases.
+Logical graphs were embedded with \texttt{EmbeddingComposite}~\cite{cai2014minor} at the default \texttt{uniform\_torque\_compensation} chain strength; chain-break effects, embedding-induced sampling bias and the Zephyr-vs-Pegasus chain-strength differences are discussed in~\cite{marshall2020embedding} and in the Supplemental Material.
 
-\subsection*{Reverse-anneal protocol}
+\subsection{Reverse-anneal protocol}
 
 All experiments use a four-point reverse-anneal schedule~\cite{dwave2024reverse_anneal}: $(0, 1.0) \to (5\,\mu\mathrm{s}, s_p) \to (5+t_p\,\mu\mathrm{s}, s_p) \to (10+t_p\,\mu\mathrm{s}, 1.0)$, with \texttt{reinitialize\_state=True}.
 Default parameters: $s_p=0.4$, $t_p=100\,\mu$s, 1{,}000--2{,}000 reads per configuration.
-Unless otherwise stated, initial states of $S$ were varied (all-up, all-down, random) while $E$ was initialized all-up; the environment-preparation controls (all-down, random, domain wall, forward-annealed) and the bath-ensemble and frustrated sub-experiments use the preparations described in the Results and Supplementary Information.
+Unless otherwise stated, initial states of $S$ were varied (all-up, all-down, random) while $E$ was initialized all-up; the environment-preparation controls (all-down, random, domain wall, forward-annealed) and the bath-ensemble sub-experiments use the preparations described in the Results and Supplemental Material.
 The submission path differs across sub-experiments and is important for the interpretation of absolute threshold values.
-The thermal-marginal $\beta_\mathrm{eff}$ calibration probes were submitted with \texttt{auto\_scale=False} so that the single-qubit bias $h=0.5$ is programmed exactly.
-The native-Zephyr thermal-marginal conditions use direct physical-qubit submissions without chain couplers, so that the programmed and nominal $(h,J)$ coincide.
-The preliminary discovery sweeps, main subsystem-bath sweeps (Figs.~\ref{fig:subsystem}--\ref{fig:baselines}) and mixed-frustration working point (Fig.~\ref{fig:barrier}) were submitted through the SDK-default path, in which the minor-embedding composite and the automatic Hamiltonian rescaling (\texttt{auto\_scale=True}) are both active; the rescaling applies a uniform linear factor to all logical and chain couplers whenever any coupler would otherwise exceed the solver's $j$-range~\cite{dwave2024system_docs}.
-We therefore performed paired \texttt{auto\_scale}-on/off spot-checks on \texttt{Advantage2\_system1} to characterise the impact of this rescaling on the memory order parameter: (i) six subsystem-bath working points on direct physical-qubit submissions (no chains); (ii) five additional transition-region working points $\lambda\in\{0.15,0.20,0.25,0.30,0.50\}$ at $|E|=20$ on direct physical-qubit submissions; (iii) four back-to-back repeats of an embedded 26-qubit random-3-regular problem with explicit \texttt{chain\_strength}$=1$ at $\lambda=0.2$.
-Outside the transition region ($\mathcal{M}\approx 0$ or $\mathcal{M}\approx 1$), the two \texttt{auto\_scale} settings give $|\Delta\mathcal{M}|\lesssim 0.04$; inside the transition region the rescaling shifts the effective crossover in~$\lambda$, with $\Delta\mathcal{M}$ reaching $\approx 0.98$ on the embedded problem at $\lambda=0.2$ in a reproducible manner (Supplementary Information).
-The qualitative conclusions of the paper---the monotonic decrease of $\mathcal{M}$ with $|E|$ and $\lambda$, the arrest by disorder and by atypical environment preparations, the $s_p$-dependence of the crossover, the qualitative cross-QPU agreement, and the thermal-marginal agreement on relaxed conditions where the sample distribution is already at the stable end state---are preserved under both settings.
-The quantitative placement of the crossover thresholds~$\lambda_c$ reported in Fig.~\ref{fig:subsystem} and Fig.~\ref{fig:baselines}, and the specific temperature-gap ratios reported in Fig.~\ref{fig:barrier}, inherit a rescaling-dependent systematic characterised by the spot-check; we report these values as empirical quantities for the SDK-default submission path used in the legacy campaigns, not as universal, rescaling-independent numbers.
-As a separate test of intrinsic control-error (ICE) bias we ran the same four transition-region conditions at four independent random spin-reversal gauges with \texttt{auto\_scale=False}; the gauge-averaged memory order parameter has standard deviation $\le 0.02$ across gauges at every tested condition (Supplementary Information), indicating that ICE bias is a subdominant source of uncertainty in the main-text observables.
-In the public code release the reverse-anneal driver defaults to \texttt{auto\_scale=False} so that future submissions retain an exact nominal-to-programmed correspondence.
-For the barrier-crossing working point of Fig.~\ref{fig:barrier} we further re-ran the full 10-seed campaign with \texttt{auto\_scale=False} on both QPUs (Supplementary Information); the regenerated relaxation rates ($8/10$ on Advantage2 and $7/10$ on Advantage\_system6.4) are consistent with or exceed the legacy rates ($14/20$ and $10/20$), so the $4.8\times$ and $1.7\times$ temperature gaps versus matched-temperature Glauber are preserved under the regenerated submission path.
+The thermal-marginal $\beta_\mathrm{eff}$ calibration probes and native-Zephyr thermal-marginal conditions were submitted with \texttt{auto\_scale=False} on direct physical-qubit submissions so that the programmed and nominal $(h,J)$ coincide.
+Discovery sweeps and the main subsystem-bath sweeps (Figs.~\ref{fig:subsystem}--\ref{fig:baselines}) were submitted through the SDK-default path with the minor-embedding composite and automatic Hamiltonian rescaling (\texttt{auto\_scale=True}) both active~\cite{dwave2024system_docs}.
+We characterized this rescaling through paired \texttt{auto\_scale}-on/off spot-checks at six embedded and unembedded working points, a transition-region $\lambda$-scan, and four independent random spin-reversal gauges (Supplemental Material).
+Outside the transition region the two settings agree exactly or within $|\Delta\mathcal{M}|\lesssim 0.11$, with most saturated points agreeing at $0$ or $1$, and gauge-averaged $\mathcal{M}$ has standard deviation $\le 0.02$ across gauges at every tested condition, so the relaxation classification is robust to the submission path away from the crossover.
+Inside the transition region the rescaling shifts the effective crossover in $\lambda$ in a reproducible manner, so the absolute $\lambda_c$ values in Figs.~\ref{fig:subsystem} and \ref{fig:baselines} are reported as empirical quantities for the SDK-default submission path used in the legacy campaigns, not as universal numbers; the public code release defaults to \texttt{auto\_scale=False}.
 
-\subsection*{Observables and statistical analysis}
+\subsection{Observables and statistical analysis}
 
 The marginal distribution $P_S(\sigma_S) = \sum_{\sigma_E} P(\sigma_S, \sigma_E)$ is computed from QPU samples by projecting onto the subsystem qubit indices, using the variable ordering returned by the sampler.
 The memory order parameter is $\mathcal{M} = \max_{a,b}\,\mathrm{TVD}(P_S^{(a)}, P_S^{(b)})$, where $\mathrm{TVD}(P,Q) = \frac{1}{2}\sum_x |P(x)-Q(x)|$.
-Uncertainty estimates on $\mathcal{M}$ are obtained by bootstrap resampling (200 resamples with replacement from the QPU reads), and are used for the error bars shown in the main-text figures; per-condition bootstrap standard deviations and disorder-averaged dispersions are tabulated in the Supplementary Information.
+Uncertainty estimates on $\mathcal{M}$ are obtained by bootstrap resampling (200 resamples with replacement from the QPU reads), and are used for the error bars shown in the main-text figures; per-condition bootstrap standard deviations and disorder-averaged dispersions are tabulated in the Supplemental Material.
 
-\subsection*{Classical baselines}
+\subsection{Classical baselines}
 
-\emph{Glauber dynamics:} single-spin-flip Monte Carlo with acceptance probability $p = [1+\exp(\Delta E/k_BT)]^{-1}$ at the device effective temperature; 10{,}000 sweeps, 2{,}000 samples after equilibration.
+\emph{Glauber dynamics:} single-spin-flip Monte Carlo with acceptance probability $p = [1+\exp(\Delta E/k_BT)]^{-1}$ at the calibrated readout temperature $T_\mathrm{cal}$; 10{,}000 sweeps, 2{,}000 samples after equilibration.  The frozen $\mathcal{M}=1.0$ reported for Glauber is the equilibrated (stationary, initial-basin-conditioned) local result, not a transient.
 \emph{Exact diagonalization:} the transverse-field Ising Hamiltonian $H(s_p)$ was constructed as a sparse matrix for $N\leq 12$ and time-evolved via \texttt{expm\_multiply} (SciPy).  The schedule coefficients $A(s_p)$ and $B(s_p)$ in GHz are absorbed into $H(s_p)$ directly, and the physical pause time $t_p$ (in $\mu$s) is converted to the dimensionless time argument of $\exp(-iHt)$ via $t_\mathrm{nat}=2\pi\times 10^{3}\,t_{\mu s}$, where the factor of $2\pi\times 10^3$ reconciles GHz with inverse microseconds (in units where $\hbar=1$).
 Subsystem marginals were obtained by tracing out environment degrees of freedom.
 \emph{Spin-vector Monte Carlo:} continuous O(3) Heisenberg spins with Metropolis updates on the unit sphere, using $H = \sum_i h_i n_i^z + \sum_{ij} J_{ij}(\mathbf{n}_i\cdot\mathbf{n}_j)$ and $z$-axis projected measurement.
-Full details of all baselines are in the Supplementary Information.
+Full details of all baselines are in the Supplemental Material.
 
-\subsection*{Data availability}
+\subsection{Data availability}
 
-The raw D-Wave sampleset data, per-condition metadata (solver identifier, \texttt{graph\_id}, calibration epoch and timing blocks; embedding information is recorded separately in per-campaign metadata), processed pooled subsystem marginals, the bootstrap resamples used for error bars, the thermal-marginal comparison artefacts, the D-Wave per-QPU anneal-schedule coefficients used for the quantum reduced Gibbs diagnostic, and figure source data for Figs.~\ref{fig:subsystem}--\ref{fig:barrier} are available to editors and referees through a confidential review-only repository link supplied in the submission package.
-The complete archive will be made public through a Zenodo record at a citable DOI upon publication.
+The raw D-Wave samplesets (HDF5, including per-read spin configurations, energies, and per-job metadata: solver identifier, \texttt{graph\_id}, anneal schedule, calibration epoch and timing blocks), processed pooled subsystem marginals, the bootstrap resamples used for error bars, the thermal-marginal comparison artifacts, the D-Wave per-QPU anneal-schedule coefficients used for the quantum reduced Gibbs diagnostic, and figure source data for Figs.~\ref{fig:subsystem}--\ref{fig:baselines} are available to editors and referees through a confidential review-only repository link supplied in the submission package; every quantitative result reported in the figures and tables regenerates from these deposited samplesets using the included analysis code.
+Upon publication, the raw data and analysis code will be released together as a single public repository archived at Zenodo under a citable DOI.
 
-\subsection*{Code availability}
+\subsection{Code availability}
 
 During peer review, custom code central to the reported analyses is made available to editors and referees through a confidential review-only repository link supplied in the submission package; credentials, private account configuration and nonessential operational logs are not included.
-The repository comprises the reverse-anneal driver, the subsystem-marginal analysis pipeline, the thermal-marginal comparison scripts, the baseline and comparison solvers (Glauber dynamics, exact diagonalization, Lindblad evolution, and continuous-spin Monte Carlo), and the figure-generation scripts used to produce Figs.~\ref{fig:protocol}--\ref{fig:barrier} and all supplementary figures, together with a \texttt{pyproject.toml} recording the Ocean SDK and Python package versions used for the experiments.
-Upon publication, a curated release sufficient to reproduce the reported analyses and figures will be made publicly available on GitHub and archived at Zenodo at a citable DOI, under a licence permitting readers to repeat the reported results.
+The repository comprises the reverse-anneal driver, the subsystem-marginal analysis pipeline, the thermal-marginal comparison scripts, the baseline and comparison solvers (Glauber dynamics, exact diagonalization, Lindblad evolution, and continuous-spin Monte Carlo), and the figure-generation scripts used to produce Figs.~\ref{fig:protocol}--\ref{fig:baselines} and all supplementary figures, together with a \texttt{pyproject.toml} recording the Ocean SDK and Python package versions used for the experiments.
+Upon publication, this code is released together with the raw data as a single public repository (hosted on GitHub and archived at Zenodo under a citable DOI), so that the reported analyses and figures reproduce from a single checkout, under a license permitting readers to repeat the reported results.
 
-\subsection*{LLM disclosure}
+\subsection{LLM disclosure}
 
 LLM-based coding assistants were used for code scaffolding and language editing.
 All scientific decisions, code validation, data analysis, and interpretation were performed and verified by the author.
 
-\subsection*{Author contributions}
+\begin{acknowledgments}
+This work received no external financial funding.  QPU access was provided through the D-Wave Leap developer platform; D-Wave had no role in study design, data analysis, interpretation, or manuscript preparation.  The author thanks the D-Wave support and training teams for platform access and technical assistance with the Leap environment.  The author declares no competing interests.
+\end{acknowledgments}
 
-L.L.\ conceived the study, designed the experiments, implemented the software, performed the QPU submissions and classical simulations, analysed the data, prepared the figures, and wrote the manuscript.
-
-\subsection*{Competing interests}
-
-The author declares no competing interests.
-
-\subsection*{Funding}
-
-This work received no external financial funding.  QPU access was provided through the D-Wave Leap developer platform.  D-Wave had no role in study design, data analysis, interpretation, or manuscript preparation.
-
-\subsection*{Correspondence}
-
-Correspondence should be addressed to L.L.\ (\href{mailto:lalozanom@tec.mx}{lalozanom@tec.mx}).
-
-\section*{Acknowledgements}
-
-The author thanks the D-Wave support and training teams for platform access and technical assistance with the Leap environment.
-
-\bibliographystyle{naturemag}
+\bibliographystyle{apsrev4-2}
 \bibliography{refs}
 
 \end{document}

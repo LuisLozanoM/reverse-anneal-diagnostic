@@ -2676,12 +2676,8 @@ def calibrate_readout(
             f, indent=2,
         )
     print(f"Readout calibration complete. Saved to {out_json}")
-
-    if not dry_run:
-        try:
-            base_sampler.client.close()
-        except Exception:  # noqa: BLE001
-            pass
+    # Note: per-call samplers are opened/closed inside `run_reverse_anneal`;
+    # no shared `base_sampler` to clean up here.
 
 
 # ---------------------------------------------------------------------------

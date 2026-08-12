@@ -1,0 +1,35 @@
+{
+  "scan": "E_size",
+  "solver": "Advantage2_system1.13",
+  "subsystem_size": 6,
+  "coupling_lambda": 0.5,
+  "s_p": 0.4,
+  "t_hold": 100.0,
+  "results": [
+    {
+      "n_env": 4,
+      "memory": 1.0,
+      "tvd_up_down": 1.0
+    },
+    {
+      "n_env": 8,
+      "memory": 0.005,
+      "tvd_up_down": 0.005
+    },
+    {
+      "n_env": 16,
+      "memory": 0.0005,
+      "tvd_up_down": 0.0005
+    },
+    {
+      "n_env": 32,
+      "memory": 0.0,
+      "tvd_up_down": 0.0
+    },
+    {
+      "n_env": 50,
+      "memory": 0.0,
+      "tvd_up_down": 0.0
+    }
+  ]
+}
