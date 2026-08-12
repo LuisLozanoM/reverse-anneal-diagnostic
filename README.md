@@ -1,4 +1,4 @@
-# locth1 — A calibrated diagnostic for reverse-anneal sampling in programmable quantum annealers
+# A calibrated diagnostic for reverse-anneal sampling in programmable quantum annealers
 
 Code and data for the paper:
 
