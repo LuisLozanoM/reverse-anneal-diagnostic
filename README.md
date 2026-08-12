@@ -5,7 +5,7 @@ Code and data for the paper:
 > Luis Lozano, *"A calibrated diagnostic for reverse-anneal sampling in programmable quantum annealers"*,
 > **[arXiv:2605.19381](https://arxiv.org/abs/2605.19381)** (v2, 2026). Currently under peer review at a journal.
 
-**If you use this code or data, please cite the arXiv preprint** (see `CITATION.cff`). A citable Zenodo DOI for this repository will be minted from a tagged release upon journal acceptance. Every quantitative result in the paper regenerates from the raw samplesets deposited here — see `DATA_MAP.md` for the figure-to-data map.
+**If you use this code or data, please cite the arXiv preprint** (see `CITATION.cff`). Every quantitative result in the paper regenerates from the raw samplesets deposited here — see `DATA_MAP.md` for the figure-to-data map.
 
 ## What this is
 
@@ -65,7 +65,7 @@ Code: Apache-2.0. Data: CC-BY-4.0.
 
 ## Citation
 
-Please cite the paper and the Zenodo record (DOI minted at publication).
+Please cite the arXiv preprint (see `CITATION.cff`): [arXiv:2605.19381](https://arxiv.org/abs/2605.19381).
 
 ## Contact
 
