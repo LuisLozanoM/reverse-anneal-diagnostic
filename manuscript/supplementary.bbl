@@ -66,17 +66,20 @@
   Inc.}}},\ }\href@noop {} {\bibinfo {title} {{D-Wave} system documentation:
   Solver properties, anneal schedules and qpu-specific parameters}},\ \bibinfo
   {howpublished}
-  {\url{https://docs.dwavequantum.com/docs/latest/doc_physical_properties.html}}
+  {\url{https://docs.dwavequantum.com/en/latest/quantum_research/solver_properties_specific.html}}
   (\bibinfo {year} {2024}),\ \bibinfo {note} {accessed 2026}\BibitemShut
   {NoStop}%
-\bibitem [{\citenamefont {Mehta}\ \emph {et~al.}(2025)\citenamefont {Mehta}
-  \emph {et~al.}}]{mehta2025dwave}%
+\bibitem [{\citenamefont {Mehta}\ \emph {et~al.}(2025)\citenamefont {Mehta},
+  \citenamefont {De~Raedt}, \citenamefont {Michielsen},\ and\ \citenamefont
+  {Jin}}]{mehta2025dwave}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {V.}~\bibnamefont
-  {Mehta}} \emph {et~al.},\ }\href {https://doi.org/10.1103/3yk8-qn64}
-  {\bibfield  {journal} {\bibinfo  {journal} {Physical Review A}\ }\textbf
-  {\bibinfo {volume} {112}},\ \bibinfo {pages} {032616} (\bibinfo {year}
-  {2025})}\BibitemShut {NoStop}%
+  {Mehta}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {De~Raedt}},
+  \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Michielsen}},\ and\
+  \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Jin}},\ }\href
+  {https://doi.org/10.1103/3yk8-qn64} {\bibfield  {journal} {\bibinfo
+  {journal} {Physical Review A}\ }\textbf {\bibinfo {volume} {112}},\ \bibinfo
+  {pages} {032616} (\bibinfo {year} {2025})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Cai}\ \emph {et~al.}(2014)\citenamefont {Cai},
   \citenamefont {Macready},\ and\ \citenamefont {Roy}}]{cai2014minor}%
   \BibitemOpen
