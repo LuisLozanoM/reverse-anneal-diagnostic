@@ -88,10 +88,31 @@ target even though the individual initial-state distributions remain
 distinct.  The classification is stable under the corrected
 device-calibrated $A(s_p)/B(s_p)$.
 
+\paragraph{The aliasing is two-sided, and neither verdict requires thermometry.}
+Tabulating the full campaign as a $2\times 2$ confusion table (memory
+pass/fail versus pooled conditional-distance pass/fail) gives
+$110/3/22/359$: memory-based validation alone false-passes the wrong-basin
+traps, while the pooled distance alone false-passes $22$ memory-retaining
+conditions---each single-observable practice in current use fails, in
+opposite directions, within one campaign, so the pair is the minimal
+sufficient set.  The $22$ false passes are a property of the \emph{pooled}
+estimator specifically: re-evaluating the same conditions with the
+per-initial-state conditional distance flags all $22$ (maximum per-state
+$D_\mathrm{TV}\ge 0.05$ in every case; deposited
+\texttt{two\_observable\_analysis.json}).  The trapping verdict is as
+insensitive to the reference temperature as the consistency check:
+sweeping the reference over $\beta\in[\beta_\mathrm{eff}/3,\,3\beta_\mathrm{eff}]$
+leaves the trap distances at $D_\mathrm{TV}\ge 0.85$ throughout, so neither
+the pass nor the fail verdict of the protocol depends on accurate
+thermometry.  The four-cell classification is likewise stable over a
+$3\times 3$ grid of threshold choices ($\mathcal{M}$ cutoff $0.02$--$0.10$,
+$D_\mathrm{TV}$ cutoff $0.02$--$0.10$), with the two severe traps flagged at
+every combination (deposited threshold-robustness table, same artifact).
+
 \begin{figure*}[!htbp]
 \centering
 \includegraphics[width=\textwidth,height=0.55\textheight,keepaspectratio]{figures/fig6_thermal_marginal.pdf}
-\caption{\textbf{Effective thermal marginal.}
+\caption{\textbf{Relaxed readouts match the calibrated conditional reference at the finite-shot floor, while trapped instances pass the memory test yet miss it by $D_\mathrm{TV}>0.94$.}
 \textbf{a,}~Fraction of relaxed disorder realizations ($\mathcal{M}\le 0.05$) in the 10-seed disorder sweep ($N=12$, $|S|=4$, $\lambda=0.5$, 3-regular logical graph, Advantage2).  Relaxation fraction decreases from $10/10$ at $W=0$ to $4/10$ at $W=1.25$.
 \textbf{b,}~Total-variation distance between the pooled subsystem marginal and the calibrated classical conditional Gibbs target at $\beta_\mathrm{eff}=7.219$ vs disorder strength.  Open circles: all 10 seeds; filled circles: relaxed subset only (error bars = s.d. across relaxed seeds).  Gray band: finite-shot reference $D_\mathrm{TV}\simeq\tfrac12\sqrt{K/N_\mathrm{reads}}\approx 0.026$ with $N_\mathrm{reads}=6000$, $K=2^{|S|}=16$; the relaxed subset stays at or below this scale across the sweep.
 \textbf{c,}~Scatter of $D_\mathrm{TV}$ vs $\mathcal{M}$ across all thermal-marginal conditions.  Red: relaxed ($\mathcal{M}\le 0.05$); gray: memory-retaining.  Two top-left red outliers correspond to the same $\lambda=0.2$, $N=8$, $W=1$, seed~42 native Zephyr instance at Hamiltonian scales $0.35$ and $0.5$ (dynamical trapping, discussed in the body).  The memory and thermal-marginal criteria identify the same condition set apart from this trapping pair and one borderline $D_\mathrm{TV}=0.051$ miss.}

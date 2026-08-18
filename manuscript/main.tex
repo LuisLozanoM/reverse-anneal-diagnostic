@@ -14,12 +14,12 @@
 \affiliation{Tecnol\'ogico de Monterrey, Campus Santa Fe, Mexico City, Mexico}
 
 \begin{abstract}
-Reverse annealing is widely used as a heuristic sampler on programmable quantum annealers, but it is often unclear whether the readout has erased its initialization memory or whether the resulting samples represent any calibrated target distribution.
-We introduce a subsystem-level validation protocol that pairs a memory order parameter $\mathcal{M}$ with the total-variation distance $D_{\mathrm{TV}}$ between the measured subsystem readout and a fixed, independently calibrated conditional-Boltzmann reference, and apply it on two D-Wave QPU generations.
-The protocol delivers three things: a diagnostic that separates relaxed, memory-retaining and ``wrong-basin'' readouts; the isolation of relaxed-but-non-thermal trapping, in which a readout passes the initial-state-independence test while concentrating on the wrong basin; and an engineering control showing that SDK auto-scale, embedding choice and environment preparation shift apparent thresholds, so calibration metadata must be logged to interpret them.
-Relaxed ferromagnetic readouts are near-deterministic, so the small distances seen there are a consistency check rather than a thermometric measurement; the diagnostic earns its value in the opposite regime.
-Across 494 conditions on one processor, 113 pass the memory criterion and 110 of those agree with the reference at $D_{\mathrm{TV}}<0.05$, while a wrong-basin instance, reproduced at two Hamiltonian scales, passes the memory test yet reaches $D_{\mathrm{TV}}>0.94$; a 60-condition replication confirms that the diagnostic transfers to a second processor.
-We provide the protocol as a transferable, reproducible validation workflow for annealer-as-sampler applications.
+Reverse annealing is widely used as a heuristic sampler on programmable quantum annealers, but whether the readout has erased its initialization memory---and what distribution it then represents---has lacked a controlled, subsystem-level test: a recent review posed the ability of a large annealer to act as an effective bath for its own subsystems as an open question, stating it was not aware of such research on annealing hardware.
+Here we provide that test---to our knowledge the first controlled subsystem--bath experiment on quantum-annealing hardware---by partitioning two D-Wave QPU generations into a small subsystem and an independently tunable on-chip environment, and pairing a memory order parameter $\mathcal{M}$ with the total-variation distance $D_{\mathrm{TV}}$ between the subsystem readout and a fixed, independently calibrated conditional-Boltzmann reference.
+We find that a readout can pass the standard initial-state-independence test while placing nearly all of its weight on the wrong energy basin ($D_{\mathrm{TV}}>0.94$, reproduced at two Hamiltonian scales)---a failure mode invisible to memory-based validation---while the pooled distance alone mislabels $22$ of $381$ memory-retaining conditions, so the two observables are jointly necessary; both verdicts survive a ninefold miscalibration of the reference temperature.
+A single SDK default (auto-scale) shifts $\mathcal{M}$ by $\approx 0.98$ on the same embedded problem, making submission metadata part of the measurement itself.
+Across 494 conditions on one processor, 113 pass the memory criterion and 110 of those agree with the reference at $D_{\mathrm{TV}}<0.05$; on relaxed ferromagnetic conditions the readout is near-deterministic, so the small distances there are a consistency check rather than a thermometric claim.
+A 60-condition replication confirms that the diagnostic transfers to a second processor, and every reported number regenerates from the openly deposited raw samplesets.
 \end{abstract}
 
 \maketitle
@@ -29,12 +29,13 @@ We provide the protocol as a transferable, reproducible validation workflow for 
 Programmable quantum annealers are increasingly deployed as open-system samplers for Boltzmann-machine training, probabilistic inference and hybrid optimization pipelines~\cite{adachi2015qbm,amin2018qbm,benedetti2017qbm,nelson2022gibbs,vuffray2022boltzmann}.
 Any such deployment turns on two operational questions: under what conditions does a reverse-anneal protocol actually erase its initial-state memory, and what distribution does the readout represent once it has?
 A sampler that has not erased its initialization is not a sampler, and a sampler whose readout does not approximate any well-defined target distribution cannot be calibrated against; both questions are practical, not academic.
-Existing answers are partial. A recent review notes that whether a sufficiently large annealer can act as an effective bath for its own subsystems remains experimentally unresolved, and that no controlled study had been performed on annealing hardware~\cite{kendon2026qacm}.
-Temperature-estimation, freeze-out and Gibbs-sampling studies have shown that annealer outputs can sometimes resemble effective Boltzmann distributions while also exposing local/global and scale-dependent limitations~\cite{raymond2016global,marshall2017freezeout,marshall2019pausing,grattan2025thermometry}.
+Existing answers are partial. A recent review poses whether a sufficiently large annealer can act as an effective bath for its own subsystems as an open research question, stating that it is not aware of such research having been performed on annealing hardware~\cite{kendon2026qacm}.
+Temperature-estimation, freeze-out and Gibbs-sampling studies have shown that annealer outputs can sometimes resemble effective Boltzmann distributions while also exposing local/global and scale-dependent limitations~\cite{raymond2016global,marshall2017freezeout,marshall2019pausing,grattan2025thermometry}, and whole-device tests have compared annealer readouts against thermal targets of the pause-point Hamiltonian~\cite{izquierdo2021thermal}.
 Reverse-anneal memory erasure~\cite{pelofske2025erasing}, finite-temperature criticality via quantum annealing~\cite{teza2025finite} and programmable localization~\cite{dacafilho2022localization} provide closely related but distinct context, and the theoretical foundations connecting subsystem relaxation to the structure of the global quantum state are well established~\cite{popescu2006entanglement,goldstein2006canonical,dalessio2016quantum}.
 What has been lacking is a direct, subsystem-level validation protocol applicable to a working annealer---a tool, not a theory---in which bath size, coupling, disorder and environment preparation can all be tuned independently on the same programmable platform.
 
 Here we provide such a protocol on two D-Wave QPUs with different topologies and energy scales~\cite{king2022coherent,king2023critical,mehta2025unraveling,mehta2025dwave}.
+To our knowledge, this is the first controlled subsystem--bath experiment on quantum-annealing hardware---a partition of the processor into a subsystem and an independently tunable on-chip environment, with bath size, boundary coupling, disorder and environment preparation varied on the same platform---and the first to pair an initial-state-memory criterion with a fixed, independently calibrated conditional-Boltzmann reference at the subsystem level; whole-device studies of reverse-anneal memory erasure~\cite{pelofske2025erasing}, disorder-induced memory retention~\cite{dacafilho2022localization} and thermal-sampling validation~\cite{izquierdo2021thermal,nelson2022gibbs,vuffray2022boltzmann} are closely related but do not partition the processor into subsystem and bath.
 We partition the annealer into a small subsystem~$S$ ($|S|=6$) coupled through programmable boundary couplers of strength $\lambda$ to an on-chip environment~$E$ (up to $|E|=50$), and use reverse annealing with a pause at $s_p=0.4$ to probe the dynamics.
 We report a two-observable validation protocol.
 The memory order parameter $\mathcal{M}$, defined as the maximum total-variation distance between subsystem marginals from different initial preparations of~$S$, identifies when the subsystem has become initial-state independent.
@@ -42,9 +43,7 @@ The distance $D_\mathrm{TV}$ between the measured subsystem readout and a calibr
 We find a tunable crossover from memory retention to relaxation with increasing bath size and coupling, arrest of this crossover by quenched disorder and atypical bath preparations, and a small set of relaxed-but-non-thermal wrong-basin traps isolated by the reference---precisely the failure the two-observable diagnostic is built to catch, and one that initial-state-independence testing alone aliases as success; on relaxed ferromagnetic conditions the readout is near-deterministic and its small distance to the reference is a consistency check rather than a thermometric measurement (it is essentially independent of the calibrated temperature; see Methods and Supplemental Material).
 The absolute thresholds behind these crossovers are themselves submission-path quantities: an SDK default (\texttt{auto\_scale}) alone can shift the memory order parameter by $\Delta\mathcal{M}\approx 0.98$ on the same embedded problem in the transition region, so calibration metadata is part of the validation protocol rather than an optional log.
 
-We emphasize that D-Wave QPUs operate as open quantum systems: the cryogenic environment, control noise, and the time-dependent anneal schedule itself contribute to the dynamics~\cite{albash2018adiabatic,mehta2025dwave}.
-The results therefore describe subsystem relaxation during reverse annealing, not thermalization in a strictly isolated system; we make no claim of isolated-system eigenstate thermalization~\cite{rigol2008thermalization,dalessio2016quantum}, many-body localization~\cite{nandkishore2015mbl,abanin2019mbl}, or quantum computational advantage.
-The contribution is a subsystem-level validation protocol for quantum-annealer sampling, anchored to a fixed, independently calibrated effective inverse temperature used as a discrepancy reference.
+Throughout, the QPU is treated as the open quantum system it is~\cite{albash2018adiabatic,mehta2025dwave}: the object of study is operational subsystem relaxation and sampler validity---not isolated-system thermalization~\cite{rigol2008thermalization,dalessio2016quantum}, many-body localization~\cite{nandkishore2015mbl,abanin2019mbl}, or quantum computational advantage---and the contribution is a subsystem-level validation protocol anchored to a fixed, independently calibrated effective inverse temperature used as a discrepancy reference.
 
 \section{Results}
 
@@ -99,7 +98,7 @@ A complementary test using $E$ states produced by forward-annealing the $E$-only
 \begin{figure*}[!htbp]
 \centering
 \includegraphics[width=\textwidth,height=0.55\textheight,keepaspectratio]{figures/fig3_subsystem.png}
-\caption{\textbf{Subsystem relaxation with tunable environment.}
+\caption{\textbf{Bath size and coupling tune a memory-to-relaxation crossover, reproduced on both QPU generations.}
 \textbf{a,}~Memory order parameter $\mathcal{M}$ versus environment size $|E|$ on both QPUs ($s_p=0.4$, $\lambda=0.5$).
 \textbf{b,}~Memory versus coupling strength $\lambda$ ($|E|=50$).  Filled markers with solid lines: legacy SDK-default submission path.  Open markers with dashed lines: regenerated on direct native-qubit submissions with \texttt{auto\_scale=False} (no chain couplers).  The $\lambda=0$ point is a decoupled control and is excluded from the monotonic crossover statement.
 \textbf{c,d,}~Pause-depth sweeps on Advantage2 (\textbf{c}) and System~6.4 (\textbf{d}); lower $s_p$ shifts relaxation to weaker coupling.
@@ -159,7 +158,26 @@ The relaxation threshold in $|E|$ characterises the effective boundary-coupling 
 The small relaxed-subset distances persist on the native Zephyr topology (mean conditional $D_\mathrm{TV}=0.0015$ across $5$ relaxed conditions, $N=12$, $|S|=4$, $\lambda=0.5$), so the consistency check is not solely an embedding artifact.
 
 The wrong-basin trapping conditions identified by the thermal-marginal test show that initial-state independence alone can mask non-thermal endpoints, an aliasing that memory-based validation cannot detect by construction.
-The practical recommendation follows directly: for annealer-based Boltzmann-machine training~\cite{adachi2015qbm,amin2018qbm,benedetti2017qbm}, quantum-assisted sampling and reverse-anneal optimization~\cite{marshall2019pausing,chen2020pausing,pelofske2025erasing,nelson2022gibbs,vuffray2022boltzmann,grattan2025thermometry}, report $\mathcal{M}$ and $D_\mathrm{TV}$ against a calibrated $\beta_\mathrm{eff}$ alongside any final-energy or success-probability metric, and log the embedding chain strength, the \texttt{auto\_scale} flag, the calibration epoch, and the per-QPU $A(s_p)/B(s_p)$ together with the samples themselves; the calibrated effective temperature alone is not sufficient to interpret the programmed Hamiltonian.
+The practical recommendation follows directly: for annealer-based Boltzmann-machine training~\cite{adachi2015qbm,amin2018qbm,benedetti2017qbm}, quantum-assisted sampling and reverse-anneal optimization~\cite{marshall2019pausing,chen2020pausing,pelofske2025erasing,nelson2022gibbs,vuffray2022boltzmann,grattan2025thermometry}, report $\mathcal{M}$ and $D_\mathrm{TV}$ against a calibrated $\beta_\mathrm{eff}$ alongside any final-energy or success-probability metric, and log the submission metadata of Table~\ref{tab:metadata} together with the samples themselves; the calibrated effective temperature alone is not sufficient to interpret the programmed Hamiltonian.
+
+\begin{table}[!htbp]
+\centering
+\caption{\label{tab:metadata}Submission-path metadata and its measured impact on the validation observables in this work (spot checks, not a factorial design; details in Methods and the Supplemental Material).}
+\begin{ruledtabular}
+\begin{tabular}{ll}
+Metadata knob & Measured impact \\
+\colrule
+\texttt{auto\_scale} flag & $\Delta\mathcal{M}$ up to $\approx 0.98$ (transition region); $\le 0.11$ saturated \\
+Chain-strength path & disorder-arrest $\mathcal{M}=0.54$ (legacy UTC) vs $\lesssim 0.1$ (fixed $c\in\{1,2\}$) \\
+Native vs embedded & $\lambda_c\in[0.05,0.10]$ native vs $[0.15,0.20]$ embedded ($c=1$) \\
+Environment preparation & $\mathcal{M}=0.000$ ordered vs $0.39$ random, $0.65$ domain wall \\
+Spin-reversal gauge & $\sigma_\mathcal{M}\le 0.02$ across four gauges \\
+Return-ramp duration & classification unchanged, $t_r\in\{1,5,20\}\,\mu$s \\
+\texttt{reinitialize\_state} & \texttt{True} read-count-independent; \texttt{False} drifts with reads \\
+Reference $\beta$ ($9\times$ range) & consistency check and trap verdicts both unchanged \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
 A second, concrete control follows from the environment-preparation results: bath qubits should be initialized deliberately into ordered, low-energy states rather than allowed to relax alongside the problem region, because random or domain-wall environment preparations arrest relaxation.
 Read this way, the experiment also speaks to a standing open question---whether a sufficiently large annealer can act as an effective bath for its own subsystems~\cite{kendon2026qacm}: under ordered low-energy environment preparations it can (for the tested subsystems $|S|\in\{4,6\}$ with on-chip environments up to $|E|=50$; exact-reference comparisons are restricted to $N\le12$), but only as a finite-size partner whose microstate must be controlled, not as a universal thermal bath.
 
@@ -212,22 +230,17 @@ Full details of all baselines are in the Supplemental Material.
 
 \subsection{Data availability}
 
-The raw D-Wave samplesets (HDF5, including per-read spin configurations, energies, and per-job metadata: solver identifier, \texttt{graph\_id}, anneal schedule, calibration epoch and timing blocks), processed pooled subsystem marginals, the bootstrap resamples used for error bars, the thermal-marginal comparison artifacts, the D-Wave per-QPU anneal-schedule coefficients used for the quantum reduced Gibbs diagnostic, and figure source data for Figs.~\ref{fig:subsystem}--\ref{fig:baselines} are available to editors and referees through a confidential review-only repository link supplied in the submission package; every quantitative result reported in the figures and tables regenerates from these deposited samplesets using the included analysis code.
-Upon publication, the raw data and analysis code will be released together as a single public repository archived at Zenodo under a citable DOI.
+The data that support the findings of this study are openly available at the following URL: \url{https://github.com/LuisLozanoM/reverse-anneal-diagnostic}.
+The deposit contains the raw D-Wave samplesets (HDF5, including per-read spin configurations, energies, and per-job metadata: solver identifier, \texttt{graph\_id}, anneal schedule, calibration epoch and timing blocks), processed pooled subsystem marginals, the bootstrap resamples used for error bars, the thermal-marginal comparison artifacts, the D-Wave per-QPU anneal-schedule coefficients used for the quantum reduced Gibbs diagnostic, and figure source data for Figs.~\ref{fig:subsystem}--\ref{fig:baselines}; every quantitative result reported in the figures and tables regenerates from these deposited samplesets using the included analysis code, with no QPU access required.
+The repository will additionally be archived under a citable DOI upon publication.
 
 \subsection{Code availability}
 
-During peer review, custom code central to the reported analyses is made available to editors and referees through a confidential review-only repository link supplied in the submission package; credentials, private account configuration and nonessential operational logs are not included.
-The repository comprises the reverse-anneal driver, the subsystem-marginal analysis pipeline, the thermal-marginal comparison scripts, the baseline and comparison solvers (Glauber dynamics, exact diagonalization, Lindblad evolution, and continuous-spin Monte Carlo), and the figure-generation scripts used to produce Figs.~\ref{fig:protocol}--\ref{fig:baselines} and all supplementary figures, together with a \texttt{pyproject.toml} recording the Ocean SDK and Python package versions used for the experiments.
-Upon publication, this code is released together with the raw data as a single public repository (hosted on GitHub and archived at Zenodo under a citable DOI), so that the reported analyses and figures reproduce from a single checkout, under a license permitting readers to repeat the reported results.
-
-\subsection{LLM disclosure}
-
-LLM-based coding assistants were used for code scaffolding and language editing.
-All scientific decisions, code validation, data analysis, and interpretation were performed and verified by the author.
+The analysis code is openly available in the same repository as the data (Data availability): the reverse-anneal driver, the subsystem-marginal analysis pipeline, the thermal-marginal comparison scripts, the baseline and comparison solvers (Glauber dynamics, exact diagonalization, Lindblad evolution, and continuous-spin Monte Carlo), and the figure-generation scripts used to produce Figs.~\ref{fig:protocol}--\ref{fig:baselines} and all supplementary figures, together with a \texttt{pyproject.toml} recording the Ocean SDK and Python package versions used for the experiments.
+Code is released under the Apache-2.0 license and the data under CC-BY-4.0, permitting readers to repeat the reported results; credentials and private account configuration are not included.
 
 \begin{acknowledgments}
-This work received no external financial funding.  QPU access was provided through the D-Wave Leap developer platform; D-Wave had no role in study design, data analysis, interpretation, or manuscript preparation.  The author thanks the D-Wave support and training teams for platform access and technical assistance with the Leap environment.  The author declares no competing interests.
+This work received no external financial funding.  QPU access was provided through the D-Wave Leap developer platform; D-Wave had no role in study design, data analysis, interpretation, or manuscript preparation.  The author thanks the D-Wave support and training teams for platform access and technical assistance with the Leap environment.  Large-language-model assistants (Anthropic Claude, 2025--2026 versions including Claude Opus~4.x and Claude~5; OpenAI Codex CLI with GPT-5.x; Moonshot Kimi) were used for code scaffolding and language editing; all scientific decisions, analyses, and verification were performed by the author, who takes full responsibility for the accuracy, integrity and originality of the entire content.  The author declares no competing interests.
 \end{acknowledgments}
 
 \bibliographystyle{apsrev4-2}

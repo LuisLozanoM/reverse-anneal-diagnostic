@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{35}%
+\begin{thebibliography}{36}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -159,6 +159,17 @@
   }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {arXiv preprint
   arXiv:2512.03162}\ } (\bibinfo {year} {2025})},\ \Eprint
   {https://arxiv.org/abs/2512.03162} {arXiv:2512.03162} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gonzalez~Izquierdo}\ \emph
+  {et~al.}(2021)\citenamefont {Gonzalez~Izquierdo}, \citenamefont {Hen},\ and\
+  \citenamefont {Albash}}]{izquierdo2021thermal}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Z.}~\bibnamefont
+  {Gonzalez~Izquierdo}}, \bibinfo {author} {\bibfnamefont {I.}~\bibnamefont
+  {Hen}},\ and\ \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Albash}},\
+  }\href {https://doi.org/10.1145/3464456} {\bibfield  {journal} {\bibinfo
+  {journal} {ACM Transactions on Quantum Computing}\ }\textbf {\bibinfo
+  {volume} {2}},\ \bibinfo {pages} {1} (\bibinfo {year} {2021})},\ \Eprint
+  {https://arxiv.org/abs/2003.00361} {arXiv:2003.00361} \BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Pelofske}\ and\ \citenamefont
   {Nisoli}(2025)}]{pelofske2025erasing}%
   \BibitemOpen
@@ -169,14 +180,18 @@
   annealing}},\ \bibinfo {howpublished} {Preprint at
   \url{https://arxiv.org/abs/2509.10927}} (\bibinfo {year} {2025})\BibitemShut
   {NoStop}%
-\bibitem [{\citenamefont {Teza}\ \emph {et~al.}(2025)\citenamefont {Teza} \emph
-  {et~al.}}]{teza2025finite}%
+\bibitem [{\citenamefont {Teza}\ \emph {et~al.}(2026)\citenamefont {Teza},
+  \citenamefont {Campaioli}, \citenamefont {Avesani},\ and\ \citenamefont
+  {Raz}}]{teza2025finite}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
-  {Teza}} \emph {et~al.},\ }\href@noop {} {\bibfield  {journal} {\bibinfo
-  {journal} {arXiv preprint arXiv:2507.07167}\ } (\bibinfo {year} {2025})},\
-  \Eprint {https://arxiv.org/abs/2507.07167} {arXiv:2507.07167} \BibitemShut
-  {NoStop}%
+  {Teza}}, \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Campaioli}},
+  \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Avesani}},\ and\ \bibinfo
+  {author} {\bibfnamefont {O.}~\bibnamefont {Raz}},\ }\href
+  {https://doi.org/10.1038/s41467-026-75348-3} {\bibfield  {journal} {\bibinfo
+  {journal} {Nature Communications}\ }\textbf {\bibinfo {volume} {17}},\
+  \bibinfo {pages} {7571} (\bibinfo {year} {2026})},\ \Eprint
+  {https://arxiv.org/abs/2507.07167} {arXiv:2507.07167} \BibitemShut {NoStop}%
 \bibitem [{\citenamefont {da~C.~Filho}\ \emph {et~al.}(2022)\citenamefont
   {da~C.~Filho}, \citenamefont {Gonzalez~Izquierdo}, \citenamefont {Saguia},
   \citenamefont {Albash}, \citenamefont {Hen},\ and\ \citenamefont
@@ -228,8 +243,14 @@
   {NoStop}%
 \bibitem [{\citenamefont {King}\ \emph {et~al.}(2022)\citenamefont {King},
   \citenamefont {Suzuki}, \citenamefont {Raymond}, \citenamefont {Zucca},
-  \citenamefont {Lanting}, \citenamefont {Altomare}, \citenamefont {Berkley}
-  \emph {et~al.}}]{king2022coherent}%
+  \citenamefont {Lanting}, \citenamefont {Altomare}, \citenamefont {Berkley},
+  \citenamefont {Ejtemaee}, \citenamefont {Hoskinson}, \citenamefont {Huang},
+  \citenamefont {Ladizinsky}, \citenamefont {MacDonald}, \citenamefont
+  {Marsden}, \citenamefont {Oh}, \citenamefont {Poulin-Lamarre}, \citenamefont
+  {Reis}, \citenamefont {Rich}, \citenamefont {Sato}, \citenamefont
+  {Whittaker}, \citenamefont {Yao}, \citenamefont {Harris}, \citenamefont
+  {Lidar}, \citenamefont {Nishimori},\ and\ \citenamefont
+  {Amin}}]{king2022coherent}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~D.}\ \bibnamefont
   {King}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Suzuki}},
@@ -237,14 +258,35 @@
   {author} {\bibfnamefont {A.}~\bibnamefont {Zucca}}, \bibinfo {author}
   {\bibfnamefont {T.}~\bibnamefont {Lanting}}, \bibinfo {author} {\bibfnamefont
   {F.}~\bibnamefont {Altomare}}, \bibinfo {author} {\bibfnamefont {A.~J.}\
-  \bibnamefont {Berkley}}, \emph {et~al.},\ }\href
-  {https://doi.org/10.1038/s41567-022-01741-6} {\bibfield  {journal} {\bibinfo
-  {journal} {Nature Physics}\ }\textbf {\bibinfo {volume} {18}},\ \bibinfo
-  {pages} {1324} (\bibinfo {year} {2022})}\BibitemShut {NoStop}%
+  \bibnamefont {Berkley}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Ejtemaee}}, \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Hoskinson}},
+  \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Huang}}, \bibinfo
+  {author} {\bibfnamefont {E.}~\bibnamefont {Ladizinsky}}, \bibinfo {author}
+  {\bibfnamefont {A.~J.~R.}\ \bibnamefont {MacDonald}}, \bibinfo {author}
+  {\bibfnamefont {G.}~\bibnamefont {Marsden}}, \bibinfo {author} {\bibfnamefont
+  {T.}~\bibnamefont {Oh}}, \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
+  {Poulin-Lamarre}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Reis}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Rich}}, \bibinfo
+  {author} {\bibfnamefont {Y.}~\bibnamefont {Sato}}, \bibinfo {author}
+  {\bibfnamefont {J.~D.}\ \bibnamefont {Whittaker}}, \bibinfo {author}
+  {\bibfnamefont {J.}~\bibnamefont {Yao}}, \bibinfo {author} {\bibfnamefont
+  {R.}~\bibnamefont {Harris}}, \bibinfo {author} {\bibfnamefont {D.~A.}\
+  \bibnamefont {Lidar}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Nishimori}},\ and\ \bibinfo {author} {\bibfnamefont {M.~H.}\ \bibnamefont
+  {Amin}},\ }\href {https://doi.org/10.1038/s41567-022-01741-6} {\bibfield
+  {journal} {\bibinfo  {journal} {Nature Physics}\ }\textbf {\bibinfo {volume}
+  {18}},\ \bibinfo {pages} {1324} (\bibinfo {year} {2022})}\BibitemShut
+  {NoStop}%
 \bibitem [{\citenamefont {King}\ \emph {et~al.}(2023)\citenamefont {King},
   \citenamefont {Raymond}, \citenamefont {Lanting}, \citenamefont {Harris},
-  \citenamefont {Zucca}, \citenamefont {Altomare}, \citenamefont {Berkley}
-  \emph {et~al.}}]{king2023critical}%
+  \citenamefont {Zucca}, \citenamefont {Altomare}, \citenamefont {Berkley},
+  \citenamefont {Boothby}, \citenamefont {Ejtemaee}, \citenamefont {Enderud},
+  \citenamefont {Hoskinson}, \citenamefont {Huang}, \citenamefont {Ladizinsky},
+  \citenamefont {MacDonald}, \citenamefont {Marsden}, \citenamefont {Molavi},
+  \citenamefont {Oh}, \citenamefont {Poulin-Lamarre}, \citenamefont {Reis},
+  \citenamefont {Rich}, \citenamefont {Sato}, \citenamefont {Tsai},
+  \citenamefont {Volkmann}, \citenamefont {Whittaker}, \citenamefont {Yao},
+  \citenamefont {Sandvik},\ and\ \citenamefont {Amin}}]{king2023critical}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~D.}\ \bibnamefont
   {King}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Raymond}},
@@ -252,7 +294,24 @@
   {author} {\bibfnamefont {R.}~\bibnamefont {Harris}}, \bibinfo {author}
   {\bibfnamefont {A.}~\bibnamefont {Zucca}}, \bibinfo {author} {\bibfnamefont
   {F.}~\bibnamefont {Altomare}}, \bibinfo {author} {\bibfnamefont {A.~J.}\
-  \bibnamefont {Berkley}}, \emph {et~al.},\ }\href
+  \bibnamefont {Berkley}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Boothby}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Ejtemaee}},
+  \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Enderud}}, \bibinfo
+  {author} {\bibfnamefont {E.}~\bibnamefont {Hoskinson}}, \bibinfo {author}
+  {\bibfnamefont {S.}~\bibnamefont {Huang}}, \bibinfo {author} {\bibfnamefont
+  {E.}~\bibnamefont {Ladizinsky}}, \bibinfo {author} {\bibfnamefont {A.~J.~R.}\
+  \bibnamefont {MacDonald}}, \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
+  {Marsden}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Molavi}},
+  \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Oh}}, \bibinfo {author}
+  {\bibfnamefont {G.}~\bibnamefont {Poulin-Lamarre}}, \bibinfo {author}
+  {\bibfnamefont {M.}~\bibnamefont {Reis}}, \bibinfo {author} {\bibfnamefont
+  {C.}~\bibnamefont {Rich}}, \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
+  {Sato}}, \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont {Tsai}}, \bibinfo
+  {author} {\bibfnamefont {M.}~\bibnamefont {Volkmann}}, \bibinfo {author}
+  {\bibfnamefont {J.~D.}\ \bibnamefont {Whittaker}}, \bibinfo {author}
+  {\bibfnamefont {J.}~\bibnamefont {Yao}}, \bibinfo {author} {\bibfnamefont
+  {A.~W.}\ \bibnamefont {Sandvik}},\ and\ \bibinfo {author} {\bibfnamefont
+  {M.~H.}\ \bibnamefont {Amin}},\ }\href
   {https://doi.org/10.1038/s41586-023-05867-2} {\bibfield  {journal} {\bibinfo
   {journal} {Nature}\ }\textbf {\bibinfo {volume} {617}},\ \bibinfo {pages}
   {61} (\bibinfo {year} {2023})}\BibitemShut {NoStop}%
@@ -269,14 +328,17 @@
   {pages} {012414} (\bibinfo {year} {2025}{\natexlab{a}})}\BibitemShut
   {NoStop}%
 \bibitem [{\citenamefont {Mehta}\ \emph
-  {et~al.}(2025{\natexlab{b}})\citenamefont {Mehta} \emph
-  {et~al.}}]{mehta2025dwave}%
+  {et~al.}(2025{\natexlab{b}})\citenamefont {Mehta}, \citenamefont {De~Raedt},
+  \citenamefont {Michielsen},\ and\ \citenamefont {Jin}}]{mehta2025dwave}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {V.}~\bibnamefont
-  {Mehta}} \emph {et~al.},\ }\href {https://doi.org/10.1103/3yk8-qn64}
-  {\bibfield  {journal} {\bibinfo  {journal} {Physical Review A}\ }\textbf
-  {\bibinfo {volume} {112}},\ \bibinfo {pages} {032616} (\bibinfo {year}
-  {2025}{\natexlab{b}})}\BibitemShut {NoStop}%
+  {Mehta}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {De~Raedt}},
+  \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Michielsen}},\ and\
+  \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Jin}},\ }\href
+  {https://doi.org/10.1103/3yk8-qn64} {\bibfield  {journal} {\bibinfo
+  {journal} {Physical Review A}\ }\textbf {\bibinfo {volume} {112}},\ \bibinfo
+  {pages} {032616} (\bibinfo {year} {2025}{\natexlab{b}})}\BibitemShut
+  {NoStop}%
 \bibitem [{\citenamefont {Albash}\ and\ \citenamefont
   {Lidar}(2018)}]{albash2018adiabatic}%
   \BibitemOpen
@@ -323,8 +385,9 @@
   \bibfield  {author} {\bibinfo {author} {\bibnamefont {{D-Wave Quantum
   Inc.}}},\ }\href@noop {} {\bibinfo {title} {{D-Wave} ocean software
   documentation: Reverse annealing}},\ \bibinfo {howpublished}
-  {\url{https://docs.dwavequantum.com}} (\bibinfo {year}
-  {2024}{\natexlab{a}}),\ \bibinfo {note} {accessed 2026}\BibitemShut {NoStop}%
+  {\url{https://docs.dwavequantum.com/en/latest/quantum_research/annealing.html}}
+  (\bibinfo {year} {2024}{\natexlab{a}}),\ \bibinfo {note} {accessed
+  2026}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Linden}\ \emph {et~al.}(2009)\citenamefont {Linden},
   \citenamefont {Popescu}, \citenamefont {Short},\ and\ \citenamefont
   {Winter}}]{linden2009equilibration}%
@@ -422,7 +485,7 @@
   Inc.}}},\ }\href@noop {} {\bibinfo {title} {{D-Wave} system documentation:
   Solver properties, anneal schedules and qpu-specific parameters}},\ \bibinfo
   {howpublished}
-  {\url{https://docs.dwavequantum.com/docs/latest/doc_physical_properties.html}}
+  {\url{https://docs.dwavequantum.com/en/latest/quantum_research/solver_properties_specific.html}}
   (\bibinfo {year} {2024}{\natexlab{b}}),\ \bibinfo {note} {accessed
   2026}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Cai}\ \emph {et~al.}(2014)\citenamefont {Cai},
